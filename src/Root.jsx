@@ -40,7 +40,7 @@ import { SeaQuiz, SEA_FRAMES } from "./Quiz/sea";
 import { SEA } from "./Quiz/seaData";
 import { FruitsQuiz, FRUITS_FRAMES } from "./Quiz/fruits";
 import { FRUITS } from "./Quiz/fruitsData";
-import { GsThumbV2, GsThumbHeroV2, GsThumbSplitV2 } from "./Quiz/gsthumb2";
+import { GsThumbV2, GsThumbHeroV2, GsThumbSplitV2, GsThumbNumberV2 } from "./Quiz/gsthumb2";
 import { GsThumbV3 } from "./Quiz/gsthumb3";
 import { GsThumbV4 } from "./Quiz/gsthumb4";
 import { QuizV2, quizFrames } from "./Quiz/quizv2";
@@ -304,6 +304,7 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE17Deserts" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "deserts-e17-thumb", grid: ["death-valley-usa", "namib-desert-namibia", "atacama-desert-chile", "gobi-desert-mongolia", "salar-de-uyuni-bolivia", "arabian-desert-saudi-arabia", "thar-desert-india", "kalahari-desert-botswana", "?", "taklamakan-desert-china", "karakum-desert-turkmenistan", "chihuahuan-desert-mexico", "patagonian-desert-argentina", "richat-structure-mauritania", "great-victoria-desert-australia"], line1: "CAN YOU NAME ALL", word: "COUNTRY?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE17DesertsHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "deserts-e17-thumb", heroSlug: "salar-de-uyuni-bolivia", line1: "GUESS THE", word: "COUNTRY?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE17DesertsSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "deserts-e17-thumb", easySlug: "salar-de-uyuni-bolivia", hardSlug: "gilf-kebir-egypt", word: "COUNTRY?", number: "71", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE17DesertsNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "deserts-e17-thumb", cascade: ["namib-desert-namibia", "kalahari-desert-botswana", "white-sands-usa", "?"], line1: "CAN YOU NAME ALL", word: "COUNTRY?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}

@@ -235,3 +235,80 @@ export const GsThumbSplitV2 = ({
     </AbsoluteFill>
   );
 };
+
+// ============================================================
+// VARIANT D — "Big Number Bullseye": diagonal cascade of 4 photos + a giant
+// number badge as the dominant focal point. No channel name/year (4th A/B
+// design, visually distinct from Grid/Hero/Split).
+// props: mode/folder, cascade[4] (slugs, top-left to bottom-right), line1, word, number, badge.
+export const GsThumbNumberV2 = ({
+  mode = "fruits",
+  folder,
+  cascade = ["strawberry", "corn", "carrot", "?"],
+  line1 = "CAN YOU NAME ALL",
+  word = "FRUIT OR VEG?",
+  number = "100",
+  badge = "Only 1% get 100%",
+}) => {
+  const A = ASSET[mode] || { dir: folder || mode, ext: "jpg", fit: "cover" };
+  const POS = [
+    { left: 20, top: 190, rot: -6 },
+    { left: 170, top: 300, rot: 4 },
+    { left: 320, top: 410, rot: -4 },
+    { left: 470, top: 500, rot: 5 },
+  ];
+  const SIZE = 190;
+  return (
+    <AbsoluteFill style={{ fontFamily: font, backgroundColor: G.blueDeep }}>
+      <Bg />
+
+      {/* العنوان أعلى الإطار */}
+      <div style={{ position: "absolute", top: 20, left: 0, right: 0, textAlign: "center" }}>
+        <div style={{ fontWeight: 900, fontSize: 54, color: "#fff", WebkitTextStroke: "3px #7a0000", paintOrder: "stroke fill", letterSpacing: 1 }}>{line1}</div>
+      </div>
+
+      {/* الكلمة الكبيرة — أعلى الإطار مباشرة تحت السطر الأول */}
+      <div style={{ position: "absolute", top: 96, left: 0, right: 0, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 16 }}>
+        {word.split(" ").map((tok, i) => {
+          const conn = /^(or|and|&)$/i.test(tok);
+          return (
+            <div key={i} style={{
+              fontWeight: 900,
+              fontSize: conn ? 50 : Math.min(90, Math.floor(440 / (tok.length * 0.62))),
+              lineHeight: 1,
+              color: conn ? G.gold : "#FF1E1E",
+              WebkitTextStroke: conn ? "3px #FF8080" : "5px #4a0000",
+              paintOrder: "stroke fill",
+              textShadow: conn ? "0 5px 12px rgba(0,0,0,0.5)" : "0 7px 0 #7a0000, 0 14px 24px rgba(0,0,0,0.6)",
+            }}>{tok}</div>
+          );
+        })}
+      </div>
+
+      {/* تتالي قطري من 4 صور — يسار/وسط الإطار، تحت النص */}
+      {cascade.slice(0, 4).map((slug, i) => {
+        const p = POS[i];
+        return slug === "?" ? (
+          <div key={i} style={{ position: "absolute", left: p.left, top: p.top, width: SIZE, height: SIZE, background: G.blueDeep, borderRadius: 24, display: "flex", alignItems: "center", justifyContent: "center", border: `5px solid ${G.gold}`, boxShadow: "0 16px 36px rgba(0,0,0,0.55)", transform: `rotate(${p.rot}deg)`, zIndex: 2 + i }}>
+            <span style={{ fontWeight: 900, fontSize: 90, color: G.gold }}>?</span>
+          </div>
+        ) : (
+          <div key={i} style={{ position: "absolute", left: p.left, top: p.top, width: SIZE, height: SIZE, background: "#fff", borderRadius: 24, padding: A.fit === "contain" ? 14 : 8, boxShadow: "0 16px 36px rgba(0,0,0,0.55)", transform: `rotate(${p.rot}deg)`, zIndex: 2 + i }}>
+            <Img src={staticFile(`${A.dir}/${slug}.${A.ext}`)} style={{ width: "100%", height: "100%", objectFit: A.fit, borderRadius: 16 }} />
+          </div>
+        );
+      })}
+
+      {/* الرقم الضخم — دائرة انفجار مهيمنة، يمين الإطار */}
+      <div style={{ position: "absolute", right: 50, top: 220, width: 300, height: 300, borderRadius: "50%", background: `radial-gradient(circle at 35% 32%, ${G.gold} 0%, ${G.goldDeep} 70%)`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 20px 48px rgba(0,0,0,0.6)", border: "7px solid #fff", transform: "rotate(-6deg)", zIndex: 10 }}>
+        <span style={{ fontWeight: 900, fontSize: 150, color: G.blueDeep }}>{number}</span>
+      </div>
+
+      {/* شارة 1% */}
+      <div style={{ position: "absolute", right: 68, top: 540, width: 220, transform: "rotate(5deg)", background: G.blueDeep, color: G.gold, fontWeight: 900, fontSize: 26, textAlign: "center", lineHeight: 1.15, padding: "12px 12px", borderRadius: 16, border: `5px solid ${G.gold}`, boxShadow: "0 12px 30px rgba(0,0,0,0.5)", zIndex: 10 }}>{badge}</div>
+
+      {/* البومة الحقيقية — الزاوية السفلية اليسار، تحت أول صورة بالتتالي */}
+      <Img src={staticFile("brand/owl-cheer.png")} style={{ position: "absolute", left: 6, bottom: -6, width: 170, height: 170, objectFit: "contain", filter: "drop-shadow(0 14px 30px rgba(0,0,0,0.55))", zIndex: 20 }} />
+    </AbsoluteFill>
+  );
+};
