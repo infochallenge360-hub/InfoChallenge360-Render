@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "christ-the-redeemer",
+    "status": "OK",
+    "via": "Christ the Redeemer (statue)",
+    "size": 971115
+  },
+  {
+    "slug": "blue-mosque",
+    "status": "OK",
+    "via": "Blue Mosque, Istanbul",
+    "size": 360900
+  },
+  {
+    "slug": "moai-statues-easter-island",
+    "status": "OK",
+    "via": "Moai",
+    "size": 142075
+  },
+  {
+    "slug": "zhangjiajie-national-forest",
+    "status": "OK",
+    "via": "Zhangjiajie National Forest Park",
+    "size": 250078
+  },
+  {
+    "slug": "lalibela-rock-hewn-churches",
+    "status": "OK",
+    "via": "Rock-Hewn Churches, Lalibela",
+    "size": 504666
+  },
+  {
+    "slug": "kailasa-temple-ellora",
+    "status": "FAILED",
+    "tried": [
+      "Kailasa temple",
+      "Ellora Caves"
+    ]
+  },
+  {
+    "slug": "ales-stenar",
+    "status": "OK",
+    "via": "Ale's Stones",
+    "size": 291423
+  },
+  {
+    "slug": "marble-caves-chile",
+    "status": "FAILED",
+    "tried": [
+      "Marble Caves (Chile)",
+      "Marble Cathedral, Chile"
+    ]
+  },
+  {
+    "slug": "kawah-ijen",
+    "status": "OK",
+    "via": "Ijen",
+    "size": 177734
+  },
+  {
+    "slug": "rainbow-mountain-vinicunca",
+    "status": "OK",
+    "via": "Vinicunca",
+    "size": 288250
+  },
+  {
+    "slug": "gobustan-petroglyphs",
+    "status": "OK",
+    "via": "Gobustan Rock Art Cultural Landscape",
+    "size": 426745
+  }
+]

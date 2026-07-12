@@ -1,0 +1,381 @@
+[
+  {
+    "slug": "eiffel-tower",
+    "name": "Eiffel Tower",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "statue-of-liberty",
+    "name": "Statue of Liberty",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "great-wall-of-china",
+    "name": "Great Wall of China",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "taj-mahal",
+    "name": "Taj Mahal",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "great-pyramid-of-giza",
+    "name": "Great Pyramid of Giza",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "colosseum",
+    "name": "Colosseum",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "big-ben",
+    "name": "Big Ben",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "sydney-opera-house",
+    "name": "Sydney Opera House",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "leaning-tower-of-pisa",
+    "name": "Leaning Tower of Pisa",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "christ-the-redeemer",
+    "name": "Christ the Redeemer",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "machu-picchu",
+    "name": "Machu Picchu",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "mount-rushmore",
+    "name": "Mount Rushmore",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "golden-gate-bridge",
+    "name": "Golden Gate Bridge",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "stonehenge",
+    "name": "Stonehenge",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "niagara-falls",
+    "name": "Niagara Falls",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "burj-khalifa",
+    "name": "Burj Khalifa",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "petra",
+    "name": "Petra",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "mount-fuji",
+    "name": "Mount Fuji",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "neuschwanstein-castle",
+    "name": "Neuschwanstein Castle",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "angkor-wat",
+    "name": "Angkor Wat",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "chichen-itza",
+    "name": "Chichen Itza",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "acropolis-of-athens",
+    "name": "Acropolis of Athens",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "sagrada-familia",
+    "name": "Sagrada Familia",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "table-mountain",
+    "name": "Table Mountain",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "cn-tower",
+    "name": "CN Tower",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "forbidden-city",
+    "name": "Forbidden City",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "hagia-sophia",
+    "name": "Hagia Sophia",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "mont-saint-michel",
+    "name": "Mont Saint-Michel",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "blue-mosque",
+    "name": "Blue Mosque",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "moai-statues-easter-island",
+    "name": "Moai Statues of Easter Island",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "victoria-falls",
+    "name": "Victoria Falls",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "uluru",
+    "name": "Uluru",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "alhambra",
+    "name": "Alhambra",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "brandenburg-gate",
+    "name": "Brandenburg Gate",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "empire-state-building",
+    "name": "Empire State Building",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "palace-of-versailles",
+    "name": "Palace of Versailles",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "fushimi-inari-shrine",
+    "name": "Fushimi Inari Shrine",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "meteora",
+    "name": "Meteora",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bagan",
+    "name": "Bagan",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ha-long-bay",
+    "name": "Ha Long Bay",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "salar-de-uyuni",
+    "name": "Salar de Uyuni",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "wat-arun",
+    "name": "Wat Arun",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "chand-baori",
+    "name": "Chand Baori",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "trolltunga",
+    "name": "Trolltunga",
+    "status": "OK",
+    "size": 431801,
+    "wikiTitle": "Trolltunga",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Trolltunga_2017.jpg/1280px-Trolltunga_2017.jpg"
+  },
+  {
+    "slug": "zhangjiajie-national-forest",
+    "name": "Zhangjiajie National Forest",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "antelope-canyon",
+    "name": "Antelope Canyon",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "pamukkale",
+    "name": "Pamukkale",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ait-benhaddou",
+    "name": "Ait Benhaddou",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "church-of-the-savior-on-spilled-blood",
+    "name": "Church of the Savior on Spilled Blood",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "potala-palace",
+    "name": "Potala Palace",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "lalibela-rock-hewn-churches",
+    "name": "Rock-Hewn Churches of Lalibela",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "preikestolen",
+    "name": "Preikestolen",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "borobudur",
+    "name": "Borobudur",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "chocolate-hills",
+    "name": "Chocolate Hills",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kailasa-temple-ellora",
+    "name": "Kailasa Temple, Ellora Caves",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "longyou-caves",
+    "name": "Longyou Caves",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "hagar-qim",
+    "name": "Hagar Qim",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "hegra",
+    "name": "Hegra",
+    "status": "OK",
+    "size": 1397321,
+    "wikiTitle": "Hegra",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Hegra%2C_Al-Ula%2C_Saudi_Arabia.png/1280px-Hegra%2C_Al-Ula%2C_Saudi_Arabia.png"
+  },
+  {
+    "slug": "derinkuyu-underground-city",
+    "name": "Derinkuyu Underground City",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "great-zimbabwe",
+    "name": "Great Zimbabwe",
+    "status": "OK",
+    "size": 546710,
+    "wikiTitle": "Great Zimbabwe",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg/1280px-Conical_Tower_-_Great_Enclosure_III_%2833736918448%29.jpg"
+  },
+  {
+    "slug": "nan-madol",
+    "name": "Nan Madol",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ales-stenar",
+    "name": "Ales Stenar",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "marble-caves-chile",
+    "name": "Marble Caves",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "richat-structure",
+    "name": "Richat Structure",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "tsingy-de-bemaraha",
+    "name": "Tsingy de Bemaraha",
+    "status": "OK",
+    "size": 551939,
+    "wikiTitle": "Tsingy de Bemaraha Strict Nature Reserve",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Tsingy_de_Bemaraha_Strict_Nature_Reserve.jpg/1280px-Tsingy_de_Bemaraha_Strict_Nature_Reserve.jpg"
+  },
+  {
+    "slug": "kawah-ijen",
+    "name": "Kawah Ijen",
+    "status": "DL_FAIL",
+    "reason": "http-429",
+    "wikiTitle": "Ijen",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Sulfur_mining_in_Kawah_Ijen_-_Indonesia_-_20110608.jpg/1280px-Sulfur_mining_in_Kawah_Ijen_-_Indonesia_-_20110608.jpg"
+  },
+  {
+    "slug": "wave-rock",
+    "name": "Wave Rock",
+    "status": "OK",
+    "size": 285691,
+    "wikiTitle": "Wave Rock",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Wave_rock_%282005%29.jpg/1280px-Wave_rock_%282005%29.jpg"
+  },
+  {
+    "slug": "rainbow-mountain-vinicunca",
+    "name": "Rainbow Mountain (Vinicunca)",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "gobustan-petroglyphs",
+    "name": "Gobustan Petroglyphs",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "cave-of-crystals",
+    "name": "Cave of Crystals",
+    "status": "OK",
+    "size": 211669,
+    "wikiTitle": "Cave of the Crystals",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cristales_cueva_de_Naica.JPG/1280px-Cristales_cueva_de_Naica.JPG"
+  },
+  {
+    "slug": "cocora-valley",
+    "name": "Cocora Valley",
+    "status": "OK",
+    "size": 1102129,
+    "wikiTitle": "Cocora Valley",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Valle_del_cocora_-_general_view.jpg"
+  }
+]

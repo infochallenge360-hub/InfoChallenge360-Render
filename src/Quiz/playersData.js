@@ -1,0 +1,73 @@
+// «Guess the Footballer» — 60 نجماً حالياً (2026)، 4 مستويات، تلميحات دقيقة
+// ملاحظة: الأندية قد تتغيّر بالانتقالات — راجعها قبل النشر النهائي.
+export const PLAYERS = [
+  // ⭐ EASY (15) — أشهر نجوم العالم
+  { key: "messi", name: "Lionel Messi", iso: "ar", nat: "Argentina", club: "Inter Miami", pos: "Forward", age: "38", fact: "8x Ballon d'Or", level: "easy" },
+  { key: "ronaldo", name: "Cristiano Ronaldo", iso: "pt", nat: "Portugal", club: "Al Nassr", pos: "Forward", age: "41", fact: "All-time top scorer", level: "easy" },
+  { key: "mbappe", name: "Kylian Mbappé", iso: "fr", nat: "France", club: "Real Madrid", pos: "Forward", age: "27", fact: "World Cup 2018 Winner", level: "easy" },
+  { key: "haaland", name: "Erling Haaland", iso: "no", nat: "Norway", club: "Manchester City", pos: "Striker", age: "25", fact: "Premier League Golden Boot", level: "easy" },
+  { key: "bellingham", name: "Jude Bellingham", iso: "gb", nat: "England", club: "Real Madrid", pos: "Midfielder", age: "22", fact: "Wears the famous No. 5", level: "easy" },
+  { key: "vinicius", name: "Vinícius Júnior", iso: "br", nat: "Brazil", club: "Real Madrid", pos: "Winger", age: "25", fact: "UCL 2024 Final Scorer", level: "easy" },
+  { key: "neymar", name: "Neymar Jr", iso: "br", nat: "Brazil", club: "Santos", pos: "Forward", age: "34", fact: "Brazil's record scorer", level: "easy" },
+  { key: "salah", name: "Mohamed Salah", iso: "eg", nat: "Egypt", club: "Liverpool", pos: "Winger", age: "33", fact: "The Egyptian King", level: "easy" },
+  { key: "kane", name: "Harry Kane", iso: "gb", nat: "England", club: "Bayern Munich", pos: "Striker", age: "32", fact: "England's record scorer", level: "easy" },
+  { key: "debruyne", name: "Kevin De Bruyne", iso: "be", nat: "Belgium", club: "Napoli", pos: "Midfielder", age: "34", fact: "Assist machine", level: "easy" },
+  { key: "lewandowski", name: "Robert Lewandowski", iso: "pl", nat: "Poland", club: "Barcelona", pos: "Striker", age: "37", fact: "2x FIFA Best", level: "easy" },
+  { key: "yamal", name: "Lamine Yamal", iso: "es", nat: "Spain", club: "Barcelona", pos: "Winger", age: "18", fact: "Euro 2024 Wonderkid", level: "easy" },
+  { key: "modric", name: "Luka Modrić", iso: "hr", nat: "Croatia", club: "AC Milan", pos: "Midfielder", age: "40", fact: "2018 Ballon d'Or", level: "easy" },
+  { key: "griezmann", name: "Antoine Griezmann", iso: "fr", nat: "France", club: "Atlético Madrid", pos: "Forward", age: "34", fact: "2018 World Cup Winner", level: "easy" },
+  { key: "son", name: "Son Heung-min", iso: "kr", nat: "South Korea", club: "LAFC", pos: "Forward", age: "33", fact: "Asia's biggest star", level: "easy" },
+
+  // 🔵 MEDIUM (15)
+  { key: "rodri", name: "Rodri", iso: "es", nat: "Spain", club: "Manchester City", pos: "Midfielder", age: "29", fact: "2024 Ballon d'Or", level: "medium" },
+  { key: "bruno", name: "Bruno Fernandes", iso: "pt", nat: "Portugal", club: "Manchester United", pos: "Midfielder", age: "31", fact: "United's captain", level: "medium" },
+  { key: "vandijk", name: "Virgil van Dijk", iso: "nl", nat: "Netherlands", club: "Liverpool", pos: "Defender", age: "34", fact: "World-class centre-back", level: "medium" },
+  { key: "saka", name: "Bukayo Saka", iso: "gb", nat: "England", club: "Arsenal", pos: "Winger", age: "24", fact: "Arsenal's Starboy", level: "medium" },
+  { key: "foden", name: "Phil Foden", iso: "gb", nat: "England", club: "Manchester City", pos: "Midfielder", age: "25", fact: "The Stockport Iniesta", level: "medium" },
+  { key: "pedri", name: "Pedri", iso: "es", nat: "Spain", club: "Barcelona", pos: "Midfielder", age: "23", fact: "Euro 2024 champion", level: "medium" },
+  { key: "gavi", name: "Gavi", iso: "es", nat: "Spain", club: "Barcelona", pos: "Midfielder", age: "21", fact: "Barça academy gem", level: "medium" },
+  { key: "osimhen", name: "Victor Osimhen", iso: "ng", nat: "Nigeria", club: "Galatasaray", pos: "Striker", age: "27", fact: "Serie A top scorer 2023", level: "medium" },
+  { key: "leao", name: "Rafael Leão", iso: "pt", nat: "Portugal", club: "AC Milan", pos: "Winger", age: "26", fact: "Serie A MVP 2022", level: "medium" },
+  { key: "vlahovic", name: "Dušan Vlahović", iso: "rs", nat: "Serbia", club: "Juventus", pos: "Striker", age: "26", fact: "Powerful No. 9", level: "medium" },
+  { key: "martinez", name: "Lautaro Martínez", iso: "ar", nat: "Argentina", club: "Inter Milan", pos: "Striker", age: "28", fact: "Copa América 2024 winner", level: "medium" },
+  { key: "alvarez", name: "Julián Álvarez", iso: "ar", nat: "Argentina", club: "Atlético Madrid", pos: "Forward", age: "26", fact: "World Cup 2022 winner", level: "medium" },
+  { key: "wirtz", name: "Florian Wirtz", iso: "de", nat: "Germany", club: "Liverpool", pos: "Midfielder", age: "22", fact: "German wonderkid", level: "medium" },
+  { key: "musiala", name: "Jamal Musiala", iso: "de", nat: "Germany", club: "Bayern Munich", pos: "Midfielder", age: "23", fact: "Bayern's magician", level: "medium" },
+  { key: "rice", name: "Declan Rice", iso: "gb", nat: "England", club: "Arsenal", pos: "Midfielder", age: "27", fact: "Record British transfer", level: "medium" },
+
+  // 🟠 HARD (15)
+  { key: "dembele", name: "Ousmane Dembélé", iso: "fr", nat: "France", club: "Paris Saint-Germain", pos: "Winger", age: "28", fact: "Two-footed dribbler", level: "hard" },
+  { key: "kvara", name: "Khvicha Kvaratskhelia", iso: "ge", nat: "Georgia", club: "Paris Saint-Germain", pos: "Winger", age: "25", fact: "Kvaradona", level: "hard" },
+  { key: "bruno2", name: "Bruno Guimarães", iso: "br", nat: "Brazil", club: "Newcastle United", pos: "Midfielder", age: "28", fact: "Newcastle's engine", level: "hard" },
+  { key: "gyokeres", name: "Viktor Gyökeres", iso: "se", nat: "Sweden", club: "Arsenal", pos: "Striker", age: "27", fact: "Goal machine", level: "hard" },
+  { key: "olise", name: "Michael Olise", iso: "fr", nat: "France", club: "Bayern Munich", pos: "Winger", age: "24", fact: "Left-footed creator", level: "hard" },
+  { key: "wiliams", name: "Nico Williams", iso: "es", nat: "Spain", club: "Athletic Bilbao", pos: "Winger", age: "23", fact: "Euro 2024 final scorer", level: "hard" },
+  { key: "gonzalez", name: "Nico González", iso: "ar", nat: "Argentina", club: "Juventus", pos: "Winger", age: "27", fact: "Argentina winger", level: "hard" },
+  { key: "hakimi", name: "Achraf Hakimi", iso: "ma", nat: "Morocco", club: "Paris Saint-Germain", pos: "Defender", age: "27", fact: "Morocco 2022 hero", level: "hard" },
+  { key: "theo", name: "Theo Hernández", iso: "fr", nat: "France", club: "Al Hilal", pos: "Defender", age: "28", fact: "Attacking left-back", level: "hard" },
+  { key: "mainoo", name: "Kobbie Mainoo", iso: "gb", nat: "England", club: "Manchester United", pos: "Midfielder", age: "20", fact: "United academy talent", level: "hard" },
+  { key: "wharton", name: "Adam Wharton", iso: "gb", nat: "England", club: "Crystal Palace", pos: "Midfielder", age: "21", fact: "Deep-lying playmaker", level: "hard" },
+  { key: "guler", name: "Arda Güler", iso: "tr", nat: "Türkiye", club: "Real Madrid", pos: "Midfielder", age: "20", fact: "Turkish jewel", level: "hard" },
+  { key: "endrick", name: "Endrick", iso: "br", nat: "Brazil", club: "Real Madrid", pos: "Forward", age: "19", fact: "Brazilian prodigy", level: "hard" },
+  { key: "cubarsi", name: "Pau Cubarsí", iso: "es", nat: "Spain", club: "Barcelona", pos: "Defender", age: "18", fact: "Barça's young rock", level: "hard" },
+  { key: "zubimendi", name: "Martín Zubimendi", iso: "es", nat: "Spain", club: "Arsenal", pos: "Midfielder", age: "26", fact: "Spain's anchor", level: "hard" },
+
+  // 🔴 IMPOSSIBLE (15) — نجوم أقل شهرة عالمياً
+  { key: "isak", name: "Alexander Isak", iso: "se", nat: "Sweden", club: "Liverpool", pos: "Striker", age: "26", fact: "Elegant finisher", level: "impossible" },
+  { key: "szobo", name: "Dominik Szoboszlai", iso: "hu", nat: "Hungary", club: "Liverpool", pos: "Midfielder", age: "25", fact: "Hungary captain", level: "impossible" },
+  { key: "xavi", name: "Xavi Simons", iso: "nl", nat: "Netherlands", club: "RB Leipzig", pos: "Midfielder", age: "22", fact: "Dutch creator", level: "impossible" },
+  { key: "openda", name: "Loïs Openda", iso: "be", nat: "Belgium", club: "RB Leipzig", pos: "Striker", age: "25", fact: "Rapid Belgian striker", level: "impossible" },
+  { key: "hojlund", name: "Rasmus Højlund", iso: "dk", nat: "Denmark", club: "Napoli", pos: "Striker", age: "23", fact: "Danish target man", level: "impossible" },
+  { key: "schlotter", name: "Nick Woltemade", iso: "de", nat: "Germany", club: "Newcastle United", pos: "Striker", age: "23", fact: "Towering forward", level: "impossible" },
+  { key: "baleba", name: "Carlos Baleba", iso: "cm", nat: "Cameroon", club: "Brighton", pos: "Midfielder", age: "21", fact: "Rising midfielder", level: "impossible" },
+  { key: "doue", name: "Désiré Doué", iso: "fr", nat: "France", club: "Paris Saint-Germain", pos: "Midfielder", age: "20", fact: "UCL 2025 final star", level: "impossible" },
+  { key: "kvara2", name: "Georgiy Sudakov", iso: "ua", nat: "Ukraine", club: "Benfica", pos: "Midfielder", age: "23", fact: "Ukrainian playmaker", level: "impossible" },
+  { key: "gittens", name: "Jamie Gittens", iso: "gb", nat: "England", club: "Chelsea", pos: "Winger", age: "21", fact: "Explosive winger", level: "impossible" },
+  { key: "yildiz", name: "Kenan Yıldız", iso: "tr", nat: "Türkiye", club: "Juventus", pos: "Forward", age: "20", fact: "Juve's No. 10", level: "impossible" },
+  { key: "camavinga", name: "Eduardo Camavinga", iso: "fr", nat: "France", club: "Real Madrid", pos: "Midfielder", age: "23", fact: "Versatile midfielder", level: "impossible" },
+  { key: "tchouameni", name: "Aurélien Tchouaméni", iso: "fr", nat: "France", club: "Real Madrid", pos: "Midfielder", age: "26", fact: "Defensive midfielder", level: "impossible" },
+  { key: "cherki", name: "Rayan Cherki", iso: "fr", nat: "France", club: "Manchester City", pos: "Midfielder", age: "22", fact: "Flair playmaker", level: "impossible" },
+  { key: "kluivert", name: "Justin Kluivert", iso: "nl", nat: "Netherlands", club: "Bournemouth", pos: "Winger", age: "26", fact: "Son of Patrick Kluivert", level: "impossible" },
+];
+
+export const PLAYER_LEVELS = ["easy", "medium", "hard", "impossible"];

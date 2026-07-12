@@ -1,0 +1,369 @@
+[
+  {
+    "slug": "paris",
+    "city": "Paris",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "london",
+    "city": "London",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "tokyo",
+    "city": "Tokyo",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "washington-dc",
+    "city": "Washington, D.C.",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "rome",
+    "city": "Rome",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "berlin",
+    "city": "Berlin",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "moscow",
+    "city": "Moscow",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "beijing",
+    "city": "Beijing",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "cairo",
+    "city": "Cairo",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "seoul",
+    "city": "Seoul",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bangkok",
+    "city": "Bangkok",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "new-delhi",
+    "city": "New Delhi",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "mexico-city",
+    "city": "Mexico City",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "buenos-aires",
+    "city": "Buenos Aires",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "madrid",
+    "city": "Madrid",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "amsterdam",
+    "city": "Amsterdam",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "brasilia",
+    "city": "Brasília",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "athens",
+    "city": "Athens",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "vienna",
+    "city": "Vienna",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "brussels",
+    "city": "Brussels",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "dublin",
+    "city": "Dublin",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "stockholm",
+    "city": "Stockholm",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "warsaw",
+    "city": "Warsaw",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "budapest",
+    "city": "Budapest",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "jakarta",
+    "city": "Jakarta",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "manila",
+    "city": "Manila",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kuala-lumpur",
+    "city": "Kuala Lumpur",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "riyadh",
+    "city": "Riyadh",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "hanoi",
+    "city": "Hanoi",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ottawa",
+    "city": "Ottawa",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "havana",
+    "city": "Havana",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "lima",
+    "city": "Lima",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bogota",
+    "city": "Bogotá",
+    "status": "OK",
+    "size": 442109,
+    "wikiTitle": "Bogotá",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bogota%2C_Colombia_%2836668708290%29.jpg/1280px-Bogota%2C_Colombia_%2836668708290%29.jpg"
+  },
+  {
+    "slug": "nairobi",
+    "city": "Nairobi",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "addis-ababa",
+    "city": "Addis Ababa",
+    "status": "OK",
+    "size": 247470,
+    "wikiTitle": "Addis Ababa",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Addis_in_night.jpg/1280px-Addis_in_night.jpg"
+  },
+  {
+    "slug": "canberra",
+    "city": "Canberra",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bern",
+    "city": "Bern",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "reykjavik",
+    "city": "Reykjavik",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "helsinki",
+    "city": "Helsinki",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bratislava",
+    "city": "Bratislava",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "zagreb",
+    "city": "Zagreb",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "sofia",
+    "city": "Sofia",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bucharest",
+    "city": "Bucharest",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ankara",
+    "city": "Ankara",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kathmandu",
+    "city": "Kathmandu",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "islamabad",
+    "city": "Islamabad",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kabul",
+    "city": "Kabul",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "phnom-penh",
+    "city": "Phnom Penh",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ulaanbaatar",
+    "city": "Ulaanbaatar",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "wellington",
+    "city": "Wellington",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "quito",
+    "city": "Quito",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "panama-city",
+    "city": "Panama City",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kigali",
+    "city": "Kigali",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "astana",
+    "city": "Astana",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "naypyidaw",
+    "city": "Naypyidaw",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "ouagadougou",
+    "city": "Ouagadougou",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "vaduz",
+    "city": "Vaduz",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bissau",
+    "city": "Bissau",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "vientiane",
+    "city": "Vientiane",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "thimphu",
+    "city": "Thimphu",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bandar-seri-begawan",
+    "city": "Bandar Seri Begawan",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "male",
+    "city": "Malé",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "suva",
+    "city": "Suva",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "nukualofa",
+    "city": "Nuku'alofa",
+    "status": "DL_FAIL",
+    "reason": "http-429",
+    "wikiTitle": "Nukuʻalofa",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Royal_Palace%2C_Nuku%27alofa%2C_Nov_18.jpg/1280px-Royal_Palace%2C_Nuku%27alofa%2C_Nov_18.jpg"
+  },
+  {
+    "slug": "apia",
+    "city": "Apia",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "majuro",
+    "city": "Majuro",
+    "status": "OK",
+    "size": 319071,
+    "wikiTitle": "Majuro",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Eneko_Islet_02.JPG/1280px-Eneko_Islet_02.JPG"
+  },
+  {
+    "slug": "praia",
+    "city": "Praia",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "moroni",
+    "city": "Moroni",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "yamoussoukro",
+    "city": "Yamoussoukro",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "juba",
+    "city": "Juba",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "mogadishu",
+    "city": "Mogadishu",
+    "status": "SKIP_EXISTS"
+  }
+]

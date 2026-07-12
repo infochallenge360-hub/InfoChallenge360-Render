@@ -1,0 +1,477 @@
+[
+  {
+    "slug": "sushi",
+    "dish": "Sushi",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "pizza-margherita",
+    "dish": "Pizza Margherita",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "tacos",
+    "dish": "Tacos",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "croissant",
+    "dish": "Croissant",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "hamburger",
+    "dish": "Hamburger",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "butter-chicken",
+    "dish": "Butter Chicken",
+    "status": "OK",
+    "size": 567885,
+    "wikiTitle": "Butter chicken",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg/1280px-Butter_Chicken_%26_Butter_Naan_-_Home_-_Chandigarh_-_India_-_0006.jpg"
+  },
+  {
+    "slug": "peking-duck",
+    "dish": "Peking Duck",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "pad-thai",
+    "dish": "Pad Thai",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "kimchi",
+    "dish": "Kimchi",
+    "status": "SKIP_EXISTS"
+  },
+  {
+    "slug": "bratwurst",
+    "dish": "Bratwurst",
+    "status": "OK",
+    "size": 206483,
+    "wikiTitle": "Bratwurst",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/German_Bratw%C3%BCrste.jpg"
+  },
+  {
+    "slug": "paella",
+    "dish": "Paella",
+    "status": "OK",
+    "size": 403262,
+    "wikiTitle": "Paella",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/01_Paella_Valenciana_original.jpg/1280px-01_Paella_Valenciana_original.jpg"
+  },
+  {
+    "slug": "pho",
+    "dish": "Pho",
+    "status": "OK",
+    "size": 335067,
+    "wikiTitle": "Pho",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Bowl_of_Meatball_pho.jpg/1280px-Bowl_of_Meatball_pho.jpg"
+  },
+  {
+    "slug": "cheese-fondue",
+    "dish": "Cheese Fondue",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "moussaka",
+    "dish": "Moussaka",
+    "status": "OK",
+    "size": 180054,
+    "wikiTitle": "Moussaka",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/MussakasMeMelitsanesKePatates01.JPG/1280px-MussakasMeMelitsanesKePatates01.JPG"
+  },
+  {
+    "slug": "pierogi",
+    "dish": "Pierogi",
+    "status": "OK",
+    "size": 355332,
+    "wikiTitle": "Pierogi",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pierogi_z_mas%C5%82em_-_2023.03.31.jpg/1280px-Pierogi_z_mas%C5%82em_-_2023.03.31.jpg"
+  },
+  {
+    "slug": "goulash",
+    "dish": "Goulash",
+    "status": "OK",
+    "size": 336483,
+    "wikiTitle": "Goulash",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Gulyas080.jpg"
+  },
+  {
+    "slug": "fish-and-chips",
+    "dish": "Fish and Chips",
+    "status": "OK",
+    "size": 247501,
+    "wikiTitle": "Fish and chips",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Fish_and_chips_blackpool.jpg/1280px-Fish_and_chips_blackpool.jpg"
+  },
+  {
+    "slug": "turkish-delight",
+    "dish": "Turkish Delight",
+    "status": "DL_FAIL",
+    "reason": "http-429",
+    "wikiTitle": "Turkish delight",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/TurkishDelightDisplay.jpg/1280px-TurkishDelightDisplay.jpg"
+  },
+  {
+    "slug": "chicken-tagine",
+    "dish": "Chicken Tagine",
+    "status": "OK",
+    "size": 314789,
+    "wikiTitle": "Tagine",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg"
+  },
+  {
+    "slug": "ghormeh-sabzi",
+    "dish": "Ghormeh Sabzi",
+    "status": "OK",
+    "size": 569325,
+    "wikiTitle": "Ghormeh sabzi",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ghormeh_Sabzi.JPG/1280px-Ghormeh_Sabzi.JPG"
+  },
+  {
+    "slug": "asado",
+    "dish": "Asado",
+    "status": "OK",
+    "size": 195275,
+    "wikiTitle": "Asado",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Asado_2005.jpg"
+  },
+  {
+    "slug": "feijoada",
+    "dish": "Feijoada",
+    "status": "OK",
+    "size": 477901,
+    "wikiTitle": "Feijoada",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Feijoada_%C3%A0_transmontada.jpg"
+  },
+  {
+    "slug": "ceviche",
+    "dish": "Ceviche",
+    "status": "OK",
+    "size": 280044,
+    "wikiTitle": "Ceviche",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cebiche_de_corvina.JPG/1280px-Cebiche_de_corvina.JPG"
+  },
+  {
+    "slug": "rendang",
+    "dish": "Rendang",
+    "status": "OK",
+    "size": 263240,
+    "wikiTitle": "Rendang",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Rendang_daging_sapi_asli_Padang.JPG/1280px-Rendang_daging_sapi_asli_Padang.JPG"
+  },
+  {
+    "slug": "chicken-adobo",
+    "dish": "Chicken Adobo",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "borscht",
+    "dish": "Borscht",
+    "status": "OK",
+    "size": 232447,
+    "wikiTitle": "Borscht",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Borscht_served.jpg/1280px-Borscht_served.jpg"
+  },
+  {
+    "slug": "pastel-de-nata",
+    "dish": "Pastel de Nata",
+    "status": "OK",
+    "size": 302983,
+    "wikiTitle": "Pastel de nata",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Pasteis_de_Belem.jpg/1280px-Pasteis_de_Belem.jpg"
+  },
+  {
+    "slug": "belgian-waffles",
+    "dish": "Belgian Waffles",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "wiener-schnitzel",
+    "dish": "Wiener Schnitzel",
+    "status": "OK",
+    "size": 255780,
+    "wikiTitle": "Wiener schnitzel",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/1280px-Wiener-Schnitzel02.jpg"
+  },
+  {
+    "slug": "nasi-lemak",
+    "dish": "Nasi Lemak",
+    "status": "OK",
+    "size": 458848,
+    "wikiTitle": "Nasi lemak",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Pedas%2C_di_Penang_Summer_Restaurant.jpg/1280px-Nasi_Lemak_dengan_Chili_Nasi_Lemak_dan_Sotong_Pedas%2C_di_Penang_Summer_Restaurant.jpg"
+  },
+  {
+    "slug": "chili-crab",
+    "dish": "Chili Crab",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "kottu-roti",
+    "dish": "Kottu Roti",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "koshari",
+    "dish": "Koshari",
+    "status": "OK",
+    "size": 437216,
+    "wikiTitle": "Koshary",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/1280px-Egyptian_food_Koshary.jpg"
+  },
+  {
+    "slug": "thieboudienne",
+    "dish": "Thieboudienne",
+    "status": "OK",
+    "size": 291059,
+    "wikiTitle": "Thieboudienne",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Thieboudienne.JPG/1280px-Thieboudienne.JPG"
+  },
+  {
+    "slug": "bandeja-paisa",
+    "dish": "Bandeja Paisa",
+    "status": "DL_FAIL",
+    "reason": "http-429",
+    "wikiTitle": "Bandeja paisa",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bandeja_paisa%2C_plato_Colombiano.jpg/1280px-Bandeja_paisa%2C_plato_Colombiano.jpg"
+  },
+  {
+    "slug": "swedish-meatballs",
+    "dish": "Swedish Meatballs",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "doro-wat",
+    "dish": "Doro Wat",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "egusi-soup",
+    "dish": "Egusi Soup",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "plov",
+    "dish": "Plov",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "khachapuri",
+    "dish": "Khachapuri",
+    "status": "OK",
+    "size": 303494,
+    "wikiTitle": "Khachapuri",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg/1280px-Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg"
+  },
+  {
+    "slug": "saltenas",
+    "dish": "Salteñas",
+    "status": "OK",
+    "size": 393393,
+    "wikiTitle": "Salteña",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Salte%C3%B1as_de_Bolivia.jpg/1280px-Salte%C3%B1as_de_Bolivia.jpg"
+  },
+  {
+    "slug": "pastel-de-choclo",
+    "dish": "Pastel de Choclo",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "ropa-vieja",
+    "dish": "Ropa Vieja",
+    "status": "OK",
+    "size": 284721,
+    "wikiTitle": "Ropa vieja",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cubanfood.jpg/1280px-Cubanfood.jpg"
+  },
+  {
+    "slug": "fish-amok",
+    "dish": "Fish Amok",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "larb",
+    "dish": "Larb",
+    "status": "OK",
+    "size": 217311,
+    "wikiTitle": "Larb",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/LaoFood_LarbNeua.JPG/1280px-LaoFood_LarbNeua.JPG"
+  },
+  {
+    "slug": "mohinga",
+    "dish": "Mohinga",
+    "status": "OK",
+    "size": 126086,
+    "wikiTitle": "Mohinga",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mohnga.jpg"
+  },
+  {
+    "slug": "dal-bhat",
+    "dish": "Dal Bhat",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "ema-datshi",
+    "dish": "Ema Datshi",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "hakarl",
+    "dish": "Hákarl",
+    "status": "OK",
+    "size": 420200,
+    "wikiTitle": "Hákarl",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Hakarl_near_Bjarnah%C3%B6fn_in_Iceland.JPG/1280px-Hakarl_near_Bjarnah%C3%B6fn_in_Iceland.JPG"
+  },
+  {
+    "slug": "hangi",
+    "dish": "Hangi",
+    "status": "OK",
+    "size": 305066,
+    "wikiTitle": "Hāngī",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Hangi_prepare.jpg/1280px-Hangi_prepare.jpg"
+  },
+  {
+    "slug": "karjalanpiirakka",
+    "dish": "Karjalanpiirakka",
+    "status": "OK",
+    "size": 205743,
+    "wikiTitle": "Karelian pasty",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Karjalanpiirakka-20060227.jpg/1280px-Karjalanpiirakka-20060227.jpg"
+  },
+  {
+    "slug": "bobotie",
+    "dish": "Bobotie",
+    "status": "OK",
+    "size": 339942,
+    "wikiTitle": "Bobotie",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Bobotie%2C_South_African_dish.jpg/1280px-Bobotie%2C_South_African_dish.jpg"
+  },
+  {
+    "slug": "buuz",
+    "dish": "Buuz",
+    "status": "OK",
+    "size": 252852,
+    "wikiTitle": "Buuz",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Buuz.jpg/1280px-Buuz.jpg"
+  },
+  {
+    "slug": "beshbarmak",
+    "dish": "Beshbarmak",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "cepelinai",
+    "dish": "Cepelinai",
+    "status": "OK",
+    "size": 126116,
+    "wikiTitle": "Cepelinai",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg/1280px-Cepelinai_2%2C_Vilnius%2C_Lithuania_-_Diliff.jpg"
+  },
+  {
+    "slug": "mulgipuder",
+    "dish": "Mulgipuder",
+    "status": "DL_FAIL",
+    "reason": "http-429",
+    "wikiTitle": "Mulgipuder",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Mulgipuder.jpg/1280px-Mulgipuder.jpg"
+  },
+  {
+    "slug": "pastizzi",
+    "dish": "Pastizzi",
+    "status": "OK",
+    "size": 22355,
+    "wikiTitle": "Pastizz",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Malta_Pastizzi.JPG"
+  },
+  {
+    "slug": "grey-peas-with-bacon",
+    "dish": "Grey Peas with Bacon",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "draniki",
+    "dish": "Draniki",
+    "status": "OK",
+    "size": 228612,
+    "wikiTitle": "Potato pancake",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Latkas.jpg/1280px-Latkas.jpg"
+  },
+  {
+    "slug": "mamaliga",
+    "dish": "Mămăligă",
+    "status": "OK",
+    "size": 594713,
+    "wikiTitle": "Mămăligă",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Mamaliga.jpg"
+  },
+  {
+    "slug": "sopa-paraguaya",
+    "dish": "Sopa Paraguaya",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "pepperpot",
+    "dish": "Pepperpot",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "pom",
+    "dish": "Pom",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "skoudehkaris",
+    "dish": "Skoudehkaris",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "laplap",
+    "dish": "Laplap",
+    "status": "OK",
+    "size": 282666,
+    "wikiTitle": "Laplap",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Laplap_sosor.jpg/1280px-Laplap_sosor.jpg"
+  },
+  {
+    "slug": "kokoda",
+    "dish": "Kokoda",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "mumu",
+    "dish": "Mumu",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "qurutob",
+    "dish": "Qurutob",
+    "status": "OK",
+    "size": 390371,
+    "wikiTitle": "Qurutob",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Kurutob_Tajikistan.JPG/1280px-Kurutob_Tajikistan.JPG"
+  },
+  {
+    "slug": "kuurdak",
+    "dish": "Kuurdak",
+    "status": "OK",
+    "size": 284648,
+    "wikiTitle": "Kuurdak",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Kazakh_quwyrdaq.jpg"
+  },
+  {
+    "slug": "langouste-a-la-vanille",
+    "dish": "Langouste à la Vanille",
+    "status": "NO_IMAGE"
+  },
+  {
+    "slug": "gutap",
+    "dish": "Gutap",
+    "status": "NO_IMAGE"
+  }
+]

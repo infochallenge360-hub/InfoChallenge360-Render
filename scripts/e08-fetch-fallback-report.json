@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "cheese-fondue",
+    "status": "OK",
+    "via": "Fondue",
+    "size": 614490
+  },
+  {
+    "slug": "turkish-delight",
+    "status": "OK",
+    "via": "Turkish delight",
+    "size": 405765
+  },
+  {
+    "slug": "chicken-adobo",
+    "status": "OK",
+    "via": "Adobo",
+    "size": 169356
+  },
+  {
+    "slug": "belgian-waffles",
+    "status": "OK",
+    "via": "Waffle",
+    "size": 253668
+  },
+  {
+    "slug": "chili-crab",
+    "status": "FAILED",
+    "tried": [
+      "Chilli crab",
+      "Chili crab (dish)"
+    ]
+  },
+  {
+    "slug": "kottu-roti",
+    "status": "OK",
+    "via": "Kottu",
+    "size": 466419
+  },
+  {
+    "slug": "bandeja-paisa",
+    "status": "OK",
+    "via": "Bandeja paisa",
+    "size": 428292
+  },
+  {
+    "slug": "swedish-meatballs",
+    "status": "OK",
+    "via": "Meatball",
+    "size": 304307
+  },
+  {
+    "slug": "doro-wat",
+    "status": "FAILED",
+    "tried": [
+      "Doro wat",
+      "Doro Wat (dish)"
+    ]
+  },
+  {
+    "slug": "egusi-soup",
+    "status": "OK",
+    "via": "Egusi",
+    "size": 251574
+  },
+  {
+    "slug": "plov",
+    "status": "OK",
+    "via": "Pilaf",
+    "size": 94450
+  },
+  {
+    "slug": "pastel-de-choclo",
+    "status": "OK",
+    "via": "Pastel de choclo",
+    "size": 362478
+  },
+  {
+    "slug": "fish-amok",
+    "status": "OK",
+    "via": "Fish amok",
+    "size": 180175
+  },
+  {
+    "slug": "dal-bhat",
+    "status": "FAILED",
+    "tried": [
+      "Dal bhat",
+      "Dal Bhat"
+    ]
+  },
+  {
+    "slug": "ema-datshi",
+    "status": "OK",
+    "via": "Ema datshi",
+    "size": 153837
+  },
+  {
+    "slug": "beshbarmak",
+    "status": "FAILED",
+    "tried": [
+      "Beshbarmak",
+      "Besbarmak"
+    ]
+  },
+  {
+    "slug": "mulgipuder",
+    "status": "OK",
+    "via": "Mulgipuder",
+    "size": 241408
+  },
+  {
+    "slug": "grey-peas-with-bacon",
+    "status": "OK",
+    "via": "Grey peas",
+    "size": 312108
+  },
+  {
+    "slug": "sopa-paraguaya",
+    "status": "OK",
+    "via": "Sopa paraguaya",
+    "size": 77462
+  },
+  {
+    "slug": "pepperpot",
+    "status": "FAILED",
+    "tried": [
+      "Pepperpot (dish)",
+      "Pepperpot"
+    ]
+  },
+  {
+    "slug": "pom",
+    "status": "OK",
+    "via": "Pom (dish)",
+    "size": 97057
+  },
+  {
+    "slug": "skoudehkaris",
+    "status": "OK",
+    "via": "Bariis iskukaris",
+    "size": 371000
+  },
+  {
+    "slug": "kokoda",
+    "status": "OK",
+    "via": "'Ota 'ika",
+    "size": 79838
+  },
+  {
+    "slug": "mumu",
+    "status": "FAILED",
+    "tried": [
+      "Mumu (cooking)",
+      "Umu"
+    ]
+  },
+  {
+    "slug": "langouste-a-la-vanille",
+    "status": "FAILED",
+    "tried": [
+      "Langouste à la vanille",
+      "Comorian cuisine"
+    ]
+  },
+  {
+    "slug": "gutap",
+    "status": "OK",
+    "via": "Turkmen cuisine",
+    "size": 345986
+  }
+]
