@@ -1,14 +1,12 @@
-name: Render Episode
+name: Render Episodes (Batch)
 
 on:
   workflow_dispatch:
     inputs:
-      composition_id:
-        description: "Remotion composition ID (e.g. E17DesertsQuiz, ThumbE17Deserts)"
-        required: true
-        type: string
-      output_name:
-        description: "Output filename (e.g. InfoChallenge360-E17-Deserts.mp4)"
+      jobs_json:
+        description: >
+          JSON array of jobs to render in parallel. Each item:
+          {"command":"render"|"still","composition_id":"E33CostumeQuiz","output_name":"InfoChallenge360-E33-Costumes.mp4"}
         required: true
         type: string
 
@@ -16,6 +14,10 @@ jobs:
   render:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        job: ${{ fromJson(inputs.jobs_json) }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,12 +39,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Render
-        run: npx remotion render src/index.js "${{ inputs.composition_id }}" "out/${{ inputs.output_name }}" --concurrency=2
+      - name: Render or Still
+        run: |
+          mkdir -p out
+          if [ "${{ matrix.job.command }}" = "still" ]; then
+            npx remotion still src/index.js "${{ matrix.job.composition_id }}" "out/${{ matrix.job.output_name }}"
+          else
+            npx remotion render src/index.js "${{ matrix.job.composition_id }}" "out/${{ matrix.job.output_name }}" --concurrency=2
+          fi
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.output_name }}
-          path: out/${{ inputs.output_name }}
+          name: ${{ matrix.job.output_name }}
+          path: out/${{ matrix.job.output_name }}
           retention-days: 14

@@ -32,6 +32,20 @@ const INTROS = {
   "vo-intro-island": "Guess the island! Can you name all seventy one?",
   "vo-intro-volcano": "Guess the volcano! Can you name all seventy one?",
   "vo-intro-desert": "Guess the desert! Can you name all seventy one?",
+  "vo-intro-waterfall": "Guess the waterfall! Can you name all seventy one?",
+  "vo-intro-lake": "Guess the lake! Can you name all seventy one?",
+  "vo-intro-river": "Guess the river! Can you name all seventy one?",
+  "vo-intro-skyline": "Guess the city by its skyline! Can you name all seventy one?",
+  "vo-intro-bird": "Guess the bird! Can you name all seventy one?",
+  "vo-intro-dogbreed": "Guess the dog breed! Can you name all seventy one?",
+  "vo-intro-reptile": "Guess the reptile! Can you name all seventy one?",
+  "vo-intro-clubbadge": "Guess the football club! Can you name all seventy one?",
+  "vo-intro-airline": "Guess the airline! Can you name all seventy one?",
+  "vo-intro-fastfood": "Guess the fast food chain! Can you name all seventy one?",
+  "vo-intro-moviestudio": "Guess the movie studio! Can you name all seventy one?",
+  "vo-intro-fashion": "Guess the fashion brand! Can you name all seventy one?",
+  "vo-intro-console": "Guess the gaming console! Can you name all seventy one?",
+  "vo-intro-castle": "Guess the castle! Can you name all seventy one?",
 };
 
 function wavDuration(path) {
@@ -50,6 +64,7 @@ function wavDuration(path) {
 let ok = 0;
 for (const [name, text] of Object.entries(INTROS)) {
   const out = `${DEST}/${name}.wav`;
+  if (existsSync(out) && statSync(out).size > 8000) { ok++; continue; }
   const TMP = `out/_intro-${name}-${process.pid}.mp3`;
   try {
     sh(`python -m edge_tts --voice ${VOICE} --rate=${RATE} --text ${JSON.stringify(text)} --write-media ${TMP}`);
