@@ -108,6 +108,8 @@ import { GAMING_CONSOLE_LOGOS_E30 } from "./Quiz/gamingConsoleLogosE30Data";
 import { GAMING_CONSOLE_LOGOS_E30_FACTS } from "./Quiz/gamingConsoleLogosE30Facts";
 import { FAMOUS_CASTLES_E32 } from "./Quiz/famousCastlesE32Data";
 import { FAMOUS_CASTLES_E32_FACTS } from "./Quiz/famousCastlesE32Facts";
+import { TRADITIONAL_COSTUMES_E33 } from "./Quiz/traditionalCostumesE33Data";
+import { TRADITIONAL_COSTUMES_E33_FACTS } from "./Quiz/traditionalCostumesE33Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -149,6 +151,7 @@ const E28_INFOCFG = { items: MOVIE_STUDIO_LOGOS_E28, facts: MOVIE_STUDIO_LOGOS_E
 const E29_INFOCFG = { items: FASHION_BRAND_LOGOS_E29, facts: FASHION_BRAND_LOGOS_E29_FACTS, topicWord: "BRAND", topicPlural: "BRANDS", dir: "fashion", ext: "png", fit: "contain", voPrefix: "fs-", nameField: "name", introVo: "vo-intro-fashion", coldSlug: "" };
 const E30_INFOCFG = { items: GAMING_CONSOLE_LOGOS_E30, facts: GAMING_CONSOLE_LOGOS_E30_FACTS, topicWord: "CONSOLE", topicPlural: "CONSOLES", dir: "consoles", ext: "png", fit: "contain", voPrefix: "gc-", nameField: "name", introVo: "vo-intro-console", coldSlug: "" };
 const E32_INFOCFG = { items: FAMOUS_CASTLES_E32, facts: FAMOUS_CASTLES_E32_FACTS, topicWord: "CASTLE", topicPlural: "CASTLES", dir: "castles", ext: "jpg", fit: "cover", voPrefix: "cl-", nameField: "name", introVo: "vo-intro-castle", coldSlug: "" };
+const E33_INFOCFG = { items: TRADITIONAL_COSTUMES_E33, facts: TRADITIONAL_COSTUMES_E33_FACTS, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "costumes", ext: "jpg", fit: "cover", voPrefix: "tc-", nameField: "country", introVo: "vo-intro-costume", coldSlug: "" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -417,6 +420,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE32CastleHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "castles-e32-thumb", heroSlug: "neuschwanstein-castle", line1: "GUESS THE", word: "CASTLE?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE32CastleSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "castles-e32-thumb", easySlug: "neuschwanstein-castle", hardSlug: "shuri-castle", word: "CASTLE?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE32CastleNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "castles-e32-thumb", cascade: ["neuschwanstein-castle", "windsor-castle", "edinburgh-castle", "?"], line1: "CAN YOU NAME ALL", word: "CASTLE?", number: "71", badge: "Only 1% get 100%" }} />
+      <Composition id="E33CostumeQuiz" component={QuizV2} durationInFrames={quizFrames(E33_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E33_INFOCFG }} />
+      <Composition id="ThumbE33Costume" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "costumes-e33-thumb", grid: ["japan-kimono", "india-sari", "scotland-kilt", "mexico-china-poblana", "south-korea-hanbok", "germany-lederhosen", "netherlands-volendam", "?", "spain-flamenco"], line1: "CAN YOU NAME ALL", word: "COUNTRY?", number: "56", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE33CostumeHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "costumes-e33-thumb", heroSlug: "japan-kimono", line1: "GUESS THE", word: "COUNTRY?", number: "56", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE33CostumeSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "costumes-e33-thumb", easySlug: "japan-kimono", hardSlug: "georgia-chokha", word: "COUNTRY?", number: "56", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE33CostumeNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "costumes-e33-thumb", cascade: ["japan-kimono", "india-sari", "scotland-kilt", "?"], line1: "CAN YOU NAME ALL", word: "COUNTRY?", number: "56", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}

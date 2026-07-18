@@ -46,6 +46,7 @@ const INTROS = {
   "vo-intro-fashion": "Guess the fashion brand! Can you name all seventy one?",
   "vo-intro-console": "Guess the gaming console! Can you name all seventy one?",
   "vo-intro-castle": "Guess the castle! Can you name all seventy one?",
+  "vo-intro-costume": "Guess the country! Can you name all fifty six?",
 };
 
 function wavDuration(path) {
