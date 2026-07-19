@@ -49,6 +49,7 @@ const INTROS = {
   "vo-intro-costume": "Guess the country! Can you name all fifty six?",
   "vo-intro-currency": "Guess the country! Can you name all thirty four?",
   "vo-intro-ruins": "Guess the ancient ruin! Can you name all seventy one?",
+  "vo-intro-emojimovies": "Guess the movie by emoji! Can you name all seventy one?",
 };
 
 function wavDuration(path) {
