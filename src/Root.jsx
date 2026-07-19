@@ -112,6 +112,8 @@ import { TRADITIONAL_COSTUMES_E33 } from "./Quiz/traditionalCostumesE33Data";
 import { TRADITIONAL_COSTUMES_E33_FACTS } from "./Quiz/traditionalCostumesE33Facts";
 import { WORLD_CURRENCIES_E34 } from "./Quiz/worldCurrenciesE34Data";
 import { WORLD_CURRENCIES_E34_FACTS } from "./Quiz/worldCurrenciesE34Facts";
+import { ANCIENT_RUINS_E35 } from "./Quiz/ancientRuinsE35Data";
+import { ANCIENT_RUINS_E35_FACTS } from "./Quiz/ancientRuinsE35Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -155,6 +157,7 @@ const E30_INFOCFG = { items: GAMING_CONSOLE_LOGOS_E30, facts: GAMING_CONSOLE_LOG
 const E32_INFOCFG = { items: FAMOUS_CASTLES_E32, facts: FAMOUS_CASTLES_E32_FACTS, topicWord: "CASTLE", topicPlural: "CASTLES", dir: "castles", ext: "jpg", fit: "cover", voPrefix: "cl-", nameField: "name", introVo: "vo-intro-castle", coldSlug: "" };
 const E33_INFOCFG = { items: TRADITIONAL_COSTUMES_E33, facts: TRADITIONAL_COSTUMES_E33_FACTS, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "costumes", ext: "jpg", fit: "cover", voPrefix: "tc-", nameField: "country", introVo: "vo-intro-costume", coldSlug: "" };
 const E34_INFOCFG = { items: WORLD_CURRENCIES_E34, facts: WORLD_CURRENCIES_E34_FACTS, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "currencies", ext: "jpg", fit: "cover", voPrefix: "cn-", nameField: "country", introVo: "vo-intro-currency", coldSlug: "" };
+const E35_INFOCFG = { items: ANCIENT_RUINS_E35, facts: ANCIENT_RUINS_E35_FACTS, topicWord: "RUIN", topicPlural: "RUINS", dir: "ruins", ext: "jpg", fit: "cover", voPrefix: "rn-", nameField: "name", introVo: "vo-intro-ruins", coldSlug: "" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -433,6 +436,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE34CurrencyHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "currencies-e34-thumb", heroSlug: "usa-dollar", line1: "GUESS THE", word: "COUNTRY?", number: "34", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE34CurrencySplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "currencies-e34-thumb", easySlug: "usa-dollar", hardSlug: "moldova-leu", word: "COUNTRY?", number: "34", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE34CurrencyNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "currencies-e34-thumb", cascade: ["usa-dollar", "eurozone-euro", "japan-yen", "?"], line1: "CAN YOU NAME ALL", word: "COUNTRY?", number: "34", badge: "Only 1% get 100%" }} />
+      <Composition id="E35RuinQuiz" component={QuizV2} durationInFrames={quizFrames(E35_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E35_INFOCFG }} />
+      <Composition id="ThumbE35Ruin" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "ruins-e35-thumb", grid: ["pompeii", "persepolis", "ephesus", "karnak-temple", "luxor-temple", "abu-simbel", "teotihuacan", "?", "tikal"], line1: "CAN YOU NAME ALL", word: "RUIN?", number: "71", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE35RuinHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "ruins-e35-thumb", heroSlug: "pompeii", line1: "GUESS THE", word: "RUIN?", number: "71", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE35RuinSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "ruins-e35-thumb", easySlug: "pompeii", hardSlug: "ai-khanoum", word: "RUIN?", number: "71", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE35RuinNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "ruins-e35-thumb", cascade: ["pompeii", "persepolis", "ephesus", "?"], line1: "CAN YOU NAME ALL", word: "RUIN?", number: "71", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
