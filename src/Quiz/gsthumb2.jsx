@@ -62,6 +62,7 @@ const ASSET = {
   "ruins-e35-thumb": { dir: "ruins", ext: "jpg", fit: "cover" },
   "emoji-e36-thumb": { dir: "emoji", ext: "png", fit: "contain" },
   "instruments-e37-thumb": { dir: "instruments", ext: "jpg", fit: "cover" },
+  "mascots-e38-thumb": { dir: "mascots", ext: "jpg", fit: "cover" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

@@ -118,6 +118,8 @@ import { EMOJI_MOVIES_E36 } from "./Quiz/emojiMoviesE36Data";
 import { EMOJI_MOVIES_E36_FACTS } from "./Quiz/emojiMoviesE36Facts";
 import { MUSICAL_INSTRUMENTS_E37 } from "./Quiz/musicalInstrumentsE37Data";
 import { MUSICAL_INSTRUMENTS_E37_FACTS } from "./Quiz/musicalInstrumentsE37Facts";
+import { SPORTS_MASCOTS_E38 } from "./Quiz/sportsMascotsE38Data";
+import { SPORTS_MASCOTS_E38_FACTS } from "./Quiz/sportsMascotsE38Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -164,6 +166,7 @@ const E34_INFOCFG = { items: WORLD_CURRENCIES_E34, facts: WORLD_CURRENCIES_E34_F
 const E35_INFOCFG = { items: ANCIENT_RUINS_E35, facts: ANCIENT_RUINS_E35_FACTS, topicWord: "RUIN", topicPlural: "RUINS", dir: "ruins", ext: "jpg", fit: "cover", voPrefix: "rn-", nameField: "name", introVo: "vo-intro-ruins", coldSlug: "" };
 const E36_INFOCFG = { items: EMOJI_MOVIES_E36, facts: EMOJI_MOVIES_E36_FACTS, topicWord: "MOVIE", topicPlural: "MOVIES", dir: "emoji", ext: "png", fit: "contain", voPrefix: "em-", nameField: "name", introVo: "vo-intro-emojimovies", coldSlug: "" };
 const E37_INFOCFG = { items: MUSICAL_INSTRUMENTS_E37, facts: MUSICAL_INSTRUMENTS_E37_FACTS, topicWord: "INSTRUMENT", topicPlural: "INSTRUMENTS", dir: "instruments", ext: "jpg", fit: "cover", voPrefix: "in-", nameField: "name", introVo: "vo-intro-instruments", coldSlug: "" };
+const E38_INFOCFG = { items: SPORTS_MASCOTS_E38, facts: SPORTS_MASCOTS_E38_FACTS, topicWord: "MASCOT", topicPlural: "MASCOTS", dir: "mascots", ext: "jpg", fit: "cover", voPrefix: "sm-", nameField: "name", introVo: "vo-intro-mascots", coldSlug: "" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -457,6 +460,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE37InstrumentHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "instruments-e37-thumb", heroSlug: "guitar", line1: "GUESS THE", word: "INSTRUMENT?", number: "68", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE37InstrumentSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "instruments-e37-thumb", easySlug: "guitar", hardSlug: "crumhorn", word: "INSTRUMENT?", number: "68", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE37InstrumentNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "instruments-e37-thumb", cascade: ["guitar", "piano", "violin", "?"], line1: "CAN YOU NAME ALL", word: "INSTRUMENT?", number: "68", badge: "Only 1% get 100%" }} />
+      <Composition id="E38MascotQuiz" component={QuizV2} durationInFrames={quizFrames(E38_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E38_INFOCFG }} />
+      <Composition id="ThumbE38Mascot" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mascots-e38-thumb", grid: ["phillie-phanatic", "gritty", "benny-the-bull", "sluggerrr", "fred-the-red", "cocky", "purdue-pete", "?", "cyril-the-swan"], line1: "CAN YOU NAME ALL", word: "MASCOT?", number: "72", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE38MascotHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mascots-e38-thumb", heroSlug: "gritty", line1: "GUESS THE", word: "MASCOT?", number: "72", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE38MascotSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mascots-e38-thumb", easySlug: "phillie-phanatic", hardSlug: "rowdy-utsa", word: "MASCOT?", number: "72", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE38MascotNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mascots-e38-thumb", cascade: ["phillie-phanatic", "gritty", "sluggerrr", "?"], line1: "CAN YOU NAME ALL", word: "MASCOT?", number: "72", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}

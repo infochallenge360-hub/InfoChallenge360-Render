@@ -51,6 +51,7 @@ const INTROS = {
   "vo-intro-ruins": "Guess the ancient ruin! Can you name all seventy one?",
   "vo-intro-emojimovies": "Guess the movie by emoji! Can you name all seventy one?",
   "vo-intro-instruments": "Guess the instrument! Can you name all sixty eight?",
+  "vo-intro-mascots": "Guess the sports mascot! Can you name all seventy two?",
 };
 
 function wavDuration(path) {
