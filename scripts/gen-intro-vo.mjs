@@ -47,6 +47,7 @@ const INTROS = {
   "vo-intro-console": "Guess the gaming console! Can you name all seventy one?",
   "vo-intro-castle": "Guess the castle! Can you name all seventy one?",
   "vo-intro-costume": "Guess the country! Can you name all fifty six?",
+  "vo-intro-currency": "Guess the country! Can you name all thirty four?",
 };
 
 function wavDuration(path) {
