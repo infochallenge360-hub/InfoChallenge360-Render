@@ -63,6 +63,12 @@ const ASSET = {
   "emoji-e36-thumb": { dir: "emoji", ext: "png", fit: "contain" },
   "instruments-e37-thumb": { dir: "instruments", ext: "jpg", fit: "cover" },
   "mascots-e38-thumb": { dir: "mascots", ext: "jpg", fit: "cover" },
+  "zodiac-e39-thumb": { dir: "zodiac", ext: "jpg", fit: "contain" },
+  "space-e40-thumb": { dir: "space", ext: "jpg", fit: "cover" },
+  "appicons-e41-thumb": { dir: "app-icons", ext: "png", fit: "contain" },
+  "flags-e42-thumb": { dir: "us-flags", ext: "png", fit: "contain" },
+  "fruits-e43-thumb": { dir: "fruits", ext: "jpg", fit: "cover" },
+  "butterflies-e45-thumb": { dir: "butterflies", ext: "jpg", fit: "cover" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

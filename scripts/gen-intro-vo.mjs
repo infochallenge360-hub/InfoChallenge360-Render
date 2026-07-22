@@ -52,6 +52,12 @@ const INTROS = {
   "vo-intro-emojimovies": "Guess the movie by emoji! Can you name all seventy one?",
   "vo-intro-instruments": "Guess the instrument! Can you name all sixty eight?",
   "vo-intro-mascots": "Guess the sports mascot! Can you name all seventy two?",
+  "vo-intro-zodiac": "Guess the zodiac sign! Can you name all sixty five?",
+  "vo-intro-space": "Guess the space object! Can you name all seventy two?",
+  "vo-intro-appicon": "Guess the app icon! Can you name all seventy two?",
+  "vo-intro-usflag": "Guess the US state flag! Can you name all fifty six?",
+  "vo-intro-freshfruit": "Guess the fruit! Can you name all seventy one?",
+  "vo-intro-realbutterfly": "Guess the butterfly! Can you name all seventy one?",
 };
 
 function wavDuration(path) {
