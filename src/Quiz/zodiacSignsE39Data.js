@@ -2,7 +2,6 @@
 // Calibrated by global recognizability (quiz-difficulty-calibration). Honestly lopsided toward impossible —
 // only Western + Chinese zodiacs are broadly known; Egyptian/Celtic/Aztec systems are genuinely obscure worldwide.
 export const ZODIAC_SIGNS_E39 = [
-  // WESTERN ZODIAC — easy (8) + medium (4)
   { slug: "aries", name: "Aries", culture: "Western", level: "easy" },
   { slug: "taurus", name: "Taurus", culture: "Western", level: "easy" },
   { slug: "gemini", name: "Gemini", culture: "Western", level: "easy" },
@@ -11,12 +10,6 @@ export const ZODIAC_SIGNS_E39 = [
   { slug: "libra", name: "Libra", culture: "Western", level: "easy" },
   { slug: "scorpio", name: "Scorpio", culture: "Western", level: "easy" },
   { slug: "pisces", name: "Pisces", culture: "Western", level: "easy" },
-  { slug: "virgo", name: "Virgo", culture: "Western", level: "medium" },
-  { slug: "sagittarius", name: "Sagittarius", culture: "Western", level: "medium" },
-  { slug: "capricorn", name: "Capricorn", culture: "Western", level: "medium" },
-  { slug: "aquarius", name: "Aquarius", culture: "Western", level: "medium" },
-
-  // CHINESE ZODIAC — easy (7) + medium (5)
   { slug: "dragon", name: "Dragon", culture: "Chinese", level: "easy" },
   { slug: "tiger", name: "Tiger", culture: "Chinese", level: "easy" },
   { slug: "rabbit", name: "Rabbit", culture: "Chinese", level: "easy" },
@@ -24,13 +17,15 @@ export const ZODIAC_SIGNS_E39 = [
   { slug: "horse", name: "Horse", culture: "Chinese", level: "easy" },
   { slug: "monkey", name: "Monkey", culture: "Chinese", level: "easy" },
   { slug: "dog", name: "Dog", culture: "Chinese", level: "easy" },
+  { slug: "virgo", name: "Virgo", culture: "Western", level: "medium" },
+  { slug: "sagittarius", name: "Sagittarius", culture: "Western", level: "medium" },
+  { slug: "capricorn", name: "Capricorn", culture: "Western", level: "medium" },
+  { slug: "aquarius", name: "Aquarius", culture: "Western", level: "medium" },
   { slug: "rat", name: "Rat", culture: "Chinese", level: "medium" },
   { slug: "ox", name: "Ox", culture: "Chinese", level: "medium" },
   { slug: "pig", name: "Pig", culture: "Chinese", level: "medium" },
   { slug: "rooster", name: "Rooster", culture: "Chinese", level: "medium" },
   { slug: "goat", name: "Goat", culture: "Chinese", level: "medium" },
-
-  // EGYPTIAN ZODIAC (modern pop-astrology) — medium (5) + hard (3) + impossible (4)
   { slug: "isis", name: "Isis", culture: "Egyptian", level: "medium" },
   { slug: "anubis", name: "Anubis", culture: "Egyptian", level: "medium" },
   { slug: "osiris", name: "Osiris", culture: "Egyptian", level: "medium" },
@@ -39,18 +34,16 @@ export const ZODIAC_SIGNS_E39 = [
   { slug: "amun-ra", name: "Amun-Ra", culture: "Egyptian", level: "hard" },
   { slug: "thoth", name: "Thoth", culture: "Egyptian", level: "hard" },
   { slug: "sekhmet", name: "Sekhmet", culture: "Egyptian", level: "hard" },
-  { slug: "geb", name: "Geb", culture: "Egyptian", level: "impossible" },
-  { slug: "mut", name: "Mut", culture: "Egyptian", level: "impossible" },
-  { slug: "seth", name: "Seth", culture: "Egyptian", level: "impossible" },
-  { slug: "hapi", name: "Hapi", culture: "Egyptian", level: "impossible" },
-
-  // CELTIC TREE ZODIAC — hard (6) + impossible (7)
   { slug: "oak", name: "Oak", culture: "Celtic", level: "hard" },
   { slug: "holly", name: "Holly", culture: "Celtic", level: "hard" },
   { slug: "willow", name: "Willow", culture: "Celtic", level: "hard" },
   { slug: "vine", name: "Vine", culture: "Celtic", level: "hard" },
   { slug: "ivy", name: "Ivy", culture: "Celtic", level: "hard" },
   { slug: "hazel", name: "Hazel", culture: "Celtic", level: "hard" },
+  { slug: "geb", name: "Geb", culture: "Egyptian", level: "impossible" },
+  { slug: "mut", name: "Mut", culture: "Egyptian", level: "impossible" },
+  { slug: "seth", name: "Seth", culture: "Egyptian", level: "impossible" },
+  { slug: "hapi", name: "Hapi", culture: "Egyptian", level: "impossible" },
   { slug: "ash", name: "Ash", culture: "Celtic", level: "impossible" },
   { slug: "elder", name: "Elder", culture: "Celtic", level: "impossible" },
   { slug: "hawthorn", name: "Hawthorn", culture: "Celtic", level: "impossible" },
@@ -58,8 +51,6 @@ export const ZODIAC_SIGNS_E39 = [
   { slug: "rowan", name: "Rowan", culture: "Celtic", level: "impossible" },
   { slug: "birch", name: "Birch", culture: "Celtic", level: "impossible" },
   { slug: "alder", name: "Alder", culture: "Celtic", level: "impossible" },
-
-  // AZTEC DAY-SIGNS (Tonalpohualli) — impossible (16)
   { slug: "coatl", name: "Coatl", culture: "Aztec", level: "impossible" },
   { slug: "cuauhtli", name: "Cuauhtli", culture: "Aztec", level: "impossible" },
   { slug: "xochitl", name: "Xochitl", culture: "Aztec", level: "impossible" },
