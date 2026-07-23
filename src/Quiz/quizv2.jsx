@@ -34,7 +34,7 @@ const buildOptions = (item, all, cfg) => {
   const picks = [], used = new Set([item[idk]]);
   let k = 1;
   while (picks.length < 3 && k < pool.length * 4) {
-    const cand = pool[(seed * 7 + k * 13) % pool.length];
+    const cand = pool[(seed * 7 + k) % pool.length];
     if (cand && !used.has(cand[idk])) { used.add(cand[idk]); picks.push(nameOf(cand, cfg)); }
     k++;
   }

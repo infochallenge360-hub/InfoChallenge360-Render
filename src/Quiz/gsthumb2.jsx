@@ -91,13 +91,16 @@ export const GsThumbV2 = ({
       </div>
 
       {/* الكلمة الكبيرة — شريط أفقي تحت البانر مباشرة */}
-      <div style={{ position: "absolute", top: 100, left: 0, right: 0, height: 158, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: 20, padding: "0 24px" }}>
+      <div style={{ position: "absolute", top: 100, left: 0, right: 0, height: 158, display: "flex", flexWrap: "nowrap", alignItems: "center", justifyContent: "center", gap: 20, padding: "0 24px" }}>
         {word.split(" ").map((tok, i) => {
           const conn = /^(or|and|&)$/i.test(tok);
+          const tokens = word.split(" ");
+          const base = Math.min(150, Math.floor(620 / (tok.length * 0.62)));
+          const fitCap = tokens.length > 1 ? Math.floor(1050 / (word.length * 0.62)) : 150;
           return (
             <div key={i} style={{
               fontWeight: 900,
-              fontSize: conn ? 80 : Math.min(150, Math.floor(620 / (tok.length * 0.62))),
+              fontSize: conn ? 80 : Math.min(base, fitCap),
               lineHeight: 1,
               color: conn ? G.gold : "#FF1E1E",
               WebkitTextStroke: conn ? "4px #FF8080" : "6px #4a0000",
