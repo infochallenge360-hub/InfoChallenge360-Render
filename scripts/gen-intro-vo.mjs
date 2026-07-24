@@ -58,6 +58,9 @@ const INTROS = {
   "vo-intro-usflag": "Guess the US state flag! Can you name all fifty six?",
   "vo-intro-freshfruit": "Guess the fruit! Can you name all seventy one?",
   "vo-intro-realbutterfly": "Guess the butterfly! Can you name all seventy one?",
+  "vo-intro-seacreature": "Guess the sea creature! Can you name all seventy one?",
+  "vo-intro-bridge": "Guess the bridge! Can you name all seventy two?",
+  "vo-intro-toygame": "Guess the toy or board game logo! Can you name all seventy one?",
 };
 
 function wavDuration(path) {
