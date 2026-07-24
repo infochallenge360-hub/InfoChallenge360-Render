@@ -44,7 +44,7 @@ export const TOY_GAME_LOGOS_E48_FACTS = {
   "mattel": "Its name blends founders Harold 'Matt' Matson and Elliot.",
   "magic-the-gathering": "Richard Garfield's 1993 design was the first modern TCG.",
   "catan": "Klaus Teuber's design debuted in Germany in 1995.",
-  "guess-who": "First manufactured by Milton Bradley in 1979.",
+  "yahtzee": "It was originally called 'Yacht,' played by a Canadian couple.",
   "sorry": "Based on the ancient game Pachisi; trademarked in 1929.",
   "candy-land": "Eleanor Abbott created it in 1948 while recovering from polio.",
   "mouse-trap": "Ideal Toy Co. released its Rube Goldberg-style trap in 1963.",

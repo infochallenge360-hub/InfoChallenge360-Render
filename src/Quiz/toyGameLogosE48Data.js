@@ -53,7 +53,7 @@ export const TOY_GAME_LOGOS_E48 = [
   { slug: "mattel", name: "Mattel", level: "hard" },
   { slug: "magic-the-gathering", name: "Magic: The Gathering", level: "hard" },
   { slug: "catan", name: "Catan", level: "hard" },
-  { slug: "guess-who", name: "Guess Who?", level: "hard" },
+  { slug: "yahtzee", name: "Yahtzee", level: "hard" }, // swapped from Guess Who?: invented by Theora Design (Israeli-founded studio), same excluded category as Rummikub/Taki
   { slug: "sorry", name: "Sorry!", level: "hard" },
   { slug: "candy-land", name: "Candy Land", level: "hard" },
   { slug: "mouse-trap", name: "Mouse Trap", level: "hard" },
