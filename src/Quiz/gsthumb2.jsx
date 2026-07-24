@@ -227,7 +227,9 @@ export const GsThumbSplitV2 = ({
 
       {/* بطاقة المستحيل — يمين، معتّمة مع "؟" */}
       <div style={{ position: "absolute", right: 40, top: 150, width: 380, height: 380, background: "#111", borderRadius: 30, padding: 8, boxShadow: "0 16px 40px rgba(0,0,0,0.6)", border: `6px solid ${G.gold}` }}>
-        <Img src={staticFile(`${A.dir}/${hardSlug}.${A.ext}`)} style={{ width: "100%", height: "100%", objectFit: A.fit, borderRadius: 20, filter: "brightness(0.28) saturate(0.6)" }} />
+        <Img src={staticFile(`${A.dir}/${hardSlug}.${A.ext}`)} style={{ width: "100%", height: "100%", objectFit: A.fit, borderRadius: 20, filter: "brightness(0.28) saturate(0.6) blur(6px)" }} />
+        {/* Solid opaque scrim — the filter alone leaves high-contrast logo wordmarks legible; this guarantees no answer leak. */}
+        <div style={{ position: "absolute", left: 8, top: 8, width: 364, height: 364, borderRadius: 20, background: "rgba(5,5,8,0.86)" }} />
         <div style={{ position: "absolute", left: 0, top: 0, width: 380, height: 380, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <span style={{ fontWeight: 900, fontSize: 130, color: G.gold, textShadow: "0 8px 20px rgba(0,0,0,0.7)" }}>?</span>
         </div>
