@@ -7,6 +7,10 @@
 // backup, for this episode. A handful of modern hobby-game titles have no dedicated logo file and
 // need box-art/cover-image sourcing instead (flagged below). No Israeli-origin brand included
 // (Rummikub and Taki were deliberately excluded as genuinely Israeli-invented games).
+// Object-as-mark exceptions (no wordmark/logo text visible, same class as Rubik's Cube): "boggle"
+// uses Wikipedia's own canonical lead photo of the letter-dice tray + timer — exhaustively searched,
+// no branded box-art file exists on Commons. "hungry-hungry-hippos" uses Wikipedia's own lead photo
+// of the game board in play (hands/feet visible, no faces) — same exhaustive-search result.
 export const TOY_GAME_LOGOS_E48 = [
   // EASY (18)
   { slug: "lego", name: "LEGO", level: "easy" },
