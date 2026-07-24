@@ -69,6 +69,9 @@ const ASSET = {
   "flags-e42-thumb": { dir: "us-flags", ext: "png", fit: "contain" },
   "fruits-e43-thumb": { dir: "fruits", ext: "jpg", fit: "cover" },
   "butterflies-e45-thumb": { dir: "butterflies", ext: "jpg", fit: "cover" },
+  "sea-creatures-e46-thumb": { dir: "sea-creatures", ext: "jpg", fit: "cover" },
+  "bridges-e47-thumb": { dir: "bridges", ext: "jpg", fit: "cover" },
+  "toygames-e48-thumb": { dir: "toy-game-logos", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
