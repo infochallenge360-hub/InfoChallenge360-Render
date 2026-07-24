@@ -74,7 +74,7 @@ export const SEA_CREATURES_E46 = [
   { slug: "bloody-belly-comb-jelly", name: "Bloody-Belly Comb Jelly", sci: "Lampocteis cruentiventer", level: "impossible" }, // Wikipedia/MBARI fallback
   { slug: "faceless-cusk", name: "Faceless Cusk", sci: "Typhlonus nasus", level: "impossible" }, // Wikipedia fallback
   { slug: "zombie-worm", name: "Zombie Worm (Bone-Eating Worm)", sci: "Osedax mucofloris", level: "impossible" }, // Wikipedia fallback
-  { slug: "squidworm", name: "Squidworm", sci: "Teuthidodrilus samae", level: "impossible" }, // Wikipedia fallback
+  { slug: "sloanes-viperfish", name: "Sloane's Viperfish", sci: "Chauliodus sloani", level: "impossible" }, // swapped from Squidworm: zero free-licensed photo exists anywhere for that species
   { slug: "silver-hatchetfish", name: "Silver Hatchetfish", sci: "Argyropelecus aculeatus", level: "impossible" }, // Wikipedia fallback
   { slug: "stoplight-loosejaw", name: "Stoplight Loosejaw", sci: "Malacosteus niger", level: "impossible" }, // Wikipedia fallback
   { slug: "pink-see-through-fantasia", name: "Pink See-Through Fantasia", sci: "Enypniastes eximia", level: "impossible" }, // Wikipedia/MBARI fallback

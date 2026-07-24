@@ -34,7 +34,7 @@ export const BRIDGES_E47 = [
   { slug: "pont-neuf", name: "Pont Neuf", country: "France", wiki: "Pont Neuf", level: "medium" },
   { slug: "howrah-bridge", name: "Howrah Bridge", country: "India", wiki: "Howrah Bridge", level: "medium" },
   { slug: "puente-nuevo-ronda", name: "Puente Nuevo", country: "Spain", wiki: "Puente Nuevo", level: "medium" },
-  { slug: "zhangjiajie-glass-bridge", name: "Zhangjiajie Grand Canyon Glass Bridge", country: "China", wiki: "Zhangjiajie Grand Canyon Glass Bridge", level: "medium" },
+  { slug: "zhangjiajie-glass-bridge", name: "Zhangjiajie Grand Canyon Glass Bridge", country: "China", wiki: "Zhangjiajie Glass Bridge", level: "medium" }, // wiki title corrected: article is "Zhangjiajie Glass Bridge"
   { slug: "hapenny-bridge", name: "Ha'penny Bridge", country: "Ireland", wiki: "Ha'penny Bridge", level: "medium" },
   { slug: "palace-bridge", name: "Palace Bridge", country: "Russia", wiki: "Palace Bridge", level: "medium" },
   { slug: "victoria-falls-bridge", name: "Victoria Falls Bridge", country: "Zambia/Zimbabwe", wiki: "Victoria Falls Bridge", level: "medium" },
@@ -68,9 +68,9 @@ export const BRIDGES_E47 = [
   // IMPOSSIBLE (18)
   { slug: "ponte-milvio", name: "Ponte Milvio", country: "Italy", wiki: "Ponte Milvio", level: "impossible" },
   { slug: "pons-fabricius", name: "Pons Fabricius", country: "Italy", wiki: "Pons Fabricius", level: "impossible" },
-  { slug: "legion-bridge-prague", name: "Legion Bridge", country: "Czech Republic", wiki: "Legion Bridge", level: "impossible" }, // verify exact title
+  { slug: "legion-bridge-prague", name: "Legion Bridge", country: "Czech Republic", wiki: "Legion Bridge", level: "impossible" }, // verified: title correct as-is
   { slug: "kramerbrucke", name: "Krämerbrücke", country: "Germany", wiki: "Krämerbrücke", level: "impossible" },
-  { slug: "stone-bridge-regensburg", name: "Stone Bridge", country: "Germany", wiki: "Stone Bridge, Regensburg", level: "impossible" }, // verify exact title
+  { slug: "stone-bridge-regensburg", name: "Stone Bridge", country: "Germany", wiki: "Stone Bridge (Regensburg)", level: "impossible" }, // verified: article title uses parentheses, not comma
   { slug: "triple-bridge-ljubljana", name: "Triple Bridge", country: "Slovenia", wiki: "Tromostovje", level: "impossible" },
   { slug: "confederation-bridge", name: "Confederation Bridge", country: "Canada", wiki: "Confederation Bridge", level: "impossible" },
   { slug: "nanjing-yangtze-river-bridge", name: "Nanjing Yangtze River Bridge", country: "China", wiki: "Nanjing Yangtze River Bridge", level: "impossible" },
@@ -78,7 +78,7 @@ export const BRIDGES_E47 = [
   { slug: "danyang-kunshan-grand-bridge", name: "Danyang–Kunshan Grand Bridge", country: "China", wiki: "Danyang–Kunshan Grand Bridge", level: "impossible" }, // verify image is a photo, not a diagram
   { slug: "trajans-bridge", name: "Trajan's Bridge", country: "Romania/Serbia", wiki: "Trajan's Bridge", level: "impossible" }, // image may be a historical relief/painting
   { slug: "alcantara-bridge", name: "Alcántara Bridge", country: "Spain", wiki: "Alcántara Bridge", level: "impossible" },
-  { slug: "6-october-bridge", name: "6th of October Bridge", country: "Egypt", wiki: "6th of October Bridge", level: "impossible" },
+  { slug: "6-october-bridge", name: "6th of October Bridge", country: "Egypt", wiki: "6th October Bridge", level: "impossible" }, // wiki title corrected: article is "6th October Bridge" (no "of")
   { slug: "rio-niteroi-bridge", name: "Rio–Niterói Bridge", country: "Brazil", wiki: "Rio–Niterói Bridge", level: "impossible" },
   { slug: "king-fahd-causeway", name: "King Fahd Causeway", country: "Saudi Arabia/Bahrain", wiki: "King Fahd Causeway", level: "impossible" }, // verify image is a photo, not a route map
   { slug: "padma-bridge", name: "Padma Bridge", country: "Bangladesh", wiki: "Padma Bridge", level: "impossible" },

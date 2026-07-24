@@ -68,7 +68,7 @@ export const SEA_CREATURES_E46_FACTS = {
   "bloody-belly-comb-jelly": "Its red gut hides glowing prey from would-be predators.",
   "faceless-cusk": "Has no visible eyes; its mouth sits underneath its head.",
   "zombie-worm": "Has no mouth or gut, yet dissolves whale bone with acid.",
-  "squidworm": "Discovered in 2007, it has ten tentacle-like head appendages.",
+  "sloanes-viperfish": "Its fang-like teeth are too long to fit inside its mouth.",
   "silver-hatchetfish": "Its mirrored sides help it vanish in dim mid-ocean light.",
   "stoplight-loosejaw": "Makes red light that most deep-sea animals can't even see.",
   "pink-see-through-fantasia": "A see-through sea cucumber that swims with a webbed hood.",
