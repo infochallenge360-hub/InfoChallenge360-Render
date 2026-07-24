@@ -61,6 +61,9 @@ const INTROS = {
   "vo-intro-seacreature": "Guess the sea creature! Can you name all seventy one?",
   "vo-intro-bridge": "Guess the bridge! Can you name all seventy two?",
   "vo-intro-toygame": "Guess the toy or board game logo! Can you name all seventy one?",
+  "vo-intro-paintingfamous": "Guess the painting! Can you name all seventy two?",
+  "vo-intro-gemstone": "Guess the gemstone! Can you name all sixty eight?",
+  "vo-intro-statue": "Guess the statue! Can you name all seventy two?",
 };
 
 function wavDuration(path) {
