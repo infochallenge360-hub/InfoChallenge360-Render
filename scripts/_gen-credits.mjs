@@ -51,7 +51,7 @@ for (const rf of reportFiles) {
   if (!existsSync(rf)) continue;
   const arr = JSON.parse(readFileSync(rf, "utf8"));
   for (const r of arr) {
-    if (r.status === "ok" && r.slug) bySlug[r.slug] = r; // later files overwrite earlier (later = more recent fix)
+    if (r.status && r.status.toLowerCase() === "ok" && r.slug) bySlug[r.slug] = r; // later files overwrite earlier (later = more recent fix)
   }
 }
 
@@ -61,9 +61,15 @@ for (const item of items) {
   const rep = bySlug[slug];
   let credit = "license verification pending";
   if (rep) {
-    let fileTitle = rep.source && rep.source.startsWith("File:") ? rep.source : null;
+    if (rep.attribution) {
+      // Sourcing agent already recorded attribution directly (e.g. iNaturalist) — trust it, skip Commons lookup.
+      credit = rep.attribution;
+    }
+    let fileTitle = rep.title && rep.title.startsWith("File:") ? rep.title : null;
+    if (!fileTitle) fileTitle = rep.source && rep.source.startsWith("File:") ? rep.source : null;
     if (!fileTitle) fileTitle = urlToFileTitle(rep.url);
-    if (fileTitle) {
+    if (!fileTitle) fileTitle = urlToFileTitle(rep.download_url);
+    if (!rep.attribution && fileTitle) {
       const lic = await licenseFor(fileTitle);
       if (lic && lic.license) {
         if (/public domain|pd|cc0/i.test(lic.license)) {
