@@ -1,6 +1,6 @@
 export const SEA_CREATURES_E46_FACTS = {
   // EASY
-  "great-white-shark": "Can smell one drop of blood in 25 gallons of water.",
+  "great-white-shark": "Can detect prey blood at astonishingly low concentrations.",
   "bottlenose-dolphin": "Each dolphin has a signature whistle that acts like a name.",
   "blue-whale": "Its heart alone can weigh as much as a small car.",
   "clownfish": "All clownfish are born male; the dominant one turns female.",
@@ -45,7 +45,7 @@ export const SEA_CREATURES_E46_FACTS = {
   "queen-angelfish": "Named for the blue 'crown' spot ringed on its forehead.",
   "vaquita": "World's most endangered marine mammal, fewer than 10 remain.",
   "ghost-shark-chimaera": "A shark relative that split off over 400 million years ago.",
-  "mantis-shrimp": "Its club-like punch strikes faster than an underwater bullet.",
+  "mantis-shrimp": "Its punch strikes with the force of a .22-caliber bullet.",
   "goblin-shark": "Its jaw can shoot forward to snatch prey, like an alien.",
   "frilled-shark": "Has about 300 trident-shaped teeth in roughly 25 rows.",
   "blobfish": "Its 'blobby' look only appears once out of deep-sea pressure.",
