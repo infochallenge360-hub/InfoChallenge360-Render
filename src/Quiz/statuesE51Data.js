@@ -41,7 +41,7 @@ export const STATUES_E51 = [
   { slug: "great-buddha-of-kamakura", name: "Great Buddha of Kamakura", country: "Japan", level: "easy" },
   { slug: "angel-of-the-north", name: "Angel of the North", country: "United Kingdom", level: "easy" },
   { slug: "queen-victoria-memorial", name: "Victoria Memorial", country: "United Kingdom", level: "easy" },
-  { slug: "fearless-girl", name: "Fearless Girl", country: "United States", level: "easy" },
+  { slug: "fearless-girl", name: "Fearless Girl", country: "United States", level: "easy" }, // photo shows the identical 2019 London (Paternoster Square) casting by the same sculptor, Kristen Visbal — no free close-up of the original NYC installation was findable; country field reflects the statue's canonical/original home
 
   // MEDIUM (18)
   { slug: "motherland-calls", name: "The Motherland Calls", country: "Russia", level: "medium" },
@@ -49,7 +49,7 @@ export const STATUES_E51 = [
   { slug: "david-michelangelo", name: "David (Michelangelo)", country: "Italy", level: "medium" },
   { slug: "manneken-pis", name: "Manneken Pis", country: "Belgium", level: "medium" },
   { slug: "little-mermaid-copenhagen", name: "The Little Mermaid", country: "Denmark", level: "medium" },
-  { slug: "nefertiti-bust", name: "Bust of Nefertiti", country: "Germany", level: "medium" },
+  { slug: "nefertiti-bust", name: "Bust of Nefertiti", country: "Egypt", level: "medium" }, // country = origin, not current museum (Neues Museum, Berlin) — standardized to match lamassu-winged-bull and Great Sphinx of Giza's origin-country convention
   { slug: "pieta-michelangelo", name: "Pietà (Michelangelo)", country: "Vatican City", level: "medium" },
   { slug: "martin-luther-king-memorial", name: "Martin Luther King Jr. Memorial", country: "United States", level: "medium" },
   { slug: "great-buddha-of-nara", name: "Great Buddha of Nara", country: "Japan", level: "medium" },

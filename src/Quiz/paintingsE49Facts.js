@@ -40,7 +40,7 @@ export const PAINTINGS_E49_FACTS = {
   "cafe-terrace-at-night": "One of Van Gogh's first paintings using a starry night sky.",
 
   // HARD
-  "the-school-of-athens": "Raphael gave Plato the face of his rival, Leonardo da Vinci.",
+  "the-school-of-athens": "Raphael gave Plato the face of Leonardo da Vinci as tribute.",
   "judith-slaying-holofernes": "Painted after Gentileschi survived a real 1612 assault trial.",
   "the-tower-of-babel": "Bruegel modeled the tower partly on Rome's Colosseum.",
   "the-anatomy-lesson-of-dr-tulp": "Shows a real public dissection of an executed criminal.",
@@ -70,7 +70,7 @@ export const PAINTINGS_E49_FACTS = {
   "the-money-changer-and-his-wife": "A tiny convex mirror on the table reflects a hidden figure.",
   "the-straw-manikin": "Shows women tossing a straw dummy in a blanket, a folk game.",
   "boy-bitten-by-a-lizard": "Caravaggio may have used his own face for the startled boy.",
-  "a-woman-bathing-in-a-stream": "The model was Hendrickje, Rembrandt's own companion.",
+  "a-woman-bathing-in-a-stream": "Likely modeled on Hendrickje, Rembrandt's own companion.",
   "portrait-of-a-man-in-a-turban": "Widely believed to be Van Eyck's own self-portrait.",
   "the-blue-rigi": "One of Turner's 'sample studies' painted to test buyer interest.",
   "the-death-of-actaeon": "Left unfinished in Titian's studio at the time of his death.",
