@@ -36,9 +36,17 @@ const buildOptions = (item, all, mode) => {
 };
 
 // يختار 12 عنصر لشورت رقم part (0..4): 3 من كل مستوى، بلا تكرار بين الشورتات (part×3 إزاحة)
+// معمم لأي حجم تير (يدعم حلقات 25/تير القديمة وحلقات 65-78 غير المتساوية الأحدث عبر تفاف الفهرس)
 export const pickShort = (items, part = 0) => {
+  const levels = ["easy", "medium", "hard", "impossible"];
+  const groups = levels.map((lvl) => items.filter((it) => it.level === lvl));
   const out = [];
-  for (let b = 0; b < 4; b++) for (let k = 0; k < 3; k++) { const it = items[b * 25 + part * 3 + k]; if (it) out.push(it); }
+  for (const pool of groups) {
+    for (let k = 0; k < 3; k++) {
+      if (!pool.length) continue;
+      out.push(pool[(part * 3 + k) % pool.length]);
+    }
+  }
   return out;
 };
 
@@ -120,6 +128,11 @@ const Clue = ({ item, mode, revealed, accent }) => {
   if (mode === "snakes") return <div style={{ ...card, width: 660, height: 560 }}><Img src={staticFile(`snakes/${item.slug}.jpg`)} style={{ width: 600, height: 500, objectFit: "cover", borderRadius: 28 }} /></div>;
   if (mode === "landmarks") return <div style={{ ...card, width: 720, height: 560 }}><Img src={staticFile(`landmarks/${item.key}.png`)} style={{ width: 660, height: 500, objectFit: "cover", borderRadius: 28 }} /></div>;
   if (mode === "cars") return <div style={{ ...card, width: 740, height: 520 }}><Img src={staticFile(`cars/${item.slug}.png`)} style={{ width: 680, height: 460, objectFit: "cover", borderRadius: 28 }} /></div>;
+  if (mode === "gemstones-e50") return <div style={{ ...card, width: 620, height: 620 }}><Img src={staticFile(`gemstones/${item.slug}.jpg`)} style={{ width: 560, height: 560, objectFit: "contain" }} /></div>;
+  if (mode === "statues-e51") return <div style={{ ...card, width: 620, height: 700 }}><Img src={staticFile(`statues/${item.slug}.jpg`)} style={{ width: 560, height: 640, objectFit: "contain" }} /></div>;
+  if (mode === "elements-e52") return <div style={{ ...card, width: 660, height: 560 }}><Img src={staticFile(`elements/${item.slug}.jpg`)} style={{ width: 600, height: 500, objectFit: "contain" }} /></div>;
+  if (mode === "classic-cars-e53") return <div style={{ ...card, width: 740, height: 520 }}><Img src={staticFile(`classic-cars/${item.slug}.jpg`)} style={{ width: 680, height: 460, objectFit: "cover", borderRadius: 28 }} /></div>;
+  if (mode === "trophies-e54") return <div style={{ ...card, width: 640, height: 700 }}><Img src={staticFile(`trophies/${item.slug}.jpg`)} style={{ width: 580, height: 640, objectFit: "contain" }} /></div>;
   if (mode === "paintings") return <div style={{ padding: 22, background: "linear-gradient(160deg, #fdfbf4, #efe7d2)", borderRadius: 10, border: `16px solid ${revealed ? accent : "#2a2118"}`, boxShadow: revealed ? `0 0 90px ${accent}` : "0 30px 70px rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center" }}><Img src={staticFile(`paintings/${item.slug}.jpg`)} style={{ maxWidth: 720, maxHeight: 760, width: "auto", height: "auto", objectFit: "contain", display: "block" }} /></div>;
   if (mode === "flags") return <div style={{ ...card, width: 640, height: 430 }}><Img src={staticFile(`flags/${item.iso}.svg`)} style={{ width: 560, height: 373, objectFit: "contain" }} /></div>;
   if (mode === "capitals") return (
@@ -132,9 +145,11 @@ const Clue = ({ item, mode, revealed, accent }) => {
   return <div style={{ fontFamily: font, fontWeight: 900, fontSize: 92, color: "#fff", textAlign: "center", padding: "0 40px", textShadow: `0 0 40px ${accent}` }}>{item.capital}</div>;
 };
 
-const QWORD = { logos: "GUESS THE LOGO", "logos-e03": "GUESS THE LOGO", animals: "GUESS THE ANIMAL", "animals-e01": "GUESS THE ANIMAL", foods: "GUESS THE FOOD", "foods-e04": "GUESS THE FOOD", dogs: "GUESS THE DOG", cars: "GUESS THE CAR", birds: "GUESS THE BIRD", sea: "GUESS THE SEA CREATURE", fruits: "FRUIT OR VEG?", flowers: "GUESS THE FLOWER", butterflies: "GUESS THE BUTTERFLY", snakes: "GUESS THE SNAKE", paintings: "GUESS THE PAINTING", landmarks: "WHICH COUNTRY?", flags: "GUESS THE COUNTRY", capitals: "GUESS THE CAPITAL", countries: "WHICH COUNTRY?", shapes: "WHAT COUNTRY?" };
-const voFile = (item, mode) => mode === "logos" ? `sfx/nm-${item.slug}.wav` : mode === "logos-e03" ? `sfx/lg-${item.slug}.wav` : (mode === "animals" || mode === "animals-e01") ? `sfx/an-${item.slug}.wav` : (mode === "foods" || mode === "foods-e04") ? `sfx/fd-${item.slug}.wav` : mode === "dogs" ? `sfx/dg-${item.slug}.wav` : mode === "cars" ? `sfx/cm-${item.slug}.wav` : mode === "birds" ? `sfx/bd-${item.slug}.wav` : mode === "sea" ? `sfx/sc-${item.slug}.wav` : mode === "fruits" ? `sfx/fr-${item.slug}.wav` : mode === "flowers" ? `sfx/fl-${item.slug}.wav` : mode === "butterflies" ? `sfx/bt-${item.slug}.wav` : mode === "snakes" ? `sfx/sn-${item.slug}.wav` : mode === "paintings" ? `sfx/pt-${item.slug}.wav` : mode === "capitals" ? `sfx/cp-${item.iso}.wav` : `sfx/fl-${item.iso}.wav`;
-const answer = (item, mode) => mode === "paintings" ? item.title : (mode === "logos" || mode === "logos-e03" || mode === "animals" || mode === "animals-e01" || mode === "foods" || mode === "foods-e04" || mode === "dogs" || mode === "cars" || mode === "birds" || mode === "sea" || mode === "fruits" || mode === "flowers" || mode === "butterflies" || mode === "snakes") ? item.name : mode === "capitals" ? item.capital : item.country || item.name;
+const QWORD = { logos: "GUESS THE LOGO", "logos-e03": "GUESS THE LOGO", animals: "GUESS THE ANIMAL", "animals-e01": "GUESS THE ANIMAL", foods: "GUESS THE FOOD", "foods-e04": "GUESS THE FOOD", dogs: "GUESS THE DOG", cars: "GUESS THE CAR", birds: "GUESS THE BIRD", sea: "GUESS THE SEA CREATURE", fruits: "FRUIT OR VEG?", flowers: "GUESS THE FLOWER", butterflies: "GUESS THE BUTTERFLY", snakes: "GUESS THE SNAKE", paintings: "GUESS THE PAINTING", landmarks: "WHICH COUNTRY?", flags: "GUESS THE COUNTRY", capitals: "GUESS THE CAPITAL", countries: "WHICH COUNTRY?", shapes: "WHAT COUNTRY?", "gemstones-e50": "GUESS THE GEMSTONE", "statues-e51": "GUESS THE STATUE", "elements-e52": "GUESS THE ELEMENT", "classic-cars-e53": "GUESS THE CLASSIC CAR", "trophies-e54": "GUESS THE SPORTS TROPHY" };
+const NAME_MODES = ["logos", "logos-e03", "animals", "animals-e01", "foods", "foods-e04", "dogs", "cars", "birds", "sea", "fruits", "flowers", "butterflies", "snakes", "gemstones-e50", "statues-e51", "elements-e52", "classic-cars-e53", "trophies-e54"];
+const VO_PREFIX = { logos: "nm", "logos-e03": "lg", animals: "an", "animals-e01": "an", foods: "fd", "foods-e04": "fd", dogs: "dg", cars: "cm", birds: "bd", sea: "sc", fruits: "fr", flowers: "fl", butterflies: "bt", snakes: "sn", paintings: "pt", "gemstones-e50": "gm", "statues-e51": "st", "elements-e52": "ce", "classic-cars-e53": "cv", "trophies-e54": "tr" };
+const voFile = (item, mode) => VO_PREFIX[mode] ? `sfx/${VO_PREFIX[mode]}-${item.slug}.wav` : mode === "capitals" ? `sfx/cp-${item.iso}.wav` : `sfx/fl-${item.iso}.wav`;
+const answer = (item, mode) => mode === "paintings" ? item.title : NAME_MODES.includes(mode) ? item.name : mode === "capitals" ? item.capital : item.country || item.name;
 
 const Round = ({ item, mode, num, all }) => {
   const frame = useCurrentFrame();

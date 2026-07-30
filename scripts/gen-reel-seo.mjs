@@ -14,6 +14,9 @@ const CFG = {
   E05: { data: "src/Quiz/logos2Data.js", nameField: "name", keyword: "logo", word: "LOGO", plural: "logos", folder: "E05_Guess-the-Logo-2", tags: ["#logoquiz", "#guessthelogo", "#quiz", "#trivia", "#logos"] },
   E08: { data: "src/Quiz/logos3Data.js", nameField: "name", keyword: "logo", word: "LOGO", plural: "logos", folder: "E08_Guess-the-Logo-3", tags: ["#logoquiz", "#guessthelogo", "#quiz", "#trivia", "#logos"] },
   E14: { data: "src/Quiz/foodsData.js", nameField: "name", keyword: "food", word: "FOOD", plural: "foods", folder: "E14_Guess-the-Food", tags: ["#foodquiz", "#guessthefood", "#quiz", "#food", "#foodie"] },
+  E52: { data: "src/Quiz/elementsE52Data.js", nameField: "name", keyword: "element", word: "ELEMENT", plural: "chemical elements", folder: "E52_ChemicalElements", tags: ["#elementquiz", "#chemistry", "#quiz", "#periodictable", "#science"] },
+  E53: { data: "src/Quiz/classicCarsE53Data.js", nameField: "name", keyword: "classic car", word: "CLASSIC CAR", plural: "classic cars", folder: "E53_ClassicCars", tags: ["#carquiz", "#classiccars", "#quiz", "#cars", "#automotive"] },
+  E54: { data: "src/Quiz/trophiesE54Data.js", nameField: "name", keyword: "sports trophy", word: "SPORTS TROPHY", plural: "sports trophies", folder: "E54_SportsTrophies", tags: ["#trophyquiz", "#sports", "#quiz", "#sportstrivia", "#trophies"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
@@ -37,10 +40,13 @@ const tiers = ["easy", "medium", "hard", "impossible"];
 const byTier = tiers.map((lv) => items.filter((x) => x.level === lv));
 const nameOf = (it) => it[c.nameField] || it.name;
 
-// نفس منطق pickShort في shortv2.jsx: 3 من كل مستوى، إزاحة part*3
+// نفس منطق pickShort في shortv2.jsx: 3 من كل مستوى، إزاحة part*3 (بتفاف الفهرس لحلقات غير 25/تير)
 const pickShort = (part) => {
   const out = [];
-  for (let b = 0; b < 4; b++) for (let k = 0; k < 3; k++) { const it = byTier[b][part * 3 + k]; if (it) out.push({ name: nameOf(it), tier: tiers[b] }); }
+  for (let b = 0; b < 4; b++) {
+    const pool = byTier[b];
+    for (let k = 0; k < 3; k++) { if (!pool.length) continue; const it = pool[(part * 3 + k) % pool.length]; out.push({ name: nameOf(it), tier: tiers[b] }); }
+  }
   return out;
 };
 

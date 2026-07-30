@@ -616,6 +616,9 @@ export const RemotionRoot = () => {
         { ep: "E02Flags", items: FLAGS_E02, mode: "flags", title: "Guess the Flag", v2: true },
         { ep: "E03Logos", items: LOGOS_E03, mode: "logos-e03", title: "Guess the Logo", v2: true },
         { ep: "E04Food", items: FOODS_E04, mode: "foods-e04", title: "Guess the Food", v2: true },
+        { ep: "E52", items: ELEMENTS_E52, mode: "elements-e52", title: "Guess the Chemical Element", v2: true },
+        { ep: "E53", items: CLASSIC_CARS_E53, mode: "classic-cars-e53", title: "Guess the Classic Car", v2: true },
+        { ep: "E54", items: TROPHIES_E54, mode: "trophies-e54", title: "Guess the Sports Trophy", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

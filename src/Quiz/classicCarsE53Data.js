@@ -91,13 +91,13 @@ export const CLASSIC_CARS_E53 = [
   { slug: "mitsubishi-lancer-evolution", name: "Mitsubishi Lancer Evolution", level: "hard" },
   { slug: "subaru-impreza-wrx-sti", name: "Subaru Impreza WRX STI", level: "hard" },
   { slug: "volkswagen-corrado", name: "Volkswagen Corrado", level: "hard" },
-  { slug: "datsun-510", name: "Datsun 510", level: "hard" },
+  { slug: "citroen-ds", name: "Citroën DS", level: "hard" },
   { slug: "alpine-a110", name: "Renault Alpine A110", level: "hard" },
   { slug: "lotus-esprit", name: "Lotus Esprit", level: "hard" },
   { slug: "plymouth-superbird", name: "Plymouth Superbird", level: "hard" },
 
   // IMPOSSIBLE (18) — <10%, aimed <3%; genuinely obscure but real production car models
-  { slug: "citroen-ds", name: "Citroën DS", level: "impossible" },
+  { slug: "datsun-510", name: "Datsun 510", level: "impossible" },
   { slug: "saab-92", name: "Saab 92", level: "impossible" },
   { slug: "trabant-601", name: "Trabant 601", level: "impossible" },
   { slug: "bristol-400", name: "Bristol 400", level: "impossible" },
