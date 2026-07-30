@@ -150,6 +150,8 @@ import { CLASSIC_CARS_E53 } from "./Quiz/classicCarsE53Data";
 import { CLASSIC_CARS_E53_FACTS } from "./Quiz/classicCarsE53Facts";
 import { TROPHIES_E54 } from "./Quiz/trophiesE54Data";
 import { TROPHIES_E54_FACTS } from "./Quiz/trophiesE54Facts";
+import { STADIUMS_E55 } from "./Quiz/stadiumsE55Data";
+import { STADIUMS_E55_FACTS } from "./Quiz/stadiumsE55Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -212,6 +214,7 @@ const E51_INFOCFG = { items: STATUES_E51, facts: STATUES_E51_FACTS, topicWord: "
 const E52_INFOCFG = { items: ELEMENTS_E52, facts: ELEMENTS_E52_FACTS, topicWord: "ELEMENT", topicPlural: "ELEMENTS", dir: "elements", ext: "jpg", fit: "contain", voPrefix: "ce-", nameField: "name", introVo: "vo-intro-element", coldSlug: "livermorium" };
 const E53_INFOCFG = { items: CLASSIC_CARS_E53, facts: CLASSIC_CARS_E53_FACTS, topicWord: "CLASSIC CAR", topicPlural: "CLASSIC CARS", dir: "classic-cars", ext: "jpg", fit: "cover", voPrefix: "cv-", nameField: "name", introVo: "vo-intro-classiccar", coldSlug: "panhard-dyna-z" };
 const E54_INFOCFG = { items: TROPHIES_E54, facts: TROPHIES_E54_FACTS, topicWord: "SPORTS TROPHY", topicPlural: "SPORTS TROPHIES", dir: "trophies", ext: "jpg", fit: "contain", voPrefix: "tr-", nameField: "name", introVo: "vo-intro-trophy", coldSlug: "sam-maguire-cup" };
+const E55_INFOCFG = { items: STADIUMS_E55, facts: STADIUMS_E55_FACTS, topicWord: "STADIUM", topicPlural: "STADIUMS", dir: "stadiums", ext: "jpg", fit: "cover", voPrefix: "sd-", nameField: "name", introVo: "vo-intro-stadium", coldSlug: "estadio-defensores-del-chaco" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -585,6 +588,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE54TrophyHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "trophies-e54-thumb", heroSlug: "fifa-world-cup-trophy", line1: "GUESS THE", word: "SPORTS TROPHY?", number: "52", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE54TrophySplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "trophies-e54-thumb", easySlug: "fifa-world-cup-trophy", hardSlug: "sam-maguire-cup", word: "SPORTS TROPHY?", number: "52", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE54TrophyNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "trophies-e54-thumb", cascade: ["fifa-world-cup-trophy", "stanley-cup", "wimbledon-trophy", "?"], line1: "CAN YOU NAME ALL", word: "SPORTS TROPHY?", number: "52", badge: "Only 1% get 100%" }} />
+      <Composition id="E55StadiumQuiz" component={QuizV2} durationInFrames={quizFrames(E55_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E55_INFOCFG }} />
+      <Composition id="ThumbE55Stadium" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "stadiums-e55-thumb", grid: ["wembley-stadium", "camp-nou", "maracana", "san-siro", "?", "old-trafford", "allianz-arena", "santiago-bernabeu", "yankee-stadium"], line1: "CAN YOU NAME ALL", word: "STADIUM?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE55StadiumHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "stadiums-e55-thumb", heroSlug: "wembley-stadium", line1: "GUESS THE", word: "STADIUM?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE55StadiumSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "stadiums-e55-thumb", easySlug: "wembley-stadium", hardSlug: "estadio-defensores-del-chaco", word: "STADIUM?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE55StadiumNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "stadiums-e55-thumb", cascade: ["wembley-stadium", "camp-nou", "maracana", "?"], line1: "CAN YOU NAME ALL", word: "STADIUM?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -619,6 +627,7 @@ export const RemotionRoot = () => {
         { ep: "E52", items: ELEMENTS_E52, mode: "elements-e52", title: "Guess the Chemical Element", v2: true },
         { ep: "E53", items: CLASSIC_CARS_E53, mode: "classic-cars-e53", title: "Guess the Classic Car", v2: true },
         { ep: "E54", items: TROPHIES_E54, mode: "trophies-e54", title: "Guess the Sports Trophy", v2: true },
+        { ep: "E55", items: STADIUMS_E55, mode: "stadiums-e55", title: "Guess the Stadium", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
