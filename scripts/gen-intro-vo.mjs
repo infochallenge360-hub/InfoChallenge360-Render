@@ -64,6 +64,9 @@ const INTROS = {
   "vo-intro-paintingfamous": "Guess the painting! Can you name all seventy two?",
   "vo-intro-gemstone": "Guess the gemstone! Can you name all sixty eight?",
   "vo-intro-statue": "Guess the statue! Can you name all seventy two?",
+  "vo-intro-element": "Guess the chemical element! Can you name all seventy six?",
+  "vo-intro-classiccar": "Guess the classic car! Can you name all seventy four?",
+  "vo-intro-trophy": "Guess the sports trophy! Can you name all fifty two?",
 };
 
 function wavDuration(path) {

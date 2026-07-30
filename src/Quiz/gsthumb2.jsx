@@ -75,6 +75,9 @@ const ASSET = {
   "paintings-e49-thumb": { dir: "paintings", ext: "jpg", fit: "contain" },
   "gemstones-e50-thumb": { dir: "gemstones", ext: "jpg", fit: "contain" },
   "statues-e51-thumb": { dir: "statues", ext: "jpg", fit: "contain" },
+  "elements-e52-thumb": { dir: "elements", ext: "jpg", fit: "contain" },
+  "classic-cars-e53-thumb": { dir: "classic-cars", ext: "jpg", fit: "cover" },
+  "trophies-e54-thumb": { dir: "trophies", ext: "jpg", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
