@@ -8,7 +8,7 @@ export const TROPHIES_E54_FACTS = {
   "ballon-dor-trophy": "A gold-plated ball on a stand, awarded by France Football since 1956.",
   "claret-jug": "Officially the Golf Champion Trophy; first awarded in 1873.",
   "larry-obrien-trophy": "Cast in silver and gold vermeil fresh for every NBA season.",
-  "fa-cup-trophy": "The current cup is actually the design's fourth version since 1871.",
+  "fa-cup-trophy": "The current cup is actually the fifth trophy made since 1871.",
   "copa-america-trophy": "South America's oldest continental title, contested since 1916.",
   "ryder-cup": "A small gold cup topped with a figure modeled on golfer Abe Mitchell.",
   "uefa-euro-trophy": "Named the Henri Delaunay Cup after the competition's founder.",
@@ -17,10 +17,10 @@ export const TROPHIES_E54_FACTS = {
 
   // MEDIUM
   "webb-ellis-cup": "Named for the schoolboy credited with inventing rugby in 1823.",
-  "wbc-championship-belt": "Its green leather championship belt design dates to 1963.",
+  "wbc-championship-belt": "Its iconic green leather championship belt design debuted in 1976.",
   "americas-cup": "Sailing's oldest trophy, first won in 1851 as a silver ewer.",
   "davis-cup": "One of sport's largest trophies, with panels added most years.",
-  "us-open-tennis-trophy": "Men's champions receive a solid silver cup first used in 1965.",
+  "us-open-tennis-trophy": "Men's champions receive a silver cup by Tiffany and Co. since 1987.",
   "coupe-des-mousquetaires": "Named for four French tennis stars of the 1920s-30s.",
   "copa-libertadores-trophy": "South America's top club trophy, first awarded in 1960.",
   "europa-league-trophy": "Formerly the UEFA Cup; renamed for the 2009-10 season.",
@@ -29,7 +29,7 @@ export const TROPHIES_E54_FACTS = {
   "borg-warner-trophy": "Every Indy 500 winner's face is sculpted onto its silver body.",
   "heisman-trophy": "Its stiff-arm pose was modeled on a 1930s college running back.",
   "icc-t20-world-cup-trophy": "A silver trophy with fanned blades, introduced for the 2007 event.",
-  "afcon-trophy": "Redesigned in 2021 after the original was retired to a museum.",
+  "afcon-trophy": "The current trophy debuted in 2002, its third design overall.",
   "premier-league-trophy": "Topped by a golden crown with three lions above a ball.",
 
   // HARD
@@ -38,18 +38,18 @@ export const TROPHIES_E54_FACTS = {
   "f1-constructors-trophy": "One trophy gets engraved yearly with every champion team since 1958.",
   "norman-brookes-challenge-cup": "Named for the Australian Open's first men's singles champion.",
   "copa-del-rey-trophy": "Spain's oldest football trophy, first awarded back in 1903.",
-  "dfb-pokal": "Germany's cup trophy stands atop a rotating wooden base.",
+  "dfb-pokal": "Sterling silver set with 42 gems; its base was extended in 1991.",
   "world-snooker-trophy": "Awarded each year at Sheffield's Crucible Theatre since 1977.",
   "fifa-club-world-cup-trophy": "A silver ball resting atop a rising column, introduced in 2000.",
   "six-nations-trophy": "Engraved with the emblems of all six competing nations.",
-  "nascar-cup-trophy": "A modern glass and chrome trophy that replaced the old Cup in 2004.",
+  "nascar-cup-trophy": "A sterling silver Tiffany and Co. design, first awarded in 2004.",
   "bundesliga-meisterschale": "Nicknamed the 'Salad Bowl' for its wide, flat plate shape.",
 
   // IMPOSSIBLE
   "afc-asian-cup-trophy": "Redesigned in 2019 with a taller, more modern silver form.",
   "grey-cup": "Canada's oldest sports trophy, first awarded back in 1909.",
   "bledisloe-cup": "A silver cup named for a New Zealand governor-general.",
-  "le-mans-trophy": "Its design changes yearly; only the winner keeps a replica.",
+  "le-mans-trophy": "The winner keeps it just one year unless won three years straight.",
   "naismith-trophy": "Named for basketball's inventor, awarded at the FIBA World Cup.",
   "afl-premiership-cup": "A fresh silver cup is awarded to each AFL Grand Final winner.",
   "heineken-champions-cup": "Rugby's top club trophy, first awarded back in 1996.",
