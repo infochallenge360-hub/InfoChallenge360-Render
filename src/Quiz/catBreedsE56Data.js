@@ -2,9 +2,11 @@
 // easy = instantly-recognizable "internet famous" breeds (Persian, Sphynx, Scottish Fold...)
 // impossible = genuinely obscure breeds only serious cat-fanciers would know.
 // fit=cover, dir="catbreeds", ext="jpg", coldSlug="german-rex" (rare, near-zero public recognition).
-// NOTE: Tennessee Rex and Owyhee Bobtail were cut — both breeds are so new/rare they have
-// no Wikipedia article and no licensed photo anywhere on Wikimedia Commons; shipping a wrong
-// or missing image was not an option, so the list is 70 items (18/18/18/16) instead of 72.
+// NOTE: Tennessee Rex, Owyhee Bobtail, Skookum, and York Chocolate were all cut — each is so
+// new/rare that no Wikipedia article or licensed photo exists anywhere on Wikimedia Commons
+// (or, for York Chocolate, every sourced photo looked too dark/ambiguous to confirm the coat
+// color that defines the breed); shipping a wrong or missing image was not an option, so the
+// final list is 68 items (18/18/17/15) instead of 72.
 
 export const CAT_BREEDS_E56 = [
   // EASY (18)
@@ -62,7 +64,6 @@ export const CAT_BREEDS_E56 = [
   { slug: "american-wirehair", name: "American Wirehair", level: "hard" },
   { slug: "kurilian-bobtail", name: "Kurilian Bobtail", level: "hard" },
   { slug: "sokoke", name: "Sokoke", level: "hard" },
-  { slug: "york-chocolate", name: "York Chocolate", level: "hard" },
   { slug: "australian-mist", name: "Australian Mist", level: "hard" },
   { slug: "british-semi-longhair", name: "British Semi-longhair", level: "hard" },
   { slug: "lykoi", name: "Lykoi", level: "hard" },
@@ -72,7 +73,6 @@ export const CAT_BREEDS_E56 = [
   { slug: "toybob", name: "Toybob", level: "impossible" },
   { slug: "ukrainian-levkoy", name: "Ukrainian Levkoy", level: "impossible" },
   { slug: "peterbald", name: "Peterbald", level: "impossible" },
-  { slug: "skookum", name: "Skookum", level: "impossible" },
   { slug: "highlander-cat", name: "Highlander", level: "impossible" },
   { slug: "napoleon-minuet", name: "Napoleon (Minuet)", level: "impossible" },
   { slug: "serengeti-cat", name: "Serengeti", level: "impossible" },
