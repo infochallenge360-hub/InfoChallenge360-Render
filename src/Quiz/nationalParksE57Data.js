@@ -1,8 +1,12 @@
 // E57 "Guess the National Park" — 70 items, absolute global recognizability.
 // easy = internationally famous parks recognizable by their iconic feature (Yellowstone geysers,
 // Grand Canyon, Serengeti plains...); impossible = genuinely obscure regional parks.
-// fit=cover, dir="nationalparks", ext="jpg", coldSlug="tbd" (set after image sourcing to the
-// most obscure successfully-sourced item).
+// fit=cover, dir="nationalparks", ext="jpg", coldSlug="korup".
+//
+// NOTE: "Hells Canyon National Recreation Area" and "El Yunque National Forest" were swapped out
+// (GATE1) — neither is actually a national park, which broke the episode's own premise. Replaced
+// with Big Bend National Park (USA, hard) and Ordesa y Monte Perdido National Park (Spain,
+// impossible) — genuine national parks at comparable difficulty.
 
 export const NATIONAL_PARKS_E57 = [
   // EASY (18)
@@ -52,7 +56,7 @@ export const NATIONAL_PARKS_E57 = [
   { slug: "gunung-mulu", name: "Gunung Mulu National Park", country: "Malaysia", level: "hard" },
   { slug: "khao-yai", name: "Khao Yai National Park", country: "Thailand", level: "hard" },
   { slug: "los-haitises", name: "Los Haitises National Park", country: "Dominican Republic", level: "hard" },
-  { slug: "hells-canyon", name: "Hells Canyon National Recreation Area", country: "USA", level: "hard" },
+  { slug: "big-bend", name: "Big Bend National Park", country: "USA", level: "hard" },
   { slug: "gran-paradiso", name: "Gran Paradiso National Park", country: "Italy", level: "hard" },
   { slug: "vatnajokull", name: "Vatnajökull National Park", country: "Iceland", level: "hard" },
   { slug: "cradle-mountain", name: "Cradle Mountain National Park", country: "Australia", level: "hard" },
@@ -76,7 +80,7 @@ export const NATIONAL_PARKS_E57 = [
   { slug: "ranomafana", name: "Ranomafana National Park", country: "Madagascar", level: "impossible" },
   { slug: "los-katios", name: "Los Katíos National Park", country: "Colombia", level: "impossible" },
   { slug: "doi-inthanon", name: "Doi Inthanon National Park", country: "Thailand", level: "impossible" },
-  { slug: "el-yunque", name: "El Yunque National Forest", country: "Puerto Rico", level: "impossible" },
+  { slug: "ordesa-monte-perdido", name: "Ordesa y Monte Perdido National Park", country: "Spain", level: "impossible" },
   { slug: "korup", name: "Korup National Park", country: "Cameroon", level: "impossible" },
   { slug: "virunga", name: "Virunga National Park", country: "DR Congo", level: "impossible" },
   { slug: "tsingy-de-bemaraha", name: "Tsingy de Bemaraha National Park", country: "Madagascar", level: "impossible" },
