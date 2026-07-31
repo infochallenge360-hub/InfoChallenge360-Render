@@ -18,6 +18,7 @@ const CFG = {
   E53: { data: "src/Quiz/classicCarsE53Data.js", nameField: "name", keyword: "classic car", word: "CLASSIC CAR", plural: "classic cars", folder: "E53_ClassicCars", tags: ["#carquiz", "#classiccars", "#quiz", "#cars", "#automotive"] },
   E54: { data: "src/Quiz/trophiesE54Data.js", nameField: "name", keyword: "sports trophy", word: "SPORTS TROPHY", plural: "sports trophies", folder: "E54_SportsTrophies", tags: ["#trophyquiz", "#sports", "#quiz", "#sportstrivia", "#trophies"] },
   E55: { data: "src/Quiz/stadiumsE55Data.js", nameField: "name", keyword: "stadium", word: "STADIUM", plural: "stadiums", folder: "E55_Stadiums", tags: ["#stadiumquiz", "#football", "#quiz", "#sports", "#stadiums"] },
+  E56: { data: "src/Quiz/catBreedsE56Data.js", nameField: "name", keyword: "cat breed", word: "CAT BREED", plural: "cat breeds", folder: "E56_CatBreeds", tags: ["#catbreedquiz", "#cats", "#quiz", "#catlover", "#pets"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
@@ -29,7 +30,7 @@ const HOOKS = [
   (K, Kp) => `90% Fail #12 😱 Guess the ${K}`,
   (K, Kp) => `How Many ${Kp} Can YOU Name? 🧠 (0–12)`,
 ];
-const cap = (s) => s[0].toUpperCase() + s.slice(1);
+const cap = (s) => s.split(" ").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
 
 const [, , ep] = process.argv;
 const c = CFG[ep];
@@ -75,14 +76,14 @@ Guess the ${Kd}! 🤔 12 ${c.plural} from EASY to IMPOSSIBLE — can you name th
 
 🎯 In this Short: ${allNames}.
 
-🔥 Full 100-${Kd} quiz on ${HANDLE} — a new quiz every week!
+🔥 Full ${items.length}-${Kd} quiz on ${HANDLE} — a new quiz every week!
 ▶ Subscribe: youtube.com/${HANDLE}
 👉 Which one did YOU miss?
 
 ${tagline}
 
 — PINNED COMMENT (سؤال يولّد ردود) —
-How many of the 12 did you get? Drop your score (0–12) 👇 Bet you missed the last one! Full 100-${Kd} quiz on ${HANDLE} 🔗
+How many of the 12 did you get? Drop your score (0–12) 👇 Bet you missed the last one! Full ${items.length}-${Kd} quiz on ${HANDLE} 🔗
 
 — محتوى هذا الريل (مرجع؛ لا تنشره) —
 EASY: ${byT[0].join(", ")}
