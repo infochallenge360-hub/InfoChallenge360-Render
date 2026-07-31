@@ -154,6 +154,8 @@ import { STADIUMS_E55 } from "./Quiz/stadiumsE55Data";
 import { STADIUMS_E55_FACTS } from "./Quiz/stadiumsE55Facts";
 import { CAT_BREEDS_E56 } from "./Quiz/catBreedsE56Data";
 import { CAT_BREEDS_E56_FACTS } from "./Quiz/catBreedsE56Facts";
+import { NATIONAL_PARKS_E57 } from "./Quiz/nationalParksE57Data";
+import { NATIONAL_PARKS_E57_FACTS } from "./Quiz/nationalParksE57Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -218,6 +220,7 @@ const E53_INFOCFG = { items: CLASSIC_CARS_E53, facts: CLASSIC_CARS_E53_FACTS, to
 const E54_INFOCFG = { items: TROPHIES_E54, facts: TROPHIES_E54_FACTS, topicWord: "SPORTS TROPHY", topicPlural: "SPORTS TROPHIES", dir: "trophies", ext: "jpg", fit: "contain", voPrefix: "tr-", nameField: "name", introVo: "vo-intro-trophy", coldSlug: "sam-maguire-cup" };
 const E55_INFOCFG = { items: STADIUMS_E55, facts: STADIUMS_E55_FACTS, topicWord: "STADIUM", topicPlural: "STADIUMS", dir: "stadiums", ext: "jpg", fit: "cover", voPrefix: "sd-", nameField: "name", introVo: "vo-intro-stadium", coldSlug: "estadio-defensores-del-chaco" };
 const E56_INFOCFG = { items: CAT_BREEDS_E56, facts: CAT_BREEDS_E56_FACTS, topicWord: "CAT BREED", topicPlural: "CAT BREEDS", dir: "catbreeds", ext: "jpg", fit: "cover", voPrefix: "ct-", nameField: "name", introVo: "vo-intro-catbreed", coldSlug: "german-rex" };
+const E57_INFOCFG = { items: NATIONAL_PARKS_E57, facts: NATIONAL_PARKS_E57_FACTS, topicWord: "NATIONAL PARK", topicPlural: "NATIONAL PARKS", dir: "nationalparks", ext: "jpg", fit: "cover", voPrefix: "np-", nameField: "name", introVo: "vo-intro-nationalpark", coldSlug: "korup" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -601,6 +604,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE56CatBreedHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "catbreeds-e56-thumb", heroSlug: "sphynx", line1: "GUESS THE", word: "CAT BREED?", number: "66", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE56CatBreedSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "catbreeds-e56-thumb", easySlug: "persian", hardSlug: "german-rex", word: "CAT BREED?", number: "66", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE56CatBreedNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "catbreeds-e56-thumb", cascade: ["persian", "siamese", "maine-coon", "?"], line1: "CAN YOU NAME ALL", word: "CAT BREED?", number: "66", badge: "Only 1% get 100%" }} />
+      <Composition id="E57NationalParkQuiz" component={QuizV2} durationInFrames={quizFrames(E57_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E57_INFOCFG }} />
+      <Composition id="ThumbE57NationalPark" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nationalparks-e57-thumb", grid: ["yellowstone", "grand-canyon", "yosemite", "?", "serengeti", "banff", "zion", "kruger", "komodo"], line1: "CAN YOU NAME ALL", word: "NATIONAL PARKS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE57NationalParkHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nationalparks-e57-thumb", heroSlug: "grand-canyon", line1: "GUESS THE", word: "NATIONAL PARK?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE57NationalParkSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nationalparks-e57-thumb", easySlug: "yellowstone", hardSlug: "korup", word: "NATIONAL PARK?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE57NationalParkNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nationalparks-e57-thumb", cascade: ["yellowstone", "grand-canyon", "yosemite", "?"], line1: "CAN YOU NAME ALL", word: "NATIONAL PARKS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -637,6 +645,7 @@ export const RemotionRoot = () => {
         { ep: "E54", items: TROPHIES_E54, mode: "trophies-e54", title: "Guess the Sports Trophy", v2: true },
         { ep: "E55", items: STADIUMS_E55, mode: "stadiums-e55", title: "Guess the Stadium", v2: true },
         { ep: "E56", items: CAT_BREEDS_E56, mode: "catbreeds-e56", title: "Guess the Cat Breed", v2: true },
+        { ep: "E57", items: NATIONAL_PARKS_E57, mode: "nationalparks-e57", title: "Guess the National Park", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

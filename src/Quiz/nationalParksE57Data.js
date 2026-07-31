@@ -1,0 +1,87 @@
+// E57 "Guess the National Park" — 70 items, absolute global recognizability.
+// easy = internationally famous parks recognizable by their iconic feature (Yellowstone geysers,
+// Grand Canyon, Serengeti plains...); impossible = genuinely obscure regional parks.
+// fit=cover, dir="nationalparks", ext="jpg", coldSlug="tbd" (set after image sourcing to the
+// most obscure successfully-sourced item).
+
+export const NATIONAL_PARKS_E57 = [
+  // EASY (18)
+  { slug: "yellowstone", name: "Yellowstone National Park", country: "USA", level: "easy" },
+  { slug: "grand-canyon", name: "Grand Canyon National Park", country: "USA", level: "easy" },
+  { slug: "yosemite", name: "Yosemite National Park", country: "USA", level: "easy" },
+  { slug: "serengeti", name: "Serengeti National Park", country: "Tanzania", level: "easy" },
+  { slug: "kruger", name: "Kruger National Park", country: "South Africa", level: "easy" },
+  { slug: "banff", name: "Banff National Park", country: "Canada", level: "easy" },
+  { slug: "zion", name: "Zion National Park", country: "USA", level: "easy" },
+  { slug: "torres-del-paine", name: "Torres del Paine National Park", country: "Chile", level: "easy" },
+  { slug: "plitvice-lakes", name: "Plitvice Lakes National Park", country: "Croatia", level: "easy" },
+  { slug: "great-smoky-mountains", name: "Great Smoky Mountains National Park", country: "USA", level: "easy" },
+  { slug: "iguazu", name: "Iguazú National Park", country: "Argentina", level: "easy" },
+  { slug: "fiordland", name: "Fiordland National Park", country: "New Zealand", level: "easy" },
+  { slug: "jasper", name: "Jasper National Park", country: "Canada", level: "easy" },
+  { slug: "denali", name: "Denali National Park", country: "USA", level: "easy" },
+  { slug: "komodo", name: "Komodo National Park", country: "Indonesia", level: "easy" },
+  { slug: "galapagos", name: "Galápagos National Park", country: "Ecuador", level: "easy" },
+  { slug: "grand-teton", name: "Grand Teton National Park", country: "USA", level: "easy" },
+  { slug: "kilimanjaro", name: "Kilimanjaro National Park", country: "Tanzania", level: "easy" },
+
+  // MEDIUM (18)
+  { slug: "arches", name: "Arches National Park", country: "USA", level: "medium" },
+  { slug: "glacier", name: "Glacier National Park", country: "USA", level: "medium" },
+  { slug: "rocky-mountain", name: "Rocky Mountain National Park", country: "USA", level: "medium" },
+  { slug: "everglades", name: "Everglades National Park", country: "USA", level: "medium" },
+  { slug: "bryce-canyon", name: "Bryce Canyon National Park", country: "USA", level: "medium" },
+  { slug: "joshua-tree", name: "Joshua Tree National Park", country: "USA", level: "medium" },
+  { slug: "table-mountain", name: "Table Mountain National Park", country: "South Africa", level: "medium" },
+  { slug: "amboseli", name: "Amboseli National Park", country: "Kenya", level: "medium" },
+  { slug: "etosha", name: "Etosha National Park", country: "Namibia", level: "medium" },
+  { slug: "chapada-diamantina", name: "Chapada Diamantina National Park", country: "Brazil", level: "medium" },
+  { slug: "sagarmatha", name: "Sagarmatha National Park", country: "Nepal", level: "medium" },
+  { slug: "los-glaciares", name: "Los Glaciares National Park", country: "Argentina", level: "medium" },
+  { slug: "lake-district", name: "Lake District National Park", country: "United Kingdom", level: "medium" },
+  { slug: "cinque-terre", name: "Cinque Terre National Park", country: "Italy", level: "medium" },
+  { slug: "tongariro", name: "Tongariro National Park", country: "New Zealand", level: "medium" },
+  { slug: "canaima", name: "Canaima National Park", country: "Venezuela", level: "medium" },
+  { slug: "sequoia", name: "Sequoia National Park", country: "USA", level: "medium" },
+  { slug: "olympic", name: "Olympic National Park", country: "USA", level: "medium" },
+
+  // HARD (18)
+  { slug: "torngat-mountains", name: "Torngat Mountains National Park", country: "Canada", level: "hard" },
+  { slug: "sarek", name: "Sarek National Park", country: "Sweden", level: "hard" },
+  { slug: "durmitor", name: "Durmitor National Park", country: "Montenegro", level: "hard" },
+  { slug: "gunung-mulu", name: "Gunung Mulu National Park", country: "Malaysia", level: "hard" },
+  { slug: "khao-yai", name: "Khao Yai National Park", country: "Thailand", level: "hard" },
+  { slug: "los-haitises", name: "Los Haitises National Park", country: "Dominican Republic", level: "hard" },
+  { slug: "hells-canyon", name: "Hells Canyon National Recreation Area", country: "USA", level: "hard" },
+  { slug: "gran-paradiso", name: "Gran Paradiso National Park", country: "Italy", level: "hard" },
+  { slug: "vatnajokull", name: "Vatnajökull National Park", country: "Iceland", level: "hard" },
+  { slug: "cradle-mountain", name: "Cradle Mountain National Park", country: "Australia", level: "hard" },
+  { slug: "purnululu", name: "Purnululu National Park", country: "Australia", level: "hard" },
+  { slug: "waterton-lakes", name: "Waterton Lakes National Park", country: "Canada", level: "hard" },
+  { slug: "goreme", name: "Göreme National Park", country: "Turkey", level: "hard" },
+  { slug: "abisko", name: "Abisko National Park", country: "Sweden", level: "hard" },
+  { slug: "kakadu", name: "Kakadu National Park", country: "Australia", level: "hard" },
+  { slug: "morne-trois-pitons", name: "Morne Trois Pitons National Park", country: "Dominica", level: "hard" },
+  { slug: "nahanni", name: "Nahanni National Park", country: "Canada", level: "hard" },
+  { slug: "huascaran", name: "Huascarán National Park", country: "Peru", level: "hard" },
+
+  // IMPOSSIBLE (16)
+  { slug: "wood-buffalo", name: "Wood Buffalo National Park", country: "Canada", level: "impossible" },
+  { slug: "gates-of-the-arctic", name: "Gates of the Arctic National Park", country: "USA", level: "impossible" },
+  { slug: "khangchendzonga", name: "Khangchendzonga National Park", country: "India", level: "impossible" },
+  { slug: "simien-mountains", name: "Simien Mountains National Park", country: "Ethiopia", level: "impossible" },
+  { slug: "manu", name: "Manú National Park", country: "Peru", level: "impossible" },
+  { slug: "salonga", name: "Salonga National Park", country: "DR Congo", level: "impossible" },
+  { slug: "phong-nha-ke-bang", name: "Phong Nha-Kẻ Bàng National Park", country: "Vietnam", level: "impossible" },
+  { slug: "ranomafana", name: "Ranomafana National Park", country: "Madagascar", level: "impossible" },
+  { slug: "los-katios", name: "Los Katíos National Park", country: "Colombia", level: "impossible" },
+  { slug: "doi-inthanon", name: "Doi Inthanon National Park", country: "Thailand", level: "impossible" },
+  { slug: "el-yunque", name: "El Yunque National Forest", country: "Puerto Rico", level: "impossible" },
+  { slug: "korup", name: "Korup National Park", country: "Cameroon", level: "impossible" },
+  { slug: "virunga", name: "Virunga National Park", country: "DR Congo", level: "impossible" },
+  { slug: "tsingy-de-bemaraha", name: "Tsingy de Bemaraha National Park", country: "Madagascar", level: "impossible" },
+  { slug: "rondane", name: "Rondane National Park", country: "Norway", level: "impossible" },
+  { slug: "aggtelek", name: "Aggtelek National Park", country: "Hungary", level: "impossible" },
+];
+
+export default NATIONAL_PARKS_E57;
