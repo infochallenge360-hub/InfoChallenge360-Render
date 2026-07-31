@@ -2,11 +2,11 @@
 // easy = instantly-recognizable "internet famous" breeds (Persian, Sphynx, Scottish Fold...)
 // impossible = genuinely obscure breeds only serious cat-fanciers would know.
 // fit=cover, dir="catbreeds", ext="jpg", coldSlug="german-rex" (rare, near-zero public recognition).
-// NOTE: Tennessee Rex, Owyhee Bobtail, Skookum, and York Chocolate were all cut — each is so
-// new/rare that no Wikipedia article or licensed photo exists anywhere on Wikimedia Commons
-// (or, for York Chocolate, every sourced photo looked too dark/ambiguous to confirm the coat
-// color that defines the breed); shipping a wrong or missing image was not an option, so the
-// final list is 68 items (18/18/17/15) instead of 72.
+// NOTE: Tennessee Rex, Owyhee Bobtail, Skookum, York Chocolate, and Aegean were all cut — each
+// is so new/rare (or, for York Chocolate/Aegean, has a coat pattern too ambiguous in every
+// sourced photo to confirm the breed-defining trait) that no correct licensed photo exists
+// anywhere on Wikimedia Commons/Openverse; shipping a wrong or missing image was not an
+// option, so the final list is 67 items (18/18/17/14) instead of 72.
 
 export const CAT_BREEDS_E56 = [
   // EASY (18)
@@ -82,7 +82,6 @@ export const CAT_BREEDS_E56 = [
   { slug: "khao-manee", name: "Khao Manee", level: "impossible" },
   { slug: "dragon-li", name: "Dragon Li", level: "impossible" },
   { slug: "arabian-mau", name: "Arabian Mau", level: "impossible" },
-  { slug: "aegean-cat", name: "Aegean", level: "impossible" },
   { slug: "german-rex", name: "German Rex", level: "impossible" },
 ];
 

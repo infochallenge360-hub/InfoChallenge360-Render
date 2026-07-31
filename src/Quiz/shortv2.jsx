@@ -14,7 +14,7 @@ const LVL = {
 };
 
 // v2: 4 خيارات لكل سؤال + شريط تايمر يمتلئ (5 ثواني). هوك 75 + (12 × 200) + خاتمة 120
-const ST = { hook: 75, round: 260, reveal: 210, outro: 120 };
+const ST = { hook: 75, round: 300, reveal: 210, outro: 120 };
 const TICKS = [0, 30, 60, 90, 120, 150, 176, 188, 198, 205];
 const ABCD = ["A", "B", "C", "D"];
 const nameOf = (x, mode) => mode === "paintings" ? x.title : mode === "capitals" ? x.capital : (x.name || x.country || x.slug);
@@ -191,7 +191,7 @@ const Round = ({ item, mode, num, all }) => {
       <Owl revealed={revealed} />
       {TICKS.map((tf) => <Sequence key={tf} from={tf} durationInFrames={12}><Audio src={staticFile("sfx/tick.wav")} volume={0.5} /></Sequence>)}
       <Sequence from={ST.reveal} durationInFrames={40}><Audio src={staticFile("sfx/ding.wav")} volume={0.8} /></Sequence>
-      <Sequence from={ST.reveal + 6} durationInFrames={70}><Audio src={staticFile(voFile(item, mode))} volume={1} /></Sequence>
+      <Sequence from={ST.reveal + 6} durationInFrames={100}><Audio src={staticFile(voFile(item, mode))} volume={1} /></Sequence>
     </AbsoluteFill>
   );
 };
@@ -248,4 +248,4 @@ export const ShortV2Quiz = ({ items, mode, title, part = 0 }) => {
   );
 };
 
-export const SHORTV2_FRAMES = build(new Array(12).fill(0)).total; // 1755
+export const SHORTV2_FRAMES = build(new Array(12).fill(0)).total; // 3795 (126.5s)

@@ -28,7 +28,7 @@ export const CAT_BREEDS_E56_FACTS = {
   "somali": "Essentially a long-haired version of the Abyssinian.",
   "balinese": "A long-haired Siamese with the same pointed coloring.",
   "selkirk-rex": "Nicknamed the 'cat in sheep's clothing' for its curls.",
-  "american-curl": "Recognized by ears that curl back from birth.",
+  "american-curl": "Kittens are born straight-eared; ears curl back within days.",
   "exotic-shorthair": "Called the 'lazy man's Persian' for its short coat.",
   "british-longhair": "A long-haired variant of the British Shorthair.",
   "chartreux": "A French breed with a blue-grey coat and copper eyes.",
@@ -72,7 +72,6 @@ export const CAT_BREEDS_E56_FACTS = {
   "khao-manee": "An ancient Thai breed often born with two eye colors.",
   "dragon-li": "A native Chinese breed with a brown-striped tabby coat.",
   "arabian-mau": "A natural desert breed from the Arabian Peninsula.",
-  "aegean-cat": "A rare natural breed from the Greek Cycladic islands.",
   "german-rex": "One of Europe's earliest recorded curly-coated cats.",
 };
 
