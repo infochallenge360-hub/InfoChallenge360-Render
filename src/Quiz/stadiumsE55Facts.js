@@ -1,7 +1,7 @@
 export const STADIUMS_E55_FACTS = {
   // EASY
   "wembley-stadium": "Its arch is 133 meters tall, visible across much of London.",
-  "camp-nou": "Europe's largest stadium by capacity, home of FC Barcelona.",
+  "camp-nou": "FC Barcelona's home, historically Europe's largest stadium.",
   "maracana": "Built for the 1950 World Cup; hosted two World Cup finals.",
   "san-siro": "Shared by AC Milan and Inter Milan since 1947.",
   "old-trafford": "Nicknamed the Theatre of Dreams, Manchester United's home since 1910.",
@@ -21,11 +21,11 @@ export const STADIUMS_E55_FACTS = {
 
   // MEDIUM
   "emirates-stadium": "Arsenal's home since 2006, replacing the nearby Highbury.",
-  "anfield": "Liverpool's home since 1884, famed for its 'You'll Never Walk Alone'.",
+  "anfield": "Liverpool's home since 1892, famed for 'You'll Never Walk Alone'.",
   "stamford-bridge": "Chelsea's home since the club's founding in 1905.",
   "etihad-stadium": "Built for the 2002 Commonwealth Games before Manchester City moved in.",
   "parc-des-princes": "Home of Paris Saint-Germain since 1974.",
-  "estadio-azteca": "The only stadium to host two FIFA World Cup finals, 1970 and 1986.",
+  "estadio-azteca": "Hosted FIFA World Cup finals in both 1970 and 1986.",
   "la-bombonera": "Boca Juniors' home, famous for its steep, boxy stands.",
   "estadio-monumental-river": "Argentina's largest stadium, hosted the 1978 World Cup final.",
   "wrigley-field": "The Chicago Cubs' home since 1914, famous for ivy-covered walls.",
@@ -66,7 +66,7 @@ export const STADIUMS_E55_FACTS = {
   "independence-park-kingston": "Jamaica's national stadium, opened for independence in 1962.",
   "ullevaal-stadion": "Norway's national football stadium, in Oslo since 1926.",
   "parken-stadium": "Denmark's national stadium, built on the site of an older ground.",
-  "tele2-arena": "A Stockholm stadium with a roof resembling a giant eye.",
+  "tele2-arena": "A Stockholm stadium with a shell-like, wicker-patterned facade.",
   "rheinenergiestadion": "Cologne's home ground, rebuilt for the 2006 World Cup.",
   "volksparkstadion": "Hamburg's home ground, rebuilt entirely between 1998 and 2000.",
   "stadion-miejski-wroclaw": "Built for Euro 2012, its facade evokes woven wicker.",
