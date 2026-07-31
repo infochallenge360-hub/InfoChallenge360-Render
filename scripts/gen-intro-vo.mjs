@@ -68,6 +68,7 @@ const INTROS = {
   "vo-intro-classiccar": "Guess the classic car! Can you name all seventy four?",
   "vo-intro-trophy": "Guess the sports trophy! Can you name all fifty two?",
   "vo-intro-stadium": "Guess the stadium! Can you name all seventy?",
+  "vo-intro-catbreed": "Guess the cat breed! Can you name all seventy?",
 };
 
 function wavDuration(path) {
