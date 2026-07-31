@@ -70,7 +70,7 @@ export const SKYSCRAPERS_E58 = [
   { slug: "gran-torre-santiago", name: "Gran Torre Santiago", country: "Chile", level: "hard" },
   { slug: "merdeka-118", name: "Merdeka 118", country: "Malaysia", level: "hard" },
 
-  // IMPOSSIBLE (16)
+  // IMPOSSIBLE (15)
   { slug: "leadenhall-building", name: "Leadenhall Building", country: "United Kingdom", level: "impossible" },
   { slug: "kingdom-centre", name: "Kingdom Centre", country: "Saudi Arabia", level: "impossible" },
   { slug: "burj-rafal", name: "Burj Rafal", country: "Saudi Arabia", level: "impossible" },
