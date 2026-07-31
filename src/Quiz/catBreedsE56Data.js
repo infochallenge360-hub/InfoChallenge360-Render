@@ -51,7 +51,7 @@ export const CAT_BREEDS_E56 = [
   { slug: "laperm", name: "LaPerm", level: "medium" },
   { slug: "singapura", name: "Singapura", level: "medium" },
 
-  // HARD (18)
+  // HARD (16)
   { slug: "korat", name: "Korat", level: "hard" },
   { slug: "havana-brown", name: "Havana Brown", level: "hard" },
   { slug: "bombay", name: "Bombay", level: "hard" },
@@ -69,7 +69,7 @@ export const CAT_BREEDS_E56 = [
   { slug: "australian-mist", name: "Australian Mist", level: "hard" },
   { slug: "lykoi", name: "Lykoi", level: "hard" },
 
-  // IMPOSSIBLE (18)
+  // IMPOSSIBLE (14)
   { slug: "minskin", name: "Minskin", level: "impossible" },
   { slug: "toybob", name: "Toybob", level: "impossible" },
   { slug: "ukrainian-levkoy", name: "Ukrainian Levkoy", level: "impossible" },
