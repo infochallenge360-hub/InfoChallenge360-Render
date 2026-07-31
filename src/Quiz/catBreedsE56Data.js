@@ -5,8 +5,10 @@
 // NOTE: Tennessee Rex, Owyhee Bobtail, Skookum, York Chocolate, and Aegean were all cut — each
 // is so new/rare (or, for York Chocolate/Aegean, has a coat pattern too ambiguous in every
 // sourced photo to confirm the breed-defining trait) that no correct licensed photo exists
-// anywhere on Wikimedia Commons/Openverse; shipping a wrong or missing image was not an
-// option, so the final list is 67 items (18/18/17/14) instead of 72.
+// anywhere on Wikimedia Commons/Openverse. British Semi-longhair was also cut — it and
+// British Longhair are the same breed under two different registry names (WCF vs TICA), not
+// two distinct breeds, so quizzing both would repeat the same answer. Final list is 66 items
+// (18/18/16/14) instead of 72.
 
 export const CAT_BREEDS_E56 = [
   // EASY (18)
@@ -65,7 +67,6 @@ export const CAT_BREEDS_E56 = [
   { slug: "kurilian-bobtail", name: "Kurilian Bobtail", level: "hard" },
   { slug: "sokoke", name: "Sokoke", level: "hard" },
   { slug: "australian-mist", name: "Australian Mist", level: "hard" },
-  { slug: "british-semi-longhair", name: "British Semi-longhair", level: "hard" },
   { slug: "lykoi", name: "Lykoi", level: "hard" },
 
   // IMPOSSIBLE (18)

@@ -55,7 +55,6 @@ export const CAT_BREEDS_E56_FACTS = {
   "kurilian-bobtail": "A Russian bobtail breed from the Kuril Islands.",
   "sokoke": "A rare natural breed from Kenya's Arabuko-Sokoke forest.",
   "australian-mist": "Australia's own spotted and marbled cat breed.",
-  "british-semi-longhair": "A fluffier-coated cousin of the British Shorthair.",
   "lykoi": "Nicknamed the 'werewolf cat' for its patchy fur.",
 
   // IMPOSSIBLE
