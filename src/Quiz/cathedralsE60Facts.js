@@ -8,7 +8,7 @@ export const CATHEDRALS_E60_FACTS = {
   "st-pauls-cathedral": "Sir Christopher Wren rebuilt it after the Great Fire.",
   "cologne-cathedral": "Took over 600 years to complete.",
   "milan-cathedral": "Its roof holds over 3,400 statues.",
-  "florence-cathedral": "Its dome inspired the U.S. Capitol's design.",
+  "florence-cathedral": "Brunelleschi's dome was the first of its kind since antiquity.",
   "seville-cathedral": "The largest Gothic cathedral in the world.",
   "st-stephens-cathedral-vienna": "Its roof is covered in 230,000 glazed tiles.",
   "st-vitus-cathedral": "Took nearly 600 years to finish.",
@@ -18,7 +18,7 @@ export const CATHEDRALS_E60_FACTS = {
   "washington-national-cathedral": "The 6th-largest cathedral in the world.",
   "st-patricks-cathedral-nyc": "The largest Gothic Catholic cathedral in the US.",
   "brasilia-cathedral": "Its hyperboloid shape opened in 1970.",
-  "mexico-city-cathedral": "The largest cathedral in the Americas.",
+  "mexico-city-cathedral": "The largest Catholic cathedral in Latin America.",
 
   // MEDIUM
   "york-minster": "One of the largest Gothic cathedrals in Europe.",
@@ -48,7 +48,7 @@ export const CATHEDRALS_E60_FACTS = {
   "naples-cathedral": "Home to a vial said to hold a saint's blood.",
   "monreale-cathedral": "Famous for its gold Byzantine mosaics.",
   "riga-cathedral": "The largest medieval church in the Baltics.",
-  "vilnius-cathedral": "Lithuania's grand duke's are entombed within.",
+  "vilnius-cathedral": "Lithuania's grand dukes are entombed within.",
   "zagreb-cathedral": "Rebuilt with twin spires after a 1880 earthquake.",
   "alexander-nevsky-cathedral": "One of the largest Orthodox cathedrals in the Balkans.",
   "bucharest-patriarchal-cathedral": "The seat of Romania's Orthodox Church.",
@@ -79,7 +79,7 @@ export const CATHEDRALS_E60_FACTS = {
   "yangon-cathedral": "Myanmar's largest Catholic cathedral.",
   "asuncion-cathedral": "Sits on Paraguay's central Plaza de la Independencia.",
   "la-paz-cathedral": "Built at over 3,600 meters above sea level.",
-  "montevideo-cathedral": "Uruguay's oldest building still in use.",
+  "montevideo-cathedral": "Montevideo's oldest building still in active use.",
 };
 
 export default CATHEDRALS_E60_FACTS;
