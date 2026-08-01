@@ -49,7 +49,7 @@ export const CATHEDRALS_E60_FACTS = {
   "monreale-cathedral": "Famous for its gold Byzantine mosaics.",
   "riga-cathedral": "The largest medieval church in the Baltics.",
   "vilnius-cathedral": "Lithuania's grand dukes are entombed within.",
-  "zagreb-cathedral": "Rebuilt with twin spires after a 1880 earthquake.",
+  "zagreb-cathedral": "Rebuilt with twin spires after an 1880 earthquake.",
   "alexander-nevsky-cathedral": "One of the largest Orthodox cathedrals in the Balkans.",
   "bucharest-patriarchal-cathedral": "The seat of Romania's Orthodox Church.",
   "etchmiadzin-cathedral": "Widely called the world's oldest cathedral.",
