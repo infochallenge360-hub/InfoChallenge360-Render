@@ -72,7 +72,7 @@ export const PALACES_E59_FACTS = {
   "mandalay-palace": "The last royal palace of the Burmese monarchy.",
   "bogd-khan-palace": "The former home of Mongolia's last king.",
   "dadiani-palace": "A former residence of Georgia's Dadiani princes.",
-  "presidential-palace-vientiane": "The former royal palace of the Kingdom of Laos.",
+  "presidential-palace-vientiane": "Built as Laos's royal palace, finished after the monarchy fell.",
   "kings-palace-nyanza": "A reconstructed royal residence of Rwanda's kings.",
   "tirana-presidential-palace": "The official residence of Albania's president.",
   "istana-negara": "The official residence of Malaysia's king.",
