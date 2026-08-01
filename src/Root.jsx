@@ -158,6 +158,8 @@ import { NATIONAL_PARKS_E57 } from "./Quiz/nationalParksE57Data";
 import { NATIONAL_PARKS_E57_FACTS } from "./Quiz/nationalParksE57Facts";
 import { SKYSCRAPERS_E58 } from "./Quiz/skyscrapersE58Data";
 import { SKYSCRAPERS_E58_FACTS } from "./Quiz/skyscrapersE58Facts";
+import { PALACES_E59 } from "./Quiz/palacesE59Data";
+import { PALACES_E59_FACTS } from "./Quiz/palacesE59Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -224,6 +226,7 @@ const E55_INFOCFG = { items: STADIUMS_E55, facts: STADIUMS_E55_FACTS, topicWord:
 const E56_INFOCFG = { items: CAT_BREEDS_E56, facts: CAT_BREEDS_E56_FACTS, topicWord: "CAT BREED", topicPlural: "CAT BREEDS", dir: "catbreeds", ext: "jpg", fit: "cover", voPrefix: "ct-", nameField: "name", introVo: "vo-intro-catbreed", coldSlug: "german-rex" };
 const E57_INFOCFG = { items: NATIONAL_PARKS_E57, facts: NATIONAL_PARKS_E57_FACTS, topicWord: "NATIONAL PARK", topicPlural: "NATIONAL PARKS", dir: "nationalparks", ext: "jpg", fit: "cover", voPrefix: "np-", nameField: "name", introVo: "vo-intro-nationalpark", coldSlug: "korup" };
 const E58_INFOCFG = { items: SKYSCRAPERS_E58, facts: SKYSCRAPERS_E58_FACTS, topicWord: "SKYSCRAPER", topicPlural: "SKYSCRAPERS", dir: "skyscrapers", ext: "jpg", fit: "cover", voPrefix: "sg-", nameField: "name", introVo: "vo-intro-skyscraper", coldSlug: "poly-international-plaza" };
+const E59_INFOCFG = { items: PALACES_E59, facts: PALACES_E59_FACTS, topicWord: "PALACE", topicPlural: "PALACES", dir: "palaces", ext: "jpg", fit: "cover", voPrefix: "pz-", nameField: "name", introVo: "vo-intro-palace", coldSlug: "jubilee-palace" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -617,6 +620,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE58SkyscraperHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "skyscrapers-e58-thumb", heroSlug: "burj-khalifa", line1: "GUESS THE", word: "SKYSCRAPER?", number: "68", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE58SkyscraperSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "skyscrapers-e58-thumb", easySlug: "burj-khalifa", hardSlug: "poly-international-plaza", word: "SKYSCRAPER?", number: "68", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE58SkyscraperNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "skyscrapers-e58-thumb", cascade: ["burj-khalifa", "empire-state-building", "shanghai-tower", "?"], line1: "CAN YOU NAME ALL", word: "SKYSCRAPERS?", number: "68", badge: "Only 1% get 100%" }} />
+      <Composition id="E59PalaceQuiz" component={QuizV2} durationInFrames={quizFrames(E59_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E59_INFOCFG }} />
+      <Composition id="ThumbE59Palace" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", grid: ["buckingham-palace", "palace-of-versailles", "forbidden-city", "?", "potala-palace", "topkapi-palace", "alhambra", "schonbrunn-palace", "peterhof-palace"], line1: "CAN YOU NAME ALL", word: "PALACES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE59PalaceHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", heroSlug: "buckingham-palace", line1: "GUESS THE", word: "PALACE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE59PalaceSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", easySlug: "buckingham-palace", hardSlug: "jubilee-palace", word: "PALACE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE59PalaceNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", cascade: ["buckingham-palace", "palace-of-versailles", "forbidden-city", "?"], line1: "CAN YOU NAME ALL", word: "PALACES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -655,6 +663,7 @@ export const RemotionRoot = () => {
         { ep: "E56", items: CAT_BREEDS_E56, mode: "catbreeds-e56", title: "Guess the Cat Breed", v2: true },
         { ep: "E57", items: NATIONAL_PARKS_E57, mode: "nationalparks-e57", title: "Guess the National Park", v2: true },
         { ep: "E58", items: SKYSCRAPERS_E58, mode: "skyscrapers-e58", title: "Guess the Skyscraper", v2: true },
+        { ep: "E59", items: PALACES_E59, mode: "palaces-e59", title: "Guess the Palace", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

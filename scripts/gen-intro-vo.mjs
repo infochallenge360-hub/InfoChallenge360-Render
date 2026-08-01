@@ -71,6 +71,7 @@ const INTROS = {
   "vo-intro-catbreed": "Guess the cat breed! Can you name all seventy?",
   "vo-intro-nationalpark": "Guess the national park! Can you name all seventy?",
   "vo-intro-skyscraper": "Guess the skyscraper! Can you name all sixty eight?",
+  "vo-intro-palace": "Guess the palace! Can you name all seventy?",
 };
 
 function wavDuration(path) {
