@@ -160,6 +160,8 @@ import { SKYSCRAPERS_E58 } from "./Quiz/skyscrapersE58Data";
 import { SKYSCRAPERS_E58_FACTS } from "./Quiz/skyscrapersE58Facts";
 import { PALACES_E59 } from "./Quiz/palacesE59Data";
 import { PALACES_E59_FACTS } from "./Quiz/palacesE59Facts";
+import { CATHEDRALS_E60 } from "./Quiz/cathedralsE60Data";
+import { CATHEDRALS_E60_FACTS } from "./Quiz/cathedralsE60Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -227,6 +229,7 @@ const E56_INFOCFG = { items: CAT_BREEDS_E56, facts: CAT_BREEDS_E56_FACTS, topicW
 const E57_INFOCFG = { items: NATIONAL_PARKS_E57, facts: NATIONAL_PARKS_E57_FACTS, topicWord: "NATIONAL PARK", topicPlural: "NATIONAL PARKS", dir: "nationalparks", ext: "jpg", fit: "cover", voPrefix: "np-", nameField: "name", introVo: "vo-intro-nationalpark", coldSlug: "korup" };
 const E58_INFOCFG = { items: SKYSCRAPERS_E58, facts: SKYSCRAPERS_E58_FACTS, topicWord: "SKYSCRAPER", topicPlural: "SKYSCRAPERS", dir: "skyscrapers", ext: "jpg", fit: "cover", voPrefix: "sg-", nameField: "name", introVo: "vo-intro-skyscraper", coldSlug: "poly-international-plaza" };
 const E59_INFOCFG = { items: PALACES_E59, facts: PALACES_E59_FACTS, topicWord: "PALACE", topicPlural: "PALACES", dir: "palaces", ext: "jpg", fit: "cover", voPrefix: "pz-", nameField: "name", introVo: "vo-intro-palace", coldSlug: "jubilee-palace" };
+const E60_INFOCFG = { items: CATHEDRALS_E60, facts: CATHEDRALS_E60_FACTS, topicWord: "CATHEDRAL", topicPlural: "CATHEDRALS", dir: "cathedrals", ext: "jpg", fit: "cover", voPrefix: "cd-", nameField: "name", introVo: "vo-intro-cathedral", coldSlug: "coptic-cathedral-cairo" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -625,6 +628,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE59PalaceHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", heroSlug: "buckingham-palace", line1: "GUESS THE", word: "PALACE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE59PalaceSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", easySlug: "buckingham-palace", hardSlug: "jubilee-palace", word: "PALACE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE59PalaceNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "palaces-e59-thumb", cascade: ["buckingham-palace", "palace-of-versailles", "forbidden-city", "?"], line1: "CAN YOU NAME ALL", word: "PALACES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E60CathedralQuiz" component={QuizV2} durationInFrames={quizFrames(E60_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E60_INFOCFG }} />
+      <Composition id="ThumbE60Cathedral" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cathedrals-e60-thumb", grid: ["notre-dame-paris", "st-peters-basilica", "sagrada-familia", "?", "st-basils-cathedral", "hagia-sophia", "st-pauls-cathedral", "cologne-cathedral", "milan-cathedral"], line1: "CAN YOU NAME ALL", word: "CATHEDRALS?", number: "74", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE60CathedralHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cathedrals-e60-thumb", heroSlug: "notre-dame-paris", line1: "GUESS THE", word: "CATHEDRAL?", number: "74", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE60CathedralSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cathedrals-e60-thumb", easySlug: "notre-dame-paris", hardSlug: "coptic-cathedral-cairo", word: "CATHEDRAL?", number: "74", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE60CathedralNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cathedrals-e60-thumb", cascade: ["notre-dame-paris", "st-peters-basilica", "sagrada-familia", "?"], line1: "CAN YOU NAME ALL", word: "CATHEDRALS?", number: "74", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -664,6 +672,7 @@ export const RemotionRoot = () => {
         { ep: "E57", items: NATIONAL_PARKS_E57, mode: "nationalparks-e57", title: "Guess the National Park", v2: true },
         { ep: "E58", items: SKYSCRAPERS_E58, mode: "skyscrapers-e58", title: "Guess the Skyscraper", v2: true },
         { ep: "E59", items: PALACES_E59, mode: "palaces-e59", title: "Guess the Palace", v2: true },
+        { ep: "E60", items: CATHEDRALS_E60, mode: "cathedrals-e60", title: "Guess the Cathedral", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
