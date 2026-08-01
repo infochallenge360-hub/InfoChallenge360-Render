@@ -5,7 +5,7 @@ export const PALACES_E59_FACTS = {
   "forbidden-city": "Home to Chinese emperors for nearly 500 years.",
   "potala-palace": "Once the winter residence of the Dalai Lama.",
   "topkapi-palace": "Home to Ottoman sultans for nearly 400 years.",
-  "alhambra": "A Moorish palace and fortress complex in Granada.",
+  "alhambra": "A Moorish royal palace overlooking Granada, Spain.",
   "schonbrunn-palace": "The former summer residence of Austria's Habsburgs.",
   "peterhof-palace": "Nicknamed the 'Russian Versailles' for its fountains.",
   "winter-palace": "Now home to part of the Hermitage Museum.",
