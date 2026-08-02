@@ -1,0 +1,90 @@
+// E61 "Guess the Mosque" — 72 items, absolute global recognizability.
+// easy = globally iconic mosques (Sheikh Zayed Grand Mosque, Blue Mosque, Masjid al-Haram...);
+// impossible = genuinely obscure regional mosques most of the world has never heard of.
+// HARD RULE: zero Israel/Jerusalem-related content — no Dome of the Rock, no Al-Aqsa Mosque,
+// no Jerusalem sites of any kind, regardless of historical/religious significance.
+// fit=cover, dir="mosques", ext="jpg", coldSlug="tbd" (set after image sourcing).
+
+export const MOSQUES_E61 = [
+  // EASY (18)
+  { slug: "sheikh-zayed-grand-mosque", name: "Sheikh Zayed Grand Mosque", country: "United Arab Emirates", level: "easy" },
+  { slug: "blue-mosque", name: "Blue Mosque", country: "Turkey", level: "easy" },
+  { slug: "masjid-al-haram", name: "Masjid al-Haram", country: "Saudi Arabia", level: "easy" },
+  { slug: "al-masjid-an-nabawi", name: "Al-Masjid an-Nabawi", country: "Saudi Arabia", level: "easy" },
+  { slug: "faisal-mosque", name: "Faisal Mosque", country: "Pakistan", level: "easy" },
+  { slug: "hassan-ii-mosque", name: "Hassan II Mosque", country: "Morocco", level: "easy" },
+  { slug: "suleymaniye-mosque", name: "Süleymaniye Mosque", country: "Turkey", level: "easy" },
+  { slug: "badshahi-mosque", name: "Badshahi Mosque", country: "Pakistan", level: "easy" },
+  { slug: "jama-masjid-delhi", name: "Jama Masjid", country: "India", level: "easy" },
+  { slug: "sultan-omar-ali-saifuddien-mosque", name: "Sultan Omar Ali Saifuddien Mosque", country: "Brunei", level: "easy" },
+  { slug: "putra-mosque", name: "Putra Mosque", country: "Malaysia", level: "easy" },
+  { slug: "istiqlal-mosque", name: "Istiqlal Mosque", country: "Indonesia", level: "easy" },
+  { slug: "king-abdullah-i-mosque", name: "King Abdullah I Mosque", country: "Jordan", level: "easy" },
+  { slug: "sheikh-lotfollah-mosque", name: "Sheikh Lotfollah Mosque", country: "Iran", level: "easy" },
+  { slug: "shah-mosque-isfahan", name: "Shah Mosque", country: "Iran", level: "easy" },
+  { slug: "crystal-mosque", name: "Crystal Mosque", country: "Malaysia", level: "easy" },
+  { slug: "koutoubia-mosque", name: "Koutoubia Mosque", country: "Morocco", level: "easy" },
+  { slug: "grand-mosque-of-paris", name: "Grand Mosque of Paris", country: "France", level: "easy" },
+
+  // MEDIUM (18)
+  { slug: "mohammed-al-amin-mosque", name: "Mohammad Al-Amin Mosque", country: "Lebanon", level: "medium" },
+  { slug: "zahir-mosque", name: "Zahir Mosque", country: "Malaysia", level: "medium" },
+  { slug: "baiturrahman-grand-mosque", name: "Baiturrahman Grand Mosque", country: "Indonesia", level: "medium" },
+  { slug: "great-mosque-of-djenne", name: "Great Mosque of Djenné", country: "Mali", level: "medium" },
+  { slug: "great-mosque-of-kairouan", name: "Great Mosque of Kairouan", country: "Tunisia", level: "medium" },
+  { slug: "al-azhar-mosque", name: "Al-Azhar Mosque", country: "Egypt", level: "medium" },
+  { slug: "ibn-tulun-mosque", name: "Mosque of Ibn Tulun", country: "Egypt", level: "medium" },
+  { slug: "muhammad-ali-mosque", name: "Muhammad Ali Mosque", country: "Egypt", level: "medium" },
+  { slug: "sultan-hassan-mosque", name: "Sultan Hassan Mosque", country: "Egypt", level: "medium" },
+  { slug: "masjid-negara", name: "Masjid Negara", country: "Malaysia", level: "medium" },
+  { slug: "shah-alam-mosque", name: "Sultan Salahuddin Abdul Aziz Mosque", country: "Malaysia", level: "medium" },
+  { slug: "istanbul-new-mosque", name: "New Mosque", country: "Turkey", level: "medium" },
+  { slug: "sultan-qaboos-grand-mosque", name: "Sultan Qaboos Grand Mosque", country: "Oman", level: "medium" },
+  { slug: "king-hussein-bin-talal-mosque", name: "King Hussein Bin Talal Mosque", country: "Jordan", level: "medium" },
+  { slug: "great-mosque-of-xian", name: "Great Mosque of Xi'an", country: "China", level: "medium" },
+  { slug: "niujie-mosque", name: "Niujie Mosque", country: "China", level: "medium" },
+  { slug: "kul-sharif-mosque", name: "Kul Sharif Mosque", country: "Russia", level: "medium" },
+  { slug: "moscow-cathedral-mosque", name: "Moscow Cathedral Mosque", country: "Russia", level: "medium" },
+
+  // HARD (18)
+  { slug: "rustem-pasha-mosque", name: "Rüstem Pasha Mosque", country: "Turkey", level: "hard" },
+  { slug: "selimiye-mosque", name: "Selimiye Mosque", country: "Turkey", level: "hard" },
+  { slug: "mosque-cathedral-of-cordoba", name: "Mosque–Cathedral of Córdoba", country: "Spain", level: "hard" },
+  { slug: "great-mosque-of-sanaa", name: "Great Mosque of Sana'a", country: "Yemen", level: "hard" },
+  { slug: "baitul-mukarram", name: "Baitul Mukarram", country: "Bangladesh", level: "hard" },
+  { slug: "star-mosque-dhaka", name: "Star Mosque", country: "Bangladesh", level: "hard" },
+  { slug: "id-kah-mosque", name: "Id Kah Mosque", country: "China", level: "hard" },
+  { slug: "great-mosque-of-herat", name: "Great Mosque of Herat", country: "Afghanistan", level: "hard" },
+  { slug: "blue-mosque-mazar-i-sharif", name: "Blue Mosque of Mazar-i-Sharif", country: "Afghanistan", level: "hard" },
+  { slug: "bibi-khanym-mosque", name: "Bibi-Khanym Mosque", country: "Uzbekistan", level: "hard" },
+  { slug: "kalyan-mosque", name: "Kalyan Mosque", country: "Uzbekistan", level: "hard" },
+  { slug: "hazrat-sultan-mosque", name: "Hazrat Sultan Mosque", country: "Kazakhstan", level: "hard" },
+  { slug: "central-mosque-almaty", name: "Central Mosque of Almaty", country: "Kazakhstan", level: "hard" },
+  { slug: "grand-mosque-of-kuwait", name: "Grand Mosque of Kuwait", country: "Kuwait", level: "hard" },
+  { slug: "imam-muhammad-ibn-abdul-wahhab-mosque", name: "Imam Muhammad ibn Abdul Wahhab Mosque", country: "Qatar", level: "hard" },
+  { slug: "jumeirah-mosque", name: "Jumeirah Mosque", country: "United Arab Emirates", level: "hard" },
+  { slug: "wazir-khan-mosque", name: "Wazir Khan Mosque", country: "Pakistan", level: "hard" },
+  { slug: "great-mosque-of-aleppo", name: "Great Mosque of Aleppo", country: "Syria", level: "hard" },
+
+  // IMPOSSIBLE (18)
+  { slug: "tin-mal-mosque", name: "Tin Mal Mosque", country: "Morocco", level: "impossible" },
+  { slug: "jameh-mosque-of-yazd", name: "Jameh Mosque of Yazd", country: "Iran", level: "impossible" },
+  { slug: "jameh-mosque-of-isfahan", name: "Jameh Mosque of Isfahan", country: "Iran", level: "impossible" },
+  { slug: "nasir-al-mulk-mosque", name: "Nasir al-Mulk Mosque", country: "Iran", level: "impossible" },
+  { slug: "vakil-mosque", name: "Vakil Mosque", country: "Iran", level: "impossible" },
+  { slug: "male-grand-friday-mosque", name: "Grand Friday Mosque", country: "Maldives", level: "impossible" },
+  { slug: "jamiul-alfar-mosque", name: "Jamiul Alfar Mosque", country: "Sri Lanka", level: "impossible" },
+  { slug: "lala-mustafa-pasha-mosque", name: "Lala Mustafa Pasha Mosque", country: "Cyprus", level: "impossible" },
+  { slug: "islamic-center-of-america", name: "Islamic Center of America", country: "USA", level: "impossible" },
+  { slug: "baitul-futuh-mosque", name: "Baitul Futuh Mosque", country: "United Kingdom", level: "impossible" },
+  { slug: "cologne-central-mosque", name: "Cologne Central Mosque", country: "Germany", level: "impossible" },
+  { slug: "grand-mosque-of-rome", name: "Grand Mosque of Rome", country: "Italy", level: "impossible" },
+  { slug: "tokyo-camii", name: "Tokyo Camii", country: "Japan", level: "impossible" },
+  { slug: "auwal-mosque", name: "Auwal Mosque", country: "South Africa", level: "impossible" },
+  { slug: "jamia-mosque-nairobi", name: "Jamia Mosque, Nairobi", country: "Kenya", level: "impossible" },
+  { slug: "king-fahd-islamic-center-buenos-aires", name: "King Fahd Islamic Cultural Center", country: "Argentina", level: "impossible" },
+  { slug: "blue-mosque-yerevan", name: "Blue Mosque, Yerevan", country: "Armenia", level: "impossible" },
+  { slug: "jinnah-memorial-mosque", name: "Jinnah Memorial Mosque", country: "Trinidad and Tobago", level: "impossible" },
+];
+
+export default MOSQUES_E61;
