@@ -22,6 +22,7 @@ const CFG = {
   E57: { data: "src/Quiz/nationalParksE57Data.js", nameField: "name", keyword: "national park", word: "NATIONAL PARK", plural: "national parks", folder: "E57_NationalParks", tags: ["#nationalparkquiz", "#geography", "#quiz", "#travel", "#nature"] },
   E58: { data: "src/Quiz/skyscrapersE58Data.js", nameField: "name", keyword: "skyscraper", word: "SKYSCRAPER", plural: "skyscrapers", folder: "E58_Skyscrapers", tags: ["#skyscraperquiz", "#architecture", "#quiz", "#travel", "#citylife"] },
   E59: { data: "src/Quiz/palacesE59Data.js", nameField: "name", keyword: "palace", word: "PALACE", plural: "palaces", folder: "E59_Palaces", tags: ["#palacequiz", "#history", "#quiz", "#travel", "#architecture"] },
+  E60: { data: "src/Quiz/cathedralsE60Data.js", nameField: "name", keyword: "cathedral", word: "CATHEDRAL", plural: "cathedrals", folder: "E60_Cathedrals", tags: ["#cathedralquiz", "#architecture", "#quiz", "#travel", "#history"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
