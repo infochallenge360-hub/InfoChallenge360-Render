@@ -164,6 +164,8 @@ import { CATHEDRALS_E60 } from "./Quiz/cathedralsE60Data";
 import { CATHEDRALS_E60_FACTS } from "./Quiz/cathedralsE60Facts";
 import { MOSQUES_E61 } from "./Quiz/mosquesE61Data";
 import { MOSQUES_E61_FACTS } from "./Quiz/mosquesE61Facts";
+import { LIGHTHOUSES_E62 } from "./Quiz/lighthousesE62Data";
+import { LIGHTHOUSES_E62_FACTS } from "./Quiz/lighthousesE62Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -233,6 +235,7 @@ const E58_INFOCFG = { items: SKYSCRAPERS_E58, facts: SKYSCRAPERS_E58_FACTS, topi
 const E59_INFOCFG = { items: PALACES_E59, facts: PALACES_E59_FACTS, topicWord: "PALACE", topicPlural: "PALACES", dir: "palaces", ext: "jpg", fit: "cover", voPrefix: "pz-", nameField: "name", introVo: "vo-intro-palace", coldSlug: "jubilee-palace" };
 const E60_INFOCFG = { items: CATHEDRALS_E60, facts: CATHEDRALS_E60_FACTS, topicWord: "CATHEDRAL", topicPlural: "CATHEDRALS", dir: "cathedrals", ext: "jpg", fit: "cover", voPrefix: "cd-", nameField: "name", introVo: "vo-intro-cathedral", coldSlug: "coptic-cathedral-cairo" };
 const E61_INFOCFG = { items: MOSQUES_E61, facts: MOSQUES_E61_FACTS, topicWord: "MOSQUE", topicPlural: "MOSQUES", dir: "mosques", ext: "jpg", fit: "cover", voPrefix: "mq-", nameField: "name", introVo: "vo-intro-mosque", coldSlug: "jinnah-memorial-mosque" };
+const E62_INFOCFG = { items: LIGHTHOUSES_E62, facts: LIGHTHOUSES_E62_FACTS, topicWord: "LIGHTHOUSE", topicPlural: "LIGHTHOUSES", dir: "lighthouses", ext: "jpg", fit: "cover", voPrefix: "lh-", nameField: "name", introVo: "vo-intro-lighthouse", coldSlug: "farol-de-santa-marta" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -641,6 +644,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE61MosqueHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mosques-e61-thumb", heroSlug: "sheikh-zayed-grand-mosque", line1: "GUESS THE", word: "MOSQUE?", number: "72", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE61MosqueSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mosques-e61-thumb", easySlug: "sheikh-zayed-grand-mosque", hardSlug: "jinnah-memorial-mosque", word: "MOSQUE?", number: "72", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE61MosqueNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mosques-e61-thumb", cascade: ["sheikh-zayed-grand-mosque", "blue-mosque", "masjid-al-haram", "?"], line1: "CAN YOU NAME ALL", word: "MOSQUES?", number: "72", badge: "Only 1% get 100%" }} />
+      <Composition id="E62LighthouseQuiz" component={QuizV2} durationInFrames={quizFrames(E62_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E62_INFOCFG }} />
+      <Composition id="ThumbE62Lighthouse" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", grid: ["cape-hatteras-lighthouse", "portland-head-light", "peggys-point-lighthouse", "?", "eddystone-lighthouse", "fastnet-lighthouse", "jeddah-light", "split-rock-lighthouse", "la-jument-lighthouse"], line1: "CAN YOU NAME ALL", word: "LIGHTHOUSES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE62LighthouseHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", heroSlug: "cape-hatteras-lighthouse", line1: "GUESS THE", word: "LIGHTHOUSE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE62LighthouseSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", easySlug: "cape-hatteras-lighthouse", hardSlug: "farol-de-santa-marta", word: "LIGHTHOUSE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE62LighthouseNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", cascade: ["cape-hatteras-lighthouse", "portland-head-light", "peggys-point-lighthouse", "?"], line1: "CAN YOU NAME ALL", word: "LIGHTHOUSES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -682,6 +690,7 @@ export const RemotionRoot = () => {
         { ep: "E59", items: PALACES_E59, mode: "palaces-e59", title: "Guess the Palace", v2: true },
         { ep: "E60", items: CATHEDRALS_E60, mode: "cathedrals-e60", title: "Guess the Cathedral", v2: true },
         { ep: "E61", items: MOSQUES_E61, mode: "mosques-e61", title: "Guess the Mosque", v2: true },
+        { ep: "E62", items: LIGHTHOUSES_E62, mode: "lighthouses-e62", title: "Guess the Lighthouse", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
