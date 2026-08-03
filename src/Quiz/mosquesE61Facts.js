@@ -31,7 +31,7 @@ export const MOSQUES_E61_FACTS = {
   "sultan-hassan-mosque": "A masterpiece of Mamluk-era architecture.",
   "masjid-negara": "Its roof folds like an 18-pointed star.",
   "shah-alam-mosque": "Its blue dome is among the largest in the world.",
-  "istanbul-new-mosque": "Took nearly 60 years to complete, with a long pause.",
+  "istanbul-new-mosque": "Took nearly 70 years to complete, with a long pause.",
   "sultan-qaboos-grand-mosque": "Once held the world's largest single hand-woven carpet.",
   "king-hussein-bin-talal-mosque": "One of Jordan's largest and most modern mosques.",
   "great-mosque-of-xian": "Blends Chinese pagoda architecture with Islamic design.",
