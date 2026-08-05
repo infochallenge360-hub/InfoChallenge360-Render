@@ -6,7 +6,7 @@ export const LIGHTHOUSES_E62_FACTS = {
   "eddystone-lighthouse": "The fourth lighthouse built on this treacherous reef.",
   "fastnet-lighthouse": "Nicknamed 'Ireland's Teardrop' by emigrants leaving home.",
   "cape-of-good-hope-lighthouse": "Guards the dramatic cliffs of South Africa's Cape Peninsula.",
-  "yokohama-marine-tower": "The tallest inland lighthouse in the world.",
+  "neist-point-lighthouse": "Marks the westernmost point of the Isle of Skye.",
   "split-rock-lighthouse": "Built after a deadly 1905 storm on Lake Superior.",
   "pigeon-point-lighthouse": "Named after a ship that wrecked nearby in 1853.",
   "la-jument-lighthouse": "Made famous by a 1989 photo of a giant wave.",
