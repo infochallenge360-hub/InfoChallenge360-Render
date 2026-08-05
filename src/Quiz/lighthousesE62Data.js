@@ -10,7 +10,7 @@ export const LIGHTHOUSES_E62 = [
   { slug: "eddystone-lighthouse", name: "Eddystone Lighthouse", country: "United Kingdom", level: "easy" },
   { slug: "fastnet-lighthouse", name: "Fastnet Lighthouse", country: "Ireland", level: "easy" },
   { slug: "cape-of-good-hope-lighthouse", name: "Cape Point Lighthouse", country: "South Africa", level: "easy" },
-  { slug: "jeddah-light", name: "Jeddah Light", country: "Saudi Arabia", level: "easy" },
+  { slug: "yokohama-marine-tower", name: "Yokohama Marine Tower", country: "Japan", level: "easy" },
   { slug: "split-rock-lighthouse", name: "Split Rock Lighthouse", country: "USA", level: "easy" },
   { slug: "pigeon-point-lighthouse", name: "Pigeon Point Lighthouse", country: "USA", level: "easy" },
   { slug: "la-jument-lighthouse", name: "La Jument Lighthouse", country: "France", level: "easy" },
