@@ -113,18 +113,18 @@ const Progress = ({ num, accent, total }) => (
   </div>
 );
 
-// مؤشّر تدرّج الصعوبة — فوق بالنص، الأربعة بألوانها، الحالي يضيء ويكبر (يعرف المشاهد وينه واصل).
+// مؤشّر تدرّج الصعوبة — عمود عمودي عالجنب الأيمن (مو فوق بالنص)، حتى يفضى فوق مكان أكتر للصورة.
 const TierMeter = ({ level }) => {
   const order = ["easy", "medium", "hard", "impossible"];
   const idx = order.indexOf(level);
   return (
-    <div style={{ position: "absolute", top: 22, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 10 }}>
+    <div style={{ position: "absolute", top: 100, right: 36, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 12 }}>
       {order.map((lv, i) => {
         const passed = i <= idx, cur = i === idx, a = LVL[lv].accent;
         return (
           <div key={lv} style={{
-            fontFamily: font, fontWeight: 900, fontSize: cur ? 24 : 20, letterSpacing: 1.5,
-            padding: cur ? "6px 20px" : "5px 15px", borderRadius: 999,
+            fontFamily: font, fontWeight: 900, fontSize: cur ? 22 : 18, letterSpacing: 1.5, textAlign: "center",
+            minWidth: 150, padding: cur ? "8px 20px" : "6px 15px", borderRadius: 999,
             background: cur ? a : "rgba(255,255,255,0.06)",
             border: `2px solid ${passed ? a : "rgba(255,255,255,0.16)"}`,
             color: cur ? GAME.blueDeep : (passed ? a : "rgba(255,255,255,0.45)"),
@@ -156,7 +156,7 @@ const Confetti = ({ accent, revealAt }) => {
 // fixed box built for square-ish photos. cfg.shapes (slug -> bucket) is optional;
 // items without an entry default to "square" (the original behavior).
 const SHAPE_BOX = {
-  options: { square: { w: 400, h: 366 }, portrait: { w: 310, h: 420 }, landscape: { w: 470, h: 300 } },
+  options: { square: { w: 400, h: 366 }, portrait: { w: 295, h: 400 }, landscape: { w: 470, h: 300 } },
   open: { square: { w: 555, h: 511 }, portrait: { w: 430, h: 580 }, landscape: { w: 640, h: 400 } },
   cold: { square: { w: 622, h: 522 }, portrait: { w: 480, h: 660 }, landscape: { w: 700, h: 460 } },
 };
@@ -187,19 +187,20 @@ const Round = ({ item, num, cfg }) => {
   const shape = shapeOf(cfg, item);
   const box = hasOptions ? SHAPE_BOX.options[shape] : SHAPE_BOX.open[shape];
   const cardW = box.w, cardH = box.h;
-  const imageTop = hasOptions ? 166 : 150;
-  // Baseline (square shape) constants below were tuned by eye; for taller/shorter
-  // boxes, shift everything below the image by the same delta so nothing collides.
-  const baseCardH = hasOptions ? 366 : 511;
-  const shift = cardH - baseCardH;
-  const optionsTop = 546 + shift;
-  const nameTop = 654 + shift;
-  const factTop = 806 + shift;
+  const imageTop = hasOptions ? 132 : 116;
+  // Positions below derive from the image's actual bottom edge (not fixed pixels),
+  // so any box height (portrait/square/landscape) gets consistent breathing room
+  // and nothing can visually touch the image or the block above it.
+  const imageBottom = imageTop + cardH;
+  const optionsTop = imageBottom + 30;
+  const OPTIONS_BLOCK_H = 214;
+  const nameTop = imageBottom + 30;
+  const factTop = hasOptions ? optionsTop + OPTIONS_BLOCK_H + 24 : nameTop + 140;
   const name = nameOf(item, cfg);
   return (
     <AbsoluteFill>
       <TierMeter level={item.level} />
-      <div style={{ position: "absolute", top: 84, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 50, color: "#fff", letterSpacing: 1, textShadow: "0 3px 16px rgba(0,0,0,0.4)" }}>GUESS THE {cfg.topicWord}</div>
+      <div style={{ position: "absolute", top: 48, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 50, color: "#fff", letterSpacing: 1, textShadow: "0 3px 16px rgba(0,0,0,0.4)" }}>GUESS THE {cfg.topicWord}</div>
       <Progress num={num} accent={accent} total={cfg.items.length} />
       <div style={{ position: "absolute", top: imageTop, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
         <div style={{ transform: `scale(${interpolate(enter, [0, 1], [0.4, 1]) * pop}) translateY(${interpolate(enter, [0, 1], [60, 0]) + floatY}px) rotate(${rot}deg)`, opacity: enter, width: cardW, height: cardH, borderRadius: 30, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: revealed ? `0 0 70px ${accent}` : "0 24px 60px rgba(0,0,0,0.5)", border: `5px solid ${revealed ? accent : "rgba(255,255,255,0.3)"}`, overflow: "hidden" }}>
@@ -230,14 +231,14 @@ const Round = ({ item, num, cfg }) => {
       <AbsoluteFill style={{ background: "#fff", opacity: flash, pointerEvents: "none" }} />
       <Confetti accent={accent} revealAt={revealAt} />
       {!hasOptions && revealed && (
-        <div style={{ position: "absolute", top: 654, left: 0, right: 0, textAlign: "center", transform: `scale(${interpolate(nameS, [0, 1], [0.3, 1])})` }}>
+        <div style={{ position: "absolute", top: nameTop, left: 0, right: 0, textAlign: "center", transform: `scale(${interpolate(nameS, [0, 1], [0.3, 1])})` }}>
           <div style={{ fontFamily: font, fontWeight: 900, fontSize: name.length > 14 ? 78 : 94, color: "#fff", textShadow: `0 0 42px ${accent}` }}>
             <span style={{ color: "#3BE07A", marginInlineEnd: 16 }}>✓</span>{name}
           </div>
         </div>
       )}
       {revealed && cfg.facts && cfg.facts[item[cfg.slugKey || "slug"]] && (
-        <div style={{ position: "absolute", top: 806, left: 150, right: 150, display: "flex", justifyContent: "center", opacity: interpolate(frame, [revealAt + 12, revealAt + 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), transform: `translateY(${interpolate(frame, [revealAt + 12, revealAt + 30], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)` }}>
+        <div style={{ position: "absolute", top: factTop, left: 150, right: 150, display: "flex", justifyContent: "center", opacity: interpolate(frame, [revealAt + 12, revealAt + 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), transform: `translateY(${interpolate(frame, [revealAt + 12, revealAt + 30], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(6,10,32,0.78)", border: `3px solid ${GAME.gold}`, borderRadius: 18, padding: "16px 38px", maxWidth: 1500, boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
             <span style={{ fontSize: 42, flex: "none" }}>💡</span>
             <span style={{ fontFamily: font, fontWeight: 800, fontSize: 42, color: "#fff", lineHeight: 1.12 }}>{cfg.facts[item[cfg.slugKey || "slug"]]}</span>
