@@ -151,6 +151,17 @@ const Confetti = ({ accent, revealAt }) => {
   return <AbsoluteFill>{bits}</AbsoluteFill>;
 };
 
+// Reveal-box sizes per photo shape (portrait/square/landscape), so a tall subject
+// (lighthouse, tower) or a wide one (bridge, skyline) isn't force-cropped into a
+// fixed box built for square-ish photos. cfg.shapes (slug -> bucket) is optional;
+// items without an entry default to "square" (the original behavior).
+const SHAPE_BOX = {
+  options: { square: { w: 400, h: 366 }, portrait: { w: 310, h: 420 }, landscape: { w: 470, h: 300 } },
+  open: { square: { w: 555, h: 511 }, portrait: { w: 430, h: 580 }, landscape: { w: 640, h: 400 } },
+  cold: { square: { w: 622, h: 522 }, portrait: { w: 480, h: 660 }, landscape: { w: 700, h: 460 } },
+};
+const shapeOf = (cfg, item) => (cfg.shapes && cfg.shapes[item[cfg.slugKey || "slug"]]) || "square";
+
 const ItemImg = ({ cfg, slug, w, h, revealed, revealAt }) => {
   const frame = useCurrentFrame();
   const kb = interpolate(frame, [0, revealAt], [1.0, 1.07], { extrapolateRight: "clamp" });
@@ -173,20 +184,30 @@ const Round = ({ item, num, cfg }) => {
   const flash = interpolate(frame, [revealAt, revealAt + 3, revealAt + 11], [0, 0.5, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const hasOptions = hasOptionsFor(item.level);
   const { opts, correctIdx } = hasOptions ? buildOptions(item, cfg.items, cfg) : { opts: [], correctIdx: 0 };
-  const cardW = hasOptions ? 430 : 580, cardH = hasOptions ? 360 : 480;
+  const shape = shapeOf(cfg, item);
+  const box = hasOptions ? SHAPE_BOX.options[shape] : SHAPE_BOX.open[shape];
+  const cardW = box.w, cardH = box.h;
+  const imageTop = hasOptions ? 166 : 150;
+  // Baseline (square shape) constants below were tuned by eye; for taller/shorter
+  // boxes, shift everything below the image by the same delta so nothing collides.
+  const baseCardH = hasOptions ? 366 : 511;
+  const shift = cardH - baseCardH;
+  const optionsTop = 546 + shift;
+  const nameTop = 654 + shift;
+  const factTop = 806 + shift;
   const name = nameOf(item, cfg);
   return (
     <AbsoluteFill>
       <TierMeter level={item.level} />
       <div style={{ position: "absolute", top: 84, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 50, color: "#fff", letterSpacing: 1, textShadow: "0 3px 16px rgba(0,0,0,0.4)" }}>GUESS THE {cfg.topicWord}</div>
       <Progress num={num} accent={accent} total={cfg.items.length} />
-      <div style={{ position: "absolute", top: hasOptions ? 166 : 150, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
+      <div style={{ position: "absolute", top: imageTop, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
         <div style={{ transform: `scale(${interpolate(enter, [0, 1], [0.4, 1]) * pop}) translateY(${interpolate(enter, [0, 1], [60, 0]) + floatY}px) rotate(${rot}deg)`, opacity: enter, width: cardW, height: cardH, borderRadius: 30, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: revealed ? `0 0 70px ${accent}` : "0 24px 60px rgba(0,0,0,0.5)", border: `5px solid ${revealed ? accent : "rgba(255,255,255,0.3)"}`, overflow: "hidden" }}>
           <ItemImg cfg={cfg} slug={item[cfg.slugKey || "slug"]} w={cardW} h={cardH} revealed={revealed} revealAt={revealAt} />
         </div>
       </div>
       {hasOptions && (
-        <div style={{ position: "absolute", top: 546, left: 0, right: 0, display: "flex", flexWrap: "wrap", gap: 22, justifyContent: "center", padding: "0 300px" }}>
+        <div style={{ position: "absolute", top: optionsTop, left: 0, right: 0, display: "flex", flexWrap: "wrap", gap: 22, justifyContent: "center", padding: "0 300px" }}>
           {opts.map((nm, i) => {
             const isC = i === correctIdx;
             const os = spring({ frame: frame - 8 - i * 4, fps, config: { damping: 12, mass: 0.6 } });
@@ -197,7 +218,7 @@ const Round = ({ item, num, cfg }) => {
             return (
               <div key={i} style={{ width: 640, height: 96, display: "flex", alignItems: "center", gap: 18, background: bg, border: `3px solid ${bd}`, borderRadius: 20, padding: "0 24px", opacity: op, transform: `scale(${sc}) translateY(${interpolate(os, [0, 1], [24, 0])}px)`, boxShadow: revealed && isC ? `0 0 34px ${accent}` : "none" }}>
                 <span style={{ width: 54, height: 54, borderRadius: 12, background: revealed && isC ? "#fff" : GAME.gold, color: GAME.blueDeep, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: font, fontWeight: 900, fontSize: 30, flex: "none" }}>{ABCD[i]}</span>
-                <span style={{ fontFamily: font, fontWeight: 900, fontSize: nm.length > 20 ? 30 : 40, color: "#fff" }}>{nm}</span>
+                <span style={{ fontFamily: font, fontWeight: 900, fontSize: nm.length >= 19 ? 30 : 40, color: "#fff" }}>{nm}</span>
                 {revealed && (isC
                   ? <span style={{ marginLeft: "auto", fontFamily: font, fontWeight: 900, fontSize: 46, color: "#fff" }}>✓</span>
                   : <span style={{ marginLeft: "auto", fontFamily: font, fontWeight: 900, fontSize: 40, color: "#FF7B7B" }}>✗</span>)}
@@ -242,7 +263,7 @@ const ColdOpen = ({ item, cfg }) => {
   const s = spring({ frame, fps, config: { damping: 12 } });
   const accent = "#FF5C7A";
   const name = nameOf(item, cfg);
-  const cardW = 650, cardH = 560;
+  const cardW = 622, cardH = 522;
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", top: 92, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 68, color: "#fff", textShadow: "0 3px 18px rgba(0,0,0,0.5)" }}>

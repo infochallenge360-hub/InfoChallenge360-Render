@@ -166,6 +166,7 @@ import { MOSQUES_E61 } from "./Quiz/mosquesE61Data";
 import { MOSQUES_E61_FACTS } from "./Quiz/mosquesE61Facts";
 import { LIGHTHOUSES_E62 } from "./Quiz/lighthousesE62Data";
 import { LIGHTHOUSES_E62_FACTS } from "./Quiz/lighthousesE62Facts";
+import LIGHTHOUSES_E62_SHAPES from "./Quiz/shapes/lighthouses.json";
 import { FORTS_E63 } from "./Quiz/fortsE63Data";
 import { FORTS_E63_FACTS } from "./Quiz/fortsE63Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
@@ -237,7 +238,7 @@ const E58_INFOCFG = { items: SKYSCRAPERS_E58, facts: SKYSCRAPERS_E58_FACTS, topi
 const E59_INFOCFG = { items: PALACES_E59, facts: PALACES_E59_FACTS, topicWord: "PALACE", topicPlural: "PALACES", dir: "palaces", ext: "jpg", fit: "cover", voPrefix: "pz-", nameField: "name", introVo: "vo-intro-palace", coldSlug: "jubilee-palace" };
 const E60_INFOCFG = { items: CATHEDRALS_E60, facts: CATHEDRALS_E60_FACTS, topicWord: "CATHEDRAL", topicPlural: "CATHEDRALS", dir: "cathedrals", ext: "jpg", fit: "cover", voPrefix: "cd-", nameField: "name", introVo: "vo-intro-cathedral", coldSlug: "coptic-cathedral-cairo" };
 const E61_INFOCFG = { items: MOSQUES_E61, facts: MOSQUES_E61_FACTS, topicWord: "MOSQUE", topicPlural: "MOSQUES", dir: "mosques", ext: "jpg", fit: "cover", voPrefix: "mq-", nameField: "name", introVo: "vo-intro-mosque", coldSlug: "jinnah-memorial-mosque" };
-const E62_INFOCFG = { items: LIGHTHOUSES_E62, facts: LIGHTHOUSES_E62_FACTS, topicWord: "LIGHTHOUSE", topicPlural: "LIGHTHOUSES", dir: "lighthouses", ext: "jpg", fit: "cover", voPrefix: "lh-", nameField: "name", introVo: "vo-intro-lighthouse", coldSlug: "farol-de-santa-marta" };
+const E62_INFOCFG = { items: LIGHTHOUSES_E62, facts: LIGHTHOUSES_E62_FACTS, topicWord: "LIGHTHOUSE", topicPlural: "LIGHTHOUSES", dir: "lighthouses", ext: "jpg", fit: "cover", voPrefix: "lh-", nameField: "name", introVo: "vo-intro-lighthouse", coldSlug: "farol-de-santa-marta", shapes: LIGHTHOUSES_E62_SHAPES };
 const E63_INFOCFG = { items: FORTS_E63, facts: FORTS_E63_FACTS, topicWord: "FORT", topicPlural: "FORTS", dir: "forts", ext: "jpg", fit: "cover", voPrefix: "ft-", nameField: "name", introVo: "vo-intro-fort", coldSlug: "fort-zeelandia-suriname" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
