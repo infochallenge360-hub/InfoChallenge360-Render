@@ -26,6 +26,7 @@ const INTROS = {
   "vo-intro-landmark": "Guess the world landmark! Can you name all seventy one?",
   "vo-intro-capital": "Guess the capital city! Can you name all seventy one?",
   "vo-intro-capital2": "Guess the country from its capital! Can you name all seventy?",
+  "vo-intro-capital3": "Guess the capital! Can you name all seventy?",
   "vo-intro-gamechar": "Guess the video game character! Can you name all seventy one?",
   "vo-intro-moviechar": "Guess the movie character! Can you name all seventy one?",
   "vo-intro-touristspot": "Guess the tourist destination! Can you name all seventy one?",
