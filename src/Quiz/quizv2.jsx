@@ -248,7 +248,7 @@ const Round = ({ item, num, cfg }) => {
         <div style={{ position: "absolute", top: factTop, left: 150, right: 150, display: "flex", justifyContent: "center", opacity: interpolate(frame, [revealAt + 12, revealAt + 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), transform: `translateY(${interpolate(frame, [revealAt + 12, revealAt + 30], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(6,10,32,0.78)", border: `3px solid ${GAME.gold}`, borderRadius: 18, padding: "16px 38px", maxWidth: 1500, boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
             <span style={{ fontSize: 42, flex: "none" }}>💡</span>
-            <span style={{ fontFamily: font, fontWeight: 800, fontSize: 42, color: "#fff", lineHeight: 1.12 }}>{cfg.facts[item[cfg.slugKey || "slug"]]}</span>
+            <span style={{ fontFamily: font, fontWeight: 800, fontSize: (cfg.facts[item[cfg.slugKey || "slug"]] || "").length > 50 ? 33 : 42, color: "#fff", lineHeight: 1.12, whiteSpace: "nowrap" }}>{cfg.facts[item[cfg.slugKey || "slug"]]}</span>
           </div>
         </div>
       )}
