@@ -99,8 +99,8 @@ const TimerBar = ({ accent, revealAt }) => {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0) 52%)", borderRadius: 999 }} />
         </div>
       </div>
-      <div style={{ position: "absolute", top: "50%", left: `${w}%`, transform: "translate(-50%, -50%)", width: 60, height: 60, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", border: `4px solid ${col}`, boxShadow: `0 0 18px ${col}`, overflow: "hidden" }}>
-        <Img src={staticFile("brand/owl-cheer.png")} style={{ width: 50, height: 50, objectFit: "contain" }} />
+      <div style={{ position: "absolute", top: "50%", left: `${w}%`, transform: "translate(-50%, -50%)", width: 92, height: 92, borderRadius: "50%", background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", border: `5px solid ${col}`, boxShadow: `0 0 24px ${col}`, overflow: "hidden" }}>
+        <Img src={staticFile("brand/owl-cheer.png")} style={{ width: 78, height: 78, objectFit: "contain" }} />
       </div>
       <div style={{ position: "absolute", left: "100%", top: "50%", transform: "translateY(-50%)", marginLeft: 24, fontFamily: font, fontWeight: 900, fontSize: 40, color: p > 0.75 && !revealed ? "#FF7B7B" : "#fff", background: "rgba(6,10,32,0.5)", padding: "2px 20px", borderRadius: 999, whiteSpace: "nowrap" }}>{secs}s</div>
     </div>
@@ -173,7 +173,7 @@ const Round = ({ item, num, cfg }) => {
   const flash = interpolate(frame, [revealAt, revealAt + 3, revealAt + 11], [0, 0.5, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const hasOptions = hasOptionsFor(item.level);
   const { opts, correctIdx } = hasOptions ? buildOptions(item, cfg.items, cfg) : { opts: [], correctIdx: 0 };
-  const cardW = hasOptions ? 360 : 500, cardH = hasOptions ? 330 : 460;
+  const cardW = hasOptions ? 430 : 580, cardH = hasOptions ? 360 : 480;
   const name = nameOf(item, cfg);
   return (
     <AbsoluteFill>
@@ -209,7 +209,7 @@ const Round = ({ item, num, cfg }) => {
       <AbsoluteFill style={{ background: "#fff", opacity: flash, pointerEvents: "none" }} />
       <Confetti accent={accent} revealAt={revealAt} />
       {!hasOptions && revealed && (
-        <div style={{ position: "absolute", top: 636, left: 0, right: 0, textAlign: "center", transform: `scale(${interpolate(nameS, [0, 1], [0.3, 1])})` }}>
+        <div style={{ position: "absolute", top: 654, left: 0, right: 0, textAlign: "center", transform: `scale(${interpolate(nameS, [0, 1], [0.3, 1])})` }}>
           <div style={{ fontFamily: font, fontWeight: 900, fontSize: name.length > 14 ? 78 : 94, color: "#fff", textShadow: `0 0 42px ${accent}` }}>
             <span style={{ color: "#3BE07A", marginInlineEnd: 16 }}>✓</span>{name}
           </div>
@@ -242,7 +242,7 @@ const ColdOpen = ({ item, cfg }) => {
   const s = spring({ frame, fps, config: { damping: 12 } });
   const accent = "#FF5C7A";
   const name = nameOf(item, cfg);
-  const cardW = 560, cardH = 470;
+  const cardW = 650, cardH = 560;
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", top: 92, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 68, color: "#fff", textShadow: "0 3px 18px rgba(0,0,0,0.5)" }}>
