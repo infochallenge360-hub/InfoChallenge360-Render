@@ -13,9 +13,9 @@ const LVL = {
   impossible: { accent: "#B983FF", label: "IMPOSSIBLE" },
 };
 
-// v2: 4 خيارات لكل سؤال + شريط تايمر يمتلئ (5 ثواني). هوك 75 + (12 × 200) + خاتمة 120
-const ST = { hook: 75, round: 300, reveal: 210, outro: 120 };
-const TICKS = [0, 30, 60, 90, 120, 150, 176, 188, 198, 205];
+// v2: 4 خيارات لكل سؤال + شريط تايمر يمتلئ (5 ثواني). يبلش مباشرة بالسؤال الأول (بلا شاشة هوك).
+const ST = { round: 240, reveal: 150, outro: 120 };
+const TICKS = [0, 25, 50, 75, 100, 120, 130, 138, 144, 148];
 const ABCD = ["A", "B", "C", "D"];
 const nameOf = (x, mode) => mode === "paintings" ? x.title : mode === "capitals" ? x.capital : (x.name || x.country || x.slug);
 const buildOptions = (item, all, mode) => {
@@ -208,19 +208,6 @@ const Round = ({ item, mode, num, all }) => {
   );
 };
 
-const Hook = ({ title }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const s = spring({ frame, fps, config: { damping: 11 } });
-  return (
-    <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", gap: 30, padding: "0 60px" }}>
-      <Img src={staticFile("brand/owl-cheer.png")} style={{ width: 300, height: 300, objectFit: "contain", transform: `scale(${interpolate(s, [0, 1], [0.5, 1])})` }} />
-      <div style={{ fontFamily: font, fontWeight: 900, fontSize: 96, color: "#fff", textAlign: "center", lineHeight: 1.1 }}>Only <span style={{ color: GAME.gold }}>1%</span> can name these!</div>
-      <div style={{ fontFamily: font, fontWeight: 800, fontSize: 54, color: GAME.blueDeep, background: GAME.gold, padding: "14px 40px", borderRadius: 999 }}>{title}</div>
-    </AbsoluteFill>
-  );
-};
-
 const Outro = () => {
   const frame = useCurrentFrame();
   const pulse = 1 + 0.05 * Math.sin(frame / 7);
@@ -235,14 +222,14 @@ const Outro = () => {
 };
 
 const build = (items) => {
-  const segs = [{ t: "hook", from: 0, dur: ST.hook }];
-  let f = ST.hook, num = 0;
+  const segs = [];
+  let f = 0, num = 0;
   for (const it of items) { num += 1; segs.push({ t: "round", item: it, num, from: f, dur: ST.round }); f += ST.round; }
   segs.push({ t: "outro", from: f, dur: ST.outro }); f += ST.outro;
   return { segs, total: f };
 };
 
-export const ShortV2Quiz = ({ items, mode, title, part = 0 }) => {
+export const ShortV2Quiz = ({ items, mode, part = 0 }) => {
   const list = items.length > 12 ? pickShort(items, part) : items;
   const { segs } = build(list);
   return (
@@ -251,7 +238,6 @@ export const ShortV2Quiz = ({ items, mode, title, part = 0 }) => {
       <Watermark />
       {segs.map((s, i) => (
         <Sequence key={i} from={s.from} durationInFrames={s.dur}>
-          {s.t === "hook" && <Hook title={title} />}
           {s.t === "round" && <Round item={s.item} mode={mode} num={s.num} all={items} />}
           {s.t === "outro" && <Outro />}
         </Sequence>
@@ -260,4 +246,4 @@ export const ShortV2Quiz = ({ items, mode, title, part = 0 }) => {
   );
 };
 
-export const SHORTV2_FRAMES = build(new Array(12).fill(0)).total; // 3795 (126.5s)
+export const SHORTV2_FRAMES = build(new Array(12).fill(0)).total; // 3000 (100s)
