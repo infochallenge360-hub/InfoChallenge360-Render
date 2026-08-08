@@ -187,7 +187,7 @@ const Round = ({ item, num, cfg }) => {
   const shape = shapeOf(cfg, item);
   const box = hasOptions ? SHAPE_BOX.options[shape] : SHAPE_BOX.open[shape];
   const cardW = box.w, cardH = box.h;
-  const imageTop = hasOptions ? 132 : 116;
+  const imageTop = (hasOptions ? 132 : 116) + (cfg.clueField ? 56 : 0);
   // Positions below derive from the image's actual bottom edge (not fixed pixels),
   // so any box height (portrait/square/landscape) gets consistent breathing room
   // and nothing can visually touch the image or the block above it.
@@ -201,6 +201,13 @@ const Round = ({ item, num, cfg }) => {
     <AbsoluteFill>
       <TierMeter level={item.level} />
       <div style={{ position: "absolute", top: 48, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 50, color: "#fff", letterSpacing: 1, textShadow: "0 3px 16px rgba(0,0,0,0.4)" }}>GUESS THE {cfg.topicWord}</div>
+      {cfg.clueField && (
+        <div style={{ position: "absolute", top: 112, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: font, fontWeight: 800, fontSize: 32, color: GAME.blueDeep, background: GAME.gold, padding: "8px 30px", borderRadius: 999, boxShadow: `0 0 20px ${GAME.gold}` }}>
+            {cfg.clueLabel || "CLUE"}: {item[cfg.clueField]}
+          </div>
+        </div>
+      )}
       <Progress num={num} accent={accent} total={cfg.items.length} />
       <div style={{ position: "absolute", top: imageTop, left: 0, right: 0, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
         <div style={{ transform: `scale(${interpolate(enter, [0, 1], [0.4, 1]) * pop}) translateY(${interpolate(enter, [0, 1], [60, 0]) + floatY}px) rotate(${rot}deg)`, opacity: enter, width: cardW, height: cardH, borderRadius: 30, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: revealed ? `0 0 70px ${accent}` : "0 24px 60px rgba(0,0,0,0.5)", border: `5px solid ${revealed ? accent : "rgba(255,255,255,0.3)"}`, overflow: "hidden" }}>
@@ -270,6 +277,13 @@ const ColdOpen = ({ item, cfg }) => {
       <div style={{ position: "absolute", top: 92, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 68, color: "#fff", textShadow: "0 3px 18px rgba(0,0,0,0.5)" }}>
         {revealed ? <span><span style={{ color: "#3BE07A" }}>✓ </span>{name}</span> : <span><span style={{ color: GAME.red }}>95%</span> CAN'T NAME THIS</span>}
       </div>
+      {cfg.clueField && !revealed && (
+        <div style={{ position: "absolute", top: 176, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+          <div style={{ fontFamily: font, fontWeight: 800, fontSize: 32, color: GAME.blueDeep, background: GAME.gold, padding: "8px 30px", borderRadius: 999, boxShadow: `0 0 20px ${GAME.gold}` }}>
+            {cfg.clueLabel || "CLUE"}: {item[cfg.clueField]}
+          </div>
+        </div>
+      )}
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
         <div style={{ width: cardW, height: cardH, borderRadius: 30, background: "#fff", overflow: "hidden", border: `6px solid ${revealed ? "#3BE07A" : accent}`, boxShadow: revealed ? "0 0 80px #3BE07A" : "0 24px 60px rgba(0,0,0,0.55)", transform: `scale(${interpolate(s, [0, 1], [0.6, 1])})`, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <ItemImg cfg={cfg} slug={item[cfg.slugKey || "slug"]} w={cardW} h={cardH} revealed={false} revealAt={9999} />

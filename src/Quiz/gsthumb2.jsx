@@ -86,7 +86,7 @@ const ASSET = {
   "cathedrals-e60-thumb": { dir: "cathedrals", ext: "jpg", fit: "cover" },
   "mosques-e61-thumb": { dir: "mosques", ext: "jpg", fit: "cover" },
   "lighthouses-e62-thumb": { dir: "lighthouses", ext: "jpg", fit: "cover" },
-  "forts-e63-thumb": { dir: "forts", ext: "jpg", fit: "cover" },
+  "capitals-e63-thumb": { dir: "maps", ext: "svg", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

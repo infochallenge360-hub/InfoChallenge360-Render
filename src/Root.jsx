@@ -167,8 +167,8 @@ import { MOSQUES_E61_FACTS } from "./Quiz/mosquesE61Facts";
 import { LIGHTHOUSES_E62 } from "./Quiz/lighthousesE62Data";
 import { LIGHTHOUSES_E62_FACTS } from "./Quiz/lighthousesE62Facts";
 import LIGHTHOUSES_E62_SHAPES from "./Quiz/shapes/lighthouses.json";
-import { FORTS_E63 } from "./Quiz/fortsE63Data";
-import { FORTS_E63_FACTS } from "./Quiz/fortsE63Facts";
+import { CAPITALS_E63 } from "./Quiz/capitalsE63Data";
+import { CAPITALS_E63_FACTS } from "./Quiz/capitalsE63Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -239,7 +239,7 @@ const E59_INFOCFG = { items: PALACES_E59, facts: PALACES_E59_FACTS, topicWord: "
 const E60_INFOCFG = { items: CATHEDRALS_E60, facts: CATHEDRALS_E60_FACTS, topicWord: "CATHEDRAL", topicPlural: "CATHEDRALS", dir: "cathedrals", ext: "jpg", fit: "cover", voPrefix: "cd-", nameField: "name", introVo: "vo-intro-cathedral", coldSlug: "coptic-cathedral-cairo" };
 const E61_INFOCFG = { items: MOSQUES_E61, facts: MOSQUES_E61_FACTS, topicWord: "MOSQUE", topicPlural: "MOSQUES", dir: "mosques", ext: "jpg", fit: "cover", voPrefix: "mq-", nameField: "name", introVo: "vo-intro-mosque", coldSlug: "jinnah-memorial-mosque" };
 const E62_INFOCFG = { items: LIGHTHOUSES_E62, facts: LIGHTHOUSES_E62_FACTS, topicWord: "LIGHTHOUSE", topicPlural: "LIGHTHOUSES", dir: "lighthouses", ext: "jpg", fit: "cover", voPrefix: "lh-", nameField: "name", introVo: "vo-intro-lighthouse", coldSlug: "farol-de-santa-marta", shapes: LIGHTHOUSES_E62_SHAPES };
-const E63_INFOCFG = { items: FORTS_E63, facts: FORTS_E63_FACTS, topicWord: "FORT", topicPlural: "FORTS", dir: "forts", ext: "jpg", fit: "cover", voPrefix: "ft-", nameField: "name", introVo: "vo-intro-fort", coldSlug: "fort-zeelandia-suriname" };
+const E63_INFOCFG = { items: CAPITALS_E63, facts: CAPITALS_E63_FACTS, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "wc-", nameField: "name", slugKey: "iso", voKey: "iso", clueField: "capital", clueLabel: "CAPITAL", introVo: "vo-intro-capital2", coldSlug: "nr" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -653,11 +653,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE62LighthouseHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", heroSlug: "cape-hatteras-lighthouse", line1: "GUESS THE", word: "LIGHTHOUSE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE62LighthouseSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", easySlug: "cape-hatteras-lighthouse", hardSlug: "farol-de-santa-marta", word: "LIGHTHOUSE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE62LighthouseNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "lighthouses-e62-thumb", cascade: ["cape-hatteras-lighthouse", "portland-head-light", "peggys-point-lighthouse", "?"], line1: "CAN YOU NAME ALL", word: "LIGHTHOUSES?", number: "70", badge: "Only 1% get 100%" }} />
-      <Composition id="E63FortQuiz" component={QuizV2} durationInFrames={quizFrames(E63_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E63_INFOCFG }} />
-      <Composition id="ThumbE63Fort" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "forts-e63-thumb", grid: ["red-fort", "tower-of-london", "el-morro-san-juan", "?", "citadel-of-aleppo", "fort-santiago", "amber-fort", "fort-alcatraz", "edinburgh-castle"], line1: "CAN YOU NAME ALL", word: "FORTS?", number: "70", badge: "Only 1% get 100%" }} />
-      <Composition id="ThumbE63FortHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "forts-e63-thumb", heroSlug: "red-fort", line1: "GUESS THE", word: "FORT?", number: "70", badge: "Only 1% get 100%" }} />
-      <Composition id="ThumbE63FortSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "forts-e63-thumb", easySlug: "red-fort", hardSlug: "fort-zeelandia-suriname", word: "FORT?", number: "70", badge: "Only 1% get 100%" }} />
-      <Composition id="ThumbE63FortNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "forts-e63-thumb", cascade: ["red-fort", "tower-of-london", "el-morro-san-juan", "?"], line1: "CAN YOU NAME ALL", word: "FORTS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E63CapitalQuiz" component={QuizV2} durationInFrames={quizFrames(E63_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E63_INFOCFG }} />
+      <Composition id="ThumbE63Capital" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "capitals-e63-thumb", grid: ["us", "fr", "gb", "?", "jp", "cn", "de", "in", "br"], line1: "CAN YOU NAME ALL", word: "COUNTRIES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE63CapitalHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "capitals-e63-thumb", heroSlug: "us", line1: "GUESS THE", word: "COUNTRY?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE63CapitalSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "capitals-e63-thumb", easySlug: "us", hardSlug: "nr", word: "COUNTRY?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE63CapitalNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "capitals-e63-thumb", cascade: ["us", "fr", "gb", "?"], line1: "CAN YOU NAME ALL", word: "COUNTRIES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -700,7 +700,7 @@ export const RemotionRoot = () => {
         { ep: "E60", items: CATHEDRALS_E60, mode: "cathedrals-e60", title: "Guess the Cathedral", v2: true },
         { ep: "E61", items: MOSQUES_E61, mode: "mosques-e61", title: "Guess the Mosque", v2: true },
         { ep: "E62", items: LIGHTHOUSES_E62, mode: "lighthouses-e62", title: "Guess the Lighthouse", v2: true },
-        { ep: "E63", items: FORTS_E63, mode: "forts-e63", title: "Guess the Fort", v2: true },
+        { ep: "E63", items: CAPITALS_E63, mode: "capitals-e63", title: "Guess the Country", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

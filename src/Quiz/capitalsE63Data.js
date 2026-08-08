@@ -1,0 +1,87 @@
+// E63 "Guess the Country" (by its capital) — 70 real capital→country pairs.
+// Image = country map-shape silhouette (NOT the flag, which would give the answer away).
+// On-screen clue text = the capital's name; player guesses the COUNTRY.
+// Absolute difficulty: easy = globally known capital-country pairing (~70-95%),
+// impossible = genuinely obscure pairing (<10%, most <3%).
+// Zero Israel content (standing hard rule, all episodes).
+export const CAPITALS_E63 = [
+  // EASY (18)
+  { iso: "us", name: "United States", capital: "Washington, D.C.", level: "easy" },
+  { iso: "fr", name: "France", capital: "Paris", level: "easy" },
+  { iso: "gb", name: "United Kingdom", capital: "London", level: "easy" },
+  { iso: "jp", name: "Japan", capital: "Tokyo", level: "easy" },
+  { iso: "cn", name: "China", capital: "Beijing", level: "easy" },
+  { iso: "ru", name: "Russia", capital: "Moscow", level: "easy" },
+  { iso: "it", name: "Italy", capital: "Rome", level: "easy" },
+  { iso: "de", name: "Germany", capital: "Berlin", level: "easy" },
+  { iso: "es", name: "Spain", capital: "Madrid", level: "easy" },
+  { iso: "eg", name: "Egypt", capital: "Cairo", level: "easy" },
+  { iso: "ca", name: "Canada", capital: "Ottawa", level: "easy" },
+  { iso: "au", name: "Australia", capital: "Canberra", level: "easy" },
+  { iso: "in", name: "India", capital: "New Delhi", level: "easy" },
+  { iso: "br", name: "Brazil", capital: "Brasília", level: "easy" },
+  { iso: "kr", name: "South Korea", capital: "Seoul", level: "easy" },
+  { iso: "mx", name: "Mexico", capital: "Mexico City", level: "easy" },
+  { iso: "gr", name: "Greece", capital: "Athens", level: "easy" },
+  { iso: "th", name: "Thailand", capital: "Bangkok", level: "easy" },
+
+  // MEDIUM (18)
+  { iso: "at", name: "Austria", capital: "Vienna", level: "medium" },
+  { iso: "nl", name: "Netherlands", capital: "Amsterdam", level: "medium" },
+  { iso: "be", name: "Belgium", capital: "Brussels", level: "medium" },
+  { iso: "pt", name: "Portugal", capital: "Lisbon", level: "medium" },
+  { iso: "se", name: "Sweden", capital: "Stockholm", level: "medium" },
+  { iso: "no", name: "Norway", capital: "Oslo", level: "medium" },
+  { iso: "dk", name: "Denmark", capital: "Copenhagen", level: "medium" },
+  { iso: "fi", name: "Finland", capital: "Helsinki", level: "medium" },
+  { iso: "ie", name: "Ireland", capital: "Dublin", level: "medium" },
+  { iso: "pl", name: "Poland", capital: "Warsaw", level: "medium" },
+  { iso: "cz", name: "Czech Republic", capital: "Prague", level: "medium" },
+  { iso: "hu", name: "Hungary", capital: "Budapest", level: "medium" },
+  { iso: "id", name: "Indonesia", capital: "Jakarta", level: "medium" },
+  { iso: "ph", name: "Philippines", capital: "Manila", level: "medium" },
+  { iso: "cu", name: "Cuba", capital: "Havana", level: "medium" },
+  { iso: "ar", name: "Argentina", capital: "Buenos Aires", level: "medium" },
+  { iso: "cl", name: "Chile", capital: "Santiago", level: "medium" },
+  { iso: "sa", name: "Saudi Arabia", capital: "Riyadh", level: "medium" },
+
+  // HARD (18)
+  { iso: "tr", name: "Turkey", capital: "Ankara", level: "hard" },
+  { iso: "nz", name: "New Zealand", capital: "Wellington", level: "hard" },
+  { iso: "ch", name: "Switzerland", capital: "Bern", level: "hard" },
+  { iso: "za", name: "South Africa", capital: "Pretoria", level: "hard" },
+  { iso: "ng", name: "Nigeria", capital: "Abuja", level: "hard" },
+  { iso: "mm", name: "Myanmar", capital: "Naypyidaw", level: "hard" },
+  { iso: "kz", name: "Kazakhstan", capital: "Astana", level: "hard" },
+  { iso: "pk", name: "Pakistan", capital: "Islamabad", level: "hard" },
+  { iso: "ma", name: "Morocco", capital: "Rabat", level: "hard" },
+  { iso: "ua", name: "Ukraine", capital: "Kyiv", level: "hard" },
+  { iso: "ro", name: "Romania", capital: "Bucharest", level: "hard" },
+  { iso: "bg", name: "Bulgaria", capital: "Sofia", level: "hard" },
+  { iso: "hr", name: "Croatia", capital: "Zagreb", level: "hard" },
+  { iso: "rs", name: "Serbia", capital: "Belgrade", level: "hard" },
+  { iso: "vn", name: "Vietnam", capital: "Hanoi", level: "hard" },
+  { iso: "my", name: "Malaysia", capital: "Kuala Lumpur", level: "hard" },
+  { iso: "ke", name: "Kenya", capital: "Nairobi", level: "hard" },
+  { iso: "pe", name: "Peru", capital: "Lima", level: "hard" },
+
+  // IMPOSSIBLE (16)
+  { iso: "bo", name: "Bolivia", capital: "Sucre", level: "impossible" },
+  { iso: "ci", name: "Ivory Coast", capital: "Yamoussoukro", level: "impossible" },
+  { iso: "to", name: "Tonga", capital: "Nuku'alofa", level: "impossible" },
+  { iso: "lk", name: "Sri Lanka", capital: "Sri Jayawardenepura Kotte", level: "impossible" },
+  { iso: "bj", name: "Benin", capital: "Porto-Novo", level: "impossible" },
+  { iso: "nr", name: "Nauru", capital: "Yaren", level: "impossible" },
+  { iso: "li", name: "Liechtenstein", capital: "Vaduz", level: "impossible" },
+  { iso: "bi", name: "Burundi", capital: "Gitega", level: "impossible" },
+  { iso: "tz", name: "Tanzania", capital: "Dodoma", level: "impossible" },
+  { iso: "bf", name: "Burkina Faso", capital: "Ouagadougou", level: "impossible" },
+  { iso: "mr", name: "Mauritania", capital: "Nouakchott", level: "impossible" },
+  { iso: "gw", name: "Guinea-Bissau", capital: "Bissau", level: "impossible" },
+  { iso: "gq", name: "Equatorial Guinea", capital: "Malabo", level: "impossible" },
+  { iso: "bt", name: "Bhutan", capital: "Thimphu", level: "impossible" },
+  { iso: "la", name: "Laos", capital: "Vientiane", level: "impossible" },
+  { iso: "sr", name: "Suriname", capital: "Paramaribo", level: "impossible" },
+];
+
+export default CAPITALS_E63;
