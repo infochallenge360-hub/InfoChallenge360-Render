@@ -177,6 +177,8 @@ import { PHONES_E65_FACTS } from "./Quiz/phonesE65Facts";
 import { APPLE_E66 } from "./Quiz/appleE66Data";
 import { APPLE_E66_FACTS } from "./Quiz/appleE66Facts";
 import APPLE_E66_SHAPES from "./Quiz/shapes/apple.json";
+import { PHONE_LOGOS_E67 } from "./Quiz/phoneLogosE67Data";
+import { PHONE_LOGOS_E67_FACTS } from "./Quiz/phoneLogosE67Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -251,6 +253,7 @@ const E63_INFOCFG = { items: CAPITALS_E63, facts: CAPITALS_E63_FACTS, topicWord:
 const E64_INFOCFG = { items: CAPITALS_E64, facts: CAPITALS_E64_FACTS, topicWord: "CAPITAL", topicPlural: "CAPITALS", dir: "maps", ext: "svg", fit: "contain", voPrefix: "gp-", nameField: "capital", slugKey: "iso", voKey: "iso", clueField: "name", clueLabel: "COUNTRY", introVo: "vo-intro-capital3", coldSlug: "vu" };
 const E65_INFOCFG = { items: PHONES_E65, facts: PHONES_E65_FACTS, topicWord: "PHONE", topicPlural: "PHONES", dir: "phones", ext: "jpg", fit: "cover", voPrefix: "ph-", nameField: "name", introVo: "vo-intro-phone", coldSlug: "essential-phone-ph-1", shapes: PHONES_E65_SHAPES };
 const E66_INFOCFG = { items: APPLE_E66, facts: APPLE_E66_FACTS, topicWord: "DEVICE", topicPlural: "DEVICES", dir: "apple", ext: "jpg", fit: "cover", voPrefix: "ap-", nameField: "name", introVo: "vo-intro-apple", coldSlug: "apple-pippin", shapes: APPLE_E66_SHAPES };
+const E67_INFOCFG = { items: PHONE_LOGOS_E67, facts: PHONE_LOGOS_E67_FACTS, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos67", ext: "png", fit: "contain", voPrefix: "pb-", nameField: "name", introVo: "vo-intro-phonelogo", coldSlug: "jolla" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -684,6 +687,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE66AppleHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "apple-e66-thumb", heroSlug: "airpods-1st-generation", line1: "GUESS THE", word: "DEVICE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE66AppleSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "apple-e66-thumb", easySlug: "airpods-1st-generation", hardSlug: "apple-pippin", word: "DEVICE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE66AppleNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "apple-e66-thumb", cascade: ["airpods-1st-generation", "macintosh-128k", "apple-watch-1st-generation", "?"], line1: "CAN YOU NAME ALL", word: "DEVICES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E67PhoneLogoQuiz" component={QuizV2} durationInFrames={quizFrames(E67_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E67_INFOCFG }} />
+      <Composition id="ThumbE67PhoneLogo" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "phonelogos-e67-thumb", grid: ["blackberry", "htc", "philips", "?", "ericsson", "toshiba", "casio", "palm", "caterpillar"], line1: "CAN YOU NAME ALL", word: "LOGOS?", number: "40", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE67PhoneLogoHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "phonelogos-e67-thumb", heroSlug: "blackberry", line1: "GUESS THE", word: "LOGO?", number: "40", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE67PhoneLogoSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "phonelogos-e67-thumb", easySlug: "blackberry", hardSlug: "jolla", word: "LOGO?", number: "40", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE67PhoneLogoNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "phonelogos-e67-thumb", cascade: ["blackberry", "htc", "philips", "?"], line1: "CAN YOU NAME ALL", word: "LOGOS?", number: "40", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -730,6 +738,7 @@ export const RemotionRoot = () => {
         { ep: "E64", items: CAPITALS_E64, mode: "capitals-e64", title: "Guess the Capital", v2: true },
         { ep: "E65", items: PHONES_E65, mode: "phones-e65", title: "Guess the Phone", v2: true },
         { ep: "E66", items: APPLE_E66, mode: "apple-e66", title: "Guess the Apple Device", v2: true },
+        { ep: "E67", items: PHONE_LOGOS_E67, mode: "phonelogos-e67", title: "Guess the Phone Brand Logo", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

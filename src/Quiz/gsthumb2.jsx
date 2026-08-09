@@ -90,6 +90,7 @@ const ASSET = {
   "capitals-e64-thumb": { dir: "maps", ext: "svg", fit: "contain" },
   "phones-e65-thumb": { dir: "phones", ext: "jpg", fit: "cover" },
   "apple-e66-thumb": { dir: "apple", ext: "jpg", fit: "cover" },
+  "phonelogos-e67-thumb": { dir: "logos67", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
