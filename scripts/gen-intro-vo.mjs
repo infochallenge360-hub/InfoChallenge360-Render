@@ -79,6 +79,7 @@ const INTROS = {
   "vo-intro-lighthouse": "Guess the lighthouse! Can you name all seventy?",
   "vo-intro-fort": "Guess the fort! Can you name all seventy?",
   "vo-intro-phone": "Guess the phone! Can you name all seventy?",
+  "vo-intro-apple": "Guess the Apple device! Can you name all seventy?",
 };
 
 function wavDuration(path) {

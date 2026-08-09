@@ -28,6 +28,7 @@ const CFG = {
   E63: { data: "src/Quiz/capitalsE63Data.js", nameField: "name", keyword: "country", word: "COUNTRY", plural: "countries", folder: "E63_Capitals", tags: ["#geoquiz", "#capitalcities", "#quiz", "#geography", "#trivia"] },
   E64: { data: "src/Quiz/capitalsE64Data.js", nameField: "capital", keyword: "capital", word: "CAPITAL", plural: "capitals", folder: "E64_Capital-Cities", tags: ["#geoquiz", "#capitalcities", "#quiz", "#geography", "#trivia"] },
   E65: { data: "src/Quiz/phonesE65Data.js", nameField: "name", keyword: "phone", word: "PHONE", plural: "phones", folder: "E65_Phones", tags: ["#phonequiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
+  E66: { data: "src/Quiz/appleE66Data.js", nameField: "name", keyword: "Apple device", word: "DEVICE", plural: "Apple devices", folder: "E66_Apple-Devices", tags: ["#applequiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
