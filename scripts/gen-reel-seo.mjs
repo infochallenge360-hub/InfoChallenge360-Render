@@ -30,6 +30,7 @@ const CFG = {
   E65: { data: "src/Quiz/phonesE65Data.js", nameField: "name", keyword: "phone", word: "PHONE", plural: "phones", folder: "E65_Phones", tags: ["#phonequiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
   E66: { data: "src/Quiz/appleE66Data.js", nameField: "name", keyword: "Apple device", word: "DEVICE", plural: "Apple devices", folder: "E66_Apple-Devices", tags: ["#applequiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
   E67: { data: "src/Quiz/phoneLogosE67Data.js", nameField: "name", keyword: "phone brand logo", word: "LOGO", plural: "phone brand logos", folder: "E67_Phone-Logos", tags: ["#logoquiz", "#phonequiz", "#quiz", "#trivia", "#brands"] },
+  E68: { data: "src/Quiz/nokiaE68Data.js", nameField: "name", keyword: "Nokia phone", word: "PHONE", plural: "Nokia phones", folder: "E68_Nokia-Phones", tags: ["#nokiaquiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
