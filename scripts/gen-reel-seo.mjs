@@ -26,6 +26,8 @@ const CFG = {
   E61: { data: "src/Quiz/mosquesE61Data.js", nameField: "name", keyword: "mosque", word: "MOSQUE", plural: "mosques", folder: "E61_Mosques", tags: ["#mosquequiz", "#architecture", "#quiz", "#travel", "#history"] },
   E62: { data: "src/Quiz/lighthousesE62Data.js", nameField: "name", keyword: "lighthouse", word: "LIGHTHOUSE", plural: "lighthouses", folder: "E62_Lighthouses", tags: ["#lighthousequiz", "#architecture", "#quiz", "#travel", "#geography"] },
   E63: { data: "src/Quiz/capitalsE63Data.js", nameField: "name", keyword: "country", word: "COUNTRY", plural: "countries", folder: "E63_Capitals", tags: ["#geoquiz", "#capitalcities", "#quiz", "#geography", "#trivia"] },
+  E64: { data: "src/Quiz/capitalsE64Data.js", nameField: "capital", keyword: "capital", word: "CAPITAL", plural: "capitals", folder: "E64_Capital-Cities", tags: ["#geoquiz", "#capitalcities", "#quiz", "#geography", "#trivia"] },
+  E65: { data: "src/Quiz/phonesE65Data.js", nameField: "name", keyword: "phone", word: "PHONE", plural: "phones", folder: "E65_Phones", tags: ["#phonequiz", "#retrotech", "#quiz", "#nostalgia", "#trivia"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
