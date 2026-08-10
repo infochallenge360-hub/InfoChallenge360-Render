@@ -1,0 +1,86 @@
+// E69 "Guess the Supercar" — 70 real modern supercars/hypercars, first of 5 planned car-themed episodes.
+// Distinct sub-theme from E53 (general classic/iconic cars across all eras/segments) and E07 (car brand
+// logos, not vehicle models). Where a brand/nameplate also appears in E53, this uses a different, more
+// specific modern trim/generation (e.g. Porsche 911 GT2 RS here vs generic classic "Porsche 911" in E53).
+// image: supercars69/<slug>.jpg | wiki: exact Wikipedia article title | Zero Israel content (standing hard rule).
+export const SUPERCARS_E69 = [
+  // EASY (18)
+  { slug: "bugatti-veyron", name: "Bugatti Veyron", wiki: "Bugatti Veyron", level: "easy" },
+  { slug: "bugatti-chiron", name: "Bugatti Chiron", wiki: "Bugatti Chiron", level: "easy" },
+  { slug: "lamborghini-aventador", name: "Lamborghini Aventador", wiki: "Lamborghini Aventador", level: "easy" },
+  { slug: "lamborghini-huracan", name: "Lamborghini Huracán", wiki: "Lamborghini Huracán", level: "easy" },
+  { slug: "ferrari-laferrari", name: "Ferrari LaFerrari", wiki: "LaFerrari", level: "easy" },
+  { slug: "ferrari-488-gtb", name: "Ferrari 488 GTB", wiki: "Ferrari 488", level: "easy" },
+  { slug: "mclaren-p1", name: "McLaren P1", wiki: "McLaren P1", level: "easy" },
+  { slug: "mclaren-720s", name: "McLaren 720S", wiki: "McLaren 720S", level: "easy" },
+  { slug: "porsche-918-spyder", name: "Porsche 918 Spyder", wiki: "Porsche 918 Spyder", level: "easy" },
+  { slug: "nissan-gt-r", name: "Nissan GT-R", wiki: "Nissan GT-R (R35)", level: "easy" },
+  { slug: "ford-gt", name: "Ford GT", wiki: "Ford GT (2017)", level: "easy" },
+  { slug: "dodge-viper", name: "Dodge Viper", wiki: "Dodge Viper", level: "easy" },
+  { slug: "chevrolet-corvette-z06", name: "Chevrolet Corvette Z06", wiki: "Chevrolet Corvette (C7)", level: "easy" },
+  { slug: "mercedes-amg-gt", name: "Mercedes-AMG GT", wiki: "Mercedes-AMG GT", level: "easy" },
+  { slug: "audi-r8", name: "Audi R8", wiki: "Audi R8 (Type 4S)", level: "easy" },
+  { slug: "ferrari-f40", name: "Ferrari F40", wiki: "Ferrari F40", level: "easy" },
+  { slug: "koenigsegg-agera", name: "Koenigsegg Agera", wiki: "Koenigsegg Agera", level: "easy" },
+  { slug: "pagani-huayra", name: "Pagani Huayra", wiki: "Pagani Huayra", level: "easy" },
+
+  // MEDIUM (18)
+  { slug: "lexus-lfa", name: "Lexus LFA", wiki: "Lexus LFA", level: "medium" },
+  { slug: "acura-nsx", name: "Acura NSX", wiki: "Acura NSX (second generation)", level: "medium" },
+  { slug: "maserati-mc20", name: "Maserati MC20", wiki: "Maserati MC20", level: "medium" },
+  { slug: "aston-martin-vanquish", name: "Aston Martin Vanquish", wiki: "Aston Martin Vanquish", level: "medium" },
+  { slug: "mclaren-senna", name: "McLaren Senna", wiki: "McLaren Senna", level: "medium" },
+  { slug: "ferrari-sf90-stradale", name: "Ferrari SF90 Stradale", wiki: "Ferrari SF90 Stradale", level: "medium" },
+  { slug: "lamborghini-sian", name: "Lamborghini Sián", wiki: "Lamborghini Sián", level: "medium" },
+  { slug: "koenigsegg-jesko", name: "Koenigsegg Jesko", wiki: "Koenigsegg Jesko", level: "medium" },
+  { slug: "rimac-nevera", name: "Rimac Nevera", wiki: "Rimac Nevera", level: "medium" },
+  { slug: "pagani-zonda", name: "Pagani Zonda", wiki: "Pagani Zonda", level: "medium" },
+  { slug: "bugatti-divo", name: "Bugatti Divo", wiki: "Bugatti Divo", level: "medium" },
+  { slug: "porsche-carrera-gt", name: "Porsche Carrera GT", wiki: "Porsche Carrera GT", level: "medium" },
+  { slug: "ferrari-f8-tributo", name: "Ferrari F8 Tributo", wiki: "Ferrari F8 Tributo", level: "medium" },
+  { slug: "mclaren-f1", name: "McLaren F1", wiki: "McLaren F1", level: "medium" },
+  { slug: "lamborghini-murcielago", name: "Lamborghini Murciélago", wiki: "Lamborghini Murciélago", level: "medium" },
+  { slug: "ferrari-enzo", name: "Ferrari Enzo", wiki: "Ferrari Enzo", level: "medium" },
+  { slug: "aston-martin-dbs-superleggera", name: "Aston Martin DBS Superleggera", wiki: "Aston Martin DBS Superleggera", level: "medium" },
+  { slug: "chevrolet-corvette-zr1", name: "Chevrolet Corvette ZR1", wiki: "Chevrolet Corvette ZR1", level: "medium" },
+
+  // HARD (16)
+  { slug: "ferrari-f50", name: "Ferrari F50", wiki: "Ferrari F50", level: "hard" },
+  { slug: "aston-martin-valkyrie", name: "Aston Martin Valkyrie", wiki: "Aston Martin Valkyrie", level: "hard" },
+  { slug: "aston-martin-one-77", name: "Aston Martin One-77", wiki: "Aston Martin One-77", level: "hard" },
+  { slug: "mclaren-artura", name: "McLaren Artura", wiki: "McLaren Artura", level: "hard" },
+  { slug: "porsche-911-gt2-rs", name: "Porsche 911 GT2 RS", wiki: "Porsche 911 GT2 RS", level: "hard" },
+  { slug: "ford-gt-2005", name: "Ford GT (2005)", wiki: "Ford GT", level: "hard" },
+  { slug: "hennessey-venom-gt", name: "Hennessey Venom GT", wiki: "Hennessey Venom GT", level: "hard" },
+  { slug: "ssc-tuatara", name: "SSC Tuatara", wiki: "SSC Tuatara", level: "hard" },
+  { slug: "lotus-evija", name: "Lotus Evija", wiki: "Lotus Evija", level: "hard" },
+  { slug: "alfa-romeo-4c", name: "Alfa Romeo 4C", wiki: "Alfa Romeo 4C", level: "hard" },
+  { slug: "rimac-concept-one", name: "Rimac Concept One", wiki: "Rimac Concept One", level: "hard" },
+  { slug: "gordon-murray-t50", name: "Gordon Murray Automotive T.50", wiki: "Gordon Murray Automotive T.50", level: "hard" },
+  { slug: "ferrari-296-gtb", name: "Ferrari 296 GTB", wiki: "Ferrari 296 GTB", level: "hard" },
+  { slug: "mclaren-speedtail", name: "McLaren Speedtail", wiki: "McLaren Speedtail", level: "hard" },
+  { slug: "ferrari-daytona-sp3", name: "Ferrari Daytona SP3", wiki: "Ferrari Daytona SP3", level: "hard" },
+  { slug: "lamborghini-revuelto", name: "Lamborghini Revuelto", wiki: "Lamborghini Revuelto", level: "hard" },
+
+  // IMPOSSIBLE (18)
+  { slug: "zenvo-ts1", name: "Zenvo TS1 GT", wiki: "Zenvo TS1 GT", level: "impossible" },
+  { slug: "w-motors-lykan-hypersport", name: "W Motors Lykan HyperSport", wiki: "Lykan HyperSport", level: "impossible" },
+  { slug: "de-tomaso-p72", name: "De Tomaso P72", wiki: "De Tomaso P72", level: "impossible" },
+  { slug: "apollo-ie", name: "Apollo IE", wiki: "Apollo IE", level: "impossible" },
+  { slug: "noble-m600", name: "Noble M600", wiki: "Noble M600", level: "impossible" },
+  { slug: "spyker-c8", name: "Spyker C8", wiki: "Spyker C8", level: "impossible" },
+  { slug: "vector-w8", name: "Vector W8", wiki: "Vector W8", level: "impossible" },
+  { slug: "koenigsegg-ccx", name: "Koenigsegg CCX", wiki: "Koenigsegg CCX", level: "impossible" },
+  { slug: "koenigsegg-one1", name: "Koenigsegg One:1", wiki: "Koenigsegg One:1", level: "impossible" },
+  { slug: "koenigsegg-regera", name: "Koenigsegg Regera", wiki: "Koenigsegg Regera", level: "impossible" },
+  { slug: "pagani-utopia", name: "Pagani Utopia", wiki: "Pagani Utopia", level: "impossible" },
+  { slug: "hennessey-venom-f5", name: "Hennessey Venom F5", wiki: "Hennessey Venom F5", level: "impossible" },
+  { slug: "mercedes-amg-one", name: "Mercedes-AMG One", wiki: "Mercedes-AMG One", level: "impossible" },
+  { slug: "mclaren-570s", name: "McLaren 570S", wiki: "McLaren 570S", level: "impossible" },
+  { slug: "alfa-romeo-8c-competizione", name: "Alfa Romeo 8C Competizione", wiki: "Alfa Romeo 8C Competizione", level: "impossible" },
+  { slug: "porsche-911-turbo-s", name: "Porsche 911 Turbo S", wiki: "Porsche 911 Turbo S", level: "impossible" },
+  { slug: "nissan-gt-r50", name: "Nissan GT-R50", wiki: "Nissan GT-R50 by Italdesign", level: "impossible" },
+  { slug: "dodge-viper-acr", name: "Dodge Viper ACR", wiki: "Dodge Viper", level: "impossible" },
+];
+
+export default SUPERCARS_E69;
