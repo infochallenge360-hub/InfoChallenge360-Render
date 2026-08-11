@@ -85,6 +85,7 @@ const INTROS = {
   "vo-intro-supercar": "Guess the supercar! Can you name all seventy?",
   "vo-intro-evcar": "Guess the electric car! Can you name all seventy?",
   "vo-intro-pickup": "Guess the pickup truck! Can you name all seventy?",
+  "vo-intro-suv": "Guess the SUV! Can you name all seventy?",
 };
 
 function wavDuration(path) {
