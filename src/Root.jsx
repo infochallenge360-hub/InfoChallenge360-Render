@@ -185,6 +185,9 @@ import NOKIA_E68_SHAPES from "./Quiz/shapes/nokia.json";
 import { SUPERCARS_E69 } from "./Quiz/supercarsE69Data";
 import { SUPERCARS_E69_FACTS } from "./Quiz/supercarsE69Facts";
 import SUPERCARS_E69_SHAPES from "./Quiz/shapes/supercars.json";
+import { EVCARS_E70 } from "./Quiz/evCarsE70Data";
+import { EVCARS_E70_FACTS } from "./Quiz/evCarsE70Facts";
+import EVCARS_E70_SHAPES from "./Quiz/shapes/evcars.json";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -262,6 +265,7 @@ const E66_INFOCFG = { items: APPLE_E66, facts: APPLE_E66_FACTS, topicWord: "DEVI
 const E67_INFOCFG = { items: PHONE_LOGOS_E67, facts: PHONE_LOGOS_E67_FACTS, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos67", ext: "png", fit: "contain", voPrefix: "pb-", nameField: "name", introVo: "vo-intro-phonelogo", coldSlug: "jolla" };
 const E68_INFOCFG = { items: NOKIA_E68, facts: NOKIA_E68_FACTS, topicWord: "NOKIA PHONE", topicPlural: "NOKIA PHONES", dir: "nokia68", ext: "jpg", fit: "cover", voPrefix: "nk-", nameField: "name", introVo: "vo-intro-nokia", coldSlug: "nokia-2110i", shapes: NOKIA_E68_SHAPES };
 const E69_INFOCFG = { items: SUPERCARS_E69, facts: SUPERCARS_E69_FACTS, topicWord: "SUPERCAR", topicPlural: "SUPERCARS", dir: "supercars69", ext: "jpg", fit: "cover", voPrefix: "sp-", nameField: "name", introVo: "vo-intro-supercar", coldSlug: "vector-w8", shapes: SUPERCARS_E69_SHAPES };
+const E70_INFOCFG = { items: EVCARS_E70, facts: EVCARS_E70_FACTS, topicWord: "ELECTRIC CAR", topicPlural: "ELECTRIC CARS", dir: "evcars70", ext: "jpg", fit: "cover", voPrefix: "ev-", nameField: "name", introVo: "vo-intro-evcar", coldSlug: "aptera", shapes: EVCARS_E70_SHAPES };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -710,6 +714,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE69SupercarHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "supercars-e69-thumb", heroSlug: "bugatti-chiron", line1: "GUESS THE", word: "SUPERCAR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE69SupercarSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "supercars-e69-thumb", easySlug: "bugatti-chiron", hardSlug: "vector-w8", word: "SUPERCAR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE69SupercarNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "supercars-e69-thumb", cascade: ["bugatti-veyron", "lamborghini-aventador", "ferrari-laferrari", "?"], line1: "CAN YOU NAME ALL", word: "SUPERCARS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E70EvCarQuiz" component={QuizV2} durationInFrames={quizFrames(E70_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E70_INFOCFG }} />
+      <Composition id="ThumbE70EvCar" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "evcars-e70-thumb", grid: ["tesla-model-3", "tesla-model-s", "tesla-cybertruck", "?", "nissan-leaf", "porsche-taycan", "rivian-r1t", "ford-mustang-mach-e", "tesla-model-x"], line1: "CAN YOU NAME ALL", word: "ELECTRIC CARS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE70EvCarHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "evcars-e70-thumb", heroSlug: "tesla-cybertruck", line1: "GUESS THE", word: "ELECTRIC CAR?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE70EvCarSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "evcars-e70-thumb", easySlug: "tesla-cybertruck", hardSlug: "aptera", word: "ELECTRIC CAR?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE70EvCarNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "evcars-e70-thumb", cascade: ["tesla-model-3", "tesla-model-s", "tesla-cybertruck", "?"], line1: "CAN YOU NAME ALL", word: "ELECTRIC CARS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -759,6 +768,7 @@ export const RemotionRoot = () => {
         { ep: "E67", items: PHONE_LOGOS_E67, mode: "phonelogos-e67", title: "Guess the Phone Brand Logo", v2: true },
         { ep: "E68", items: NOKIA_E68, mode: "nokia-e68", title: "Guess the Nokia Phone", v2: true },
         { ep: "E69", items: SUPERCARS_E69, mode: "supercars-e69", title: "Guess the Supercar", v2: true },
+        { ep: "E70", items: EVCARS_E70, mode: "evcars-e70", title: "Guess the Electric Car", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

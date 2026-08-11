@@ -93,6 +93,7 @@ const ASSET = {
   "phonelogos-e67-thumb": { dir: "logos67", ext: "png", fit: "contain" },
   "nokia-e68-thumb": { dir: "nokia68", ext: "jpg", fit: "cover" },
   "supercars-e69-thumb": { dir: "supercars69", ext: "jpg", fit: "cover" },
+  "evcars-e70-thumb": { dir: "evcars70", ext: "jpg", fit: "cover" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
