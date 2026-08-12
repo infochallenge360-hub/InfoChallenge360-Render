@@ -36,6 +36,7 @@ const CFG = {
   E71: { data: "src/Quiz/pickupsE71Data.js", nameField: "name", keyword: "pickup truck", word: "PICKUP", plural: "pickup trucks", folder: "E71_Pickup-Trucks", tags: ["#truckquiz", "#carquiz", "#quiz", "#pickuptrucks", "#automotive"] },
   E72: { data: "src/Quiz/suvsE72Data.js", nameField: "name", keyword: "SUV", word: "SUV", plural: "SUVs", folder: "E72_SUVs", tags: ["#suvquiz", "#carquiz", "#quiz", "#suvs", "#automotive"] },
   E73: { data: "src/Quiz/jdmCarsE73Data.js", nameField: "name", keyword: "JDM car", word: "JDM car", plural: "JDM cars", folder: "E73_JDM-Cars", tags: ["#jdmquiz", "#carquiz", "#quiz", "#jdm", "#automotive"] },
+  E74: { data: "src/Quiz/vegetablesE74Data.js", nameField: "name", keyword: "vegetable", word: "vegetable", plural: "vegetables", folder: "E74_Vegetables", tags: ["#vegetablequiz", "#foodquiz", "#quiz", "#vegetables", "#trivia"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)

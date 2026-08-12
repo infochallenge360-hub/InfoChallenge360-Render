@@ -197,6 +197,9 @@ import SUVS_E72_SHAPES from "./Quiz/shapes/suvs.json";
 import { JDM_CARS_E73 } from "./Quiz/jdmCarsE73Data";
 import { JDM_CARS_E73_FACTS } from "./Quiz/jdmCarsE73Facts";
 import JDM_CARS_E73_SHAPES from "./Quiz/shapes/jdm.json";
+import { VEGETABLES_E74 } from "./Quiz/vegetablesE74Data";
+import { VEGETABLES_E74_FACTS } from "./Quiz/vegetablesE74Facts";
+import VEGETABLES_E74_SHAPES from "./Quiz/shapes/veg.json";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -278,6 +281,7 @@ const E70_INFOCFG = { items: EVCARS_E70, facts: EVCARS_E70_FACTS, topicWord: "EL
 const E71_INFOCFG = { items: PICKUPS_E71, facts: PICKUPS_E71_FACTS, topicWord: "PICKUP TRUCK", topicPlural: "PICKUP TRUCKS", dir: "pickups71", ext: "jpg", fit: "cover", voPrefix: "pk-", nameField: "name", introVo: "vo-intro-pickup", coldSlug: "piaggio-porter", shapes: PICKUPS_E71_SHAPES };
 const E72_INFOCFG = { items: SUVS_E72, facts: SUVS_E72_FACTS, topicWord: "SUV", topicPlural: "SUVS", dir: "suvs72", ext: "jpg", fit: "cover", voPrefix: "sv-", nameField: "name", introVo: "vo-intro-suv", coldSlug: "suzuki-jimny", shapes: SUVS_E72_SHAPES };
 const E73_INFOCFG = { items: JDM_CARS_E73, facts: JDM_CARS_E73_FACTS, topicWord: "JDM CAR", topicPlural: "JDM CARS", dir: "jdm73", ext: "jpg", fit: "cover", voPrefix: "jd-", nameField: "name", introVo: "vo-intro-jdm", coldSlug: "nissan-s-cargo", shapes: JDM_CARS_E73_SHAPES };
+const E74_INFOCFG = { items: VEGETABLES_E74, facts: VEGETABLES_E74_FACTS, topicWord: "VEGETABLE", topicPlural: "VEGETABLES", dir: "veg74", ext: "jpg", fit: "cover", voPrefix: "vt-", nameField: "name", introVo: "vo-intro-vegetable", coldSlug: "amaranth-greens", shapes: VEGETABLES_E74_SHAPES };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -746,6 +750,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE73JdmHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "jdm-e73-thumb", heroSlug: "toyota-gr-supra", line1: "GUESS THE", word: "JDM CAR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE73JdmSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "jdm-e73-thumb", easySlug: "mazda-rx7-fd", hardSlug: "datsun-fairlady-sr311", word: "JDM CAR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE73JdmNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "jdm-e73-thumb", cascade: ["mazda-rx7-fd", "nissan-350z", "toyota-gr-supra", "?"], line1: "CAN YOU NAME ALL", word: "JDM CARS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E74VegetableQuiz" component={QuizV2} durationInFrames={quizFrames(E74_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E74_INFOCFG }} />
+      <Composition id="ThumbE74Veg" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "veg-e74-thumb", grid: ["potato", "tomato", "carrot", "?", "broccoli", "onion", "cucumber", "corn", "cabbage"], line1: "CAN YOU NAME ALL", word: "VEGETABLES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE74VegHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "veg-e74-thumb", heroSlug: "potato", line1: "GUESS THE", word: "VEGETABLE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE74VegSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "veg-e74-thumb", easySlug: "potato", hardSlug: "scorzonera", word: "VEGETABLE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE74VegNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "veg-e74-thumb", cascade: ["potato", "tomato", "carrot", "?"], line1: "CAN YOU NAME ALL", word: "VEGETABLES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -799,6 +808,7 @@ export const RemotionRoot = () => {
         { ep: "E71", items: PICKUPS_E71, mode: "pickups-e71", title: "Guess the Pickup Truck", v2: true },
         { ep: "E72", items: SUVS_E72, mode: "suvs-e72", title: "Guess the SUV", v2: true },
         { ep: "E73", items: JDM_CARS_E73, mode: "jdm-e73", title: "Guess the JDM Car", v2: true },
+        { ep: "E74", items: VEGETABLES_E74, mode: "veg-e74", title: "Guess the Vegetable", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
