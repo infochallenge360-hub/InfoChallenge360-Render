@@ -55,7 +55,7 @@ export const VEGETABLES_E74_FACTS = {
   "fiddlehead-fern": "The tightly coiled young shoot of certain fern species.",
   "purslane": "A succulent weed in many gardens that's also edible and nutritious.",
   "sunchoke": "Not related to Jerusalem or artichokes — it's a sunflower relative.",
-  "burdock-root": "A long, slender root popular in Japanese cooking as gobo.",
+  "horseradish": "Its pungent heat comes from the same compound family as mustard.",
   "sea-kale": "A coastal plant historically foraged along European shorelines.",
   "lotus-root": "Its slices reveal a distinctive lace-like pattern of holes.",
   "yardlong-bean": "Can grow pods reaching nearly a meter, or three feet, in length.",
@@ -66,7 +66,7 @@ export const VEGETABLES_E74_FACTS = {
   "gai-lan": "Also called Chinese broccoli, prized for its thick tender stems.",
   "kabocha": "A Japanese winter squash with a naturally sweet, dense flesh.",
   "delicata-squash": "Known as the sweet potato squash for its creamy texture.",
-  "salsify": "Its root has a mild, oyster-like flavor when cooked.",
-  "scorzonera": "Called black salsify for its dark, almost bark-like skin.",
+  "cassava": "A starchy root that's a staple food for over 800 million people.",
+  "turmeric": "Its bright orange flesh comes from the compound curcumin.",
   "amaranth-greens": "Related to grain amaranth, but this species is grown for its leaves.",
 };

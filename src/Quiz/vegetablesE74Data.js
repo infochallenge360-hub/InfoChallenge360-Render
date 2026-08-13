@@ -65,7 +65,7 @@ export const VEGETABLES_E74 = [
   { slug: "fiddlehead-fern", name: "Fiddlehead Fern", wiki: "Fiddlehead fern", level: "impossible" },
   { slug: "purslane", name: "Purslane", wiki: "Purslane", level: "impossible" },
   { slug: "sunchoke", name: "Sunchoke", wiki: "Jerusalem artichoke", level: "impossible" },
-  { slug: "burdock-root", name: "Burdock Root", wiki: "Burdock root", level: "impossible" },
+  { slug: "horseradish", name: "Horseradish", wiki: "Horseradish", level: "impossible" },
   { slug: "sea-kale", name: "Sea Kale", wiki: "Crambe maritima", level: "impossible" },
   { slug: "lotus-root", name: "Lotus Root", wiki: "Lotus root", level: "impossible" },
   { slug: "yardlong-bean", name: "Yardlong Bean", wiki: "Vigna unguiculata subsp. sesquipedalis", level: "impossible" },
@@ -76,8 +76,8 @@ export const VEGETABLES_E74 = [
   { slug: "gai-lan", name: "Gai Lan", wiki: "Gai lan", level: "impossible" },
   { slug: "kabocha", name: "Kabocha", wiki: "Kabocha", level: "impossible" },
   { slug: "delicata-squash", name: "Delicata Squash", wiki: "Delicata squash", level: "impossible" },
-  { slug: "salsify", name: "Salsify", wiki: "Tragopogon porrifolius", level: "impossible" },
-  { slug: "scorzonera", name: "Scorzonera", wiki: "Scorzonera hispanica", level: "impossible" },
+  { slug: "cassava", name: "Cassava", wiki: "Cassava", level: "impossible" },
+  { slug: "turmeric", name: "Turmeric Root", wiki: "Turmeric", level: "impossible" },
   { slug: "amaranth-greens", name: "Amaranth Greens", wiki: "Amaranthus tricolor", level: "impossible" },
 ];
 export default VEGETABLES_E74;

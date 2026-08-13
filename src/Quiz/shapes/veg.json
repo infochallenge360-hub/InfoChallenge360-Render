@@ -45,7 +45,7 @@
   "napa-cabbage": "portrait",
   "swiss-chard": "portrait",
   "yam": "landscape",
-  "taro": "square",
+  "taro": "portrait",
   "water-chestnut": "square",
   "bamboo-shoot": "square",
   "bitter-melon": "square",
@@ -55,7 +55,7 @@
   "fiddlehead-fern": "landscape",
   "purslane": "square",
   "sunchoke": "square",
-  "burdock-root": "square",
+  "horseradish": "square",
   "sea-kale": "square",
   "lotus-root": "square",
   "yardlong-bean": "square",
@@ -66,7 +66,7 @@
   "gai-lan": "portrait",
   "kabocha": "square",
   "delicata-squash": "square",
-  "salsify": "portrait",
-  "scorzonera": "portrait",
+  "cassava": "portrait",
+  "turmeric": "portrait",
   "amaranth-greens": "portrait"
 }
