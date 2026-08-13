@@ -57,7 +57,7 @@ export const VEGETABLES_E74_FACTS = {
   "sunchoke": "Not related to Jerusalem or artichokes — it's a sunflower relative.",
   "horseradish": "Its pungent heat comes from the same compound family as mustard.",
   "sea-kale": "A coastal plant historically foraged along European shorelines.",
-  "lotus-root": "Its slices reveal a distinctive lace-like pattern of holes.",
+  "water-spinach": "A fast-growing green often stir-fried whole, stems and all.",
   "yardlong-bean": "Can grow pods reaching nearly a meter, or three feet, in length.",
   "malabar-spinach": "A vining plant unrelated to true spinach despite the name.",
   "tatsoi": "A small, dark-leafed Asian green often arranged in a flat rosette.",

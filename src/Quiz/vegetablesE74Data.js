@@ -67,7 +67,7 @@ export const VEGETABLES_E74 = [
   { slug: "sunchoke", name: "Sunchoke", wiki: "Jerusalem artichoke", level: "impossible" },
   { slug: "horseradish", name: "Horseradish", wiki: "Horseradish", level: "impossible" },
   { slug: "sea-kale", name: "Sea Kale", wiki: "Crambe maritima", level: "impossible" },
-  { slug: "lotus-root", name: "Lotus Root", wiki: "Lotus root", level: "impossible" },
+  { slug: "water-spinach", name: "Water Spinach", wiki: "Ipomoea aquatica", level: "impossible" },
   { slug: "yardlong-bean", name: "Yardlong Bean", wiki: "Vigna unguiculata subsp. sesquipedalis", level: "impossible" },
   { slug: "malabar-spinach", name: "Malabar Spinach", wiki: "Basella alba", level: "impossible" },
   { slug: "tatsoi", name: "Tatsoi", wiki: "Tatsoi", level: "impossible" },
