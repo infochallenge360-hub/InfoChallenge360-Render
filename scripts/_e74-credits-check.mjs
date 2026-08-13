@@ -28,6 +28,7 @@ const MANUAL = {
   "cassava": "Balanghoy (Manihot esculenta) tubers.jpg",
   "turmeric": "Liat Portal for Foodie Disorder - Turmeric Root.jpg",
   "water-spinach": "Water spinach.jpg",
+  "amaranth-greens": "Aleho Vegetables at Bakin Dogo Market, Kaduna North.jpg",
   "endive": "Cichorium endivia var. crispum (01).jpg",
   "asparagus": "Asparagus-Bundle.jpg",
   "water-chestnut": "Peeled water chestnuts.jpg",
