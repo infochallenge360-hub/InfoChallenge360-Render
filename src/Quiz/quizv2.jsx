@@ -275,7 +275,7 @@ const ColdOpen = ({ item, cfg }) => {
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", top: 92, left: 0, right: 0, textAlign: "center", fontFamily: font, fontWeight: 900, fontSize: 68, color: "#fff", textShadow: "0 3px 18px rgba(0,0,0,0.5)" }}>
-        {revealed ? <span><span style={{ color: "#3BE07A" }}>✓ </span>{name}</span> : <span><span style={{ color: GAME.red }}>95%</span> CAN'T NAME THIS</span>}
+        {revealed ? <span><span style={{ color: "#3BE07A" }}>✓ </span>{name}</span> : <span>ONLY <span style={{ color: GAME.red }}>1%</span> GET ALL {cfg.items.length} RIGHT</span>}
       </div>
       {cfg.clueField && !revealed && (
         <div style={{ position: "absolute", top: 176, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
@@ -384,7 +384,7 @@ const build = (cfg) => {
   const items = cfg.items;
   const segs = [];
   let f = 0;
-  const coldItem = (cfg.coldSlug && items.find((l) => l[cfg.slugKey || "slug"] === cfg.coldSlug)) || items.find((l) => l.level === "impossible") || items[0];
+  const coldItem = (cfg.coldSlug && items.find((l) => l[cfg.slugKey || "slug"] === cfg.coldSlug)) || items.find((l) => l.level === "easy") || items[0];
   segs.push({ t: "cold", item: coldItem, from: f, dur: LT.cold }); f += LT.cold;
   segs.push({ t: "intro", from: f, dur: LT.intro }); f += LT.intro;
   let last = null, num = 0;
