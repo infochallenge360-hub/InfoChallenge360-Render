@@ -62,7 +62,7 @@ export const MOTORCYCLES_E75_FACTS = {
   "jawa-350": "A Czech two-stroke twin popular across the former Eastern Bloc.",
   "mz-etz": "An East German motorcycle exported widely during the Cold War.",
   "ural-gear-up": "A Russian sidecar bike that can power its third wheel too.",
-  "cz-175": "A pre-war Czech motorcycle from a maker once known for weapons.",
+  "cz-175": "This 1957 Czech scooter's round nose earned it the nickname 'Cyclops.'",
   "rokon-trail-breaker": "Unusual for having power sent to both of its wheels.",
   "britten-v1000": "A radical hand-built New Zealand superbike, only ten ever made.",
   "vyrus-987": "A boutique Italian brand using hub-center steering like Bimota.",

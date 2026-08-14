@@ -71,7 +71,7 @@ export const MOTORCYCLES_E75 = [
   { slug: "jawa-350", name: "Jawa 350", wiki: "Jawa Moto", level: "impossible" },
   { slug: "mz-etz", name: "MZ ETZ", wiki: "MZ Motorrad- und Zweiradwerk", level: "impossible" },
   { slug: "ural-gear-up", name: "Ural Gear-Up", wiki: "Ural Motorcycles", level: "impossible" },
-  { slug: "cz-175", name: "ČZ 175", wiki: "ČZ (motorcycle)", level: "impossible" },
+  { slug: "cz-175", name: "ČZ 175", wiki: "Česká zbrojovka Strakonice", level: "impossible" },
   { slug: "rokon-trail-breaker", name: "Rokon Trail-Breaker", wiki: "Rokon", level: "impossible" },
   { slug: "britten-v1000", name: "Britten V1000", wiki: "Britten V1000", level: "impossible" },
   { slug: "vyrus-987", name: "Vyrus 987", wiki: "Vyrus", level: "impossible" },
