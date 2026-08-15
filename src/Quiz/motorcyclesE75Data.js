@@ -61,7 +61,7 @@ export const MOTORCYCLES_E75 = [
 
   // IMPOSSIBLE (18)
   { slug: "bimota-tesi", name: "Bimota Tesi", wiki: "Bimota Tesi", level: "impossible" },
-  { slug: "confederate-wraith", name: "Confederate Wraith", wiki: "Confederate Motor Company", level: "impossible" },
+  { slug: "megola", name: "Megola", wiki: "Megola", level: "impossible" },
   { slug: "brough-superior-ss100", name: "Brough Superior SS100", wiki: "Brough Superior SS100", level: "impossible" },
   { slug: "vincent-black-shadow", name: "Vincent Black Shadow", wiki: "Vincent Black Shadow", level: "impossible" },
   { slug: "ariel-square-four", name: "Ariel Square Four", wiki: "Ariel Square Four", level: "impossible" },

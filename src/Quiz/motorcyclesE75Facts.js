@@ -52,7 +52,7 @@ export const MOTORCYCLES_E75_FACTS = {
   "suzuki-v-strom": "Its name blends \"V-twin\" with the Swedish word for \"stream.\"",
   "lambretta-li": "Vespa's biggest scooter rival, born in postwar Milan.",
   "bimota-tesi": "Used an unusual hub-center steering system instead of forks.",
-  "confederate-wraith": "A boutique American brand known for aircraft-grade aluminum frames.",
+  "megola": "This 1920s German bike's rotary engine sat in the front wheel.",
   "brough-superior-ss100": "Once called \"the Rolls-Royce of motorcycles\" by a magazine.",
   "vincent-black-shadow": "Was the world's fastest production motorcycle in its era.",
   "ariel-square-four": "Used a rare engine with four cylinders arranged in a square.",

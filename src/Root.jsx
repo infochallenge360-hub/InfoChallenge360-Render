@@ -285,7 +285,7 @@ const E71_INFOCFG = { items: PICKUPS_E71, facts: PICKUPS_E71_FACTS, topicWord: "
 const E72_INFOCFG = { items: SUVS_E72, facts: SUVS_E72_FACTS, topicWord: "SUV", topicPlural: "SUVS", dir: "suvs72", ext: "jpg", fit: "cover", voPrefix: "sv-", nameField: "name", introVo: "vo-intro-suv", coldSlug: "suzuki-jimny", shapes: SUVS_E72_SHAPES };
 const E73_INFOCFG = { items: JDM_CARS_E73, facts: JDM_CARS_E73_FACTS, topicWord: "JDM CAR", topicPlural: "JDM CARS", dir: "jdm73", ext: "jpg", fit: "cover", voPrefix: "jd-", nameField: "name", introVo: "vo-intro-jdm", coldSlug: "nissan-s-cargo", shapes: JDM_CARS_E73_SHAPES };
 const E74_INFOCFG = { items: VEGETABLES_E74, facts: VEGETABLES_E74_FACTS, topicWord: "VEGETABLE", topicPlural: "VEGETABLES", dir: "veg74", ext: "jpg", fit: "cover", voPrefix: "vt-", nameField: "name", introVo: "vo-intro-vegetable", coldSlug: "amaranth-greens", shapes: VEGETABLES_E74_SHAPES };
-const E75_INFOCFG = { items: MOTORCYCLES_E75, facts: MOTORCYCLES_E75_FACTS, topicWord: "MOTORCYCLE", topicPlural: "MOTORCYCLES", dir: "moto75", ext: "jpg", fit: "cover", voPrefix: "mc-", nameField: "name", introVo: "vo-intro-motorcycle", coldSlug: "horex-vr6", shapes: MOTORCYCLES_E75_SHAPES };
+const E75_INFOCFG = { items: MOTORCYCLES_E75, facts: MOTORCYCLES_E75_FACTS, topicWord: "MOTORCYCLE", topicPlural: "MOTORCYCLES", dir: "moto75", ext: "jpg", fit: "cover", voPrefix: "mc-", nameField: "name", introVo: "vo-intro-motorcycle", coldSlug: "harley-davidson-fat-boy", shapes: MOTORCYCLES_E75_SHAPES };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
