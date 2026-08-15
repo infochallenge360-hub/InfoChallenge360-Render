@@ -203,6 +203,9 @@ import VEGETABLES_E74_SHAPES from "./Quiz/shapes/veg.json";
 import { MOTORCYCLES_E75 } from "./Quiz/motorcyclesE75Data";
 import { MOTORCYCLES_E75_FACTS } from "./Quiz/motorcyclesE75Facts";
 import MOTORCYCLES_E75_SHAPES from "./Quiz/shapes/moto.json";
+import { AIRPLANES_E76 } from "./Quiz/airplanesE76Data";
+import { AIRPLANES_E76_FACTS } from "./Quiz/airplanesE76Facts";
+import AIRPLANES_E76_SHAPES from "./Quiz/shapes/airplanes.json";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -286,6 +289,7 @@ const E72_INFOCFG = { items: SUVS_E72, facts: SUVS_E72_FACTS, topicWord: "SUV", 
 const E73_INFOCFG = { items: JDM_CARS_E73, facts: JDM_CARS_E73_FACTS, topicWord: "JDM CAR", topicPlural: "JDM CARS", dir: "jdm73", ext: "jpg", fit: "cover", voPrefix: "jd-", nameField: "name", introVo: "vo-intro-jdm", coldSlug: "nissan-s-cargo", shapes: JDM_CARS_E73_SHAPES };
 const E74_INFOCFG = { items: VEGETABLES_E74, facts: VEGETABLES_E74_FACTS, topicWord: "VEGETABLE", topicPlural: "VEGETABLES", dir: "veg74", ext: "jpg", fit: "cover", voPrefix: "vt-", nameField: "name", introVo: "vo-intro-vegetable", coldSlug: "amaranth-greens", shapes: VEGETABLES_E74_SHAPES };
 const E75_INFOCFG = { items: MOTORCYCLES_E75, facts: MOTORCYCLES_E75_FACTS, topicWord: "MOTORCYCLE", topicPlural: "MOTORCYCLES", dir: "moto75", ext: "jpg", fit: "cover", voPrefix: "mc-", nameField: "name", introVo: "vo-intro-motorcycle", coldSlug: "harley-davidson-fat-boy", shapes: MOTORCYCLES_E75_SHAPES };
+const E76_INFOCFG = { items: AIRPLANES_E76, facts: AIRPLANES_E76_FACTS, topicWord: "AIRPLANE", topicPlural: "AIRPLANES", dir: "airplanes76", ext: "jpg", fit: "cover", voPrefix: "av-", nameField: "name", introVo: "vo-intro-airplane", coldSlug: "boeing-747", shapes: AIRPLANES_E76_SHAPES };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -764,6 +768,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE75MotoHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "moto-e75-thumb", heroSlug: "kawasaki-ninja", line1: "GUESS THE", word: "MOTORCYCLE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE75MotoSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "moto-e75-thumb", easySlug: "kawasaki-ninja", hardSlug: "voxan-wattman", word: "MOTORCYCLE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE75MotoNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "moto-e75-thumb", cascade: ["kawasaki-ninja", "harley-davidson-fat-boy", "ducati-panigale", "?"], line1: "CAN YOU NAME ALL", word: "MOTORCYCLES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E76AirplaneQuiz" component={QuizV2} durationInFrames={quizFrames(E76_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E76_INFOCFG }} />
+      <Composition id="ThumbE76Plane" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "plane-e76-thumb", grid: ["boeing-747", "concorde", "sr-71-blackbird", "?", "f-22-raptor", "supermarine-spitfire", "wright-flyer", "p-51-mustang", "f-16-fighting-falcon"], line1: "CAN YOU NAME ALL", word: "AIRPLANES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE76PlaneHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "plane-e76-thumb", heroSlug: "sr-71-blackbird", line1: "GUESS THE", word: "AIRPLANE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE76PlaneSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "plane-e76-thumb", easySlug: "boeing-747", hardSlug: "vought-v173", word: "AIRPLANE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE76PlaneNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "plane-e76-thumb", cascade: ["sr-71-blackbird", "boeing-747", "concorde", "?"], line1: "CAN YOU NAME ALL", word: "AIRPLANES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -819,6 +828,7 @@ export const RemotionRoot = () => {
         { ep: "E73", items: JDM_CARS_E73, mode: "jdm-e73", title: "Guess the JDM Car", v2: true },
         { ep: "E74", items: VEGETABLES_E74, mode: "veg-e74", title: "Guess the Vegetable", v2: true },
         { ep: "E75", items: MOTORCYCLES_E75, mode: "moto-e75", title: "Guess the Motorcycle", v2: true },
+        { ep: "E76", items: AIRPLANES_E76, mode: "plane-e76", title: "Guess the Airplane", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

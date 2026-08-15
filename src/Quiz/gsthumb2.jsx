@@ -99,6 +99,7 @@ const ASSET = {
   "jdm-e73-thumb": { dir: "jdm73", ext: "jpg", fit: "cover" },
   "veg-e74-thumb": { dir: "veg74", ext: "jpg", fit: "cover" },
   "moto-e75-thumb": { dir: "moto75", ext: "jpg", fit: "cover" },
+  "plane-e76-thumb": { dir: "airplanes76", ext: "jpg", fit: "cover" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

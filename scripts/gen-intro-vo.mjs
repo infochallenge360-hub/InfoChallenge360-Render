@@ -89,6 +89,7 @@ const INTROS = {
   "vo-intro-jdm": "Guess the JDM car! Can you name all seventy?",
   "vo-intro-vegetable": "Guess the vegetable! Can you name all seventy?",
   "vo-intro-motorcycle": "Guess the motorcycle! Can you name all seventy?",
+  "vo-intro-airplane": "Guess the airplane! Can you name all seventy?",
 };
 
 function wavDuration(path) {
