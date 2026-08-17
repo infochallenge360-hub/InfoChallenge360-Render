@@ -208,6 +208,8 @@ import { AIRPLANES_E76_FACTS } from "./Quiz/airplanesE76Facts";
 import AIRPLANES_E76_SHAPES from "./Quiz/shapes/airplanes.json";
 import { STATES_E77 } from "./Quiz/statesE77Data";
 import { STATES_E77_FACTS } from "./Quiz/statesE77Facts";
+import { NBA_E78 } from "./Quiz/nbaE78Data";
+import { NBA_E78_FACTS } from "./Quiz/nbaE78Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -293,6 +295,7 @@ const E74_INFOCFG = { items: VEGETABLES_E74, facts: VEGETABLES_E74_FACTS, topicW
 const E75_INFOCFG = { items: MOTORCYCLES_E75, facts: MOTORCYCLES_E75_FACTS, topicWord: "MOTORCYCLE", topicPlural: "MOTORCYCLES", dir: "moto75", ext: "jpg", fit: "cover", voPrefix: "mc-", nameField: "name", introVo: "vo-intro-motorcycle", coldSlug: "harley-davidson-fat-boy", shapes: MOTORCYCLES_E75_SHAPES };
 const E76_INFOCFG = { items: AIRPLANES_E76, facts: AIRPLANES_E76_FACTS, topicWord: "AIRPLANE", topicPlural: "AIRPLANES", dir: "airplanes76", ext: "jpg", fit: "cover", voPrefix: "av-", nameField: "name", introVo: "vo-intro-airplane", coldSlug: "boeing-747", shapes: AIRPLANES_E76_SHAPES };
 const E77_INFOCFG = { items: STATES_E77, facts: STATES_E77_FACTS, topicWord: "US STATE", topicPlural: "US STATES", dir: "states77", ext: "svg", fit: "contain", voPrefix: "us-", nameField: "name", introVo: "vo-intro-usstate", coldSlug: "tx" };
+const E78_INFOCFG = { items: NBA_E78, facts: NBA_E78_FACTS, topicWord: "NBA TEAM", topicPlural: "NBA TEAMS", dir: "nba78", ext: "png", fit: "contain", voPrefix: "nb-", nameField: "name", introVo: "vo-intro-nba", coldSlug: "chicago-bulls" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -781,6 +784,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE77StateHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "state-e77-thumb", heroSlug: "tx", line1: "GUESS THE", word: "US STATE?", number: "50", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE77StateSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "state-e77-thumb", easySlug: "tx", hardSlug: "wy", word: "US STATE?", number: "50", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE77StateNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "state-e77-thumb", cascade: ["tx", "fl", "ca", "?"], line1: "CAN YOU NAME ALL", word: "US STATES?", number: "50", badge: "Only 1% get 100%" }} />
+      <Composition id="E78NbaQuiz" component={QuizV2} durationInFrames={quizFrames(E78_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E78_INFOCFG }} />
+      <Composition id="ThumbE78Nba" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nba-e78-thumb", grid: ["chicago-bulls", "los-angeles-lakers", "boston-celtics", "?", "golden-state-warriors", "miami-heat", "brooklyn-nets", "new-york-knicks", "toronto-raptors"], line1: "CAN YOU NAME ALL", word: "NBA TEAMS?", number: "30", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE78NbaHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nba-e78-thumb", heroSlug: "los-angeles-lakers", line1: "GUESS THE", word: "NBA TEAM?", number: "30", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE78NbaSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nba-e78-thumb", easySlug: "chicago-bulls", hardSlug: "utah-jazz", word: "NBA TEAM?", number: "30", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE78NbaNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nba-e78-thumb", cascade: ["chicago-bulls", "los-angeles-lakers", "boston-celtics", "?"], line1: "CAN YOU NAME ALL", word: "NBA TEAMS?", number: "30", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -838,6 +846,7 @@ export const RemotionRoot = () => {
         { ep: "E75", items: MOTORCYCLES_E75, mode: "moto-e75", title: "Guess the Motorcycle", v2: true },
         { ep: "E76", items: AIRPLANES_E76, mode: "plane-e76", title: "Guess the Airplane", v2: true },
         { ep: "E77", items: STATES_E77, mode: "state-e77", title: "Guess the US State", v2: true },
+        { ep: "E78", items: NBA_E78, mode: "nba-e78", title: "Guess the NBA Team", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
