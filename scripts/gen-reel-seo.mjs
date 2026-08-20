@@ -42,6 +42,7 @@ const CFG = {
   E77: { data: "src/Quiz/statesE77Data.js", nameField: "name", keyword: "US state", word: "state", plural: "states", folder: "E77_USStates", tags: ["#usstatequiz", "#geographyquiz", "#quiz", "#usa", "#geography"] },
   E78: { data: "src/Quiz/nbaE78Data.js", nameField: "name", keyword: "NBA team", word: "team", plural: "teams", folder: "E78_NBA", tags: ["#nbaquiz", "#basketballquiz", "#quiz", "#nba", "#basketball"] },
   E79: { data: "src/Quiz/nflE79Data.js", nameField: "name", keyword: "NFL team", word: "team", plural: "teams", folder: "E79_NFL", tags: ["#nflquiz", "#footballquiz", "#quiz", "#nfl", "#americanfootball"] },
+  E80: { data: "src/Quiz/mlbE80Data.js", nameField: "name", keyword: "MLB team", word: "team", plural: "teams", folder: "E80_MLB", tags: ["#mlbquiz", "#baseballquiz", "#quiz", "#mlb", "#baseball"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)

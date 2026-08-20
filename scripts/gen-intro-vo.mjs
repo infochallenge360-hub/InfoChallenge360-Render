@@ -93,6 +93,7 @@ const INTROS = {
   "vo-intro-usstate": "Guess the US state! Can you name all fifty?",
   "vo-intro-nba": "Guess the NBA team! Can you name all thirty?",
   "vo-intro-nfl": "Guess the NFL team! Can you name all thirty two?",
+  "vo-intro-mlb": "Guess the MLB team! Can you name all thirty?",
 };
 
 function wavDuration(path) {
