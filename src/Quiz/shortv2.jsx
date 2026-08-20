@@ -56,15 +56,23 @@ export const pickShort = (items, part = 0) => {
   for (const pool of groups) {
     if (!pool.length) continue;
     let sequence = [];
-    for (let lap = 0; sequence.length < NEEDED; lap++) {
-      let nextLap = _seededShuffle(pool, `lap${lap}`);
-      // تجنب تصادم حافة الدورة: لو أول عنصر بالدورة الجديدة نفس آخر عنصر بالدورة السابقة (بيسبب سؤال مكرر متتالي)، دوّرها لحد ما تختلف
-      if (sequence.length && pool.length > 1) {
-        while (keyOf(nextLap[0]) === keyOf(sequence[sequence.length - 1])) nextLap.push(nextLap.shift());
+    for (let lap = 0; sequence.length < NEEDED + pool.length; lap++) sequence = sequence.concat(_seededShuffle(pool, `lap${lap}`));
+    const start = part * 3;
+    const slice = [sequence[start], sequence[start + 1], sequence[start + 2]];
+    // لو صادف تكرار داخل نفس الثلاثية (بيصير عند حافة "الدورة" إذا حجم التير صغير — الثلاثية بتاخذ عنصرين من دورة وعنصر من التالية)،
+    // بدّل العنصر المكرر بأقرب عنصر لاحق بالتسلسل مو مستخدم بهالثلاثية أصلاً
+    const used = new Set();
+    for (let i = 0; i < slice.length; i++) {
+      let key = keyOf(slice[i]);
+      if (used.has(key)) {
+        let j = start + slice.length;
+        while (j < sequence.length && used.has(keyOf(sequence[j]))) j++;
+        slice[i] = sequence[j];
+        key = keyOf(slice[i]);
       }
-      sequence = sequence.concat(nextLap);
+      used.add(key);
     }
-    for (let k = 0; k < 3; k++) out.push(sequence[part * 3 + k]);
+    out.push(...slice);
   }
   return out;
 };
