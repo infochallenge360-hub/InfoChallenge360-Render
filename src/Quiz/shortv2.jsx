@@ -35,17 +35,28 @@ const buildOptions = (item, all, mode) => {
   return { opts: opts.slice(0, 4), correctIdx };
 };
 
-// يختار 12 عنصر لشورت رقم part (0..4): 3 من كل مستوى، بلا تكرار بين الشورتات (part×3 إزاحة)
-// معمم لأي حجم تير (يدعم حلقات 25/تير القديمة وحلقات 65-78 غير المتساوية الأحدث عبر تفاف الفهرس)
+// هاش بسيط وثابت (بدون Math.random) لعمل ترتيب "عشوائي" لكن قابل لإعادة الإنتاج لكل "دورة"
+const _hashStr = (s) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return h; };
+const _seededShuffle = (arr, seed) =>
+  arr.map((item, i) => ({ item, key: _hashStr(`${seed}-${i}-${item.slug || item.iso || i}`) }))
+     .sort((a, b) => a.key - b.key)
+     .map((x) => x.item);
+
+// يختار 12 عنصر لشورت رقم part (0..4): 3 من كل مستوى، بلا تكرار بين الشورتات إذا أمكن.
+// معمم لأي حجم تير (يدعم حلقات 25/تير القديمة وحلقات 65-78 غير المتساوية الأحدث). لما يكون
+// حجم التير أصغر من 15 (5 شورتات × 3)، القديم كان يكرر نفس الـ3 عناصر بالترتيب نفسه بين
+// الشورتات (مثلاً شورت 5 = شورت 1 بالضبط). الحل: نبني "دورات" من ترتيب مبعثر (deterministic
+// shuffle) بذرة مختلفة لكل دورة، فلما يضطر التكرار يصير بترتيب مختلف، مو نسخة طبق الأصل.
 export const pickShort = (items, part = 0) => {
   const levels = ["easy", "medium", "hard", "impossible"];
   const groups = levels.map((lvl) => items.filter((it) => it.level === lvl));
   const out = [];
+  const NEEDED = 15; // 5 شورتات × 3 عناصر لكل تير
   for (const pool of groups) {
-    for (let k = 0; k < 3; k++) {
-      if (!pool.length) continue;
-      out.push(pool[(part * 3 + k) % pool.length]);
-    }
+    if (!pool.length) continue;
+    let sequence = [];
+    for (let lap = 0; sequence.length < NEEDED; lap++) sequence = sequence.concat(_seededShuffle(pool, `lap${lap}`));
+    for (let k = 0; k < 3; k++) out.push(sequence[part * 3 + k]);
   }
   return out;
 };
