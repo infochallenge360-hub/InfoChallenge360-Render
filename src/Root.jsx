@@ -214,6 +214,8 @@ import { NFL_E79 } from "./Quiz/nflE79Data";
 import { NFL_E79_FACTS } from "./Quiz/nflE79Facts";
 import { MLB_E80 } from "./Quiz/mlbE80Data";
 import { MLB_E80_FACTS } from "./Quiz/mlbE80Facts";
+import { NHL_E81 } from "./Quiz/nhlE81Data";
+import { NHL_E81_FACTS } from "./Quiz/nhlE81Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -302,6 +304,7 @@ const E77_INFOCFG = { items: STATES_E77, facts: STATES_E77_FACTS, topicWord: "US
 const E78_INFOCFG = { items: NBA_E78, facts: NBA_E78_FACTS, topicWord: "NBA TEAM", topicPlural: "NBA TEAMS", dir: "nba78", ext: "png", fit: "contain", voPrefix: "nb-", nameField: "name", introVo: "vo-intro-nba", coldSlug: "chicago-bulls" };
 const E79_INFOCFG = { items: NFL_E79, facts: NFL_E79_FACTS, topicWord: "NFL TEAM", topicPlural: "NFL TEAMS", dir: "nfl79", ext: "png", fit: "contain", voPrefix: "nf-", nameField: "name", introVo: "vo-intro-nfl", coldSlug: "dallas-cowboys" };
 const E80_INFOCFG = { items: MLB_E80, facts: MLB_E80_FACTS, topicWord: "MLB TEAM", topicPlural: "MLB TEAMS", dir: "mlb80", ext: "png", fit: "contain", voPrefix: "mb-", nameField: "name", introVo: "vo-intro-mlb", coldSlug: "new-york-yankees" };
+const E81_INFOCFG = { items: NHL_E81, facts: NHL_E81_FACTS, topicWord: "NHL TEAM", topicPlural: "NHL TEAMS", dir: "nhl81", ext: "png", fit: "contain", voPrefix: "nh-", nameField: "name", introVo: "vo-intro-nhl", coldSlug: "toronto-maple-leafs" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -805,6 +808,11 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE80MlbHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mlb-e80-thumb", heroSlug: "new-york-yankees", line1: "GUESS THE", word: "MLB TEAM?", number: "30", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE80MlbSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mlb-e80-thumb", easySlug: "new-york-yankees", hardSlug: "athletics", word: "MLB TEAM?", number: "30", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE80MlbNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mlb-e80-thumb", cascade: ["new-york-yankees", "los-angeles-dodgers", "boston-red-sox", "?"], line1: "CAN YOU NAME ALL", word: "MLB TEAMS?", number: "30", badge: "Only 1% get 100%" }} />
+      <Composition id="E81NhlQuiz" component={QuizV2} durationInFrames={quizFrames(E81_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E81_INFOCFG }} />
+      <Composition id="ThumbE81Nhl" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nhl-e81-thumb", grid: ["toronto-maple-leafs", "montreal-canadiens", "boston-bruins", "?", "new-york-rangers", "chicago-blackhawks", "detroit-red-wings", "pittsburgh-penguins", "edmonton-oilers"], line1: "CAN YOU NAME ALL", word: "NHL TEAMS?", number: "32", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE81NhlHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nhl-e81-thumb", heroSlug: "toronto-maple-leafs", line1: "GUESS THE", word: "NHL TEAM?", number: "32", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE81NhlSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nhl-e81-thumb", easySlug: "toronto-maple-leafs", hardSlug: "utah-mammoth", word: "NHL TEAM?", number: "32", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE81NhlNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "nhl-e81-thumb", cascade: ["toronto-maple-leafs", "montreal-canadiens", "boston-bruins", "?"], line1: "CAN YOU NAME ALL", word: "NHL TEAMS?", number: "32", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -865,6 +873,7 @@ export const RemotionRoot = () => {
         { ep: "E78", items: NBA_E78, mode: "nba-e78", title: "Guess the NBA Team", v2: true },
         { ep: "E79", items: NFL_E79, mode: "nfl-e79", title: "Guess the NFL Team", v2: true },
         { ep: "E80", items: MLB_E80, mode: "mlb-e80", title: "Guess the MLB Team", v2: true },
+        { ep: "E81", items: NHL_E81, mode: "nhl-e81", title: "Guess the NHL Team", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
