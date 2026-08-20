@@ -52,10 +52,18 @@ export const pickShort = (items, part = 0) => {
   const groups = levels.map((lvl) => items.filter((it) => it.level === lvl));
   const out = [];
   const NEEDED = 15; // 5 شورتات × 3 عناصر لكل تير
+  const keyOf = (x) => x && (x.slug || x.iso);
   for (const pool of groups) {
     if (!pool.length) continue;
     let sequence = [];
-    for (let lap = 0; sequence.length < NEEDED; lap++) sequence = sequence.concat(_seededShuffle(pool, `lap${lap}`));
+    for (let lap = 0; sequence.length < NEEDED; lap++) {
+      let nextLap = _seededShuffle(pool, `lap${lap}`);
+      // تجنب تصادم حافة الدورة: لو أول عنصر بالدورة الجديدة نفس آخر عنصر بالدورة السابقة (بيسبب سؤال مكرر متتالي)، دوّرها لحد ما تختلف
+      if (sequence.length && pool.length > 1) {
+        while (keyOf(nextLap[0]) === keyOf(sequence[sequence.length - 1])) nextLap.push(nextLap.shift());
+      }
+      sequence = sequence.concat(nextLap);
+    }
     for (let k = 0; k < 3; k++) out.push(sequence[part * 3 + k]);
   }
   return out;
