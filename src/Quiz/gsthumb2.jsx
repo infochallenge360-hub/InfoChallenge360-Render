@@ -105,6 +105,7 @@ const ASSET = {
   "nfl-e79-thumb": { dir: "nfl79", ext: "png", fit: "contain" },
   "mlb-e80-thumb": { dir: "mlb80", ext: "png", fit: "contain" },
   "nhl-e81-thumb": { dir: "nhl81", ext: "png", fit: "contain" },
+  "roadsigns-e82-thumb": { dir: "roadsigns82", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
