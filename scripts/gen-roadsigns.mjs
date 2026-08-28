@@ -251,7 +251,7 @@ const items = [
     const arrow = `<path d="M0,-140 A140,140 0 0,1 121,-70" fill="none" stroke="${WHITE}" stroke-width="28" stroke-linecap="round"/><polygon points="121,-70 100,-22 148,-42" fill="${WHITE}"/>`;
     return circleMandatory(`<g>${arrow}</g><g transform="rotate(120)">${arrow}</g><g transform="rotate(240)">${arrow}</g>`);
   })()],
-  ["no-overtaking", circleProhibition(`<g><circle cx="-80" cy="0" r="46" fill="${BLACK}"/><circle cx="80" cy="-20" r="46" fill="${RED}"/></g>`)],
+  ["no-overtaking", circleProhibition(`<g transform="translate(-55,15)"><rect x="-18" y="-68" width="36" height="136" rx="14" fill="${BLACK}"/><rect x="-24" y="-12" width="48" height="42" rx="8" fill="${BLACK}"/></g><g transform="translate(65,-15)"><rect x="-18" y="-68" width="36" height="136" rx="14" fill="${RED}"/><rect x="-24" y="-12" width="48" height="42" rx="8" fill="${RED}"/></g>`)],
   ["speed-bump", triangleWarning(P.bump)],
   ["handicap-parking", rectInfo(P.wheelchair, BLUE)],
   ["gas-station", rectInfo(P.gasPump)],
@@ -267,9 +267,9 @@ const items = [
   ["curve-ahead", triangleWarning(P.curve)],
   ["divided-highway", triangleWarning(P.divided)],
   ["no-bicycles", circleProhibitionSlash(P.bike)],
-  ["steep-hill", triangleWarning(`<path d="M-160,120 L160,120 L160,-40 L20,120" fill="${BLACK}"/><text x="20" y="30" font-family="Arial" font-weight="900" font-size="60" fill="${BLACK}">10%</text>`)],
+  ["steep-hill", triangleWarning(`<path d="M-160,120 L160,120 L160,-60 Z" fill="${BLACK}"/><text x="0" y="95" font-family="Arial" font-weight="900" font-size="52" fill="${WHITE}">10%</text>`)],
   ["winding-road", triangleWarning(P.windingRoad)],
-  ["no-left-turn", circleProhibitionSlash(`<path d="M-60,140 Q-60,-40 60,-40 Q160,-40 160,60" fill="none" stroke="${BLACK}" stroke-width="34"/><polygon points="160,10 220,80 100,80" fill="${BLACK}"/>`)],
+  ["no-left-turn", circleProhibitionSlash(`<path d="M40,140 L40,-20 Q40,-60 0,-60 L-100,-60" fill="none" stroke="${BLACK}" stroke-width="34"/><polygon points="-100,-95 -165,-60 -100,-25" fill="${BLACK}"/>`)],
   ["keep-right", circleMandatory(`<g transform="rotate(135) scale(1.1)">${P.arrowUp().replace(new RegExp(BLACK,'g'), WHITE)}</g>`)],
   ["parking", rectInfo(P.parkingP)],
   ["construction-zone", triangleWarning(`<g fill="${BLACK}">
@@ -292,7 +292,7 @@ const items = [
   ["emergency-stopping-only", wrap(`<rect x="20" y="230" width="660" height="240" rx="10" fill="${BLUE}"/><text x="350" y="330" font-family="Arial" font-weight="900" font-size="70" fill="${WHITE}" text-anchor="middle">EMERGENCY</text><text x="350" y="410" font-family="Arial" font-weight="900" font-size="70" fill="${WHITE}" text-anchor="middle">STOPPING ONLY</text>`)],
   ["no-stopping", wrap(`<circle cx="350" cy="350" r="300" fill="${BLUE}" stroke="${RED}" stroke-width="40"/><line x1="140" y1="140" x2="560" y2="560" stroke="${RED}" stroke-width="36"/><line x1="560" y1="140" x2="140" y2="560" stroke="${RED}" stroke-width="36"/>`)],
   ["no-pedestrians", circleProhibitionSlash(P.pedestrian)],
-  ["steep-descent", triangleWarning(`<path d="M-160,-40 L160,-40 L160,120 L20,-40" fill="${BLACK}"/><text x="20" y="80" font-family="Arial" font-weight="900" font-size="60" fill="${BLACK}">10%</text>`)],
+  ["steep-descent", triangleWarning(`<path d="M-160,-40 L160,-40 L160,140 Z" fill="${BLACK}"/><text x="0" y="15" font-family="Arial" font-weight="900" font-size="52" fill="${WHITE}">10%</text>`)],
   ["road-narrows", triangleWarning(`<g fill="none" stroke="${BLACK}" stroke-width="26"><path d="M-180,-160 L-40,-20 L-40,20 L-180,160"/><path d="M180,-160 L40,-20 L40,20 L180,160"/></g>`)],
   ["give-way-to-oncoming-traffic", circleMandatory(`<g fill="${WHITE}"><rect x="-160" y="-30" width="130" height="60"/></g><g fill="${RED}"><rect x="30" y="-30" width="130" height="60"/></g>`)],
   ["kangaroo-crossing", triangleWarning(P.kangaroo)],
