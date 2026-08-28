@@ -251,7 +251,7 @@ const items = [
     const arrow = `<path d="M0,-140 A140,140 0 0,1 121,-70" fill="none" stroke="${WHITE}" stroke-width="28" stroke-linecap="round"/><polygon points="121,-70 100,-22 148,-42" fill="${WHITE}"/>`;
     return circleMandatory(`<g>${arrow}</g><g transform="rotate(120)">${arrow}</g><g transform="rotate(240)">${arrow}</g>`);
   })()],
-  ["no-overtaking", circleProhibition(`<g transform="translate(-55,15)"><rect x="-18" y="-68" width="36" height="136" rx="14" fill="${BLACK}"/><rect x="-24" y="-12" width="48" height="42" rx="8" fill="${BLACK}"/></g><g transform="translate(65,-15)"><rect x="-18" y="-68" width="36" height="136" rx="14" fill="${RED}"/><rect x="-24" y="-12" width="48" height="42" rx="8" fill="${RED}"/></g>`)],
+  ["no-overtaking", circleProhibition(`<g transform="translate(-55,35) scale(0.5)">${P.car}</g><g transform="translate(60,-30) scale(0.46)">${P.car.replace(new RegExp(BLACK, "g"), RED)}</g>`)],
   ["speed-bump", triangleWarning(P.bump)],
   ["handicap-parking", rectInfo(P.wheelchair, BLUE)],
   ["gas-station", rectInfo(P.gasPump)],
