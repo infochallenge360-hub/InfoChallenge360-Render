@@ -49,6 +49,7 @@ const CFG = {
   E84: { data: "src/Quiz/emojiE84Data.js", nameField: "name", keyword: "emoji", word: "emoji", plural: "emoji", folder: "E84_Emoji", tags: ["#emojiquiz", "#emoji", "#quiz", "#nameemoji", "#trivia"] },
   E85: { data: "src/Quiz/weatherE85Data.js", nameField: "name", keyword: "weather symbol", word: "symbol", plural: "symbols", folder: "E85_WeatherSymbols", tags: ["#weatherquiz", "#meteorology", "#quiz", "#weathersymbols", "#trivia"] },
   E86: { data: "src/Quiz/constellationsE86Data.js", nameField: "name", keyword: "constellation", word: "constellation", plural: "constellations", folder: "E86_Constellations", tags: ["#astronomyquiz", "#constellations", "#quiz", "#stargazing", "#trivia"] },
+  E87: { data: "src/Quiz/fontsE87Data.js", nameField: "name", keyword: "font", word: "font", plural: "fonts", folder: "E87_Fonts", tags: ["#fontquiz", "#typography", "#quiz", "#fonts", "#design"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)

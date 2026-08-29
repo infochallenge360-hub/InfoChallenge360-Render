@@ -226,6 +226,8 @@ import { WEATHER_E85 } from "./Quiz/weatherE85Data";
 import { WEATHER_E85_FACTS } from "./Quiz/weatherE85Facts";
 import { CONSTELLATIONS_E86 } from "./Quiz/constellationsE86Data";
 import { CONSTELLATIONS_E86_FACTS } from "./Quiz/constellationsE86Facts";
+import { FONTS_E87 } from "./Quiz/fontsE87Data";
+import { FONTS_E87_FACTS } from "./Quiz/fontsE87Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -320,6 +322,7 @@ const E83_INFOCFG = { items: MYTHICAL_CREATURES_E83, facts: MYTHICAL_CREATURES_E
 const E84_INFOCFG = { items: EMOJI_E84, facts: EMOJI_E84_FACTS, topicWord: "EMOJI", topicPlural: "EMOJI", dir: "emoji84", ext: "png", fit: "contain", voPrefix: "eo-", nameField: "name", introVo: "vo-intro-emoji", coldSlug: "red-heart" };
 const E85_INFOCFG = { items: WEATHER_E85, facts: WEATHER_E85_FACTS, topicWord: "WEATHER SYMBOL", topicPlural: "WEATHER SYMBOLS", dir: "weather85", ext: "png", fit: "contain", voPrefix: "we-", nameField: "name", introVo: "vo-intro-weather", coldSlug: "sun" };
 const E86_INFOCFG = { items: CONSTELLATIONS_E86, facts: CONSTELLATIONS_E86_FACTS, topicWord: "CONSTELLATION", topicPlural: "CONSTELLATIONS", dir: "constellations86", ext: "png", fit: "contain", voPrefix: "sk-", nameField: "name", introVo: "vo-intro-constellation", coldSlug: "orion" };
+const E87_INFOCFG = { items: FONTS_E87, facts: FONTS_E87_FACTS, topicWord: "FONT", topicPlural: "FONTS", dir: "fonts87", ext: "png", fit: "contain", voPrefix: "fn-", nameField: "name", introVo: "vo-intro-font", coldSlug: "roboto" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -849,6 +852,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE86Constellation" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "constellation-e86-thumb", grid: ["orion", "ursa-major", "cassiopeia", "?", "leo", "scorpius", "taurus", "gemini", "draco"], line1: "CAN YOU NAME ALL", word: "CONSTELLATIONS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE86ConstellationHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "constellation-e86-thumb", heroSlug: "orion", line1: "GUESS THE", word: "CONSTELLATION?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE86ConstellationSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "constellation-e86-thumb", easySlug: "orion", hardSlug: "mensa", word: "CONSTELLATION?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E87FontQuiz" component={QuizV2} durationInFrames={quizFrames(E87_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E87_INFOCFG }} />
+      <Composition id="ThumbE87Font" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "font-e87-thumb", grid: ["roboto", "montserrat", "poppins", "?", "pacifico", "lobster", "anton", "bebas-neue", "oswald"], line1: "CAN YOU NAME ALL", word: "FONTS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE87FontHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "font-e87-thumb", heroSlug: "pacifico", line1: "GUESS THE", word: "FONT?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE87FontSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "font-e87-thumb", easySlug: "roboto", hardSlug: "recursive", word: "FONT?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -915,6 +922,7 @@ export const RemotionRoot = () => {
         { ep: "E84", items: EMOJI_E84, mode: "emoji-e84", title: "Guess the Emoji", v2: true },
         { ep: "E85", items: WEATHER_E85, mode: "weather-e85", title: "Guess the Weather Symbol", v2: true },
         { ep: "E86", items: CONSTELLATIONS_E86, mode: "constellation-e86", title: "Guess the Constellation", v2: true },
+        { ep: "E87", items: FONTS_E87, mode: "font-e87", title: "Guess the Font", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
