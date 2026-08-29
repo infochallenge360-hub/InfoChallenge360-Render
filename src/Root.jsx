@@ -222,6 +222,8 @@ import { MYTHICAL_CREATURES_E83 } from "./Quiz/mythicalCreaturesE83Data";
 import { MYTHICAL_CREATURES_E83_FACTS } from "./Quiz/mythicalCreaturesE83Facts";
 import { EMOJI_E84 } from "./Quiz/emojiE84Data";
 import { EMOJI_E84_FACTS } from "./Quiz/emojiE84Facts";
+import { WEATHER_E85 } from "./Quiz/weatherE85Data";
+import { WEATHER_E85_FACTS } from "./Quiz/weatherE85Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -314,6 +316,7 @@ const E81_INFOCFG = { items: NHL_E81, facts: NHL_E81_FACTS, topicWord: "NHL TEAM
 const E82_INFOCFG = { items: ROADSIGNS_E82, facts: ROADSIGNS_E82_FACTS, topicWord: "ROAD SIGN", topicPlural: "ROAD SIGNS", dir: "roadsigns82", ext: "png", fit: "contain", voPrefix: "rs-", nameField: "name", introVo: "vo-intro-roadsign", coldSlug: "stop" };
 const E83_INFOCFG = { items: MYTHICAL_CREATURES_E83, facts: MYTHICAL_CREATURES_E83_FACTS, topicWord: "MYTHICAL CREATURE", topicPlural: "MYTHICAL CREATURES", dir: "mythical83", ext: "jpg", fit: "contain", voPrefix: "my-", nameField: "name", introVo: "vo-intro-mythical", coldSlug: "dragon" };
 const E84_INFOCFG = { items: EMOJI_E84, facts: EMOJI_E84_FACTS, topicWord: "EMOJI", topicPlural: "EMOJI", dir: "emoji84", ext: "png", fit: "contain", voPrefix: "eo-", nameField: "name", introVo: "vo-intro-emoji", coldSlug: "red-heart" };
+const E85_INFOCFG = { items: WEATHER_E85, facts: WEATHER_E85_FACTS, topicWord: "WEATHER SYMBOL", topicPlural: "WEATHER SYMBOLS", dir: "weather85", ext: "png", fit: "contain", voPrefix: "we-", nameField: "name", introVo: "vo-intro-weather", coldSlug: "sun" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -835,6 +838,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE84Emoji" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "emoji-e84-thumb", grid: ["red-heart", "fire", "star", "?", "crown", "skull", "robot", "rainbow", "rocket"], line1: "CAN YOU NAME ALL", word: "EMOJI?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE84EmojiHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "emoji-e84-thumb", heroSlug: "fire", line1: "GUESS THE", word: "EMOJI?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE84EmojiSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "emoji-e84-thumb", easySlug: "red-heart", hardSlug: "mirror-ball", word: "EMOJI?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E85WeatherQuiz" component={QuizV2} durationInFrames={quizFrames(E85_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E85_INFOCFG }} />
+      <Composition id="ThumbE85Weather" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "weather-e85-thumb", grid: ["sun", "rain", "snow", "?", "thunderstorm", "rainbow", "tornado", "hurricane", "lightning"], line1: "CAN YOU NAME ALL", word: "WEATHER SYMBOLS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE85WeatherHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "weather-e85-thumb", heroSlug: "tornado", line1: "GUESS THE", word: "WEATHER SYMBOL?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE85WeatherSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "weather-e85-thumb", easySlug: "sun", hardSlug: "sprite", word: "WEATHER SYMBOL?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -899,6 +906,7 @@ export const RemotionRoot = () => {
         { ep: "E82", items: ROADSIGNS_E82, mode: "roadsigns-e82", title: "Guess the Road Sign", v2: true },
         { ep: "E83", items: MYTHICAL_CREATURES_E83, mode: "mythical-e83", title: "Guess the Mythical Creature", v2: true },
         { ep: "E84", items: EMOJI_E84, mode: "emoji-e84", title: "Guess the Emoji", v2: true },
+        { ep: "E85", items: WEATHER_E85, mode: "weather-e85", title: "Guess the Weather Symbol", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

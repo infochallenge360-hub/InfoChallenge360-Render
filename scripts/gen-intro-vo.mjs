@@ -98,6 +98,7 @@ const INTROS = {
   "vo-intro-roadsign": "Guess the road sign! Can you name all seventy?",
   "vo-intro-mythical": "Guess the mythical creature! Can you name all seventy?",
   "vo-intro-emoji": "Guess the emoji! Can you name all seventy?",
+  "vo-intro-weather": "Guess the weather symbol! Can you name all seventy?",
 };
 
 function wavDuration(path) {
