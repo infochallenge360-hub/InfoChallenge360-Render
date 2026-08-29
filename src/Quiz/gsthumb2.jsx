@@ -107,6 +107,7 @@ const ASSET = {
   "nhl-e81-thumb": { dir: "nhl81", ext: "png", fit: "contain" },
   "roadsigns-e82-thumb": { dir: "roadsigns82", ext: "png", fit: "contain" },
   "mythical-e83-thumb": { dir: "mythical83", ext: "jpg", fit: "contain" },
+  "emoji-e84-thumb": { dir: "emoji84", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
