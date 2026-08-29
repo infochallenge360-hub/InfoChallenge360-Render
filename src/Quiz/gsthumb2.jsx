@@ -109,6 +109,7 @@ const ASSET = {
   "mythical-e83-thumb": { dir: "mythical83", ext: "jpg", fit: "contain" },
   "emoji-e84-thumb": { dir: "emoji84", ext: "png", fit: "contain" },
   "weather-e85-thumb": { dir: "weather85", ext: "png", fit: "contain" },
+  "constellation-e86-thumb": { dir: "constellations86", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
