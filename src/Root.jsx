@@ -218,6 +218,8 @@ import { NHL_E81 } from "./Quiz/nhlE81Data";
 import { NHL_E81_FACTS } from "./Quiz/nhlE81Facts";
 import { ROADSIGNS_E82 } from "./Quiz/roadsignsE82Data";
 import { ROADSIGNS_E82_FACTS } from "./Quiz/roadsignsE82Facts";
+import { MYTHICAL_CREATURES_E83 } from "./Quiz/mythicalCreaturesE83Data";
+import { MYTHICAL_CREATURES_E83_FACTS } from "./Quiz/mythicalCreaturesE83Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -308,6 +310,7 @@ const E79_INFOCFG = { items: NFL_E79, facts: NFL_E79_FACTS, topicWord: "NFL TEAM
 const E80_INFOCFG = { items: MLB_E80, facts: MLB_E80_FACTS, topicWord: "MLB TEAM", topicPlural: "MLB TEAMS", dir: "mlb80", ext: "png", fit: "contain", voPrefix: "mb-", nameField: "name", introVo: "vo-intro-mlb", coldSlug: "new-york-yankees" };
 const E81_INFOCFG = { items: NHL_E81, facts: NHL_E81_FACTS, topicWord: "NHL TEAM", topicPlural: "NHL TEAMS", dir: "nhl81", ext: "png", fit: "contain", voPrefix: "nh-", nameField: "name", introVo: "vo-intro-nhl", coldSlug: "toronto-maple-leafs" };
 const E82_INFOCFG = { items: ROADSIGNS_E82, facts: ROADSIGNS_E82_FACTS, topicWord: "ROAD SIGN", topicPlural: "ROAD SIGNS", dir: "roadsigns82", ext: "png", fit: "contain", voPrefix: "rs-", nameField: "name", introVo: "vo-intro-roadsign", coldSlug: "stop" };
+const E83_INFOCFG = { items: MYTHICAL_CREATURES_E83, facts: MYTHICAL_CREATURES_E83_FACTS, topicWord: "MYTHICAL CREATURE", topicPlural: "MYTHICAL CREATURES", dir: "mythical83", ext: "jpg", fit: "contain", voPrefix: "my-", nameField: "name", introVo: "vo-intro-mythical", coldSlug: "dragon" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -821,6 +824,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE82RoadSignHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "roadsigns-e82-thumb", heroSlug: "stop", line1: "GUESS THE", word: "ROAD SIGN?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE82RoadSignSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "roadsigns-e82-thumb", easySlug: "stop", hardSlug: "kangaroo-crossing", word: "ROAD SIGN?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE82RoadSignNumber" component={GsThumbNumberV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "roadsigns-e82-thumb", cascade: ["stop", "yield", "no-entry", "?"], line1: "CAN YOU NAME ALL", word: "ROAD SIGNS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E83MythicalQuiz" component={QuizV2} durationInFrames={quizFrames(E83_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E83_INFOCFG }} />
+      <Composition id="ThumbE83Mythical" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mythical-e83-thumb", grid: ["dragon", "unicorn", "mermaid", "?", "phoenix", "griffin", "medusa", "minotaur", "kraken"], line1: "CAN YOU NAME ALL", word: "MYTHICAL CREATURES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE83MythicalHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mythical-e83-thumb", heroSlug: "dragon", line1: "GUESS THE", word: "MYTHICAL CREATURE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE83MythicalSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "mythical-e83-thumb", easySlug: "dragon", hardSlug: "kongamato", word: "MYTHICAL CREATURE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -883,6 +890,7 @@ export const RemotionRoot = () => {
         { ep: "E80", items: MLB_E80, mode: "mlb-e80", title: "Guess the MLB Team", v2: true },
         { ep: "E81", items: NHL_E81, mode: "nhl-e81", title: "Guess the NHL Team", v2: true },
         { ep: "E82", items: ROADSIGNS_E82, mode: "roadsigns-e82", title: "Guess the Road Sign", v2: true },
+        { ep: "E83", items: MYTHICAL_CREATURES_E83, mode: "mythical-e83", title: "Guess the Mythical Creature", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
