@@ -74,12 +74,42 @@ const tiers = ["easy", "medium", "hard", "impossible"];
 const byTier = tiers.map((lv) => items.filter((x) => x.level === lv));
 const nameOf = (it) => it[c.nameField] || it.name;
 
-// نفس منطق pickShort في shortv2.jsx: 3 من كل مستوى، إزاحة part*3 (بتفاف الفهرس لحلقات غير 25/تير)
+// EXACT port of pickShort from src/Quiz/shortv2.jsx — a naive modular slice
+// (previous version of this function) diverges completely from the real
+// seeded-shuffle logic once a tier has ≥15 items, which every tier in a
+// standard 18/18/16/18 episode does. Caught by GATE2 on E88: every one of
+// the 5 reel SEO descriptions listed years that didn't match the actual
+// rendered short. Keep this in lockstep with shortv2.jsx's pickShort/
+// _seededShuffle/_hashStr if that engine logic ever changes.
+const _hashStr = (s) => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return h; };
+const _seededShuffle = (arr, seed) =>
+  arr.map((item, i) => ({ item, key: _hashStr(`${seed}-${i}-${item.slug || item.iso || i}`) }))
+     .sort((a, b) => a.key - b.key)
+     .map((x) => x.item);
+
 const pickShort = (part) => {
   const out = [];
+  const NEEDED = 15;
+  const keyOf = (x) => x && (x.slug || x.iso);
   for (let b = 0; b < 4; b++) {
     const pool = byTier[b];
-    for (let k = 0; k < 3; k++) { if (!pool.length) continue; const it = pool[(part * 3 + k) % pool.length]; out.push({ name: nameOf(it), tier: tiers[b] }); }
+    if (!pool.length) continue;
+    let sequence = [];
+    for (let lap = 0; sequence.length < NEEDED + pool.length; lap++) sequence = sequence.concat(_seededShuffle(pool, `lap${lap}`));
+    const start = part * 3;
+    const slice = [sequence[start], sequence[start + 1], sequence[start + 2]];
+    const used = new Set();
+    for (let i = 0; i < slice.length; i++) {
+      let key = keyOf(slice[i]);
+      if (used.has(key)) {
+        let j = start + slice.length;
+        while (j < sequence.length && used.has(keyOf(sequence[j]))) j++;
+        slice[i] = sequence[j];
+        key = keyOf(slice[i]);
+      }
+      used.add(key);
+    }
+    for (const it of slice) out.push({ name: nameOf(it), tier: tiers[b] });
   }
   return out;
 };
