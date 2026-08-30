@@ -102,6 +102,7 @@ const INTROS = {
   "vo-intro-constellation": "Guess the constellation! Can you name all seventy?",
   "vo-intro-font": "Guess the font! Can you name all seventy?",
   "vo-intro-year": "Guess the year! Can you name all seventy?",
+  "vo-intro-book": "Guess the book! Can you name all seventy?",
 };
 
 function wavDuration(path) {

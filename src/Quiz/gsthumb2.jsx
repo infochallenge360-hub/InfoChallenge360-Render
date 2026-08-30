@@ -112,6 +112,7 @@ const ASSET = {
   "constellation-e86-thumb": { dir: "constellations86", ext: "png", fit: "contain" },
   "font-e87-thumb": { dir: "fonts87", ext: "png", fit: "contain" },
   "year-e88-thumb": { dir: "years88", ext: "png", fit: "contain" },
+  "book-e89-thumb": { dir: "books89", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

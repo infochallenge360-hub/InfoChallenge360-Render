@@ -230,6 +230,8 @@ import { FONTS_E87 } from "./Quiz/fontsE87Data";
 import { FONTS_E87_FACTS } from "./Quiz/fontsE87Facts";
 import { YEARS_E88 } from "./Quiz/yearsE88Data";
 import { YEARS_E88_FACTS } from "./Quiz/yearsE88Facts";
+import { BOOKS_E89 } from "./Quiz/booksE89Data";
+import { BOOKS_E89_FACTS } from "./Quiz/booksE89Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -326,6 +328,7 @@ const E85_INFOCFG = { items: WEATHER_E85, facts: WEATHER_E85_FACTS, topicWord: "
 const E86_INFOCFG = { items: CONSTELLATIONS_E86, facts: CONSTELLATIONS_E86_FACTS, topicWord: "CONSTELLATION", topicPlural: "CONSTELLATIONS", dir: "constellations86", ext: "png", fit: "contain", voPrefix: "sk-", nameField: "name", introVo: "vo-intro-constellation", coldSlug: "orion" };
 const E87_INFOCFG = { items: FONTS_E87, facts: FONTS_E87_FACTS, topicWord: "FONT", topicPlural: "FONTS", dir: "fonts87", ext: "png", fit: "contain", voPrefix: "fn-", nameField: "name", introVo: "vo-intro-font", coldSlug: "roboto" };
 const E88_INFOCFG = { items: YEARS_E88, facts: YEARS_E88_FACTS, topicWord: "YEAR", topicPlural: "YEARS", dir: "years88", ext: "png", fit: "contain", voPrefix: "yr-", nameField: "name", introVo: "vo-intro-year", coldSlug: "y1969" };
+const E89_INFOCFG = { items: BOOKS_E89, facts: BOOKS_E89_FACTS, topicWord: "BOOK", topicPlural: "BOOKS", dir: "books89", ext: "png", fit: "contain", voPrefix: "bk-", nameField: "name", introVo: "vo-intro-book", coldSlug: "moby-dick" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -863,6 +866,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE88Year" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "year-e88-thumb", grid: ["y1969", "y1945", "y1929", "y2007", "?", "y1912", "y1776", "y1991", "y1955"], line1: "CAN YOU NAME ALL", word: "YEARS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE88YearHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "year-e88-thumb", heroSlug: "y1969", line1: "GUESS THE", word: "YEAR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE88YearSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "year-e88-thumb", easySlug: "y1969", hardSlug: "y1088", word: "YEAR?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E89BookQuiz" component={QuizV2} durationInFrames={quizFrames(E89_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E89_INFOCFG }} />
+      <Composition id="ThumbE89Book" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "book-e89-thumb", grid: ["moby-dick", "1984", "the-hobbit", "pride-and-prejudice", "?", "a-christmas-carol", "the-great-gatsby", "peter-pan", "frankenstein"], line1: "CAN YOU NAME ALL", word: "BOOKS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE89BookHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "book-e89-thumb", heroSlug: "moby-dick", line1: "GUESS THE", word: "BOOK?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE89BookSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "book-e89-thumb", easySlug: "moby-dick", hardSlug: "finnegans-wake", word: "BOOK?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -931,6 +938,7 @@ export const RemotionRoot = () => {
         { ep: "E86", items: CONSTELLATIONS_E86, mode: "constellation-e86", title: "Guess the Constellation", v2: true },
         { ep: "E87", items: FONTS_E87, mode: "font-e87", title: "Guess the Font", v2: true },
         { ep: "E88", items: YEARS_E88, mode: "year-e88", title: "Guess the Year", v2: true },
+        { ep: "E89", items: BOOKS_E89, mode: "book-e89", title: "Guess the Book", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
