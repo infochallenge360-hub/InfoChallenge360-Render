@@ -52,6 +52,7 @@ const CFG = {
   E87: { data: "src/Quiz/fontsE87Data.js", nameField: "name", keyword: "font", word: "font", plural: "fonts", folder: "E87_Fonts", tags: ["#fontquiz", "#typography", "#quiz", "#fonts", "#design"] },
   E88: { data: "src/Quiz/yearsE88Data.js", nameField: "name", keyword: "year", word: "year", plural: "years", folder: "E88_Years", tags: ["#historyquiz", "#guesstheyear", "#quiz", "#history", "#trivia"] },
   E89: { data: "src/Quiz/booksE89Data.js", nameField: "name", keyword: "book", word: "book", plural: "books", folder: "E89_Books", tags: ["#bookquiz", "#guessthebook", "#quiz", "#books", "#literature"] },
+  E90: { data: "src/Quiz/languagesE90Data.js", nameField: "name", keyword: "language", word: "language", plural: "languages", folder: "E90_Languages", tags: ["#languagequiz", "#guessthelanguage", "#quiz", "#linguistics", "#trivia"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
