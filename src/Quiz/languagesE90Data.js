@@ -5,6 +5,15 @@
 // family (Google Fonts) that correctly shapes this script; rendering is done
 // via a real headless Chromium (scripts/gen-languages90.mjs), not opentype.js,
 // since several of these scripts need contextual shaping opentype.js cannot do.
+//
+// IMPORTANT: items MUST stay grouped contiguously by level (all easy, then all
+// medium, then all hard, then all impossible) — the engine (quizv2.jsx build())
+// inserts a level-transition splash screen every time an item's level differs
+// from the previous item's, so a single item stranded out of its tier block
+// creates a spurious extra splash and visibly regresses the difficulty on
+// screen (caught by GATE2 on the first E90 render after an in-place tier
+// reassignment changed two items' level field without moving their array
+// position).
 export const LANGUAGES_E90 = [
   { slug: "mandarin-chinese", name: "Chinese", script: "Han (Simplified)", text: "你好", googleFontFamily: "Noto Sans SC", level: "easy" },
   { slug: "japanese", name: "Japanese", script: "Japanese (Kanji + Hiragana)", text: "こんにちは世界", googleFontFamily: "Noto Sans JP", level: "easy" },
@@ -20,10 +29,11 @@ export const LANGUAGES_E90 = [
   { slug: "amharic-ethiopic", name: "Amharic", script: "Ethiopic (Ge'ez)", text: "ሰላም", googleFontFamily: "Noto Sans Ethiopic", level: "easy" },
   { slug: "bengali", name: "Bengali", script: "Bengali", text: "নমস্কার", googleFontFamily: "Noto Sans Bengali", level: "easy" },
   { slug: "tamil", name: "Tamil", script: "Tamil", text: "வணக்கம்", googleFontFamily: "Noto Sans Tamil", level: "easy" },
-  { slug: "urdu-nastaliq", name: "Urdu", script: "Arabic (Nastaliq)", text: "کیا حال ہے", googleFontFamily: "Noto Nastaliq Urdu", level: "medium" },
   { slug: "punjabi-gurmukhi", name: "Punjabi", script: "Gurmukhi", text: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", googleFontFamily: "Noto Sans Gurmukhi", level: "easy" },
   { slug: "khmer", name: "Khmer", script: "Khmer", text: "សួស្តី", googleFontFamily: "Noto Sans Khmer", level: "easy" },
   { slug: "mongolian-traditional", name: "Mongolian", script: "Mongolian (traditional)", text: "ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ", googleFontFamily: "Noto Sans Mongolian", level: "easy" },
+  { slug: "vietnamese-diacritics", name: "Vietnamese", script: "Latin (Vietnamese diacritics)", text: "Xin chào", googleFontFamily: "Noto Sans", level: "easy" },
+  { slug: "urdu-nastaliq", name: "Urdu", script: "Arabic (Nastaliq)", text: "کیا حال ہے", googleFontFamily: "Noto Nastaliq Urdu", level: "medium" },
   { slug: "telugu", name: "Telugu", script: "Telugu", text: "నమస్కారం", googleFontFamily: "Noto Sans Telugu", level: "medium" },
   { slug: "kannada", name: "Kannada", script: "Kannada", text: "ನಮಸ್ಕಾರ", googleFontFamily: "Noto Sans Kannada", level: "medium" },
   { slug: "malayalam", name: "Malayalam", script: "Malayalam", text: "നമസ്കാരം", googleFontFamily: "Noto Sans Malayalam", level: "medium" },
@@ -34,7 +44,6 @@ export const LANGUAGES_E90 = [
   { slug: "tibetan", name: "Tibetan", script: "Tibetan", text: "བཀྲ་ཤིས་བདེ་ལེགས", googleFontFamily: "Noto Serif Tibetan", level: "medium" },
   { slug: "cherokee", name: "Cherokee", script: "Cherokee", text: "ᎣᏏᏲ", googleFontFamily: "Noto Sans Cherokee", level: "medium" },
   { slug: "canadian-aboriginal-syllabics", name: "Inuktitut", script: "Canadian Aboriginal Syllabics", text: "ᐊᐃᓐᖓᐃ", googleFontFamily: "Noto Sans Canadian Aboriginal", level: "medium" },
-  { slug: "vietnamese-diacritics", name: "Vietnamese", script: "Latin (Vietnamese diacritics)", text: "Xin chào", googleFontFamily: "Noto Sans", level: "easy" },
   { slug: "nko", name: "N'Ko", script: "N'Ko", text: "ߒߞߏ", googleFontFamily: "Noto Sans NKo", level: "medium" },
   { slug: "tifinagh", name: "Tifinagh (Berber/Tamazight)", script: "Tifinagh", text: "ⴰⵣⵓⵍ", googleFontFamily: "Noto Sans Tifinagh", level: "medium" },
   { slug: "syriac", name: "Syriac (Aramaic)", script: "Syriac", text: "ܫܠܡܐ", googleFontFamily: "Noto Sans Syriac", level: "medium" },
