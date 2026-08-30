@@ -222,8 +222,23 @@ const draw = {
     return s;
   },
   "dove-holy-spirit": () => {
-    let s = PATH(`M -220 20 Q -80 -120 0 -20 Q 80 -120 220 20 Q 100 0 0 40 Q -100 0 -220 20 Z`, INK);
-    s += C(40, 10, 10, INK);
+    // needs a readable body/head/beak + olive branch, not just wing outlines
+    let s = "";
+    // wings swept back in flight
+    s += PATH(`M -20 -10 Q -160 -140 -260 -60 Q -170 -70 -110 -20 Q -170 10 -240 60 Q -140 40 -30 20 Z`, INK);
+    s += PATH(`M 20 -10 Q 160 -140 260 -60 Q 170 -70 110 -20 Q 170 10 240 60 Q 140 40 30 20 Z`, INK);
+    // body
+    s += `<ellipse cx="0" cy="30" rx="55" ry="80" fill="${INK}"/>`;
+    // head + beak + eye
+    s += C(15, -55, 38, INK, "none");
+    s += P("50,-60 95,-50 50,-40", "#D4AF37");
+    s += C(25, -62, 6, BG, "none");
+    // olive branch held in the beak (twig + two leaves)
+    s += PATH(`M 95 -50 Q 130 -70 150 -95`, "none", INK, 8);
+    s += `<ellipse cx="140" cy="-85" rx="16" ry="7" fill="${INK}" transform="rotate(-35 140 -85)"/>`;
+    s += `<ellipse cx="120" cy="-70" rx="14" ry="6" fill="${INK}" transform="rotate(-20 120 -70)"/>`;
+    // tail
+    s += P("-10,105 10,105 0,160", INK);
     return s;
   },
   "the-kaaba": () => {
@@ -264,14 +279,31 @@ const draw = {
   },
   "lion-of-judah": () => {
     // an actual lion silhouette in profile (an animal, not a deity/person —
-    // fine per the abstract-iconography rule) so it reads unambiguously
+    // fine per the abstract-iconography rule). The first attempt used thin
+    // radiating spike LINES for the mane, which read as a sunburst/star, not
+    // fur — overlapping filled circles read as a scalloped mane instead.
+    // moved the head/mane closer to the body (previous headX/headY left a
+    // visible gap between the mane blob and the body, reading as two
+    // disconnected creatures) and pushed the ear tips further above the
+    // mane's own silhouette so they're no longer swallowed by the scallops
     let s = "";
-    for (let i = 0; i < 12; i++) { const ang = (i / 12) * 2 * Math.PI; s += L(-90 + Math.cos(ang) * 95, -70 + Math.sin(ang) * 95, -90 + Math.cos(ang) * 155, -70 + Math.sin(ang) * 155, 20); }
-    s += C(-90, -70, 95, INK); // maned head
-    s += PATH(`M 10 -30 Q 210 -50 240 60 Q 220 130 90 110 Q 10 100 10 -30 Z`, INK); // body
-    s += L(170, 105, 205, 220, 22); // front leg
-    s += L(70, 105, 55, 220, 22); // back leg
-    s += PATH(`M 240 60 Q 300 30 290 -30`, "none", INK, 16); // tail
+    const headX = -60, headY = -20, headR = 90;
+    for (let i = 0; i < 14; i++) {
+      const ang = (i / 14) * 2 * Math.PI;
+      s += C(headX + Math.cos(ang) * headR * 0.9, headY + Math.sin(ang) * headR * 0.9, 40, INK);
+    }
+    s += C(headX, headY, headR * 0.65, INK); // head disc on top of the mane
+    s += P(`${headX - 70},${headY - 40} ${headX - 85},${headY - 175} ${headX - 30},${headY - 70}`, INK); // ear
+    s += P(`${headX + 70},${headY - 40} ${headX + 85},${headY - 175} ${headX + 30},${headY - 70}`, INK); // ear
+    // torso, planted back legs, one raised front paw, and a tail arched
+    // up over the back with a tuft — the earlier thin oval body + dangling
+    // side tail read as a sheep/bug, not a standing lion
+    s += PATH(`M 0 20 Q 60 -40 160 -20 Q 230 -10 230 60 Q 230 110 160 115 Q 60 120 0 90 Z`, INK); // body
+    s += L(150, 105, 155, 210, 24); // back leg
+    s += L(190, 105, 205, 210, 24); // back leg
+    s += PATH(`M 30 85 Q 10 130 40 160`, "none", INK, 26); // raised front paw
+    s += PATH(`M 220 40 Q 280 10 270 -60 Q 260 -110 210 -120`, "none", INK, 16); // tail arched over the back
+    s += C(205, -122, 20, INK); // tail tuft
     return s;
   },
   "triple-moon": () => {
@@ -353,11 +385,22 @@ const draw = {
   },
   yggdrasil: () => treeShape(160, 220, 200),
   "owl-of-athena": () => {
-    let s = C(0, -20, 130, INK);
-    s += C(-45, -40, 30, "#FAF7F0") + C(45, -40, 30, "#FAF7F0");
-    s += C(-45, -40, 12, INK) + C(45, -40, 12, INK);
-    s += P("0,-140 -30,-190 10,-160", INK) + P("0,-140 30,-190 -10,-160", INK);
-    s += `<path d="M -130 -20 A 130 130 0 0 0 0 110 A 130 130 0 0 0 130 -20 Z" fill="${INK}"/>`;
+    // previous attempt's eye circles used C()'s default INK stroke, which
+    // drew a thick dark ring almost swallowing the light eye discs, and the
+    // ear-tuft triangles met at a point that read as devil-horns, not an owl
+    let s = "";
+    // ear tufts
+    s += P("-70,-190 -100,-260 -30,-205", INK);
+    s += P("70,-190 100,-260 30,-205", INK);
+    // head
+    s += C(0, -70, 135, INK, "none");
+    // eyes: light discs with dark pupils, explicitly no stroke on either
+    s += C(-50, -90, 45, BG, "none") + C(50, -90, 45, BG, "none");
+    s += C(-50, -90, 22, INK, "none") + C(50, -90, 22, INK, "none");
+    // beak
+    s += P("-20,-25 20,-25 0,25", "#D4AF37");
+    // rounded body below the head
+    s += PATH(`M -140 10 Q -160 160 -80 220 Q 0 250 80 220 Q 160 160 140 10 Z`, INK);
     return s;
   },
   triskelion: () => {
@@ -448,11 +491,21 @@ const draw = {
     return s;
   },
   "mithraic-bull": () => {
-    let s = C(0, 0, 220, "none", INK, 16);
-    s += `<ellipse cx="-20" cy="20" rx="150" ry="90" fill="${INK}"/>`;
-    s += C(-150, -30, 50, INK);
-    s += `<path d="M -180 -70 Q -200 -110 -170 -120 Q -160 -90 -180 -70 Z" fill="${INK}"/><path d="M -120 -70 Q -100 -110 -130 -120 Q -140 -90 -120 -70 Z" fill="${INK}"/>`;
-    s += PATH(`M 20 -80 L 60 60`, "none", INK, 16);
+    // needs clearly-readable horns, a snout, legs, and the defining dagger
+    // element — the first attempt's tiny ear-nubs and missing dagger made it
+    // read as an unidentifiable blob rather than a bull being struck
+    let s = C(0, 10, 220, "none", INK, 16); // circular border
+    s += `<ellipse cx="10" cy="30" rx="150" ry="70" fill="${INK}"/>`; // body
+    s += C(-140, 0, 55, INK); // head
+    s += `<ellipse cx="-190" cy="10" rx="26" ry="17" fill="${INK}"/>`; // snout
+    s += PATH(`M -168 -45 Q -215 -100 -178 -130`, "none", INK, 20); // horn
+    s += PATH(`M -112 -45 Q -75 -100 -102 -130`, "none", INK, 20); // horn
+    for (const dx of [-60, 0, 60, 110]) s += L(dx, 90, dx - 6, 175, 18); // 4 legs
+    // dagger: a distinct silver fill (not INK) so the blade doesn't vanish
+    // where it overlaps the ink-colored body — the original all-INK blade
+    // was invisible except for the sliver poking out above the silhouette
+    s += P("60,-115 95,-98 45,10 22,-8", "#B8BCC8"); // blade, point touching the shoulder
+    s += L(28, -2, 55, 22, 12, "#6B6E7C"); // hilt
     return s;
   },
   "manichaean-cross-of-light": () => {
@@ -467,11 +520,23 @@ const draw = {
     return s;
   },
   "melek-taus-peacock": () => {
-    let s = C(-120, -60, 50, INK);
-    s += PATH(`M -80 -30 Q -20 20 60 0`, "none", INK, 24);
-    for (let i = -3; i <= 3; i++) {
-      const ang = (i / 3) * 0.9;
-      s += `<g transform="rotate(${(ang * 180) / Math.PI}) translate(80,0)">${PATH("M 0 0 Q 100 -30 160 0 Q 100 30 0 0", INK)}${C(150, 0, 14, "#FAF7F0")}</g>`;
+    // previous attempt had no body/legs/crest and the eye-spot dots used
+    // C()'s default INK stroke, which nearly filled them back in — the whole
+    // thing read as a hand/fan rather than a bird
+    let s = "";
+    s += L(-60, 90, -70, 170, 16);
+    s += L(-20, 90, -10, 170, 16);
+    s += `<ellipse cx="-40" cy="20" rx="95" ry="75" fill="${INK}"/>`;
+    s += PATH(`M -120 -30 Q -150 -70 -150 -110`, "none", INK, 34);
+    s += C(-150, -125, 40, INK, "none");
+    s += P("-185,-135 -230,-120 -185,-110", "#D4AF37");
+    s += PATH(`M -160 -160 Q -170 -210 -155 -230`, "none", INK, 12);
+    s += PATH(`M -150 -165 Q -150 -220 -140 -235`, "none", INK, 12);
+    s += PATH(`M -140 -160 Q -125 -205 -120 -225`, "none", INK, 12);
+    for (let i = -4; i <= 4; i++) {
+      const ang = (i / 4) * 0.95;
+      const deg = (ang * 180) / Math.PI;
+      s += `<g transform="rotate(${deg}) translate(60,10)">${PATH("M 0 -18 Q 190 -40 220 0 Q 190 40 0 18 Z", INK)}${C(190, 0, 26, BG, "none")}${C(190, 0, 11, INK, "none")}</g>`;
     }
     return s;
   },
