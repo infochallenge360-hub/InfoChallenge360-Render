@@ -31,16 +31,24 @@ const buildOptions = (item, all, cfg) => {
   const idk = cfg.slugKey || "slug";
   const pool = all.filter((x) => x.level === item.level && x[idk] !== item[idk]);
   const seed = String(item[idk]).split("").reduce((a, c) => a + c.charCodeAt(0), 0);
-  const picks = [], used = new Set([item[idk]]);
+  const myName = nameOf(item, cfg);
+  // Dedup by displayed NAME, not slug — most episodes have a unique name per
+  // slug so this behaves identically to the old slug-based check everywhere
+  // else, but some episodes (e.g. E91 Religion Symbols, where several
+  // distinct symbol slugs share the same religion as their answer) can
+  // otherwise produce two visually-identical answer options (caught by
+  // local sanity render: "Judaism" appeared as both option C and D).
+  const picks = [], usedNames = new Set([myName]);
   let k = 1;
   while (picks.length < 3 && k < pool.length * 4) {
     const cand = pool[(seed * 7 + k) % pool.length];
-    if (cand && !used.has(cand[idk])) { used.add(cand[idk]); picks.push(nameOf(cand, cfg)); }
+    const candName = cand && nameOf(cand, cfg);
+    if (candName && !usedNames.has(candName)) { usedNames.add(candName); picks.push(candName); }
     k++;
   }
   const correctIdx = seed % 4;
   const opts = picks.slice();
-  opts.splice(correctIdx, 0, nameOf(item, cfg));
+  opts.splice(correctIdx, 0, myName);
   return { opts: opts.slice(0, 4), correctIdx };
 };
 

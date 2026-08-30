@@ -234,6 +234,8 @@ import { BOOKS_E89 } from "./Quiz/booksE89Data";
 import { BOOKS_E89_FACTS } from "./Quiz/booksE89Facts";
 import { LANGUAGES_E90 } from "./Quiz/languagesE90Data";
 import { LANGUAGES_E90_FACTS } from "./Quiz/languagesE90Facts";
+import { RELIGION_SYMBOLS_E91 } from "./Quiz/religionSymbolsE91Data";
+import { RELIGION_SYMBOLS_E91_FACTS } from "./Quiz/religionSymbolsE91Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -332,6 +334,7 @@ const E87_INFOCFG = { items: FONTS_E87, facts: FONTS_E87_FACTS, topicWord: "FONT
 const E88_INFOCFG = { items: YEARS_E88, facts: YEARS_E88_FACTS, topicWord: "YEAR", topicPlural: "YEARS", dir: "years88", ext: "png", fit: "contain", voPrefix: "yr-", nameField: "name", introVo: "vo-intro-year", coldSlug: "y1969" };
 const E89_INFOCFG = { items: BOOKS_E89, facts: BOOKS_E89_FACTS, topicWord: "BOOK", topicPlural: "BOOKS", dir: "books89", ext: "png", fit: "contain", voPrefix: "bk-", nameField: "name", introVo: "vo-intro-book", coldSlug: "moby-dick" };
 const E90_INFOCFG = { items: LANGUAGES_E90, facts: LANGUAGES_E90_FACTS, topicWord: "LANGUAGE", topicPlural: "LANGUAGES", dir: "languages90", ext: "png", fit: "contain", voPrefix: "la-", nameField: "name", introVo: "vo-intro-language", coldSlug: "mandarin-chinese" };
+const E91_INFOCFG = { items: RELIGION_SYMBOLS_E91, facts: RELIGION_SYMBOLS_E91_FACTS, topicWord: "RELIGION", topicPlural: "RELIGIONS", dir: "religionsymbols91", ext: "png", fit: "contain", voPrefix: "rl-", nameField: "name", introVo: "vo-intro-religion", coldSlug: "christian-cross" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -877,6 +880,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE90Language" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "language-e90-thumb", grid: ["mandarin-chinese", "japanese", "korean-hangul", "russian-cyrillic", "?", "arabic", "hebrew", "greek", "hindi-devanagari"], line1: "CAN YOU NAME ALL", word: "LANGUAGES?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE90LanguageHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "language-e90-thumb", heroSlug: "arabic", line1: "GUESS THE", word: "LANGUAGE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE90LanguageSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "language-e90-thumb", easySlug: "mandarin-chinese", hardSlug: "linear-b", word: "LANGUAGE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E91ReligionQuiz" component={QuizV2} durationInFrames={quizFrames(E91_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E91_INFOCFG }} />
+      <Composition id="ThumbE91Religion" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "religion-e91-thumb", grid: ["christian-cross", "islamic-star-and-crescent", "star-of-david", "om-symbol", "?", "dharma-wheel", "khanda", "yin-yang", "ankh"], line1: "CAN YOU NAME ALL", word: "RELIGIONS?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE91ReligionHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "religion-e91-thumb", heroSlug: "yin-yang", line1: "GUESS THE", word: "RELIGION?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE91ReligionSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "religion-e91-thumb", easySlug: "christian-cross", hardSlug: "star-of-ishtar", word: "RELIGION?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -947,6 +954,7 @@ export const RemotionRoot = () => {
         { ep: "E88", items: YEARS_E88, mode: "year-e88", title: "Guess the Year", v2: true },
         { ep: "E89", items: BOOKS_E89, mode: "book-e89", title: "Guess the Book", v2: true },
         { ep: "E90", items: LANGUAGES_E90, mode: "language-e90", title: "Guess the Language", v2: true },
+        { ep: "E91", items: RELIGION_SYMBOLS_E91, mode: "religion-e91", title: "Guess the Religion", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
