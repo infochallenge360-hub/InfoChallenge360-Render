@@ -61,7 +61,7 @@ export const BOOKS_E89 = [
   { slug: "the-grapes-of-wrath", name: "The Grapes of Wrath", author: "John Steinbeck", year: 1939, openingLine: "To the red country and part of the gray country of Oklahoma, the last rains came gently, and they did not cut the scarred earth.", level: "hard" },
   { slug: "catch-22", name: "Catch-22", author: "Joseph Heller", year: 1961, openingLine: "It was love at first sight.", level: "hard" },
   { slug: "don-quixote", name: "Don Quixote", author: "Miguel de Cervantes", year: 1605, openingLine: "Somewhere in La Mancha, in a place whose name I do not care to remember, a gentleman lived not long ago.", level: "hard" },
-  { slug: "the-brothers-karamazov", name: "The Brothers Karamazov", author: "Fyodor Dostoevsky", year: 1880, openingLine: "Alexey Fyodorovitch Karamazov was the third son of Fyodor Pavlovitch Karamazov, a landowner well known in our district in his own day.", level: "hard" },
+  { slug: "the-idiot", name: "The Idiot", author: "Fyodor Dostoevsky", year: 1869, openingLine: "Towards the end of November, during a thaw, at nine o'clock one morning, a train on the Warsaw and Petersburg railway was approaching the latter city at full speed.", level: "hard" },
 
   // IMPOSSIBLE (18)
   { slug: "finnegans-wake", name: "Finnegans Wake", author: "James Joyce", year: 1939, openingLine: "riverrun, past Eve and Adam's, from swerve of shore to bend of bay, brings us by a commodious vicus of recirculation back to Howth Castle and Environs.", level: "impossible" },

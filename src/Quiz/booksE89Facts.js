@@ -50,7 +50,7 @@ export const BOOKS_E89_FACTS = {
   "the-grapes-of-wrath": "It was publicly burned and banned in parts of California over its depiction of migrant workers.",
   "catch-22": "Heller's original title, 'Catch-18,' was changed to avoid clashing with another new novel.",
   "don-quixote": "It's often called the best-selling novel ever written, with estimates as high as 500 million copies.",
-  "the-brothers-karamazov": "It was Dostoevsky's final novel; he died less than four months after finishing it.",
+  "the-idiot": "Dostoevsky said his goal was to portray 'a truly beautiful soul' in the main character.",
   "finnegans-wake": "Joyce spent 17 years writing it, and its unfinished final sentence loops back into this opening line.",
   "the-unbearable-lightness-of-being": "Kundera's books were banned in Communist Czechoslovakia, pushing him into French exile.",
   "under-the-volcano": "Its entire plot unfolds across a single day, the Mexican Day of the Dead.",
