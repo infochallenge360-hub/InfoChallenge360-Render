@@ -106,6 +106,7 @@ const INTROS = {
   "vo-intro-language": "Guess the language! Can you name all seventy?",
   "vo-intro-religion": "Guess the religion! Can you name all seventy?",
   "vo-intro-dinosaur": "Guess the dinosaur! Can you name all seventy?",
+  "vo-intro-historicalfigure": "Guess the historical figure! Can you name all seventy?",
 };
 
 function wavDuration(path) {

@@ -238,6 +238,8 @@ import { RELIGION_SYMBOLS_E91 } from "./Quiz/religionSymbolsE91Data";
 import { RELIGION_SYMBOLS_E91_FACTS } from "./Quiz/religionSymbolsE91Facts";
 import { DINOSAURS_E92 } from "./Quiz/dinosaursE92Data";
 import { DINOSAURS_E92_FACTS } from "./Quiz/dinosaursE92Facts";
+import { HISTORICAL_FIGURES_E93 } from "./Quiz/historicalFiguresE93Data";
+import { HISTORICAL_FIGURES_E93_FACTS } from "./Quiz/historicalFiguresE93Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -338,6 +340,7 @@ const E89_INFOCFG = { items: BOOKS_E89, facts: BOOKS_E89_FACTS, topicWord: "BOOK
 const E90_INFOCFG = { items: LANGUAGES_E90, facts: LANGUAGES_E90_FACTS, topicWord: "LANGUAGE", topicPlural: "LANGUAGES", dir: "languages90", ext: "png", fit: "contain", voPrefix: "la-", nameField: "name", introVo: "vo-intro-language", coldSlug: "mandarin-chinese" };
 const E91_INFOCFG = { items: RELIGION_SYMBOLS_E91, facts: RELIGION_SYMBOLS_E91_FACTS, topicWord: "RELIGION", topicPlural: "RELIGIONS", dir: "religionsymbols91", ext: "png", fit: "contain", voPrefix: "rl-", nameField: "name", introVo: "vo-intro-religion", coldSlug: "christian-cross" };
 const E92_INFOCFG = { items: DINOSAURS_E92, facts: DINOSAURS_E92_FACTS, topicWord: "DINOSAUR", topicPlural: "DINOSAURS", dir: "dinosaurs92", ext: "png", fit: "contain", voPrefix: "dn-", nameField: "name", introVo: "vo-intro-dinosaur", coldSlug: "tyrannosaurus-rex" };
+const E93_INFOCFG = { items: HISTORICAL_FIGURES_E93, facts: HISTORICAL_FIGURES_E93_FACTS, topicWord: "HISTORICAL FIGURE", topicPlural: "HISTORICAL FIGURES", dir: "historicalfigures93", ext: "jpg", fit: "contain", voPrefix: "hf-", nameField: "name", introVo: "vo-intro-historicalfigure", coldSlug: "albert-einstein" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -891,6 +894,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE92Dinosaur" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "dinosaur-e92-thumb", grid: ["tyrannosaurus-rex", "triceratops", "stegosaurus", "velociraptor", "?", "brachiosaurus", "ankylosaurus", "spinosaurus", "pteranodon"], line1: "CAN YOU NAME ALL", word: "DINOSAURS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE92DinosaurHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "dinosaur-e92-thumb", heroSlug: "tyrannosaurus-rex", line1: "GUESS THE", word: "DINOSAUR?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE92DinosaurSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "dinosaur-e92-thumb", easySlug: "tyrannosaurus-rex", hardSlug: "yi-qi", word: "DINOSAUR?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E93HistoricalFigureQuiz" component={QuizV2} durationInFrames={quizFrames(E93_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E93_INFOCFG }} />
+      <Composition id="ThumbE93HistoricalFigure" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "historicalfigure-e93-thumb", grid: ["albert-einstein", "leonardo-da-vinci", "cleopatra-vii", "napoleon-bonaparte", "?", "julius-caesar", "genghis-khan", "alexander-the-great", "mahatma-gandhi"], line1: "CAN YOU NAME ALL", word: "HISTORICAL FIGURES?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE93HistoricalFigureHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "historicalfigure-e93-thumb", heroSlug: "albert-einstein", line1: "GUESS THE", word: "HISTORICAL FIGURE?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE93HistoricalFigureSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "historicalfigure-e93-thumb", easySlug: "albert-einstein", hardSlug: "ada-lovelace", word: "HISTORICAL FIGURE?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -963,6 +970,7 @@ export const RemotionRoot = () => {
         { ep: "E90", items: LANGUAGES_E90, mode: "language-e90", title: "Guess the Language", v2: true },
         { ep: "E91", items: RELIGION_SYMBOLS_E91, mode: "religion-e91", title: "Guess the Religion", v2: true },
         { ep: "E92", items: DINOSAURS_E92, mode: "dinosaur-e92", title: "Guess the Dinosaur", v2: true },
+        { ep: "E93", items: HISTORICAL_FIGURES_E93, mode: "historicalfigure-e93", title: "Guess the Historical Figure", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
