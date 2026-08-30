@@ -1,13 +1,14 @@
 // مولّد أصوات مجاني (edge-tts, Microsoft neural) بديل Higgsfield — صفر تكلفة.
-// الاستخدام: node scripts/tts-edge.mjs <dataFile> <prefix> <nameField> [voice] [rate]
+// الاستخدام: node scripts/tts-edge.mjs <dataFile> <prefix> <nameField> [voice] [rate] [template]
 //   مثال: node scripts/tts-edge.mjs src/Quiz/carsData.js cm name en-US-GuyNeural   (CARS → sfx/cm-<slug>.wav)
 //   rate اختياري (مثل +15%) لتسريع النطق لما تكون الأسماء طويلة وتتجاوز مقطع audio-fit-check.
-// يولّد "It's the <name>!" لكل عنصر، mp3 عبر edge-tts ثم يحوّله wav 24kHz (drop-in مثل Higgsfield).
+//   template اختياري (افتراضي "It's the {name}!") — لو الاسم رقم/سنة وما يحتاج "the"، مرّر "It's {name}!"
+// يولّد جملة القالب لكل عنصر، mp3 عبر edge-tts ثم يحوّله wav 24kHz (drop-in مثل Higgsfield).
 import { execSync } from "node:child_process";
 import { existsSync, statSync, unlinkSync } from "node:fs";
 
-const [dataFile, prefix, nameField = "name", voice = "en-US-GuyNeural", rate = "+0%"] = process.argv.slice(2);
-if (!dataFile || !prefix) { console.log("usage: node tts-edge.mjs <dataFile> <prefix> <nameField> [voice] [rate]"); process.exit(1); }
+const [dataFile, prefix, nameField = "name", voice = "en-US-GuyNeural", rate = "+0%", template = "It's the {name}!"] = process.argv.slice(2);
+if (!dataFile || !prefix) { console.log("usage: node tts-edge.mjs <dataFile> <prefix> <nameField> [voice] [rate] [template]"); process.exit(1); }
 
 const mod = await import("../" + dataFile.replace(/^src\//, "src/").replace(/\\/g, "/"));
 const arr = Object.values(mod).find((v) => Array.isArray(v));
@@ -18,7 +19,7 @@ let ok = 0, fail = [];
 for (const it of arr) {
   const out = `${DEST}/${prefix}-${(it.slug || it.iso)}.wav`;
   if (existsSync(out) && statSync(out).size > 8000) { ok++; continue; }
-  const text = `It's the ${it[nameField]}!`;
+  const text = template.replace("{name}", it[nameField]);
   // UNIQUE temp per clip+prefix+pid — never share a temp file, or concurrent runs cross-contaminate (shifted audio bug).
   const TMP = `out/_tts-${prefix}-${(it.slug || it.iso)}-${process.pid}.mp3`;
   try {

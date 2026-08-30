@@ -111,6 +111,7 @@ const ASSET = {
   "weather-e85-thumb": { dir: "weather85", ext: "png", fit: "contain" },
   "constellation-e86-thumb": { dir: "constellations86", ext: "png", fit: "contain" },
   "font-e87-thumb": { dir: "fonts87", ext: "png", fit: "contain" },
+  "year-e88-thumb": { dir: "years88", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

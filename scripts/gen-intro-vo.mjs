@@ -101,6 +101,7 @@ const INTROS = {
   "vo-intro-weather": "Guess the weather symbol! Can you name all seventy?",
   "vo-intro-constellation": "Guess the constellation! Can you name all seventy?",
   "vo-intro-font": "Guess the font! Can you name all seventy?",
+  "vo-intro-year": "Guess the year! Can you name all seventy?",
 };
 
 function wavDuration(path) {
