@@ -252,14 +252,26 @@ const Round = ({ item, num, cfg }) => {
           </div>
         </div>
       )}
-      {revealed && cfg.facts && cfg.facts[item[cfg.slugKey || "slug"]] && (
-        <div style={{ position: "absolute", top: factTop, left: 150, right: 150, display: "flex", justifyContent: "center", opacity: interpolate(frame, [revealAt + 12, revealAt + 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), transform: `translateY(${interpolate(frame, [revealAt + 12, revealAt + 30], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)` }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(6,10,32,0.78)", border: `3px solid ${GAME.gold}`, borderRadius: 18, padding: "16px 38px", maxWidth: 1500, boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
-            <span style={{ fontSize: 42, flex: "none" }}>💡</span>
-            <span style={{ fontFamily: font, fontWeight: 800, fontSize: (cfg.facts[item[cfg.slugKey || "slug"]] || "").length > 50 ? 33 : 42, color: "#fff", lineHeight: 1.12, whiteSpace: "nowrap" }}>{cfg.facts[item[cfg.slugKey || "slug"]]}</span>
+      {revealed && cfg.facts && cfg.facts[item[cfg.slugKey || "slug"]] && (() => {
+        const factText = cfg.facts[item[cfg.slugKey || "slug"]] || "";
+        // GATE2 caught a real bug (E94): whiteSpace:"nowrap" + a single
+        // >50-char breakpoint meant any fact past ~70 chars at the 33px
+        // fallback size silently ran off the right edge of the 1920px
+        // frame — the text was cut, not wrapped or shrunk. Facts commonly
+        // run 90-160 chars per the "~180 char max" content guideline, so
+        // this likely clipped the fact on most reveals across several
+        // episodes before anyone specifically checked for it. Fixed by
+        // allowing wrap to 2 lines and adding finer-grained size tiers.
+        const factSize = factText.length > 130 ? 26 : factText.length > 90 ? 30 : factText.length > 50 ? 36 : 42;
+        return (
+          <div style={{ position: "absolute", top: factTop, left: 150, right: 150, display: "flex", justifyContent: "center", opacity: interpolate(frame, [revealAt + 12, revealAt + 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }), transform: `translateY(${interpolate(frame, [revealAt + 12, revealAt + 30], [16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}px)` }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 18, background: "rgba(6,10,32,0.78)", border: `3px solid ${GAME.gold}`, borderRadius: 18, padding: "16px 38px", maxWidth: 1500, boxShadow: "0 12px 34px rgba(0,0,0,0.45)" }}>
+              <span style={{ fontSize: 42, flex: "none" }}>💡</span>
+              <span style={{ fontFamily: font, fontWeight: 800, fontSize: factSize, color: "#fff", lineHeight: 1.18, whiteSpace: "normal", maxWidth: 1320 }}>{factText}</span>
+            </div>
           </div>
-        </div>
-      )}
+        );
+      })()}
       <TimerBar accent={accent} revealAt={revealAt} />
       <OwlReact revealed={revealed} revealAt={revealAt} />
       {makeTicks(revealAt).map((tf) => (

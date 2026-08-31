@@ -259,7 +259,10 @@ const Round = ({ item, mode, num, all }) => {
           return (
             <div key={i} style={{ width: 462, height: 148, display: "flex", alignItems: "center", gap: 16, background: bg, border: `4px solid ${bd}`, borderRadius: 24, padding: "0 24px", opacity: op, transform: `scale(${revealed && isC ? 1.05 : 1}) translateY(${interpolate(os, [0, 1], [24, 0])}px)`, boxShadow: revealed && isC ? `0 0 40px ${accent}` : "none" }}>
               <span style={{ width: 68, height: 68, borderRadius: 16, background: revealed && isC ? "#fff" : GAME.gold, color: GAME.blueDeep, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: font, fontWeight: 900, fontSize: 40, flex: "none" }}>{ABCD[i]}</span>
-              <span style={{ fontFamily: font, fontWeight: 900, fontSize: nm.length > 12 ? 38 : 46, color: "#fff", lineHeight: 1 }}>{nm}</span>
+              {/* GATE2 (E94) caught an off-by-one here: a 12-char single-word
+                  name like "Hypothalamus" has no space to wrap on, so it
+                  needs the smaller size too, not just >12 */}
+              <span style={{ fontFamily: font, fontWeight: 900, fontSize: nm.length >= 12 ? 38 : 46, color: "#fff", lineHeight: 1 }}>{nm}</span>
               {revealed && isC && <span style={{ marginLeft: "auto", fontFamily: font, fontWeight: 900, fontSize: 52, color: "#fff" }}>✓</span>}
             </div>
           );
