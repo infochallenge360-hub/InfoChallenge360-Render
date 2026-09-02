@@ -242,6 +242,8 @@ import { HISTORICAL_FIGURES_E93 } from "./Quiz/historicalFiguresE93Data";
 import { HISTORICAL_FIGURES_E93_FACTS } from "./Quiz/historicalFiguresE93Facts";
 import { BODY_PARTS_E94 } from "./Quiz/bodyPartsE94Data";
 import { BODY_PARTS_E94_FACTS } from "./Quiz/bodyPartsE94Facts";
+import { SPORT_EQUIPMENT_E95 } from "./Quiz/sportEquipmentE95Data";
+import { SPORT_EQUIPMENT_E95_FACTS } from "./Quiz/sportEquipmentE95Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -344,6 +346,7 @@ const E91_INFOCFG = { items: RELIGION_SYMBOLS_E91, facts: RELIGION_SYMBOLS_E91_F
 const E92_INFOCFG = { items: DINOSAURS_E92, facts: DINOSAURS_E92_FACTS, topicWord: "DINOSAUR", topicPlural: "DINOSAURS", dir: "dinosaurs92", ext: "png", fit: "contain", voPrefix: "dn-", nameField: "name", introVo: "vo-intro-dinosaur", coldSlug: "tyrannosaurus-rex" };
 const E93_INFOCFG = { items: HISTORICAL_FIGURES_E93, facts: HISTORICAL_FIGURES_E93_FACTS, topicWord: "HISTORICAL FIGURE", topicPlural: "HISTORICAL FIGURES", dir: "historicalfigures93", ext: "jpg", fit: "contain", voPrefix: "hf-", nameField: "name", introVo: "vo-intro-historicalfigure", coldSlug: "albert-einstein" };
 const E94_INFOCFG = { items: BODY_PARTS_E94, facts: BODY_PARTS_E94_FACTS, topicWord: "BODY PART", topicPlural: "BODY PARTS", dir: "bodyparts94", ext: "png", fit: "contain", voPrefix: "bp-", nameField: "name", introVo: "vo-intro-bodypart", coldSlug: "heart" };
+const E95_INFOCFG = { items: SPORT_EQUIPMENT_E95, facts: SPORT_EQUIPMENT_E95_FACTS, topicWord: "SPORT", topicPlural: "SPORTS", dir: "sportequipment95", ext: "png", fit: "contain", voPrefix: "se-", nameField: "name", introVo: "vo-intro-sportequipment", coldSlug: "soccer-ball" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -905,6 +908,10 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE94BodyPart" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "bodypart-e94-thumb", grid: ["heart", "brain", "eye", "lung", "?", "hand", "stomach", "skull", "foot"], line1: "CAN YOU NAME ALL", word: "BODY PARTS?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE94BodyPartHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "bodypart-e94-thumb", heroSlug: "heart", line1: "GUESS THE", word: "BODY PART?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbE94BodyPartSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "bodypart-e94-thumb", easySlug: "heart", hardSlug: "hypothalamus", word: "BODY PART?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="E95SportEquipmentQuiz" component={QuizV2} durationInFrames={quizFrames(E95_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E95_INFOCFG }} />
+      <Composition id="ThumbE95SportEquipment" component={GsThumbV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "sportequipment-e95-thumb", grid: ["soccer-ball", "basketball-hoop", "tennis-racket", "boxing-gloves", "?", "golf-club", "baseball-bat", "dartboard", "bowling-pin"], line1: "CAN YOU NAME THE", word: "SPORT?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE95SportEquipmentHero" component={GsThumbHeroV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "sportequipment-e95-thumb", heroSlug: "soccer-ball", line1: "GUESS THE", word: "SPORT?", number: "70", badge: "Only 1% get 100%" }} />
+      <Composition id="ThumbE95SportEquipmentSplit" component={GsThumbSplitV2} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "sportequipment-e95-thumb", easySlug: "soccer-ball", hardSlug: "floorball-stick", word: "SPORT?", number: "70", badge: "Only 1% get 100%" }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -979,6 +986,7 @@ export const RemotionRoot = () => {
         { ep: "E92", items: DINOSAURS_E92, mode: "dinosaur-e92", title: "Guess the Dinosaur", v2: true },
         { ep: "E93", items: HISTORICAL_FIGURES_E93, mode: "historicalfigure-e93", title: "Guess the Historical Figure", v2: true },
         { ep: "E94", items: BODY_PARTS_E94, mode: "bodypart-e94", title: "Guess the Body Part", v2: true },
+        { ep: "E95", items: SPORT_EQUIPMENT_E95, mode: "sportequipment-e95", title: "Guess the Sport", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />

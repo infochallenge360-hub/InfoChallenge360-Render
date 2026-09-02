@@ -118,6 +118,7 @@ const ASSET = {
   "dinosaur-e92-thumb": { dir: "dinosaurs92", ext: "png", fit: "contain" },
   "historicalfigure-e93-thumb": { dir: "historicalfigures93", ext: "jpg", fit: "contain" },
   "bodypart-e94-thumb": { dir: "bodyparts94", ext: "png", fit: "contain" },
+  "sportequipment-e95-thumb": { dir: "sportequipment95", ext: "png", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",
