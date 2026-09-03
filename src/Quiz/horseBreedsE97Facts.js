@@ -9,7 +9,7 @@ export const HORSE_BREEDS_E97_FACTS = {
   "friesian-horse": "Dutch nobility once used solid-black Friesians to pull funeral carriages because of their somber, elegant look.",
   "percheron": "Percherons are thought to carry Arabian bloodlines from stallions crossed into French mares centuries ago.",
   "andalusian-horse": "The Andalusian's official name, Pura Raza Espanola, means Pure Spanish Horse and reflects its closed studbook.",
-  "shire-horse": "A Shire gelding named Sampson, later called Mammoth, stood 21.2 hands in 1850 - the tallest horse ever recorded.",
+  "shire-horse": "A Shire gelding named Sampson, later called Mammoth, stood 21.2½ hands in 1850 - the tallest horse ever recorded.",
   "quarter-horse": "With millions registered, the American Quarter Horse is the most numerous and most popular horse breed on Earth.",
   "icelandic-horse": "Icelandic law bans importing horses, so once an Icelandic horse leaves the island it can never legally return.",
   "welsh-pony": "The Welsh Pony and Cob registry actually covers four distinct size sections, from tiny ponies to sturdy cobs.",
@@ -36,7 +36,7 @@ export const HORSE_BREEDS_E97_FACTS = {
   "american-saddlebred": "Nicknamed 'the horse America made,' the Saddlebred was bred as a smooth-riding mount for plantation owners and officers.",
   "connemara-pony": "The Connemara is Ireland's only native pony breed, developed in the rugged coastal region of County Galway.",
   "dartmoor-pony": "Dartmoor ponies have roamed the moors of Devon, England semi-wild for at least a thousand years.",
-  "trakehner": "In the brutal winter of 1944-45, refugees fled East Prussia with Trakehners, and fewer than 1,000 of 56,000 survived.",
+  "trakehner": "In the brutal winter of 1944-45, refugees fled East Prussia with Trakehners, and only around 1,500 of 30,000 survived.",
   "holsteiner": "Breeding records for the Holsteiner in northern Germany's Schleswig-Holstein region stretch back to the 13th century.",
 
   // HARD
