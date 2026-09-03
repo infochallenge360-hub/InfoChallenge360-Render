@@ -13,6 +13,7 @@
     "@remotion/three": "^4.0.482",
     "flag-icons": "^7.5.0",
     "opentype.js": "^2.0.0",
+    "puppeteer": "^25.9.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.482",
@@ -23,8 +24,11 @@
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.482",
+    "d3-geo": "^3.1.1",
     "eslint": "9.19.0",
-    "prettier": "3.8.1"
+    "prettier": "3.8.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
   },
   "scripts": {
     "dev": "remotion studio",
@@ -34,5 +38,8 @@
   },
   "sideEffects": [
     "*.css"
-  ]
+  ],
+  "allowScripts": {
+    "puppeteer@25.9.0": true
+  }
 }
