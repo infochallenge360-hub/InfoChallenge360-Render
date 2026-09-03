@@ -12,7 +12,7 @@ const Bg = () => (
 );
 
 // props: mode (topic → asset path/ext/fit), grid (9 slugs/isos; "?" = mystery tile), line1, word, number, year, badge
-const ASSET = {
+export const ASSET = {
   logos: { dir: "logos", ext: "svg", fit: "contain" },
   flags: { dir: "flags", ext: "svg", fit: "contain" },
   capitals: { dir: "flags", ext: "svg", fit: "contain" },

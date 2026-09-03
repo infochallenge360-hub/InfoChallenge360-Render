@@ -43,6 +43,7 @@ import { FRUITS } from "./Quiz/fruitsData";
 import { GsThumbV2, GsThumbHeroV2, GsThumbSplitV2, GsThumbNumberV2 } from "./Quiz/gsthumb2";
 import { GsThumbV3 } from "./Quiz/gsthumb3";
 import { GsThumbV4 } from "./Quiz/gsthumb4";
+import { GsThumbMosaicV5, GsThumbMirrorV5, GsThumbFullBleedV5, GsThumbCoinV5, GsThumbStripV5 } from "./Quiz/gsthumb5";
 import { QuizV2, quizFrames } from "./Quiz/quizv2";
 import { TEST_ANIMALS } from "./Quiz/testAnimalsData";
 import { TEST_ANIMALS_FACTS } from "./Quiz/testAnimalsFacts";
