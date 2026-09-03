@@ -120,6 +120,7 @@ export const ASSET = {
   "bodypart-e94-thumb": { dir: "bodyparts94", ext: "png", fit: "contain" },
   "sportequipment-e95-thumb": { dir: "sportequipment95", ext: "png", fit: "contain" },
   "empire-e96-thumb": { dir: "empiremaps96", ext: "png", fit: "contain" },
+  "horsebreed-e97-thumb": { dir: "horsebreeds97", ext: "jpg", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

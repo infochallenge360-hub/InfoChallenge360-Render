@@ -58,6 +58,7 @@ const CFG = {
   E93: { data: "src/Quiz/historicalFiguresE93Data.js", nameField: "name", keyword: "historical figure", word: "figure", plural: "figures", folder: "E93_HistoricalFigures", tags: ["#historyquiz", "#guessthehistoricalfigure", "#quiz", "#history", "#trivia"] },
   E94: { data: "src/Quiz/bodyPartsE94Data.js", nameField: "name", keyword: "body part", word: "body part", plural: "body parts", folder: "E94_BodyParts", tags: ["#anatomyquiz", "#guessthebodypart", "#quiz", "#anatomy", "#trivia"] },
   E95: { data: "src/Quiz/sportEquipmentE95Data.js", nameField: "name", keyword: "sport", word: "sport", plural: "sports", folder: "E95_SportEquipment", tags: ["#sportsquiz", "#guessthesport", "#quiz", "#sports", "#trivia"] },
+  E96: { data: "src/Quiz/empiresE96Data.js", nameField: "name", keyword: "historical empire", word: "historical empire", plural: "historical empires", folder: "E96_HistoricalEmpires", tags: ["#historyquiz", "#guesstheempire", "#quiz", "#history", "#geography"] },
 };
 
 // هوكات عناوين متنوّعة (عشان الـ5 ريلز ما تكون متطابقة = يوتيوب يكره التكرار)
