@@ -194,8 +194,10 @@ export const EMPIRES_E96 = [
     level: "medium",
     // ~1200 AD, Hohenstaufen era (Germany + Italian/Burgundian claims — pulled
     // back from Calabria to Rome/central Italy per GATE1: the far south was a
-    // separate Kingdom of Sicily, only briefly in personal union)
-    polygon: [[6,51],[7,45],[13,42],[19,50],[15,54]],
+    // separate Kingdom of Sicily, only briefly in personal union). GATE2
+    // pixel-verified the first fix's southern vertex (lat 42) sat just north
+    // of Rome, excluding it — nudged to 41.5 so Rome itself is covered.
+    polygon: [[6,51],[7,45],[13,41.5],[19,50],[15,54]],
   },
   {
     slug: "umayyad-caliphate",
@@ -287,8 +289,10 @@ export const EMPIRES_E96 = [
     name: "Carthaginian Empire",
     level: "medium",
     // ~265 BC, on the eve of the First Punic War — western tip pulled back
-    // from Gibraltar/Morocco to the Algerian coast per GATE1 (Barcid Iberia
-    // wasn't conquered until after 237 BC, later than this date)
+    // from Gibraltar to the Morocco/Algeria border area (GATE2 pixel-checked
+    // the exact vertex to Nador, Morocco — comment corrected) since Barcid
+    // Iberia wasn't conquered until after 237 BC, later than this date; the
+    // fix's real requirement (stop well short of Gibraltar) is satisfied
     polygon: [[-3,35],[10,33],[10,37],[9,42]],
   },
 
