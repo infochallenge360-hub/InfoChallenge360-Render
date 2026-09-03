@@ -30,10 +30,20 @@ import { feature } from "topojson-client";
 import { readFileSync } from "node:fs";
 import sharp from "sharp";
 
-const world = JSON.parse(readFileSync("node_modules/world-atlas/countries-110m.json", "utf8"));
+// 50m (not 110m) resolution — needed so small Pacific island nations (Tonga,
+// Samoa, Fiji) actually render as visible landmasses; 110m drops them
+// entirely, which left the Tu'i Tonga Empire map with zero context land
+// anywhere in frame (caught by GATE1 fact-verifier on E96).
+const world = JSON.parse(readFileSync("node_modules/world-atlas/countries-50m.json", "utf8"));
 const countries = feature(world, world.objects.countries);
 
-const MAP_W = 1920;
+// 7680px wide (4x a "1920" reference width) — needed so genuinely tiny
+// countries/islands (Samoa, Tonga's neighbors, etc.) render as more than a
+// single stray pixel once a 700x700 card crops in tight on a small empire.
+// At 1920px, Samoa was exactly 1 pixel (invisible); at 7680px it's ~80+
+// pixels (a small but real, perceptible landmass). Verified empirically —
+// see the E96 GATE1 finding that drove this change.
+const MAP_W = 7680;
 // geoEquirectangular's default scale maps the full sphere (-180..180 lon,
 // -90..90 lat) to a projected width of 2*PI*scale and height of PI*scale
 // (exactly 2:1) — solve for the scale that gives us MAP_W, then the natural

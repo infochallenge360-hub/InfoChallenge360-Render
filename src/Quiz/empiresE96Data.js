@@ -64,9 +64,13 @@ export const EMPIRES_E96 = [
     slug: "macedonian-empire",
     name: "Alexander the Great's Empire",
     level: "easy",
-    // 323 BC, at Alexander's death — includes Greece/Macedon and pushes
-    // further into India (Beas river) than Achaemenid Persia ever did
-    polygon: [[21,40],[23,38],[27,39],[36,38],[44,37],[48,30],[60,30],[67,40],[70,35],[74,32],[68,25],[55,26],[48,28],[36,31],[31,30],[25,32]],
+    // 323 BC, at Alexander's death — includes Greece/Macedon, conquered
+    // Egypt (crowned there, founded Alexandria, 332 BC), and pushes further
+    // into India (Beas river) than Achaemenid Persia ever did. A missing
+    // Nubia/Egypt vertex left Egypt unshaded in the first render (GATE1) —
+    // fixed by extending the polygon's reach to match Achaemenid's own Egypt
+    // coverage.
+    polygon: [[21,40],[25,32],[33,24],[68,25],[74,32],[67,40]],
   },
   {
     slug: "qing-dynasty",
@@ -119,18 +123,21 @@ export const EMPIRES_E96 = [
     polygon: [[6,51],[16,-22],[147,-3],[120,36],[23,54],[13,54]],
   },
   {
-    slug: "assyrian-empire",
-    name: "Assyrian Empire",
+    slug: "aztec-empire",
+    name: "Aztec Empire",
+    // Tier swapped up from medium per GATE1 (2026-09-03): Aztec/Inca are far
+    // more globally recognizable than Assyria/Babylon for "guess the shape" —
+    // moved with array position per the standing E90 contiguity rule.
     level: "easy",
-    // Neo-Assyrian peak ~670 BC (Esarhaddon/Ashurbanipal), briefly held Egypt
-    polygon: [[31,30],[34,31],[36,36],[38,37],[41,38],[44,37],[46,36],[48,33],[48,29],[44,30],[36,31]],
+    // 1519, Triple Alliance at Spanish contact
+    polygon: [[-99,20],[-96,19],[-93,16],[-97,15],[-99,16],[-102,18],[-100,21],[-97,21]],
   },
   {
-    slug: "babylonian-empire",
-    name: "Babylonian Empire",
+    slug: "inca-empire",
+    name: "Inca Empire",
     level: "easy",
-    // Neo-Babylonian peak ~562 BC, Nebuchadnezzar II (no Egypt, unlike Assyria)
-    polygon: [[44,37],[48,33],[48,29],[44,29],[40,32],[36,31],[35,33],[36,36],[38,37],[41,37]],
+    // 1527, Huayna Capac's peak (Tawantinsuyu)
+    polygon: [[-77,1],[-79,-2],[-81,-6],[-77,-12],[-72,-13],[-70,-16],[-68,-22],[-70,-33],[-65,-27],[-64,-18],[-75,-8]],
   },
   {
     slug: "mughal-empire",
@@ -158,18 +165,20 @@ export const EMPIRES_E96 = [
     polygon: [[24,41],[27,40],[36,38],[44,37],[48,30],[60,30],[67,37],[70,33],[73,30],[68,24],[55,26],[48,28],[36,31],[31,30],[33,24],[25,31]],
   },
   {
-    slug: "aztec-empire",
-    name: "Aztec Empire",
+    slug: "assyrian-empire",
+    name: "Assyrian Empire",
+    // Tier-swapped down from easy per GATE1 (2026-09-03) — see aztec-empire's
+    // comment above.
     level: "medium",
-    // 1519, Triple Alliance at Spanish contact
-    polygon: [[-99,20],[-96,19],[-93,16],[-97,15],[-99,16],[-102,18],[-100,21],[-97,21]],
+    // Neo-Assyrian peak ~670 BC (Esarhaddon/Ashurbanipal), briefly held Egypt
+    polygon: [[31,30],[34,31],[36,36],[38,37],[41,38],[44,37],[46,36],[48,33],[48,29],[44,30],[36,31]],
   },
   {
-    slug: "inca-empire",
-    name: "Inca Empire",
+    slug: "babylonian-empire",
+    name: "Babylonian Empire",
     level: "medium",
-    // 1527, Huayna Capac's peak (Tawantinsuyu)
-    polygon: [[-77,1],[-79,-2],[-81,-6],[-77,-12],[-72,-13],[-70,-16],[-68,-22],[-70,-33],[-65,-27],[-64,-18],[-75,-8]],
+    // Neo-Babylonian peak ~562 BC, Nebuchadnezzar II (no Egypt, unlike Assyria)
+    polygon: [[44,37],[48,33],[48,29],[44,29],[40,32],[36,31],[35,33],[36,36],[38,37],[41,37]],
   },
   {
     slug: "mali-empire",
@@ -183,15 +192,19 @@ export const EMPIRES_E96 = [
     slug: "holy-roman-empire",
     name: "Holy Roman Empire",
     level: "medium",
-    // ~1200 AD, Hohenstaufen era (Germany + Italian/Burgundian claims)
-    polygon: [[6,51],[7,45],[14,38],[19,50],[15,54]],
+    // ~1200 AD, Hohenstaufen era (Germany + Italian/Burgundian claims — pulled
+    // back from Calabria to Rome/central Italy per GATE1: the far south was a
+    // separate Kingdom of Sicily, only briefly in personal union)
+    polygon: [[6,51],[7,45],[13,42],[19,50],[15,54]],
   },
   {
     slug: "umayyad-caliphate",
     name: "Umayyad Caliphate",
     level: "medium",
-    // Peak 750 AD, Iberia to the Indus — the larger of the two Caliphates
-    // (still holds Iberia and the far Maghreb, unlike the later Abbasids)
+    // Peak ~720 AD, Iberia to the Indus (750 AD is actually the year it was
+    // overthrown by the Abbasid Revolution, not its territorial peak — fixed
+    // per GATE1) — the larger of the two Caliphates (still holds Iberia and
+    // the far Maghreb, unlike the later Abbasids)
     polygon: [[-9,37],[-9,43],[-1,43],[3,43],[10,36],[25,31],[31,30],[35,32],[41,37],[48,38],[52,36],[60,37],[67,40],[71,33],[73,30],[68,24],[55,26],[48,28],[44,29],[40,22],[40,15],[35,21],[10,30]],
   },
   {
@@ -273,8 +286,10 @@ export const EMPIRES_E96 = [
     slug: "carthaginian-empire",
     name: "Carthaginian Empire",
     level: "medium",
-    // ~265 BC, on the eve of the First Punic War
-    polygon: [[-8,36],[-3,35],[10,33],[10,37],[9,42]],
+    // ~265 BC, on the eve of the First Punic War — western tip pulled back
+    // from Gibraltar/Morocco to the Algerian coast per GATE1 (Barcid Iberia
+    // wasn't conquered until after 237 BC, later than this date)
+    polygon: [[-3,35],[10,33],[10,37],[9,42]],
   },
 
   // ===================== HARD (16) =====================
@@ -416,8 +431,11 @@ export const EMPIRES_E96 = [
     slug: "chola-empire",
     name: "Chola Empire",
     level: "impossible",
-    // Peak under Rajendra I, ~1030 AD (south India + conquered Sri Lanka)
-    polygon: [[76,10],[80,6],[81,7],[80,16],[78,15]],
+    // Peak under Rajendra I, ~1030 AD (south India + conquered Sri Lanka).
+    // Explicit Sri Lanka-spanning vertices added after GATE1 found the
+    // earlier convex-hull fix's thin southern edge left the island out of
+    // the rendered fill entirely.
+    polygon: [[76,10],[80,6],[80.2,5.9],[81.5,6.3],[80,16],[78,15]],
   },
   {
     slug: "vijayanagara-empire",
@@ -505,13 +523,19 @@ export const EMPIRES_E96 = [
     polygon: [[16,48],[18,47],[22,49],[26,47],[22,44],[19,43],[15,46],[20,46]],
   },
   {
-    slug: "tui-tonga-empire",
-    name: "Tu'i Tonga Empire",
+    slug: "chimu-empire",
+    name: "Chimu Empire",
     level: "impossible",
-    // Peak ~1200-1300 AD. Coordinates kept on the negative-longitude side of
-    // the antimeridian (Fiji shifted from ~178E to ~-179) since the basemap
-    // projection cannot wrap the 180° line within one polygon.
-    polygon: [[-179,-17.5],[-177,-16],[-173,-14],[-171,-14],[-169.9,-19.1],[-173,-18.5],[-175,-21.2],[-176,-19]],
+    // Peak ~1470 AD, under Minchancaman, just before the Inca conquest.
+    // Replaces the originally-planned Tu'i Tonga Empire (2026-09-03, post-
+    // GATE1): Tonga/Samoa's real landmasses are so tiny that no basemap
+    // resolution reasonable for this pipeline renders them as more than a
+    // few stray pixels, and the empire's remoteness meant no other land was
+    // ever going to be in frame either — a genuine format mismatch, not a
+    // fixable coordinate bug, so it was swapped for a comparably-obscure but
+    // land-based empire instead (thin north-coast-Peru strip, easy to give
+    // real geographic context).
+    polygon: [[-80.5,-3.4],[-79.9,-5.0],[-78.9,-8.1],[-77.2,-11.4],[-76.9,-12.0],[-78.2,-10.5],[-79.8,-6.5]],
   },
   {
     slug: "gokturk-khaganate",

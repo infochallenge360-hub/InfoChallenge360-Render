@@ -16,9 +16,9 @@ const DEST = "public/empiremaps96";
 if (!existsSync(DEST)) mkdirSync(DEST, { recursive: true });
 
 const BASEMAP_PATH = "scripts/assets/blankmap-world-v2.png";
-const MAP_W = 1920, MAP_H = 960;
+const MAP_W = 7680, MAP_H = 3840;
 // v2 basemap is rendered ourselves via d3-geo's geoEquirectangular() (see
-// scratch_build_basemap.mjs) which is a GENUINELY linear Plate Carree
+// scripts/gen-basemap-v2.mjs) which is a GENUINELY linear Plate Carree
 // projection (x=lon*k, y=-lat*k) — so LON/LAT bounds are exact, not
 // approximated. The original blankmap-world.png (a downloaded Wikimedia
 // file) turned out NOT to be truly equirectangular despite its filename —
@@ -30,7 +30,14 @@ const MAP_W = 1920, MAP_H = 960;
 // empires. Verified this new basemap against 12 known cities spanning the
 // whole globe before switching — all 12 land correctly. Do not go back to
 // a downloaded "blank map" image without doing the same 12-city check.
+// Rendered at 7680x3840 (4x a "1920-wide" reference), not 1920x960 — at
+// 1920px, a genuinely tiny country (Samoa) was exactly 1 pixel, invisible
+// once a small/remote empire's card cropped in tight (GATE1 caught this on
+// tui-tonga-empire: its rendered card had literally no basemap visible in
+// frame). All the MIN_SIZE/pad constants below are in these MAP_W-scale
+// pixel units, not degrees — if MAP_W ever changes again, rescale them too.
 const LON_MIN = -180, LON_MAX = 180, LAT_MAX = 90, LAT_MIN = -90;
+const RES_SCALE = MAP_W / 1920; // scales the pixel-unit constants below
 const S = 700;
 const ACCENT = "#C0392B";
 const ACCENT_BORDER = "#7B1E14";
@@ -52,9 +59,9 @@ function viewBoxFor(polygon) {
   let minX = Math.min(...xs), maxX = Math.max(...xs);
   let minY = Math.min(...ys), maxY = Math.max(...ys);
   const w0 = maxX - minX, h0 = maxY - minY;
-  const padX = w0 * 0.4 + 60, padY = h0 * 0.4 + 60;
+  const padX = w0 * 0.4 + 60 * RES_SCALE, padY = h0 * 0.4 + 60 * RES_SCALE;
   minX -= padX; maxX += padX; minY -= padY; maxY += padY;
-  const MIN_SIZE = 260;
+  const MIN_SIZE = 260 * RES_SCALE;
   if (maxX - minX < MIN_SIZE) { const d = (MIN_SIZE - (maxX - minX)) / 2; minX -= d; maxX += d; }
   if (maxY - minY < MIN_SIZE) { const d = (MIN_SIZE - (maxY - minY)) / 2; minY -= d; maxY += d; }
   // square it up (crop to the larger of the two dimensions)
@@ -74,7 +81,7 @@ function cardSVG(item) {
   const pts = item.polygon.map(project);
   const box = viewBoxFor(item.polygon);
   const ptsStr = pts.map((p) => p.join(",")).join(" ");
-  const strokeW = Math.max(3, box.w / 180);
+  const strokeW = Math.max(3 * RES_SCALE, box.w / 180);
   return `<svg width="${S}" height="${S}" viewBox="${box.minX} ${box.minY} ${box.w} ${box.h}" xmlns="http://www.w3.org/2000/svg">
     <image href="data:image/png;base64,${basemapB64}" x="0" y="0" width="${MAP_W}" height="${MAP_H}" preserveAspectRatio="none"/>
     <polygon points="${ptsStr}" fill="${ACCENT}" fill-opacity="0.72" stroke="${ACCENT_BORDER}" stroke-width="${strokeW}" stroke-linejoin="round"/>
