@@ -111,6 +111,7 @@ const INTROS = {
   "vo-intro-sportequipment": "Guess the sport! Can you name all seventy?",
   "vo-intro-cheese": "Guess the cheese! Can you name all seventy?",
   "vo-intro-pasta": "Guess the pasta shape! Can you name all seventy?",
+  "vo-intro-coffeetea": "Guess the coffee or tea drink! Can you name all seventy?",
 };
 
 function wavDuration(path) {
