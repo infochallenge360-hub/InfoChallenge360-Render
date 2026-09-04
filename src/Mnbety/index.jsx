@@ -16,7 +16,6 @@ export const MnbetyIntro = () => {
     <AbsoluteFill style={{ backgroundColor: colors.white }}>
       {/* التعليق الصوتي النسائي */}
       <Audio src={staticFile("gen/voiceover.mp3")} />
-
       <Sequence from={0} durationInFrames={152}>
         <Intro />
       </Sequence>
@@ -26,7 +25,7 @@ export const MnbetyIntro = () => {
       <Sequence from={380} durationInFrames={166}>
         <Stats />
       </Sequence>
-      <Sequence from={540} durationInFrames={182}>
+      <Sequence from={533} durationInFrames={182}>
         <Benefits />
       </Sequence>
       <Sequence from={704} durationInFrames={106}>

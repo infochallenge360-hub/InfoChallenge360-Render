@@ -249,6 +249,8 @@ import { EMPIRES_E96 } from "./Quiz/empiresE96Data";
 import { EMPIRES_E96_FACTS } from "./Quiz/empiresE96Facts";
 import { HORSE_BREEDS_E97 } from "./Quiz/horseBreedsE97Data";
 import { HORSE_BREEDS_E97_FACTS } from "./Quiz/horseBreedsE97Facts";
+import { CHEESE_E98 } from "./Quiz/cheeseE98Data";
+import { CHEESE_E98_FACTS } from "./Quiz/cheeseE98Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -354,6 +356,7 @@ const E94_INFOCFG = { items: BODY_PARTS_E94, facts: BODY_PARTS_E94_FACTS, topicW
 const E95_INFOCFG = { items: SPORT_EQUIPMENT_E95, facts: SPORT_EQUIPMENT_E95_FACTS, topicWord: "SPORT", topicPlural: "SPORTS", dir: "sportequipment95", ext: "png", fit: "contain", voPrefix: "se-", nameField: "name", introVo: "vo-intro-sportequipment", coldSlug: "soccer-ball" };
 const E96_INFOCFG = { items: EMPIRES_E96, facts: EMPIRES_E96_FACTS, topicWord: "HISTORICAL EMPIRE", topicPlural: "HISTORICAL EMPIRES", dir: "empiremaps96", ext: "png", fit: "contain", voPrefix: "ep-", nameField: "name", introVo: "vo-intro-empire", coldSlug: "roman-empire" };
 const E97_INFOCFG = { items: HORSE_BREEDS_E97, facts: HORSE_BREEDS_E97_FACTS, topicWord: "HORSE BREED", topicPlural: "HORSE BREEDS", dir: "horsebreeds97", ext: "jpg", fit: "contain", voPrefix: "hb-", nameField: "name", introVo: "vo-intro-horsebreed", coldSlug: "arabian-horse" };
+const E98_INFOCFG = { items: CHEESE_E98, facts: CHEESE_E98_FACTS, topicWord: "CHEESE", topicPlural: "CHEESES", dir: "cheese98", ext: "jpg", fit: "contain", voPrefix: "ch-", nameField: "name", introVo: "vo-intro-cheese", coldSlug: "cheddar" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -932,6 +935,12 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE97HorseBreedFullBleed" component={GsThumbFullBleedV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "horsebreed-e97-thumb", number: "70", grid: ["arabian-horse", "thoroughbred", "clydesdale", "shetland-pony", "mustang", "appaloosa", "friesian-horse", "percheron", "andalusian-horse", "shire-horse", "quarter-horse", "icelandic-horse", "lipizzaner", "miniature-horse", "akhal-teke", "gypsy-vanner", "fjord-horse", "falabella", "marwari-horse", "camargue-horse", "curly-horse", "knabstrupper", "fell-pony", "caspian-horse"] }} />
       <Composition id="ThumbE97HorseBreedCoin" component={GsThumbCoinV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "horsebreed-e97-thumb", topicPlural: "HORSE BREEDS", number: "70", grid: ["arabian-horse", "thoroughbred", "clydesdale", "shetland-pony", "mustang", "appaloosa", "friesian-horse", "percheron", "andalusian-horse", "shire-horse", "quarter-horse", "icelandic-horse"] }} />
       <Composition id="ThumbE97HorseBreedStrip" component={GsThumbStripV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "horsebreed-e97-thumb", topicPlural: "HORSE BREEDS", number: "70", grid: ["arabian-horse", "thoroughbred", "clydesdale", "shetland-pony", "mustang", "appaloosa", "friesian-horse", "percheron", "andalusian-horse", "shire-horse"] }} />
+      <Composition id="E98CheeseQuiz" component={QuizV2} durationInFrames={quizFrames(E98_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E98_INFOCFG }} />
+      <Composition id="ThumbE98CheeseMosaic" component={GsThumbMosaicV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone", "gruyere", "halloumi", "mascarpone", "monterey-jack", "colby"] }} />
+      <Composition id="ThumbE98CheeseMirror" component={GsThumbMirrorV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["manchego", "roquefort", "gorgonzola", "havarti", "fontina", "pecorino-romano", "burrata", "paneer", "stilton", "asiago", "muenster", "edam", "jarlsberg", "grana-padano", "cheshire"] }} />
+      <Composition id="ThumbE98CheeseFullBleed" component={GsThumbFullBleedV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone", "gruyere", "halloumi", "roquefort", "gorgonzola", "burrata", "paneer", "stilton", "edam", "comte", "reblochon", "chevre", "caciocavallo", "kefalotyri", "brunost"] }} />
+      <Composition id="ThumbE98CheeseCoin" component={GsThumbCoinV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone", "gruyere", "halloumi"] }} />
+      <Composition id="ThumbE98CheeseStrip" component={GsThumbStripV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone"] }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -1009,6 +1018,7 @@ export const RemotionRoot = () => {
         { ep: "E95", items: SPORT_EQUIPMENT_E95, mode: "sportequipment-e95", title: "Guess the Sport", v2: true },
         { ep: "E96", items: EMPIRES_E96, mode: "empire-e96", title: "Guess the Historical Empire", v2: true },
         { ep: "E97", items: HORSE_BREEDS_E97, mode: "horsebreed-e97", title: "Guess the Horse Breed", v2: true },
+        { ep: "E98", items: CHEESE_E98, mode: "cheese-e98", title: "Guess the Cheese", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
