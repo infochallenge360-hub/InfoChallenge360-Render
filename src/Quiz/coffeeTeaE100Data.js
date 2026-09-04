@@ -75,5 +75,5 @@ export const COFFEE_TEA_E100 = [
   { slug: "yuja-tea", name: "Yuja Tea", level: "impossible", wiki: "Yuja tea" },
   { slug: "ceremonial-matcha", name: "Ceremonial Matcha", level: "impossible", wiki: "Matcha" },
   { slug: "noon-chai", name: "Noon Chai", level: "impossible", wiki: "Noon chai" },
-  { slug: "ginger-tea", name: "Ginger Tea", level: "impossible", wiki: "Ginger tea" },
+  { slug: "ginger-tea", name: "Salabat (Filipino Ginger Tea)", level: "impossible", wiki: "Ginger tea" },
 ];

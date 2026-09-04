@@ -4,7 +4,7 @@ export const COFFEE_TEA_E100_FACTS = {
   cappuccino: "Cappuccino is named after Capuchin friars, whose brown robes and pointed hoods reminded people of its ring of milk foam.",
   "caffe-latte": "Order just 'a latte' in Italy and you'll get a glass of milk — 'latte' means milk, so cafés there call this drink 'caffè latte.'",
   americano: "One popular story says the Americano was born when WWII GIs in Italy diluted strong espresso with hot water to taste like home.",
-  "iced-coffee": "Iced coffee surged in popularity at the sweltering 1904 St. Louis World's Fair, where vendors reportedly poured hot coffee over ice.",
+  "iced-coffee": "Iced coffee may trace back to 1840s Algeria, where French soldiers cooled their coffee with ice in a drink called 'mazagran.'",
   "caffe-mocha": "Caffè mocha takes its name from Mocha, Yemen, a Red Sea port that was once the world's main hub for the coffee trade.",
   frappuccino: "The Frappuccino wasn't invented by Starbucks — a Boston coffee chain trademarked it first, and Starbucks later bought the name.",
   "espresso-macchiato": "Macchiato means 'stained' in Italian, referring to the single dollop of foamed milk that lightly 'stains' the dark espresso.",
@@ -16,7 +16,7 @@ export const COFFEE_TEA_E100_FACTS = {
   "matcha-latte": "Matcha is made by grinding shade-grown tea leaves into a fine powder, so unlike steeped tea, you actually drink the whole leaf.",
   "chamomile-tea": "Chamomile tea isn't brewed from tea leaves at all — it's an herbal infusion made from the plant's small, daisy-like flowers.",
   "earl-grey-tea": "Earl Grey is simply black tea flavored with oil from the bergamot orange, a citrus fruit grown mainly in southern Italy.",
-  "thai-iced-tea": "Thai iced tea gets its bright orange color from black tea brewed with spices like star anise, then poured over milk.",
+  "thai-iced-tea": "Thai iced tea's bright orange color usually comes from food coloring added to spiced black tea, before it's poured over milk.",
   kombucha: "Kombucha is fermented using a SCOBY, a rubbery mat of bacteria and yeast that looks a bit like a pancake floating in the jar.",
 
   // MEDIUM
@@ -26,7 +26,7 @@ export const COFFEE_TEA_E100_FACTS = {
   affogato: "Affogato means 'drowned' in Italian — a hot shot of espresso is poured directly over a scoop of vanilla gelato or ice cream.",
   "latte-macchiato": "A latte macchiato is built backwards from a regular latte: the steamed milk goes into the glass first, then espresso on top.",
   "greek-frappe": "The Greek frappé was invented by accident in 1957 when a Nescafé rep at a trade fair had no hot water and shook instant coffee with ice.",
-  "irish-coffee": "Irish coffee was created in the 1940s at a flying-boat terminal in County Clare to warm up cold, weary transatlantic passengers.",
+  "irish-coffee": "Irish coffee was created in the 1940s at a flying-boat terminal in County Limerick to warm up cold, weary transatlantic passengers.",
   "cafe-au-lait": "Café au lait is just strong brewed coffee mixed with hot milk in roughly equal parts, traditionally served in France in a wide bowl.",
   "pumpkin-spice-latte": "Starbucks' original 2003 pumpkin spice latte recipe famously contained no actual pumpkin until the formula changed in 2015.",
   "moroccan-mint-tea": "Moroccan mint tea is poured from high above the glass on purpose — the height whips up a light foam considered a mark of skill.",
