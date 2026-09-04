@@ -34,7 +34,7 @@ export const CHEESE_E98 = [
   { slug: "muenster", name: "Muenster", level: "medium", wiki: "Muenster cheese" },
   { slug: "edam", name: "Edam", level: "medium", wiki: "Edam cheese" },
   { slug: "oaxaca-cheese", name: "Oaxaca Cheese", level: "medium", wiki: "Oaxaca cheese" },
-  { slug: "jarlsberg", name: "Jarlsberg", level: "medium", wiki: "Jarlsberg cheese" },
+  { slug: "raclette", name: "Raclette", level: "medium", wiki: "Raclette" },
   { slug: "port-salut", name: "Port Salut", level: "medium", wiki: "Port Salut" },
   { slug: "grana-padano", name: "Grana Padano", level: "medium", wiki: "Grana Padano" },
   { slug: "cheshire", name: "Cheshire Cheese", level: "medium", wiki: "Cheshire cheese" },

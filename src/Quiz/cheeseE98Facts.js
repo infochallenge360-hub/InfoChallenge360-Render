@@ -34,7 +34,7 @@ export const CHEESE_E98_FACTS = {
   muenster: "American Muenster was created by German immigrants imitating France's pungent Munster cheese, though the US version is milder and dyed orange.",
   edam: "Edam's wax coating and resistance to spoiling made it the world's most popular cheese between the 14th and 18th centuries, especially at sea.",
   "oaxaca-cheese": "Oaxaca cheese is stretched and wound into balls of cheese 'string,' a technique reportedly brought to Mexico by Dominican friars.",
-  jarlsberg: "Jarlsberg is named after a Norwegian manor house, and its yellow wax rind and large holes make it a cousin of Swiss Emmental.",
+  raclette: "Raclette takes its name from the French 'racler,' meaning 'to scrape' — exactly how melted rounds of it are served.",
   "port-salut": "Port Salut was developed by Trappist monks who fled France during the Revolution and later returned to their abbey to resume cheesemaking.",
   "grana-padano": "Grana Padano was created nearly 1,000 years ago by Cistercian monks preserving surplus milk, and its crunchy specks are crystallized amino acids.",
   cheshire: "Cheshire, England's oldest named cheese, likely dates back to Roman Britain and was already famous by the 16th century.",
