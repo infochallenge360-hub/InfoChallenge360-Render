@@ -122,6 +122,7 @@ export const ASSET = {
   "empire-e96-thumb": { dir: "empiremaps96", ext: "png", fit: "contain" },
   "horsebreed-e97-thumb": { dir: "horsebreeds97", ext: "jpg", fit: "contain" },
   "cheese-e98-thumb": { dir: "cheese98", ext: "jpg", fit: "contain" },
+  "pasta-e99-thumb": { dir: "pasta99", ext: "jpg", fit: "contain" },
 };
 export const GsThumbV2 = ({
   mode = "fruits",

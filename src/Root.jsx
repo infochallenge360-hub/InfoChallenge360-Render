@@ -251,6 +251,8 @@ import { HORSE_BREEDS_E97 } from "./Quiz/horseBreedsE97Data";
 import { HORSE_BREEDS_E97_FACTS } from "./Quiz/horseBreedsE97Facts";
 import { CHEESE_E98 } from "./Quiz/cheeseE98Data";
 import { CHEESE_E98_FACTS } from "./Quiz/cheeseE98Facts";
+import { PASTA_SHAPES_E99 } from "./Quiz/pastaShapesE99Data";
+import { PASTA_SHAPES_E99_FACTS } from "./Quiz/pastaShapesE99Facts";
 const E18CFG = { items: PAINTINGS, topicWord: "PAINTING", topicPlural: "PAINTINGS", dir: "paintings", ext: "jpg", fit: "contain", voPrefix: "pt-", nameField: "title", introVo: "vo-intro-painting", coldSlug: "" };
 const E10CFG = { items: LOGOS4, topicWord: "LOGO", topicPlural: "LOGOS", dir: "logos", ext: "svg", fit: "contain", voPrefix: "nm-", nameField: "name", introVo: "vo-intro-logo", coldSlug: "nxp" };
 const E12CFG = { items: SHAPES2, topicWord: "COUNTRY", topicPlural: "COUNTRIES", dir: "maps", ext: "svg", fit: "contain", voPrefix: "fl-", nameField: "name", slugKey: "iso", voKey: "iso", introVo: "vo-intro-shape", coldSlug: "" };
@@ -357,6 +359,7 @@ const E95_INFOCFG = { items: SPORT_EQUIPMENT_E95, facts: SPORT_EQUIPMENT_E95_FAC
 const E96_INFOCFG = { items: EMPIRES_E96, facts: EMPIRES_E96_FACTS, topicWord: "HISTORICAL EMPIRE", topicPlural: "HISTORICAL EMPIRES", dir: "empiremaps96", ext: "png", fit: "contain", voPrefix: "ep-", nameField: "name", introVo: "vo-intro-empire", coldSlug: "roman-empire" };
 const E97_INFOCFG = { items: HORSE_BREEDS_E97, facts: HORSE_BREEDS_E97_FACTS, topicWord: "HORSE BREED", topicPlural: "HORSE BREEDS", dir: "horsebreeds97", ext: "jpg", fit: "contain", voPrefix: "hb-", nameField: "name", introVo: "vo-intro-horsebreed", coldSlug: "arabian-horse" };
 const E98_INFOCFG = { items: CHEESE_E98, facts: CHEESE_E98_FACTS, topicWord: "CHEESE", topicPlural: "CHEESES", dir: "cheese98", ext: "jpg", fit: "contain", voPrefix: "ch-", nameField: "name", introVo: "vo-intro-cheese", coldSlug: "cheddar" };
+const E99_INFOCFG = { items: PASTA_SHAPES_E99, facts: PASTA_SHAPES_E99_FACTS, topicWord: "PASTA SHAPE", topicPlural: "PASTA SHAPES", dir: "pasta99", ext: "jpg", fit: "contain", voPrefix: "ps-", nameField: "name", introVo: "vo-intro-pasta", coldSlug: "spaghetti" };
 import { Word3D } from "./Quiz/Word3D";
 import { FruitsV2Quiz, FRUITSV2_FRAMES } from "./Quiz/fruitsv2";
 import { FlowersV2Quiz, FLOWERSV2_FRAMES } from "./Quiz/flowersv2";
@@ -941,6 +944,12 @@ export const RemotionRoot = () => {
       <Composition id="ThumbE98CheeseFullBleed" component={GsThumbFullBleedV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone", "gruyere", "halloumi", "roquefort", "gorgonzola", "burrata", "paneer", "stilton", "edam", "comte", "reblochon", "chevre", "caciocavallo", "kefalotyri", "brunost"] }} />
       <Composition id="ThumbE98CheeseCoin" component={GsThumbCoinV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone", "gruyere", "halloumi"] }} />
       <Composition id="ThumbE98CheeseStrip" component={GsThumbStripV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "cheese-e98-thumb", topicPlural: "CHEESES", number: "70", grid: ["cheddar", "mozzarella", "parmesan", "brie", "gouda", "feta", "swiss-cheese", "blue-cheese", "camembert", "provolone"] }} />
+      <Composition id="E99PastaQuiz" component={QuizV2} durationInFrames={quizFrames(E99_INFOCFG)} fps={30} width={1920} height={1080} defaultProps={{ config: E99_INFOCFG }} />
+      <Composition id="ThumbE99PastaMosaic" component={GsThumbMosaicV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "pasta-e99-thumb", topicPlural: "PASTA SHAPES", number: "70", grid: ["spaghetti", "macaroni", "penne", "ravioli", "lasagna", "fettuccine", "linguine", "rigatoni", "tortellini", "gnocchi", "vermicelli", "cannelloni", "tagliatelle", "manicotti", "conchiglie"] }} />
+      <Composition id="ThumbE99PastaMirror" component={GsThumbMirrorV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "pasta-e99-thumb", topicPlural: "PASTA SHAPES", number: "70", grid: ["orzo", "ziti", "farfalle", "fusilli", "orecchiette", "bucatini", "cavatappi", "pappardelle", "rotelle", "alphabet-pasta", "gemelli", "campanelle", "ditalini", "mafaldine", "casarecce"] }} />
+      <Composition id="ThumbE99PastaFullBleed" component={GsThumbFullBleedV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "pasta-e99-thumb", number: "70", grid: ["spaghetti", "macaroni", "penne", "ravioli", "lasagna", "fettuccine", "linguine", "rigatoni", "tortellini", "gnocchi", "cannelloni", "tagliatelle", "farfalle", "fusilli", "orecchiette", "bucatini", "cavatappi", "pappardelle", "gemelli", "campanelle", "strozzapreti", "trofie", "cavatelli", "garganelli"] }} />
+      <Composition id="ThumbE99PastaCoin" component={GsThumbCoinV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "pasta-e99-thumb", topicPlural: "PASTA SHAPES", number: "70", grid: ["spaghetti", "macaroni", "penne", "ravioli", "lasagna", "fettuccine", "linguine", "rigatoni", "tortellini", "gnocchi", "farfalle", "fusilli"] }} />
+      <Composition id="ThumbE99PastaStrip" component={GsThumbStripV5} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "pasta-e99-thumb", topicPlural: "PASTA SHAPES", number: "70", grid: ["spaghetti", "macaroni", "penne", "ravioli", "lasagna", "fettuccine", "linguine", "rigatoni", "tortellini", "gnocchi"] }} />
       <Composition id="ThumbLogosV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "logos", word: "LOGO?", wordImg: "brand/word3d-logo.png", grid: ["apple", "nike", "?", "mcdonalds", "?", "cocacola", "?", "netflix", "spotify"] }} />
       <Composition id="ThumbSnakesV4" component={GsThumbV4} durationInFrames={1} fps={30} width={1280} height={720} defaultProps={{ mode: "snakes", word: "SNAKE?", wordImg: "brand/word3d-snake.png", grid: ["king-cobra", "green-tree-python", "?", "gaboon-viper", "?", "corn-snake", "?", "eyelash-viper", "eastern-coral-snake"] }} />
       {/* ── الشورتس العمودية (1080×1920) — 5 شورتات لكل حلقة (part 0..4، بلا تكرار) ── */}
@@ -1019,6 +1028,7 @@ export const RemotionRoot = () => {
         { ep: "E96", items: EMPIRES_E96, mode: "empire-e96", title: "Guess the Historical Empire", v2: true },
         { ep: "E97", items: HORSE_BREEDS_E97, mode: "horsebreed-e97", title: "Guess the Horse Breed", v2: true },
         { ep: "E98", items: CHEESE_E98, mode: "cheese-e98", title: "Guess the Cheese", v2: true },
+        { ep: "E99", items: PASTA_SHAPES_E99, mode: "pasta-e99", title: "Guess the Pasta Shape", v2: true },
       ].flatMap((e) =>
         [0, 1, 2, 3, 4].map((part) => (
           <Composition key={`${e.ep}-${part}`} id={`Short-${e.ep}-${part + 1}`} component={e.v2 ? ShortV2Quiz : ShortQuiz} durationInFrames={e.v2 ? SHORTV2_FRAMES : SHORT_FRAMES} fps={30} width={1080} height={1920} defaultProps={{ items: e.items, mode: e.mode, title: e.title, part }} />
