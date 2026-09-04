@@ -37,7 +37,7 @@ export const CHEESE_E98_FACTS = {
   jarlsberg: "Jarlsberg is named after a Norwegian manor house, and its yellow wax rind and large holes make it a cousin of Swiss Emmental.",
   "port-salut": "Port Salut was developed by Trappist monks who fled France during the Revolution and later returned to their abbey to resume cheesemaking.",
   "grana-padano": "Grana Padano was created nearly 1,000 years ago by Cistercian monks preserving surplus milk, and its crunchy specks are crystallized amino acids.",
-  cheshire: "Cheshire, England's oldest named cheese, dates back to Roman Britain and is even referenced in the Domesday Book.",
+  cheshire: "Cheshire, England's oldest named cheese, likely dates back to Roman Britain and was already famous by the 16th century.",
 
   // HARD
   comte: "Comté is France's top-selling PDO cheese, with about 65,000 tonnes made yearly using techniques from the Jura mountains dating back 1,000 years.",
@@ -62,11 +62,11 @@ export const CHEESE_E98_FACTS = {
   maroilles: "Maroilles has such a strong smell that the mild flavor underneath comes as a surprise — it's sold in rectangular blocks with a moist orange rind.",
   "stinking-bishop": "Stinking Bishop cheese is washed in perry made from a pear variety named after a real 19th-century farmer nicknamed 'Stinking Bishop.'",
   langres: "Langres cheese is never flipped during aging, so a natural dimple called the 'fontaine' forms on top, traditionally filled with Champagne.",
-  mimolette: "Mimolette's crusty grey rind comes from cheese mites deliberately added during aging; the US restricted its import over mite counts until 2014.",
+  mimolette: "Mimolette's crusty grey rind comes from cheese mites deliberately added during aging; US customs has seized shipments over its mite counts.",
   cabrales: "Cabrales blue cheese is aged for months inside natural limestone caves in Spain's Picos de Europa mountains.",
   "tomme-de-savoie": "Tomme de Savoie was traditionally made from the low-fat milk left over after farmers skimmed the cream to make butter or richer cheeses.",
-  telemea: "Telemea has been a protected Romanian PDO cheese since 2005, with distinct regional versions from towns like Sibiu, Brașov, and Ibănești.",
-  livarot: "Livarot is bound with five strips of reed that once held the wheel together on stagecoach journeys, earning it the nickname 'the Colonel.'",
+  telemea: "Telemea has protected EU status, with distinct regional versions made in towns like Sibiu, Brașov, and Ibănești.",
+  livarot: "Livarot is wrapped in five bands of reed resembling a colonel's rank stripes, which is exactly how it earned the nickname 'the Colonel.'",
   "kesong-puti": "Kesong puti, the Philippines' classic fresh cheese, is traditionally made from carabao (water buffalo) milk and sold wrapped in banana leaves.",
   wagasi: "Wagasi, made by Fulani herders in West Africa, is traditionally curdled using leaves from the local 'fromager' tree instead of animal rennet.",
   "murcia-al-vino": "Murcia al Vino cheese gets its striking purple-red rind from being repeatedly bathed in red wine as it matures.",

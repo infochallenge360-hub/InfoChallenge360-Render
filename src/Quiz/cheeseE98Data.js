@@ -45,7 +45,7 @@ export const CHEESE_E98 = [
   { slug: "reblochon", name: "Reblochon", level: "hard", wiki: "Reblochon" },
   { slug: "appenzeller", name: "Appenzeller", level: "hard", wiki: "Appenzeller cheese" },
   { slug: "chevre", name: "Chèvre", level: "hard", wiki: "Goat cheese" },
-  { slug: "munster-french", name: "Munster", level: "hard", wiki: "Munster cheese" },
+  { slug: "munster-french", name: "Munster (France)", level: "hard", wiki: "Munster cheese" },
   { slug: "cotija", name: "Cotija", level: "hard", wiki: "Cotija cheese" },
   { slug: "caciocavallo", name: "Caciocavallo", level: "hard", wiki: "Caciocavallo" },
   { slug: "kefalotyri", name: "Kefalotyri", level: "hard", wiki: "Kefalotyri" },
